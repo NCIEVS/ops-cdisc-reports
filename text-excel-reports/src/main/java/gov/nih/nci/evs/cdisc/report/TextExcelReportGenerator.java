@@ -4,8 +4,8 @@ import gov.nih.nci.evs.cdisc.report.model.Synonym;
 import gov.nih.nci.evs.cdisc.report.model.TextExcelReportResponse;
 import gov.nih.nci.evs.cdisc.report.model.TextExcelReportStats;
 import gov.nih.nci.evs.cdisc.report.utils.CDISCScanner;
-import gov.nih.nci.evs.reportwriter.core.model.report.Report;
-import gov.nih.nci.evs.reportwriter.formatter.*;
+import gov.nih.nci.evs.cdisc.report.utils.ReportUtils;
+import gov.nih.nci.evs.reportwriter.formatter.AsciiToExcelFormatter;
 import gov.nih.nci.evs.restapi.util.SortUtils;
 
 import java.io.File;
@@ -13,10 +13,7 @@ import java.io.FileOutputStream;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.LocalDateTime;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Vector;
+import java.util.*;
 
 /**
  *
@@ -54,6 +51,7 @@ import java.util.Vector;
  *     <p>Modification history: Initial implementation kim.ong@nih.gov
  */
 public class TextExcelReportGenerator implements CDISCReport {
+
   public static String HEADING =
       "Code	Codelist Code	Codelist Extensible (Yes/No)	Codelist Name	CDISC Submission Value	CDISC Synonym(s)	CDISC Definition	NCI Preferred Term";
   Vector focusedCodes = null;
@@ -67,7 +65,6 @@ public class TextExcelReportGenerator implements CDISCReport {
   HashMap extensibleListMap = null;
   HashSet retired_concepts = null;
 
-  private String root;
   private String outDirectory;
 
   String version = null;
@@ -79,24 +76,24 @@ public class TextExcelReportGenerator implements CDISCReport {
 
   String SOURCE_NAME = CDISC;
 
-  public TextExcelReportGenerator(ReportContext reportContext) {
+  @Override
+  public void initialize(ReportContext reportContext) {
     cdiscScanner = new CDISCScanner(reportContext.getInputFile());
     version = cdiscScanner.getVersion();
-    root = reportContext.getRootCode();
   }
 
   @Override
-  public TextExcelReportResponse run(ReportContext context) {
+  public TextExcelReportResponse run(String root, ReportContext context) {
     TextExcelReportResponse response = new TextExcelReportResponse();
     TextExcelReportStats reportStats = new TextExcelReportStats();
     reportStats.setStart(LocalDateTime.now());
     response.setStats(reportStats);
 
-    System.out.println("Subset root concept code: " + this.root);
+    System.out.println("Subset root concept code: " + root);
     synonymMap = new HashMap();
-    String label = cdiscScanner.getPreferredName(this.root);
+    String label = cdiscScanner.getPreferredName(root);
     response.setLabel(label);
-    File textfile = getTextFile(label, context);
+    File textfile = getTextFile(label, context.getOutputDirectory());
     System.out.println("Generating " + textfile + " -- please wait.");
 
     if (label.indexOf("Glossary") != -1) {
@@ -113,21 +110,21 @@ public class TextExcelReportGenerator implements CDISCReport {
     Vector v = new Vector();
     v.add(HEADING);
 
-    codeListCodes = getCodeListCodes(this.root);
+    codeListCodes = getCodeListCodes(root);
     if (codeListCodes == null || codeListCodes.size() == 0) {
       codeListCodes = new Vector();
-      codeListCodes.add(this.root);
+      codeListCodes.add(root);
     }
     subsetMemberHashMap = createSubsetMemberHashMap(codeListCodes);
     focusedCodes = createFocusedCodes(subsetMemberHashMap);
 
     HashSet hset = cdiscScanner.vector2HashSet(focusedCodes);
-    if (!hset.contains(this.root)) {
-      hset.add(this.root);
+    if (!hset.contains(root)) {
+      hset.add(root);
     }
     Vector syn_vec = cdiscScanner.extractFULLSyns(hset);
     synonymMap = createSynonymMap(syn_vec);
-    Vector subset_codes = cdiscScanner.getSubclassCodes(this.root);
+    Vector subset_codes = cdiscScanner.getSubclassCodes(root);
 
     for (int i = 0; i < codeListCodes.size(); i++) {
       String code = (String) codeListCodes.elementAt(i);
@@ -573,9 +570,9 @@ public class TextExcelReportGenerator implements CDISCReport {
     return w;
   }
 
-  private File getTextFile(String label, ReportContext context) {
+  private File getTextFile(String label, Path outputDirectory) {
     String shortLabel = label.replace("CDISC", "").replace("Terminology", "").trim();
-    return context.getOutputDirectory().resolve(shortLabel).resolve(label + ".txt").toFile();
+    return ReportUtils.getOutputPath(outputDirectory, shortLabel).resolve(label + ".txt").toFile();
   }
 
   public void generateExcel(File textfile) {
@@ -600,9 +597,9 @@ public class TextExcelReportGenerator implements CDISCReport {
     ReportContext reportContext =
         ReportContext.builder()
             .inputFile(owlfile)
-            .rootCode(root)
+            .rootCodes(Collections.singletonList(root))
             .outputDirectory(outputDirectory)
             .build();
-    new TextExcelReportGenerator(reportContext).run(reportContext);
+    new TextExcelReportGenerator().run(reportContext);
   }
 }

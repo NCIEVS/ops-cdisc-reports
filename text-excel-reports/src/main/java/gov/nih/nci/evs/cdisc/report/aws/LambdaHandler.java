@@ -3,8 +3,8 @@ package gov.nih.nci.evs.cdisc.report.aws;
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 import gov.nih.nci.evs.cdisc.report.ReportContext;
+import gov.nih.nci.evs.cdisc.report.ReportResponse;
 import gov.nih.nci.evs.cdisc.report.TextExcelReportGenerator;
-import gov.nih.nci.evs.cdisc.report.model.TextExcelReportResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,8 +12,6 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class LambdaHandler implements RequestHandler<LambdaRequest, LambdaResponse> {
@@ -21,26 +19,31 @@ public class LambdaHandler implements RequestHandler<LambdaRequest, LambdaRespon
 
   @Override
   public LambdaResponse handleRequest(LambdaRequest input, Context context) {
-    File file = new File("/mnt/cdisc");
-    System.out.println("Executable: " + file.canExecute());
-    System.out.println("Readable: " + file.canRead());
-    System.out.println("Writable: " + file.canWrite());
-    try {
-      System.out.println("Owner: " + Files.getOwner(file.toPath()));
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
-
-    List<TextExcelReportResponse> reportResponseList = new ArrayList<>();
-    for (String rootCode : input.getConceptCodes()) {
-      ReportContext reportContext =
-          new ReportContext(new File(input.getThesaurusOwlFile()), rootCode, getOutputDirectory());
-      TextExcelReportResponse reportResponse =
-          new TextExcelReportGenerator(reportContext).run(reportContext);
-      log.info("TextExcelReportResponse:{}", reportResponse);
-      reportResponseList.add(reportResponse);
-    }
+    validate(input);
+    ReportContext reportContext =
+        new ReportContext(
+            new File(input.getThesaurusOwlFile()),
+            input.getConceptCodes(),
+            getOutputDirectory(),
+            null);
+    List<ReportResponse> reportResponseList = new TextExcelReportGenerator().run(reportContext);
     return new LambdaResponse(reportResponseList, input.getPublicationDate());
+  }
+
+  private void validate(LambdaRequest request) {
+    if (request == null) {
+      throw new IllegalArgumentException("LambdaRequest is required");
+    }
+    if (request.getConceptCodes() == null || request.getConceptCodes().isEmpty()) {
+      throw new IllegalArgumentException("conceptCodes are required");
+    }
+    if (request.getPublicationDate() == null || request.getPublicationDate().trim().length() == 0) {
+      throw new IllegalArgumentException("publicationDate is required");
+    }
+    if (request.getThesaurusOwlFile() == null
+        || request.getThesaurusOwlFile().trim().length() == 0) {
+      throw new IllegalArgumentException("thesaurusOwlFile is required");
+    }
   }
 
   private Path getOutputDirectory() {
