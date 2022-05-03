@@ -1,11 +1,11 @@
-package gov.nih.nci.evs.cdisc.report.aws;
+package gov.nih.nci.evs.cdisc.report.model;
 
 import lombok.Data;
 
 import java.util.List;
 
 @Data
-public class LambdaRequest {
+public class ThesaurusRequest {
     private String thesaurusOwlFile;
     private String publicationDate;
     private List<String> conceptCodes;

@@ -1,7 +1,7 @@
 package gov.nih.nci.evs.cdisc.report;
 
 import gov.nih.nci.evs.cdisc.report.model.CDISCRow;
-import gov.nih.nci.evs.cdisc.report.model.PairingReportContext;
+import gov.nih.nci.evs.cdisc.report.model.ReportDetail;
 import gov.nih.nci.evs.cdisc.report.model.Synonym;
 import gov.nih.nci.evs.cdisc.report.utils.CDISCScanner;
 import gov.nih.nci.evs.cdisc.report.utils.OWLScanner;
@@ -16,7 +16,6 @@ import java.io.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.*;
 
 /**
@@ -54,7 +53,7 @@ import java.util.*;
  * @version 1.0
  *     <p>Modification history: Initial implementation kim.ong@nih.gov
  */
-public class CDISCPairing implements CDISCReport {
+public class CDISCPairing {
   public static int DATA_SOURCE_NCIT_OWL = 1;
   public static int DATA_SOURCE_SPARQL = 2;
   static String METADATA_HEADER =
@@ -107,11 +106,14 @@ public class CDISCPairing implements CDISCReport {
 
   String xlsxfile = null;
   HashSet retired_concepts = new HashSet();
+  private Path outputDirectory;
+  private String publicationDate;
 
-  @Override
-  public void initialize(ReportContext reportContext) {
-    cdiscScanner = new CDISCScanner(reportContext.getInputFile());
+  public CDISCPairing(File owlFile, Path outputDirectory, String publicationDate) {
+    cdiscScanner = new CDISCScanner(owlFile);
     this.data_source = DATA_SOURCE_NCIT_OWL;
+    this.outputDirectory = outputDirectory;
+    this.publicationDate = publicationDate;
   }
 
   public void dumpStringValuedHashMap(HashMap hmap) {
@@ -511,13 +513,9 @@ public class CDISCPairing implements CDISCReport {
     Utils.saveToFile("CdiscDefinition.txt", w);
   }
 
-  @Override
-  public ReportResponse run(String root, ReportContext reportContext) {
-    int dataSource = ((PairingReportContext) reportContext).getDataSource();
-    Path outputDirectory = reportContext.getOutputDirectory();
+  public ReportDetail run(String root, int dataSource) {
     String terminology = null;
-    ReportStats stats = new ReportStats();
-    stats.setStart(LocalDateTime.now());
+    String excelFileName = null;
     if (dataSource == DATA_SOURCE_NCIT_OWL) {
       focusedCodes = cdiscScanner.createFocusedCodes(root);
       HashSet codes = cdiscScanner.vector2HashSet(focusedCodes);
@@ -552,16 +550,15 @@ public class CDISCPairing implements CDISCReport {
       pairedTermData = generatePairedTermData();
       pairedTermData = sortPairedTermData(pairedTermData);
 
-      String outputfile = getPairedTermDataTextFileName(data_source, outputDirectory);
+      String outputfile = getPairedTermDataTextFileName(data_source, this.outputDirectory);
       Utils.saveToFile(outputfile, pairedTermData);
-      String metadatafile = generateMetadata(outputDirectory);
+      String metadatafile = generateMetadata(this.outputDirectory);
 
-      String excelFileName =
-          getReportFileName(terminology, outputDirectory, reportContext.getPublicationDate());
+      excelFileName = getReportFileName(terminology, this.outputDirectory, this.publicationDate);
 
       Vector<String> textfiles = new Vector();
       Vector blanks = new Vector();
-      String blankfile = getReadmeTextFileName(outputDirectory);
+      String blankfile = getReadmeTextFileName(this.outputDirectory);
       Utils.saveToFile(blankfile, blanks);
       textfiles.add(blankfile);
       textfiles.add(metadatafile);
@@ -579,11 +576,14 @@ public class CDISCPairing implements CDISCReport {
       }
       // ExcelFormatter.reformat(excelFileName, excelFileName);
       XLSXFormatter.reformat(excelFileName, excelFileName);
-      stats.setEnd(LocalDateTime.now());
     } catch (Exception ex) {
       ex.printStackTrace();
     }
-    return ReportResponse.builder().stats(stats).build();
+    return ReportDetail.builder()
+        .code(root)
+        .label(terminology)
+        .reports(Collections.singletonMap(ReportEnum.PAIRING_EXCEL, excelFileName))
+        .build();
   }
 
   private String getReportFileName(
@@ -1235,16 +1235,8 @@ public class CDISCPairing implements CDISCReport {
     String owlfile = args[0];
     String root = args[1];
     Path outputDirectory = Paths.get(args[2]);
-    PairingReportContext context =
-        PairingReportContext.builder()
-            .dataSource(DATA_SOURCE_NCIT_OWL)
-            .inputFile(new File(owlfile))
-            .outputDirectory(outputDirectory)
-            .publicationDate(LocalDate.now().toString())
-            .rootCodes(Collections.singletonList(root))
-            .build();
-    CDISCPairing cdiscPairing = new CDISCPairing();
-    cdiscPairing.run(context);
+    CDISCPairing cdiscPairing = new CDISCPairing(new File(owlfile),outputDirectory, LocalDate.now().toString());
+    cdiscPairing.run(root, DATA_SOURCE_NCIT_OWL);
     System.out.println("Total run time (ms): " + (System.currentTimeMillis() - ms));
   }
 }
