@@ -12,20 +12,25 @@ import static gov.nih.nci.evs.cdisc.report.utils.AssertUtils.assertRequired;
 public class ReportUtils {
   public static final Logger log = LoggerFactory.getLogger(ReportUtils.class);
 
+  public static Path getBaseOutputDirectory() {
+    Path outputDirectory = Path.of("/mnt", "cdisc", "work");
+    try {
+      Files.createDirectories(outputDirectory);
+    } catch (IOException e) {
+      throw new RuntimeException("Unable to create output directory", e);
+    }
+    return outputDirectory;
+  }
+
   public static Path getOutputPath(Path basePath, String... children) {
     assertRequired(basePath, "basePath");
     Path path = Path.of(basePath.toString());
-    try {
-      if (children != null) {
-        for(String child : children){
-          path = path.resolve(child);
-        }
+    if (children != null) {
+      for (String child : children) {
+        path = path.resolve(child);
       }
-      Files.createDirectories(path);
-    } catch (IOException e) {
-      log.error("Unable to create directories. Path:{}", path);
-      throw new RuntimeException("Exception occurred when creating directories", e);
     }
+    createDirectories(path);
     return path;
   }
 
@@ -36,5 +41,9 @@ public class ReportUtils {
       log.error("Unable to create directories. Path:{}", path);
       throw new RuntimeException("Exception occurred when creating directories", e);
     }
+  }
+
+  public static void main(String[] args) {
+    System.out.println(Path.of("mnt", "cdisc","work").toString());
   }
 }
