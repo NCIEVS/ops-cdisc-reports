@@ -13,7 +13,7 @@ public class ReportUtils {
   public static final Logger log = LoggerFactory.getLogger(ReportUtils.class);
 
   public static Path getBaseOutputDirectory() {
-    Path outputDirectory = Path.of("/mnt", "cdisc", "work");
+    Path outputDirectory = Path.of("/mnt", "cdisc", "work", "current");
     try {
       Files.createDirectories(outputDirectory);
     } catch (IOException e) {
@@ -43,7 +43,8 @@ public class ReportUtils {
     }
   }
 
-  public static void main(String[] args) {
-    System.out.println(Path.of("mnt", "cdisc","work").toString());
+  public static String getShortCodeLabel(String codeLabel) {
+    AssertUtils.assertRequired(codeLabel, "codeLabel");
+    return codeLabel.replace("CDISC", "").replace("Terminology", "").trim();
   }
 }

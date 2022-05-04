@@ -12,4 +12,5 @@ include 'text-excel-reports'
 include 'pairing-report'
 include 'common'
 include 'excel-formatting'
+include 'changes-report'
 
