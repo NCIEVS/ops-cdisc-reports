@@ -15,4 +15,5 @@ include 'excel-formatting'
 include 'changes-report'
 include 'odm-report'
 include 'owl-report'
+include 'html-report'
 
