@@ -10,9 +10,9 @@ import org.apache.commons.io.FilenameUtils;
 import java.io.FileInputStream;
 import java.io.IOException;
 
-public class PdfHtmlHeaderAndFooter {
+public class PdfHtmlFooter {
     public static void main(String[] args) throws IOException {
-        PdfHtmlHeaderAndFooter.manipulatePdf(args[0], args[1]);
+        PdfHtmlFooter.manipulatePdf(args[0], args[1]);
     }
 
     public static void manipulatePdf(String htmlSource, String pdfDest) throws IOException {

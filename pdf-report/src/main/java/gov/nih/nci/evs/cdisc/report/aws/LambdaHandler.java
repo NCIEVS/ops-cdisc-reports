@@ -2,7 +2,7 @@ package gov.nih.nci.evs.cdisc.report.aws;
 
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
-import gov.nih.nci.evs.cdisc.report.PdfHtmlHeaderAndFooter;
+import gov.nih.nci.evs.cdisc.report.PdfHtmlFooter;
 import gov.nih.nci.evs.cdisc.report.ReportEnum;
 import gov.nih.nci.evs.cdisc.report.model.ReportDetail;
 import gov.nih.nci.evs.cdisc.report.model.ReportSummary;
@@ -27,7 +27,7 @@ public class LambdaHandler implements RequestHandler<ReportSummary, ReportSummar
         log.info("PDF report generation from HTML for {}", reportDetail.getLabel());
         String pdfFile = pdfHtmlFile.replace("-pdf.html", ".pdf");
         try {
-          PdfHtmlHeaderAndFooter.manipulatePdf(pdfHtmlFile, pdfFile);
+          PdfHtmlFooter.manipulatePdf(pdfHtmlFile, pdfFile);
         } catch (IOException e) {
           throw new RuntimeException(e);
         }
