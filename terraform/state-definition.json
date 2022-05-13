@@ -1,0 +1,377 @@
+{
+  "Comment": "State Engine to generate reports and files from thesaurus OWL file",
+  "StartAt": "Parallel",
+  "States": {
+    "Parallel": {
+      "Type": "Parallel",
+      "Branches": [
+        {
+          "StartAt": "TextExcelReportCondition",
+          "States": {
+            "TextExcelReportCondition": {
+              "Type": "Choice",
+              "Choices": [
+                {
+                  "Variable": "$.skipTextExcelReport",
+                  "IsPresent": true,
+                  "Next": "SkipTextExcelReport"
+                }
+              ],
+              "Default": "TextExcelReport"
+            },
+            "SkipTextExcelReport": {
+              "Type": "Pass",
+              "Next": "ExcelFormatterCondition"
+            },
+            "ExcelFormatterCondition": {
+              "Type": "Choice",
+              "Choices": [
+                {
+                  "Variable": "$.skipExcelFormatter",
+                  "IsPresent": true,
+                  "Next": "SkipExcelFormatter"
+                }
+              ],
+              "Default": "Excel Formatter"
+            },
+            "SkipExcelFormatter": {
+              "Type": "Pass",
+              "Next": "TextExcelReportParallel"
+            },
+            "TextExcelReport": {
+              "Type": "Task",
+              "Resource": "arn:aws:states:::lambda:invoke",
+              "OutputPath": "$.Payload",
+              "Parameters": {
+                "Payload.$": "$",
+                "FunctionName": "arn:aws:lambda:us-west-2:340229005005:function:text-excel-report-generator:$LATEST"
+              },
+              "Retry": [
+                {
+                  "ErrorEquals": [
+                    "Lambda.ServiceException",
+                    "Lambda.AWSLambdaException",
+                    "Lambda.SdkClientException"
+                  ],
+                  "IntervalSeconds": 2,
+                  "MaxAttempts": 6,
+                  "BackoffRate": 2
+                }
+              ],
+              "Next": "ExcelFormatterCondition"
+            },
+            "Excel Formatter": {
+              "Type": "Task",
+              "Resource": "arn:aws:states:::lambda:invoke",
+              "OutputPath": "$.Payload",
+              "Parameters": {
+                "Payload.$": "$",
+                "FunctionName": "arn:aws:lambda:us-west-2:340229005005:function:excel-formatter:$LATEST"
+              },
+              "Retry": [
+                {
+                  "ErrorEquals": [
+                    "Lambda.ServiceException",
+                    "Lambda.AWSLambdaException",
+                    "Lambda.SdkClientException"
+                  ],
+                  "IntervalSeconds": 2,
+                  "MaxAttempts": 6,
+                  "BackoffRate": 2
+                }
+              ],
+              "Next": "TextExcelReportParallel"
+            },
+            "TextExcelReportParallel": {
+              "Type": "Parallel",
+              "End": true,
+              "Branches": [
+                {
+                  "StartAt": "ChangesReportConditional",
+                  "States": {
+                    "ChangesReportConditional": {
+                      "Type": "Choice",
+                      "Choices": [
+                        {
+                          "Variable": "$.skipChangesReport",
+                          "IsPresent": true,
+                          "Next": "SkipChangesReport"
+                        }
+                      ],
+                      "Default": "ChangesReport"
+                    },
+                    "SkipChangesReport": {
+                      "Type": "Pass",
+                      "End": true
+                    },
+                    "ChangesReport": {
+                      "Type": "Task",
+                      "Resource": "arn:aws:states:::lambda:invoke",
+                      "OutputPath": "$.Payload",
+                      "Parameters": {
+                        "Payload.$": "$",
+                        "FunctionName": "arn:aws:lambda:us-west-2:340229005005:function:changes-report:$LATEST"
+                      },
+                      "Retry": [
+                        {
+                          "ErrorEquals": [
+                            "Lambda.ServiceException",
+                            "Lambda.AWSLambdaException",
+                            "Lambda.SdkClientException"
+                          ],
+                          "IntervalSeconds": 2,
+                          "MaxAttempts": 6,
+                          "BackoffRate": 2
+                        }
+                      ],
+                      "End": true
+                    }
+                  }
+                },
+                {
+                  "StartAt": "OdmXmlReportConditional",
+                  "States": {
+                    "OdmXmlReportConditional": {
+                      "Type": "Choice",
+                      "Choices": [
+                        {
+                          "Variable": "$.skipOdmXmlReport",
+                          "IsPresent": true,
+                          "Next": "SkipOdmXmlReport"
+                        }
+                      ],
+                      "Default": "OdmXmlReport"
+                    },
+                    "SkipOdmXmlReport": {
+                      "Type": "Pass",
+                      "Next": "OdmXmlParallel"
+                    },
+                    "OdmXmlReport": {
+                      "Type": "Task",
+                      "Resource": "arn:aws:states:::lambda:invoke",
+                      "OutputPath": "$.Payload",
+                      "Parameters": {
+                        "Payload.$": "$",
+                        "FunctionName": "arn:aws:lambda:us-west-2:340229005005:function:odm-xml-report:$LATEST"
+                      },
+                      "Retry": [
+                        {
+                          "ErrorEquals": [
+                            "Lambda.ServiceException",
+                            "Lambda.AWSLambdaException",
+                            "Lambda.SdkClientException"
+                          ],
+                          "IntervalSeconds": 2,
+                          "MaxAttempts": 6,
+                          "BackoffRate": 2
+                        }
+                      ],
+                      "Next": "OdmXmlParallel"
+                    },
+                    "OdmXmlParallel": {
+                      "Type": "Parallel",
+                      "End": true,
+                      "Branches": [
+                        {
+                          "StartAt": "HtmlReportConditional",
+                          "States": {
+                            "HtmlReportConditional": {
+                              "Type": "Choice",
+                              "Choices": [
+                                {
+                                  "Variable": "$.skipHtmlReport",
+                                  "IsPresent": true,
+                                  "Next": "SkipHtmlReport"
+                                }
+                              ],
+                              "Default": "HTML Report"
+                            },
+                            "SkipHtmlReport": {
+                              "Type": "Pass",
+                              "End": true
+                            },
+                            "HTML Report": {
+                              "Type": "Task",
+                              "Resource": "arn:aws:states:::lambda:invoke",
+                              "OutputPath": "$.Payload",
+                              "Parameters": {
+                                "Payload.$": "$",
+                                "FunctionName": "arn:aws:lambda:us-west-2:340229005005:function:html-report:$LATEST"
+                              },
+                              "Retry": [
+                                {
+                                  "ErrorEquals": [
+                                    "Lambda.ServiceException",
+                                    "Lambda.AWSLambdaException",
+                                    "Lambda.SdkClientException"
+                                  ],
+                                  "IntervalSeconds": 2,
+                                  "MaxAttempts": 6,
+                                  "BackoffRate": 2
+                                }
+                              ],
+                              "End": true
+                            }
+                          }
+                        },
+                        {
+                          "StartAt": "PdfReportConditional",
+                          "States": {
+                            "PdfReportConditional": {
+                              "Type": "Choice",
+                              "Choices": [
+                                {
+                                  "Variable": "$.skipPdfReport",
+                                  "IsPresent": true,
+                                  "Next": "SkipPdfReport"
+                                }
+                              ],
+                              "Default": "Lambda Invoke"
+                            },
+                            "Lambda Invoke": {
+                              "Type": "Task",
+                              "Resource": "arn:aws:states:::lambda:invoke",
+                              "OutputPath": "$.Payload",
+                              "Parameters": {
+                                "Payload.$": "$",
+                                "FunctionName": "arn:aws:lambda:us-west-2:340229005005:function:html-report:$LATEST"
+                              },
+                              "Retry": [
+                                {
+                                  "ErrorEquals": [
+                                    "Lambda.ServiceException",
+                                    "Lambda.AWSLambdaException",
+                                    "Lambda.SdkClientException"
+                                  ],
+                                  "IntervalSeconds": 2,
+                                  "MaxAttempts": 6,
+                                  "BackoffRate": 2
+                                }
+                              ],
+                              "Next": "PDF Report"
+                            },
+                            "PDF Report": {
+                              "Type": "Task",
+                              "Resource": "arn:aws:states:::lambda:invoke",
+                              "OutputPath": "$.Payload",
+                              "Parameters": {
+                                "Payload.$": "$",
+                                "FunctionName": "arn:aws:lambda:us-west-2:340229005005:function:pdf-report:$LATEST"
+                              },
+                              "Retry": [
+                                {
+                                  "ErrorEquals": [
+                                    "Lambda.ServiceException",
+                                    "Lambda.AWSLambdaException",
+                                    "Lambda.SdkClientException"
+                                  ],
+                                  "IntervalSeconds": 2,
+                                  "MaxAttempts": 6,
+                                  "BackoffRate": 2
+                                }
+                              ],
+                              "End": true
+                            },
+                            "SkipPdfReport": {
+                              "Type": "Pass",
+                              "End": true
+                            }
+                          }
+                        },
+                        {
+                          "StartAt": "OwlReportConditional",
+                          "States": {
+                            "OwlReportConditional": {
+                              "Type": "Choice",
+                              "Choices": [
+                                {
+                                  "Variable": "$.skipOwlReport",
+                                  "IsPresent": true,
+                                  "Next": "SkipOwlReport"
+                                }
+                              ],
+                              "Default": "OWL Report"
+                            },
+                            "SkipOwlReport": {
+                              "Type": "Pass",
+                              "End": true
+                            },
+                            "OWL Report": {
+                              "Type": "Task",
+                              "Resource": "arn:aws:states:::lambda:invoke",
+                              "OutputPath": "$.Payload",
+                              "Parameters": {
+                                "Payload.$": "$",
+                                "FunctionName": "arn:aws:lambda:us-west-2:340229005005:function:owl-report:$LATEST"
+                              },
+                              "Retry": [
+                                {
+                                  "ErrorEquals": [
+                                    "Lambda.ServiceException",
+                                    "Lambda.AWSLambdaException",
+                                    "Lambda.SdkClientException"
+                                  ],
+                                  "IntervalSeconds": 2,
+                                  "MaxAttempts": 6,
+                                  "BackoffRate": 2
+                                }
+                              ],
+                              "End": true
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "StartAt": "PairingReportCondition",
+          "States": {
+            "PairingReportCondition": {
+              "Type": "Choice",
+              "Choices": [
+                {
+                  "Variable": "$.skipPairingReport",
+                  "IsPresent": true,
+                  "Next": "SkipPairingReport"
+                }
+              ],
+              "Default": "PairingReport"
+            },
+            "SkipPairingReport": {
+              "Type": "Pass",
+              "End": true
+            },
+            "PairingReport": {
+              "Type": "Task",
+              "Resource": "arn:aws:states:::lambda:invoke",
+              "OutputPath": "$.Payload",
+              "Parameters": {
+                "Payload.$": "$.pairingReportRequest",
+                "FunctionName": "arn:aws:lambda:us-west-2:340229005005:function:pairing-report-generator:$LATEST"
+              },
+              "Retry": [
+                {
+                  "ErrorEquals": [
+                    "Lambda.ServiceException",
+                    "Lambda.AWSLambdaException",
+                    "Lambda.SdkClientException"
+                  ],
+                  "IntervalSeconds": 2,
+                  "MaxAttempts": 6,
+                  "BackoffRate": 2
+                }
+              ],
+              "End": true
+            }
+          }
+        }
+      ],
+      "End": true
+    }
+  }
+}
