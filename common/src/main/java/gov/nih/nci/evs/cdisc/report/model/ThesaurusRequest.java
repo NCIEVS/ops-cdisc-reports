@@ -8,5 +8,6 @@ import java.util.List;
 public class ThesaurusRequest {
     private String thesaurusOwlFile;
     private String publicationDate;
+    private List<String> deliveryEmailAddresses;
     private List<String> conceptCodes;
 }
