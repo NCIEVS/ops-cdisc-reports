@@ -226,9 +226,9 @@
                                   "Next": "SkipPdfReport"
                                 }
                               ],
-                              "Default": "Lambda Invoke"
+                              "Default": "PDF Html"
                             },
-                            "Lambda Invoke": {
+                            "PDF Html": {
                               "Type": "Task",
                               "Resource": "arn:aws:states:::lambda:invoke",
                               "OutputPath": "$.Payload",
@@ -369,6 +369,28 @@
               "End": true
             }
           }
+        }
+      ],
+      "Next": "UploadReports"
+    },
+    "UploadReports": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "OutputPath": "$.Payload",
+      "Parameters": {
+        "Payload.$": "$",
+        "FunctionName": "arn:aws:lambda:us-west-2:340229005005:function:upload-reports:$LATEST"
+      },
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "Lambda.ServiceException",
+            "Lambda.AWSLambdaException",
+            "Lambda.SdkClientException"
+          ],
+          "IntervalSeconds": 2,
+          "MaxAttempts": 6,
+          "BackoffRate": 2
         }
       ],
       "End": true
