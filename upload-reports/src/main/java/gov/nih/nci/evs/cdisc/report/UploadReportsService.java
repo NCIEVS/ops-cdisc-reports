@@ -1,8 +1,6 @@
 package gov.nih.nci.evs.cdisc.report;
 
 import com.google.api.services.drive.model.File;
-import com.google.common.collect.Lists;
-import gov.nih.nci.evs.cdisc.aws.SecretsClient;
 import gov.nih.nci.evs.cdisc.gcp.GoogleDriveClient;
 import gov.nih.nci.evs.cdisc.report.utils.ReportUtils;
 import org.slf4j.Logger;
@@ -65,14 +63,5 @@ public class UploadReportsService {
         }
       }
     }
-  }
-
-  public static void main(String[] args) {
-    GoogleDriveClient googleDriveClient =
-        new GoogleDriveClient(SecretsClient.getSecret("/nci/cdisc/gdrive"));
-    UploadReportsService service = new UploadReportsService(googleDriveClient);
-    service.uploadReportsFolder(
-        Lists.newArrayList("akuppusamy@westcoastinformatics.com"),
-        Path.of("/Users/squareroot/temp/Current_6"));
   }
 }
