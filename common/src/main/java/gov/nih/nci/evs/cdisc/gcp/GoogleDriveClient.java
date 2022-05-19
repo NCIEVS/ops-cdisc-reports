@@ -1,24 +1,17 @@
 package gov.nih.nci.evs.cdisc.gcp;
 
-import com.google.api.client.auth.oauth2.Credential;
-import com.google.api.client.extensions.java6.auth.oauth2.AuthorizationCodeInstalledApp;
-import com.google.api.client.extensions.jetty.auth.oauth2.LocalServerReceiver;
-import com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeFlow;
-import com.google.api.client.googleapis.auth.oauth2.GoogleClientSecrets;
 import com.google.api.client.googleapis.auth.oauth2.GoogleCredential;
 import com.google.api.client.googleapis.javanet.GoogleNetHttpTransport;
 import com.google.api.client.http.FileContent;
 import com.google.api.client.http.javanet.NetHttpTransport;
 import com.google.api.client.json.JsonFactory;
 import com.google.api.client.json.gson.GsonFactory;
-import com.google.api.client.util.store.FileDataStoreFactory;
 import com.google.api.services.drive.Drive;
 import com.google.api.services.drive.DriveScopes;
 import com.google.api.services.drive.model.File;
 import com.google.api.services.drive.model.FileList;
 import com.google.api.services.drive.model.Permission;
 import com.google.common.collect.Lists;
-import gov.nih.nci.evs.cdisc.aws.SecretsClient;
 import gov.nih.nci.evs.cdisc.report.utils.AssertUtils;
 import lombok.SneakyThrows;
 import org.apache.commons.io.IOUtils;
@@ -27,12 +20,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
-import java.io.StringReader;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.security.GeneralSecurityException;
 import java.util.Collections;
 import java.util.List;
+
+import static gov.nih.nci.evs.cdisc.report.utils.AssertUtils.assertRequired;
 
 public class GoogleDriveClient {
   private static final Logger log = LoggerFactory.getLogger(GoogleDriveClient.class);
@@ -41,11 +35,16 @@ public class GoogleDriveClient {
   private static final String TOKENS_DIRECTORY_PATH = "tokens";
   private static final List<String> SCOPES = Lists.newArrayList(DriveScopes.DRIVE);
 
-  private Drive drive;
+  private final Drive drive;
 
   public GoogleDriveClient(String credentialsJson) {
     try {
       final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
+      /**
+       * The sample from Google Drive API documentation uses this deprecated class. I tried to use
+       * the GoogleCredentials class from google-auth-library-oauth2-http. But that class is
+       * incompatible with Drive class. So using this deprecated class for now.
+       */
       GoogleCredential credentials =
           GoogleCredential.fromStream(
                   IOUtils.toInputStream(credentialsJson, Charset.defaultCharset()))
@@ -59,26 +58,7 @@ public class GoogleDriveClient {
     }
   }
 
-  private static Credential getCredentials(final NetHttpTransport HTTP_TRANSPORT)
-      throws IOException {
-    String credentialsJson = SecretsClient.getSecret("/nci/cdisc/gdrive");
-    GoogleClientSecrets clientSecrets =
-        GoogleClientSecrets.load(JSON_FACTORY, new StringReader(credentialsJson));
-
-    // Build flow and trigger user authorization request.
-    GoogleAuthorizationCodeFlow flow =
-        new GoogleAuthorizationCodeFlow.Builder(HTTP_TRANSPORT, JSON_FACTORY, clientSecrets, SCOPES)
-            .setDataStoreFactory(new FileDataStoreFactory(new java.io.File(TOKENS_DIRECTORY_PATH)))
-            .setAccessType("offline")
-            .build();
-    LocalServerReceiver receiver = new LocalServerReceiver.Builder().setPort(8888).build();
-    Credential credential =
-        new AuthorizationCodeInstalledApp(flow, receiver).authorize("WCI GDrive User");
-    // returns an authorized Credential object.
-    return credential;
-  }
-
-  public static File getFolder(Drive drive, String folderName) throws IOException {
+  public File getFolder(String folderName) throws IOException {
     FileList result =
         drive
             .files()
@@ -92,36 +72,46 @@ public class GoogleDriveClient {
     return result.getFiles().isEmpty() ? null : result.getFiles().get(0);
   }
 
-  public File uploadFile(File folder, java.io.File file) throws IOException {
+  public File uploadFile(java.io.File file, String parentFolderId) throws IOException {
+    AssertUtils.assertRequired(file, "file");
     File fileMetadata = new File();
     fileMetadata.setName(file.getName());
-    fileMetadata.setParents(Lists.newArrayList(folder.getId()));
-    FileContent mediaContent = null;
+    if (StringUtils.isNotBlank(parentFolderId)) {
+      fileMetadata.setParents(Lists.newArrayList(parentFolderId));
+    }
+    FileContent mediaContent;
     try {
       mediaContent = new FileContent(Files.probeContentType(file.toPath()), file);
     } catch (IOException e) {
       mediaContent = new FileContent("application/octet-stream", file);
     }
-    File uploadedFile =
+    return
         drive.files().create(fileMetadata, mediaContent).setFields("id, parents").execute();
-    return uploadedFile;
   }
 
+  /**
+   * Creates a folder in Google Drive
+   * @param folderName required. Name of the folder to create
+   * @param parentFolderId The parent folder Id under which this folder will be created. If null, the folder will be created as a top level folder
+   * @param fields Comma separated fields that need to be returned in the response
+   * @return metadata of the folder that was created
+   */
   @SneakyThrows
-  public File createTargetFolder(String targetFolder, String parentFolderId) {
+  public File createFolder(String folderName, String parentFolderId, String fields) {
+    assertRequired(folderName, "folderName");
     File folderMetadata = new File();
-    folderMetadata.setName(targetFolder);
+    folderMetadata.setName(folderName);
     folderMetadata.setMimeType("application/vnd.google-apps.folder");
     if (StringUtils.isNotBlank(parentFolderId)) {
       folderMetadata.setParents(Collections.singletonList(parentFolderId));
     }
-    return drive.files().create(folderMetadata).setFields("id, webViewLink").execute();
+    return drive.files().create(folderMetadata).setFields(fields).execute();
   }
 
   @SneakyThrows
   public void grantWritePermissions(File targetFolder, List<String> emailAddresses) {
-    AssertUtils.assertRequired(targetFolder, "targetFolder");
-    AssertUtils.assertRequired(emailAddresses, "emailAddresses");
+    assertRequired(targetFolder, "targetFolder");
+    assertRequired(emailAddresses, "emailAddresses");
     for (String emailAddress : emailAddresses) {
       drive
           .permissions()

@@ -13,9 +13,10 @@ import java.nio.file.Path;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.Objects;
 
 public class UploadReportsService {
-  private final static Logger log = LoggerFactory.getLogger(UploadReportsService.class);
+  private static final Logger log = LoggerFactory.getLogger(UploadReportsService.class);
 
   private final GoogleDriveClient googleDriveClient;
 
@@ -33,7 +34,7 @@ public class UploadReportsService {
     String targetFolder =
         LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd-HH-mm-ss"));
     com.google.api.services.drive.model.File driveTargetFolder =
-        googleDriveClient.createTargetFolder(targetFolder, null);
+        googleDriveClient.createFolder(targetFolder, null, "id, webViewLink");
     log.info("Report Upload Folder Id:{} ", driveTargetFolder.getId());
     googleDriveClient.grantWritePermissions(driveTargetFolder, emailAddresses);
     uploadFolder(sourceFolder.toFile(), driveTargetFolder);
@@ -42,17 +43,18 @@ public class UploadReportsService {
   private void uploadFolder(java.io.File folder, File parentFolder) {
     log.info("Uploading folder {}", folder.getName());
     if (folder.listFiles() != null) {
-      for (java.io.File file : folder.listFiles()) {
+      for (java.io.File file : Objects.requireNonNull(folder.listFiles())) {
         if (file.isDirectory()) {
           log.info("Found sub directory {}. Creating.", file.getName());
           File googleDriveFolder =
-              googleDriveClient.createTargetFolder(file.getName(), parentFolder.getId());
+              googleDriveClient.createFolder(
+                  file.getName(), parentFolder.getId(), "id, webViewLink");
           uploadFolder(file, googleDriveFolder);
         } else {
           try {
             log.debug(
                 "Uploading file: {}. Parent folder:{}", file.getName(), parentFolder.getName());
-            googleDriveClient.uploadFile(parentFolder, file);
+            googleDriveClient.uploadFile(file, parentFolder.getId());
           } catch (IOException e) {
             throw new RuntimeException(
                 String.format(
