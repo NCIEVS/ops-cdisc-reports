@@ -17,4 +17,5 @@ include 'odm-report'
 include 'owl-report'
 include 'html-report'
 include 'pdf-report'
+include 'upload-reports'
 

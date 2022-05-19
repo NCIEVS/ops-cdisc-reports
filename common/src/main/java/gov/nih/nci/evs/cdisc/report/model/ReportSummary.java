@@ -10,4 +10,5 @@ import java.util.List;
 public class ReportSummary {
     private List<ReportDetail> reportDetails;
     private String publicationDate;
+    private List<String> deliveryEmailAddresses;
 }

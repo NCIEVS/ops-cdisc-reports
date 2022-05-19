@@ -25,20 +25,22 @@ public class LambdaHandler implements RequestHandler<ThesaurusRequest, ReportSum
     List<ReportDetail> details = new ArrayList<>();
     for (String conceptCode : input.getConceptCodes()) {
       TextExcelReportGenerator textExcelReportGenerator =
-          new TextExcelReportGenerator(new File(input.getThesaurusOwlFile()), getBaseOutputDirectory());
+          new TextExcelReportGenerator(
+              new File(input.getThesaurusOwlFile()), getBaseOutputDirectory());
       ReportDetail reportDetail = textExcelReportGenerator.run(conceptCode);
       details.add(reportDetail);
     }
     return ReportSummary.builder()
         .reportDetails(details)
         .publicationDate(input.getPublicationDate())
+        .deliveryEmailAddresses(input.getDeliveryEmailAddresses())
         .build();
   }
 
   private void validate(ThesaurusRequest request) {
     AssertUtils.assertRequired(request, "request");
     AssertUtils.assertRequired(request.getConceptCodes(), "conceptCodes");
-    AssertUtils.assertRequired(request.getPublicationDate(),"publicationDate");
-    AssertUtils.assertRequired(request.getPublicationDate(),"thesaurusOwlFile");
+    AssertUtils.assertRequired(request.getPublicationDate(), "publicationDate");
+    AssertUtils.assertRequired(request.getPublicationDate(), "thesaurusOwlFile");
   }
 }
