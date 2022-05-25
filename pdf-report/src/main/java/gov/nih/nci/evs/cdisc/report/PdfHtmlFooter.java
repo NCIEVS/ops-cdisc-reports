@@ -22,7 +22,7 @@ public class PdfHtmlFooter {
 
         pdfDocument.addEventHandler(PdfDocumentEvent.END_PAGE, footerHandler);
 
-        // Base URI is required to resolve the path to source files
+        //Base URI is required to resolve the path to source files
         ConverterProperties converterProperties = new ConverterProperties().setBaseUri(FilenameUtils.getPath(htmlSource));
         HtmlConverter.convertToDocument(new FileInputStream(htmlSource), pdfDocument, converterProperties);
 
