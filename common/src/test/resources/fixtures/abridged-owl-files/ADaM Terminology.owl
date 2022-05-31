@@ -1,0 +1,3298 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#"
+     xml:base="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:Thesaurus="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#">
+    <owl:Ontology rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl">
+        <protege:defaultLanguage>en</protege:defaultLanguage>
+        <dc:date>March 14, 2022</dc:date>
+        <rdfs:comment>NCI Thesaurus, a controlled vocabulary in support of NCI administrative and scientific activities. Produced by the Enterprise Vocabulary System (EVS), a project by the NCI Center for Biomedical Informatics and Information Technology. National Cancer Institute, National Institutes of Health, Bethesda, MD 20892, U.S.A.</rdfs:comment>
+        <owl:versionInfo>22.03b</owl:versionInfo>
+    </owl:Ontology>
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25484 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25484">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C27993"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C124296"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C82590"/>
+        <NHC0>C25484</NHC0>
+        <P106>Qualitative Concept</P106>
+        <P108>Discontinue</P108>
+        <P207>C1444662</P207>
+        <P322>CDISC</P322>
+        <P325>To stop or end, permanently or temporarily.</P325>
+        <P366>Discontinued</P366>
+        <P370>TCGA</P370>
+        <P90>D/C</P90>
+        <P90>DIS</P90>
+        <P90>DISCONTINUED</P90>
+        <P90>Discontinuation</P90>
+        <P90>Discontinue</P90>
+        <P90>Discontinued</P90>
+        <P90>Discontinuous</P90>
+        <P90>dc</P90>
+        <P90>disc</P90>
+        <P95>EM-P24 CDISC</P95>
+        <P95>EM-P25 CDISC</P95>
+        <P97>To stop or end, permanently or temporarily.</P97>
+        <rdfs:label>Discontinue</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25484"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>To stop or end, permanently or temporarily.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>151204</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25484"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>D/C</owl:annotatedTarget>
+        <P383>AB</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25484"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>DIS</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+        <P385>CDISC-OBSCLS</P385>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25484"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>DISCONTINUED</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+        <P385>ADaM-SBJTSTAT</P385>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25484"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Discontinuation</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25484"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Discontinue</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25484"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Discontinue</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>caDSR</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25484"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Discontinued</owl:annotatedTarget>
+        <P383>AD</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25484"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Discontinuous</owl:annotatedTarget>
+        <P383>AD</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25484"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>dc</owl:annotatedTarget>
+        <P383>AB</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25484"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>disc</owl:annotatedTarget>
+        <P383>AB</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25484"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>To stop or end, permanently or temporarily.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Nicole Thomas</P379>
+        <P380>060202</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C53279 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C53279">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25404"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C64913"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C124296"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C66728"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C66830"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C71113"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C77526"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C82590"/>
+        <NHC0>C53279</NHC0>
+        <P106>Qualitative Concept</P106>
+        <P108>Continue</P108>
+        <P207>C0439598</P207>
+        <P322>CDISC</P322>
+        <P322>FDA</P322>
+        <P325>Remain in force or carry on without letup; keep or maintain in unaltered condition; exist in time or space without stop or interruption. (NCI)</P325>
+        <P325>The problem is still present or has not resolved.</P325>
+        <P366>Continuous</P366>
+        <P370>TCGA</P370>
+        <P90>CONTINUOUS</P90>
+        <P90>Continual</P90>
+        <P90>Continue</P90>
+        <P90>Continued</P90>
+        <P90>Continuing</P90>
+        <P90>Continuous</P90>
+        <P90>ONGO</P90>
+        <P90>ONGOING</P90>
+        <P90>Ongoing</P90>
+        <P95>EM-P24 CDISC</P95>
+        <P97>Remain in force or carry on without letup; keep or maintain in unaltered condition; exist in time or space without stop or interruption.</P97>
+        <rdfs:label>Continue</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C53279"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>Remain in force or carry on without letup; keep or maintain in unaltered condition; exist in time or space without stop or interruption. (NCI)</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Theresa Quinn</P379>
+        <P380>070201</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C53279"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>The problem is still present or has not resolved.</owl:annotatedTarget>
+        <P378>SPL</P378>
+        <P379>Wen-Ling Shaiu</P379>
+        <P380>090731</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C53279"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>CONTINUOUS</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+        <P385>SDTM-FREQ</P385>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C53279"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Continual</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C53279"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Continue</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C53279"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Continue</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>caDSR</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C53279"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Continued</owl:annotatedTarget>
+        <P383>AD</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C53279"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Continuing</owl:annotatedTarget>
+        <P383>AD</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C53279"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Continuous</owl:annotatedTarget>
+        <P383>AD</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C53279"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Continuous</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C53279"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>ONGO</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+        <P385>CDISC-OBSCLS</P385>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C53279"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>ONGOING</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+        <P385>ADaM-SBJTSTAT</P385>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C53279"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>ONGOING</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+        <P385>SDTM-STENRF</P385>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C53279"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Ongoing</owl:annotatedTarget>
+        <P383>AD</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C53279"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Ongoing</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>FDA</P384>
+        <P386>ICSR-CVM</P386>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C53279"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>Remain in force or carry on without letup; keep or maintain in unaltered condition; exist in time or space without stop or interruption.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Nicole Thomas</P379>
+        <P380>070201</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C124296 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C124296">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <NHC0>C124296</NHC0>
+        <P106>Intellectual Product</P106>
+        <P108>CDISC ADaM Subject Trial Status Terminology</P108>
+        <P207>C4086047</P207>
+        <P322>CDISC</P322>
+        <P325>Indicates the status of the subject in the trial.</P325>
+        <P361>Yes</P361>
+        <P372>Yes</P372>
+        <P373>TVS_ADaM_Component</P373>
+        <P374>EVS/CDISC/ADaM/ADaM Terminology.xls|2:2:C124296</P374>
+        <P376>&lt;p&gt;Terminology associated with the Subject Trial Status codelist of the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model (ADaM).&lt;/p&gt; &lt;p&gt;The terminology can be downloaded at this location: &lt;a href=&quot;https://evs.nci.nih.gov/ftp1/CDISC/ADaM/&quot;&gt; CDISC ADaM Terminology&lt;/a&gt;.&lt;/p&gt;</P376>
+        <P398>No</P398>
+        <P90>ADaM-SBJTSTAT</P90>
+        <P90>CDISC ADaM Subject Trial Status Terminology</P90>
+        <P90>SBJTSTAT</P90>
+        <P90>Subject Trial Status</P90>
+        <P95>EM-P24 CDISC</P95>
+        <P97>Terminology associated with the subject trial status codelist of the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model (ADaM).</P97>
+        <rdfs:label>CDISC ADaM Subject Trial Status Terminology</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C124296"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>Indicates the status of the subject in the trial.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>151202</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C124296"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>ADaM-SBJTSTAT</owl:annotatedTarget>
+        <P383>AB</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C124296"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>CDISC ADaM Subject Trial Status Terminology</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C124296"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>SBJTSTAT</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C124296"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Subject Trial Status</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C124296"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>Terminology associated with the subject trial status codelist of the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model (ADaM).</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>151202</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C170546 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C170546">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80304"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81224"/>
+        <NHC0>C170546</NHC0>
+        <P106>Quantitative Concept</P106>
+        <P108>One Half of Lower Limit of Quantification Derivation Technique</P108>
+        <P208>CL1382968</P208>
+        <P322>CDISC</P322>
+        <P325>A data derivation or imputation technique which sets the analysis value on the record to one half of the lower limit of quantification of a test.</P325>
+        <P90>HALFLLOQ</P90>
+        <P90>One Half of Lower Limit of Quantification</P90>
+        <P90>One Half of Lower Limit of Quantification Derivation Technique</P90>
+        <P95>EM-CDISC P41</P95>
+        <P97>A data derivation or imputation technique which sets the analysis value on the record to one half of the lower limit of quantification of a test.</P97>
+        <rdfs:label>One Half of Lower Limit of Quantification Derivation Technique</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C170546"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>A data derivation or imputation technique which sets the analysis value on the record to one half of the lower limit of quantification of a test.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-03-05</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C170546"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>HALFLLOQ</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C170546"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>One Half of Lower Limit of Quantification</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C170546"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>One Half of Lower Limit of Quantification Derivation Technique</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C170546"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>A data derivation or imputation technique which sets the analysis value on the record to one half of the lower limit of quantification of a test.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-03-05</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C170543 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C170543">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80304"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81224"/>
+        <NHC0>C170543</NHC0>
+        <P106>Quantitative Concept</P106>
+        <P108>Lower Limit of Quantification Derivation Technique</P108>
+        <P208>CL1382978</P208>
+        <P322>CDISC</P322>
+        <P325>A data derivation or imputation technique which sets the analysis value on the record to the lower limit of quantification of a test.</P325>
+        <P90>LLOQ</P90>
+        <P90>Lower Limit of Quantification</P90>
+        <P90>Lower Limit of Quantification Derivation Technique</P90>
+        <P95>EM-CDISC P41</P95>
+        <P97>A data derivation or imputation technique which sets the analysis value on the record to the lower limit of quantification of a test.</P97>
+        <rdfs:label>Lower Limit of Quantification Derivation Technique</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C170543"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>A data derivation or imputation technique which sets the analysis value on the record to the lower limit of quantification of a test.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-03-05</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C170543"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>LLOQ</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C170543"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Lower Limit of Quantification</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C170543"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Lower Limit of Quantification Derivation Technique</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C170543"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>A data derivation or imputation technique which sets the analysis value on the record to the lower limit of quantification of a test.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-03-05</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C170544 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C170544">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80304"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81224"/>
+        <NHC0>C170544</NHC0>
+        <P106>Quantitative Concept</P106>
+        <P108>Upper Limit of Quantification Derivation Technique</P108>
+        <P208>CL1382969</P208>
+        <P322>CDISC</P322>
+        <P325>A data derivation or imputation technique which sets the analysis value on the record to the upper limit of quantification of a test.</P325>
+        <P90>ULOQ</P90>
+        <P90>Upper Limit of Quantification</P90>
+        <P90>Upper Limit of Quantification Derivation Technique</P90>
+        <P95>EM-CDISC P41</P95>
+        <P97>A data derivation or imputation technique which sets the analysis value on the record to the upper limit of quantification of a test.</P97>
+        <rdfs:label>Upper Limit of Quantification Derivation Technique</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C170544"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>A data derivation or imputation technique which sets the analysis value on the record to the upper limit of quantification of a test.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-03-05</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C170544"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>ULOQ</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C170544"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Upper Limit of Quantification</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C170544"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Upper Limit of Quantification Derivation Technique</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C170544"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>A data derivation or imputation technique which sets the analysis value on the record to the upper limit of quantification of a test.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-03-05</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C170545 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C170545">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80304"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81224"/>
+        <NHC0>C170545</NHC0>
+        <P106>Quantitative Concept</P106>
+        <P108>Phantom Record Imputation Technique</P108>
+        <P208>CL1382970</P208>
+        <P322>CDISC</P322>
+        <P325>A technique that creates a record with a missing analysis value when there is no observed record for a given analysis visit or analysis timepoint.</P325>
+        <P90>PHANTOM</P90>
+        <P90>Phantom Record</P90>
+        <P90>Phantom Record Imputation Technique</P90>
+        <P95>EM-CDISC P41</P95>
+        <P97>A technique that creates a record with a missing analysis value when there is no observed record for a given analysis visit or analysis timepoint.</P97>
+        <rdfs:label>Phantom Record Imputation Technique</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C170545"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>A technique that creates a record with a missing analysis value when there is no observed record for a given analysis visit or analysis timepoint.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-03-05</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C170545"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>PHANTOM</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C170545"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Phantom Record</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C170545"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Phantom Record Imputation Technique</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C170545"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>A technique that creates a record with a missing analysis value when there is no observed record for a given analysis visit or analysis timepoint.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-03-05</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81197 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81197">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43578"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81225"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C82590"/>
+        <NHC0>C81197</NHC0>
+        <P106>Conceptual Entity</P106>
+        <P108>Derived Flag</P108>
+        <P207>C2825506</P207>
+        <P322>CDISC</P322>
+        <P325>Derived: Indicates that a parameter is derived as a function of one or more other parameters.</P325>
+        <P366>Derived_Flag</P366>
+        <P90>DERIVED</P90>
+        <P90>DRVFL</P90>
+        <P90>Derived Flag</P90>
+        <P95>EM-ADaM</P95>
+        <P97>An indication that a data element has been derived from one or more data elements.</P97>
+        <rdfs:label>Derived Flag</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81197"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>Derived: Indicates that a parameter is derived as a function of one or more other parameters.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>100108</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81197"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>DERIVED</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+        <P385>ADaM-PARAMTYP</P385>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81197"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>DRVFL</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+        <P385>CDISC-OBSCLS</P385>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81197"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Derived Flag</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81197"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>An indication that a data element has been derived from one or more data elements.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>090529</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81198 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81198">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80304"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81224"/>
+        <NHC0>C81198</NHC0>
+        <P106>Quantitative Concept</P106>
+        <P108>Last Observation Carried Forward Imputation Technique</P108>
+        <P207>C2825507</P207>
+        <P322>CDISC</P322>
+        <P325>A data derivation or imputation technique which sets the analysis value on the record to the subject&apos;s previous non-missing value.</P325>
+        <P366>Last_Observation_Carried_Forward_Imputation_Technique</P366>
+        <P90>LOCF</P90>
+        <P90>Last Observation Carried Forward</P90>
+        <P90>Last Observation Carried Forward Imputation Technique</P90>
+        <P95>EM-ADaM</P95>
+        <P97>The substitution of missing data with the most recent data collected that is not missing.</P97>
+        <rdfs:label>Last Observation Carried Forward Imputation Technique</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81198"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>A data derivation or imputation technique which sets the analysis value on the record to the subject&apos;s previous non-missing value.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-03-02</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81198"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>LOCF</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81198"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Last Observation Carried Forward</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81198"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Last Observation Carried Forward Imputation Technique</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81198"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>The substitution of missing data with the most recent data collected that is not missing.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>090529</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81199 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81199">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80304"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81224"/>
+        <NHC0>C81199</NHC0>
+        <P106>Quantitative Concept</P106>
+        <P108>Worst Observation Carried Forward Imputation Technique</P108>
+        <P207>C2825508</P207>
+        <P322>CDISC</P322>
+        <P325>A data derivation or imputation technique which sets the analysis value on the record to the subject&apos;s worst-case non-missing observation.</P325>
+        <P366>Worst_Observation_Carried_Forward_Imputation_Technique</P366>
+        <P90>WOCF</P90>
+        <P90>Worst Observation Carried Forward Imputation Technique</P90>
+        <P90>Worst Observed Value Carried Forward</P90>
+        <P95>EM-ADaM</P95>
+        <P97>The substitution of missing data with the value the represents the worst-case value that is not missing.</P97>
+        <rdfs:label>Worst Observation Carried Forward Imputation Technique</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81199"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>A data derivation or imputation technique which sets the analysis value on the record to the subject&apos;s worst-case non-missing observation.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-03-02</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81199"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>WOCF</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81199"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Worst Observation Carried Forward Imputation Technique</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81199"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Worst Observed Value Carried Forward</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81199"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>The substitution of missing data with the value the represents the worst-case value that is not missing.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>090529</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C174264 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C174264">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80304"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81224"/>
+        <NHC0>C174264</NHC0>
+        <P106>Quantitative Concept</P106>
+        <P108>Upper Limit of Detection Imputation Technique</P108>
+        <P208>CL1411700</P208>
+        <P322>CDISC</P322>
+        <P325>A data derivation or imputation technique which sets the analysis value on the record to the upper limit of detection of a test.</P325>
+        <P90>ULOD</P90>
+        <P90>Upper Limit of Detection</P90>
+        <P90>Upper Limit of Detection Imputation Technique</P90>
+        <P95>EM-CDISC P43</P95>
+        <P97>A data derivation or imputation technique which sets the analysis value on the record to the upper limit of detection of a test.</P97>
+        <rdfs:label>Upper Limit of Detection Imputation Technique</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C174264"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>A data derivation or imputation technique which sets the analysis value on the record to the upper limit of detection of a test.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-09-09</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C174264"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>ULOD</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C174264"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Upper Limit of Detection</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C174264"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Upper Limit of Detection Imputation Technique</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C174264"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>A data derivation or imputation technique which sets the analysis value on the record to the upper limit of detection of a test.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-09-08</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81200 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81200">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80304"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81224"/>
+        <NHC0>C81200</NHC0>
+        <P106>Quantitative Concept</P106>
+        <P108>Screening Observation Carried Forward Imputation Technique</P108>
+        <P207>C2825509</P207>
+        <P322>CDISC</P322>
+        <P325>A data derivation or imputation technique which sets the analysis value on the record to the subject&apos;s non-missing screening observation.</P325>
+        <P366>Screening_Observation_Carried_Forward_Imputation_Technique</P366>
+        <P90>SOCF</P90>
+        <P90>Screening Observation Carried Forward</P90>
+        <P90>Screening Observation Carried Forward Imputation Technique</P90>
+        <P95>EM-ADaM</P95>
+        <P97>The substitution of missing data with the subject&apos;s screening observation values that are not missing.</P97>
+        <rdfs:label>Screening Observation Carried Forward Imputation Technique</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81200"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>A data derivation or imputation technique which sets the analysis value on the record to the subject&apos;s non-missing screening observation.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-03-02</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81200"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>SOCF</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81200"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Screening Observation Carried Forward</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81200"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Screening Observation Carried Forward Imputation Technique</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81200"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>The substitution of missing data with the subject&apos;s screening observation values that are not missing.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>090529</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81201 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81201">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80304"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81224"/>
+        <NHC0>C81201</NHC0>
+        <P106>Quantitative Concept</P106>
+        <P108>Baseline Observation Carried Forward Imputation Technique</P108>
+        <P207>C2825510</P207>
+        <P322>CDISC</P322>
+        <P325>A data derivation or imputation technique which sets the analysis value on the record to the subject&apos;s non-missing baseline observation.</P325>
+        <P366>Baseline_Observation_Carried_Forward_Imputation_Technique</P366>
+        <P90>BLOCF</P90>
+        <P90>Baseline Observation Carried Forward</P90>
+        <P90>Baseline Observation Carried Forward Imputation Technique</P90>
+        <P95>EM-ADaM</P95>
+        <P97>The substitution of a missing data point with the value from the subject&apos;s baseline observation that is not missing.</P97>
+        <rdfs:label>Baseline Observation Carried Forward Imputation Technique</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81201"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>A data derivation or imputation technique which sets the analysis value on the record to the subject&apos;s non-missing baseline observation.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-03-02</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81201"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>BLOCF</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81201"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Baseline Observation Carried Forward</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81201"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Baseline Observation Carried Forward Imputation Technique</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81201"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>The substitution of a missing data point with the value from the subject&apos;s baseline observation that is not missing.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>090529</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81203 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81203">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80304"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81224"/>
+        <NHC0>C81203</NHC0>
+        <P106>Quantitative Concept</P106>
+        <P108>Worst Case Imputation Technique</P108>
+        <P207>C2825512</P207>
+        <P322>CDISC</P322>
+        <P325>A data derivation or imputation technique which sets the analysis value on the record to the worst possible outcome.</P325>
+        <P366>Worst_Case_Imputation_Technique</P366>
+        <P90>WC</P90>
+        <P90>Worst Case</P90>
+        <P90>Worst Case Imputation Technique</P90>
+        <P95>EM-ADaM</P95>
+        <P97>The substitution of missing data with the value that represents the worst possible outcome.</P97>
+        <rdfs:label>Worst Case Imputation Technique</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81203"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>A data derivation or imputation technique which sets the analysis value on the record to the worst possible outcome.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-03-02</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81203"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>WC</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81203"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Worst Case</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81203"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Worst Case Imputation Technique</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81203"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>The substitution of missing data with the value that represents the worst possible outcome.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>090529</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81204 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81204">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80304"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81224"/>
+        <NHC0>C81204</NHC0>
+        <P106>Quantitative Concept</P106>
+        <P108>Mean of Other Group Imputation Technique</P108>
+        <P207>C2825513</P207>
+        <P322>CDISC</P322>
+        <P325>A data derivation or imputation technique which sets the analysis value on the record to the mean value from a comparator or reference group.</P325>
+        <P366>Mean_of_Other_Group_Imputation_Technique</P366>
+        <P90>MOTH</P90>
+        <P90>Mean of Other Group</P90>
+        <P90>Mean of Other Group Imputation Technique</P90>
+        <P95>EM-ADaM</P95>
+        <P97>The substitution of missing data with the mean value from a comparator or reference group.</P97>
+        <rdfs:label>Mean of Other Group Imputation Technique</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81204"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>A data derivation or imputation technique which sets the analysis value on the record to the mean value from a comparator or reference group.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-03-02</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81204"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>MOTH</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81204"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Mean of Other Group</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81204"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Mean of Other Group Imputation Technique</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81204"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>The substitution of missing data with the mean value from a comparator or reference group.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>090529</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81205 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81205">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80304"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81224"/>
+        <NHC0>C81205</NHC0>
+        <P106>Quantitative Concept</P106>
+        <P108>Penultimate Observation Carried Forward Imputation Technique</P108>
+        <P207>C2825514</P207>
+        <P322>CDISC</P322>
+        <P325>A data derivation or imputation technique which sets the analysis value on the record to the subject&apos;s next-to-last non-missing value.</P325>
+        <P366>Penultimate_Observation_Carried_Forward_Imputation_Technique</P366>
+        <P90>POCF</P90>
+        <P90>Penultimate Observation Carried Forward</P90>
+        <P90>Penultimate Observation Carried Forward Imputation Technique</P90>
+        <P95>EM-ADaM</P95>
+        <P97>The substitution of missing data with the next-to-last value that is not missing.</P97>
+        <rdfs:label>Penultimate Observation Carried Forward Imputation Technique</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81205"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>A data derivation or imputation technique which sets the analysis value on the record to the subject&apos;s next-to-last non-missing value.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-03-02</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81205"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>POCF</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81205"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Penultimate Observation Carried Forward</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81205"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Penultimate Observation Carried Forward Imputation Technique</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81205"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>The substitution of missing data with the next-to-last value that is not missing.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>090529</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81206 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81206">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80304"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81224"/>
+        <NHC0>C81206</NHC0>
+        <P106>Quantitative Concept</P106>
+        <P108>Worst Observed Value in a Group Imputation Technique</P108>
+        <P207>C2825515</P207>
+        <P322>CDISC</P322>
+        <P325>A data derivation or imputation technique which sets the analysis value on the record to the worst value observed in a group of subjects.</P325>
+        <P366>Worst_Observed_Value_in_a_Group_Imputation_Technique</P366>
+        <P90>WOV</P90>
+        <P90>Worst Observed Value in a Group</P90>
+        <P90>Worst Observed Value in a Group Imputation Technique</P90>
+        <P95>EM-ADaM</P95>
+        <P97>The substitution of missing data with the worst value observed in a group of subjects.</P97>
+        <rdfs:label>Worst Observed Value in a Group Imputation Technique</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81206"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>A data derivation or imputation technique which sets the analysis value on the record to the worst value observed in a group of subjects.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-03-02</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81206"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>WOV</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81206"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Worst Observed Value in a Group</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81206"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Worst Observed Value in a Group Imputation Technique</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81206"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>The substitution of missing data with the worst value observed in a group of subjects.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>090529</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81207 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81207">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80304"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81224"/>
+        <NHC0>C81207</NHC0>
+        <P106>Quantitative Concept</P106>
+        <P108>Mean Observed Value in a Group Imputation Technique</P108>
+        <P207>C2825516</P207>
+        <P322>CDISC</P322>
+        <P325>A data derivation or imputation technique which sets the analysis value on the record to the mean value observed in a group of subjects.</P325>
+        <P366>Mean_Observed_Value_in_a_Group_Imputation_Technique</P366>
+        <P90>MOV</P90>
+        <P90>Mean Observed Value in a Group</P90>
+        <P90>Mean Observed Value in a Group Imputation Technique</P90>
+        <P95>EM-ADaM</P95>
+        <P97>The substitution of missing data with the mean value from a group of subjects.</P97>
+        <rdfs:label>Mean Observed Value in a Group Imputation Technique</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81207"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>A data derivation or imputation technique which sets the analysis value on the record to the mean value observed in a group of subjects.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-03-02</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81207"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>MOV</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81207"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Mean Observed Value in a Group</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81207"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Mean Observed Value in a Group Imputation Technique</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81207"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>The substitution of missing data with the mean value from a group of subjects.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>090529</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81208 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81208">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80304"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81224"/>
+        <NHC0>C81208</NHC0>
+        <P106>Quantitative Concept</P106>
+        <P108>Interpolation Imputation Technique</P108>
+        <P207>C2825517</P207>
+        <P322>CDISC</P322>
+        <P325>A data derivation or imputation technique which sets the analysis value on the record to a function of known values to estimate a value within the range.</P325>
+        <P366>Interpolation_Imputation_Technique</P366>
+        <P90>INTERP</P90>
+        <P90>Interpolation</P90>
+        <P90>Interpolation Imputation Technique</P90>
+        <P95>EM-ADaM</P95>
+        <P97>The substitution of missing data with an estimated value that falls between known data points.</P97>
+        <rdfs:label>Interpolation Imputation Technique</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81208"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>A data derivation or imputation technique which sets the analysis value on the record to a function of known values to estimate a value within the range.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-03-02</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81208"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>INTERP</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81208"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Interpolation</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81208"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Interpolation</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81208"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Interpolation Imputation Technique</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81208"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>The substitution of missing data with an estimated value that falls between known data points.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>090529</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81209 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81209">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80304"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81224"/>
+        <NHC0>C81209</NHC0>
+        <P106>Quantitative Concept</P106>
+        <P108>Average of Value Derivation Technique</P108>
+        <P207>C2825518</P207>
+        <P322>CDISC</P322>
+        <P325>A data derivation or imputation technique which sets the analysis value on the record to the subject&apos;s average value over a defined set of records.</P325>
+        <P366>Average_of_Value_Derivation_Technique</P366>
+        <P90>AVERAGE</P90>
+        <P90>Average</P90>
+        <P90>Average of Value Derivation Technique</P90>
+        <P95>EM-ADaM</P95>
+        <P97>The substitution of missing data with a value that represents the average of a group of specified values.</P97>
+        <rdfs:label>Average of Value Derivation Technique</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81209"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>A data derivation or imputation technique which sets the analysis value on the record to the subject&apos;s average value over a defined set of records.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-03-02</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81209"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>AVERAGE</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81209"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Average</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81209"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Average of Value Derivation Technique</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81209"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>The substitution of missing data with a value that represents the average of a group of specified values.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>090529</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C53331 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C53331">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C53327"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81224"/>
+        <NHC0>C53331</NHC0>
+        <P106>Research Activity</P106>
+        <P108>Maximum Likelihood Estimation</P108>
+        <P207>C1708949</P207>
+        <P322>CDISC</P322>
+        <P325>A data derivation or imputation technique which sets the analysis value on the record to the estimate that maximizes the probability of observing what has in fact been observed.</P325>
+        <P366>Maximum_Likelihood_Estimation</P366>
+        <P90>ML</P90>
+        <P90>Maximum Likelihood</P90>
+        <P90>Maximum Likelihood Estimation</P90>
+        <P95>EM-ADaM</P95>
+        <P97>A method for estimating population characteristics based on limited data by choosing the sample values that make the data most likely to represent the general population.</P97>
+        <rdfs:label>Maximum Likelihood Estimation</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C53331"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>A data derivation or imputation technique which sets the analysis value on the record to the estimate that maximizes the probability of observing what has in fact been observed.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-03-02</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C53331"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>ML</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C53331"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Maximum Likelihood</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C53331"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Maximum Likelihood Estimation</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C53331"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>A method for estimating population characteristics based on limited data by choosing the sample values that make the data most likely to represent the general population.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>SPECIAL_Review</P379>
+        <P380>080509</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C139176 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C139176">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80304"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81224"/>
+        <NHC0>C139176</NHC0>
+        <P106>Quantitative Concept</P106>
+        <P108>Extrapolation Imputation Technique</P108>
+        <P208>CL526591</P208>
+        <P322>CDISC</P322>
+        <P325>A data derivation or imputation technique which sets the analysis value on the record to an estimation of a value based on extending a known sequence of values.</P325>
+        <P90>EXTRAP</P90>
+        <P90>Extrapolation</P90>
+        <P90>Extrapolation Imputation Technique</P90>
+        <P95>EM-P31</P95>
+        <P97>A method of imputation involving populating an analysis value that is outside the range of observed values and is estimated by a function of those observed values. (CDISC)</P97>
+        <rdfs:label>Extrapolation Imputation Technique</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C139176"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>A data derivation or imputation technique which sets the analysis value on the record to an estimation of a value based on extending a known sequence of values.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-03-02</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C139176"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>EXTRAP</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C139176"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Extrapolation</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C139176"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Extrapolation Imputation Technique</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C139176"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>A method of imputation involving populating an analysis value that is outside the range of observed values and is estimated by a function of those observed values. (CDISC)</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2017-09-15</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81210 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81210">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81195"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81223"/>
+        <NHC0>C81210</NHC0>
+        <P106>Temporal Concept</P106>
+        <P108>Year Month Day Imputed</P108>
+        <P207>C2825519</P207>
+        <P322>CDISC</P322>
+        <P325>Year Imputed: Entire date (year, month and day) is imputed.</P325>
+        <P366>Year_Month_Day_Imputed</P366>
+        <P90>Y</P90>
+        <P90>Year Month Day Imputed</P90>
+        <P95>EM-ADaM</P95>
+        <P97>An imputed date that includes the year, month and day of observation.</P97>
+        <rdfs:label>Year Month Day Imputed</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81210"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>Year Imputed: Entire date (year, month and day) is imputed.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>100111</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81210"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Y</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81210"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Year Month Day Imputed</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81210"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>An imputed date that includes the year, month and day of observation.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>090529</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C92226 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C92226">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80304"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81224"/>
+        <NHC0>C92226</NHC0>
+        <P106>Quantitative Concept</P106>
+        <P108>Best Observation Carried Forward Imputation Technique</P108>
+        <P207>C2984917</P207>
+        <P322>CDISC</P322>
+        <P325>A data derivation or imputation technique which sets the analysis value on the record to the subject&apos;s previous best-case non-missing value.</P325>
+        <P90>BOCF</P90>
+        <P90>Best Observation Carried Forward</P90>
+        <P90>Best Observation Carried Forward Imputation Technique</P90>
+        <P95>EM-P5</P95>
+        <P97>A data imputation technique which populates missing values with the best-case nonmissing value.</P97>
+        <rdfs:label>Best Observation Carried Forward Imputation Technique</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C92226"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>A data derivation or imputation technique which sets the analysis value on the record to the subject&apos;s previous best-case non-missing value.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-03-02</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C92226"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>BOCF</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C92226"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Best Observation Carried Forward</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C92226"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Best Observation Carried Forward Imputation Technique</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C92226"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>A data imputation technique which populates missing values with the best-case nonmissing value.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>100924</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81211 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81211">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81195"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81223"/>
+        <NHC0>C81211</NHC0>
+        <P106>Temporal Concept</P106>
+        <P108>Month Day Imputed</P108>
+        <P207>C2825520</P207>
+        <P322>CDISC</P322>
+        <P325>Month Imputed: Month and day are imputed.</P325>
+        <P366>Month_Day_Imputed</P366>
+        <P90>M</P90>
+        <P90>Month Day Imputed</P90>
+        <P95>EM-ADaM</P95>
+        <P97>An imputed date that includes the month and day of observation.</P97>
+        <rdfs:label>Month Day Imputed</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81211"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>Month Imputed: Month and day are imputed.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>100111</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81211"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>M</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81211"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Month Day Imputed</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81211"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>An imputed date that includes the month and day of observation.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>090529</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C92225 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C92225">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80304"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81224"/>
+        <NHC0>C92225</NHC0>
+        <P106>Quantitative Concept</P106>
+        <P108>Best Case Imputation Technique</P108>
+        <P207>C2984916</P207>
+        <P322>CDISC</P322>
+        <P325>A data derivation or imputation technique which sets the analysis value on the record to the best possible outcome.</P325>
+        <P90>BC</P90>
+        <P90>Best Case</P90>
+        <P90>Best Case Imputation Technique</P90>
+        <P95>EM-P5</P95>
+        <P97>A data imputation technique which populates missing values with the best possible outcome.</P97>
+        <rdfs:label>Best Case Imputation Technique</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C92225"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>A data derivation or imputation technique which sets the analysis value on the record to the best possible outcome.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-03-02</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C92225"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>BC</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C92225"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Best Case</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C92225"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Best Case Imputation Technique</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C92225"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>A data imputation technique which populates missing values with the best possible outcome.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>100924</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81212 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81212">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81195"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81223"/>
+        <NHC0>C81212</NHC0>
+        <P106>Temporal Concept</P106>
+        <P108>Day Imputed</P108>
+        <P207>C2825521</P207>
+        <P322>CDISC</P322>
+        <P325>Day Imputed: Day is imputed.</P325>
+        <P366>Day_Imputed</P366>
+        <P90>D</P90>
+        <P90>Day Imputed</P90>
+        <P95>EM-ADaM</P95>
+        <P97>An imputed date that includes the day of observation.</P97>
+        <rdfs:label>Day Imputed</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81212"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>Day Imputed: Day is imputed.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>100108</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81212"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>D</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81212"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Day Imputed</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81212"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>An imputed date that includes the day of observation.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>090529</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81213 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81213">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81196"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81226"/>
+        <NHC0>C81213</NHC0>
+        <P106>Temporal Concept</P106>
+        <P108>Hours Minutes Seconds Imputed</P108>
+        <P207>C2825522</P207>
+        <P322>CDISC</P322>
+        <P325>Hours Imputed: Entire time (hours, minutes and seconds) is imputed.</P325>
+        <P366>Hours_Minutes_Seconds_Imputed</P366>
+        <P90>H</P90>
+        <P90>Hours Minutes Seconds Imputed</P90>
+        <P95>EM-ADaM</P95>
+        <P97>An imputed time that includes the hour, minute and second of observation.</P97>
+        <rdfs:label>Hours Minutes Seconds Imputed</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81213"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>Hours Imputed: Entire time (hours, minutes and seconds) is imputed.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>100111</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81213"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>H</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81213"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Hours Minutes Seconds Imputed</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81213"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>An imputed time that includes the hour, minute and second of observation.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>090529</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C105701 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C105701">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25712"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81224"/>
+        <NHC0>C105701</NHC0>
+        <P106>Conceptual Entity</P106>
+        <P108>Detection Limit</P108>
+        <P207>C2718050</P207>
+        <P322>CDISC</P322>
+        <P325>A data derivation or imputation technique which sets the analysis value on the record to the lower limit of detection of a test.</P325>
+        <P90>Detection Limit</P90>
+        <P90>LLOD</P90>
+        <P90>LOD</P90>
+        <P90>Limit of Detection</P90>
+        <P90>Lower Limit of Detection</P90>
+        <P95>EM-CDISC P43</P95>
+        <P97>The smallest concentration of an analyte that can be determined with a stated precision or confidence.</P97>
+        <rdfs:label>Detection Limit</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C105701"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>A data derivation or imputation technique which sets the analysis value on the record to the lower limit of detection of a test.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-09-09</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C105701"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Detection Limit</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C105701"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>LLOD</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C105701"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>LOD</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C105701"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Limit of Detection</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C105701"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Lower Limit of Detection</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C105701"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Lower Limit of Detection</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C105701"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>The smallest concentration of an analyte that can be determined with a stated precision or confidence.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Nicole Thomas</P379>
+        <P380>130326</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81214 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81214">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81196"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81226"/>
+        <NHC0>C81214</NHC0>
+        <P106>Temporal Concept</P106>
+        <P108>Minutes Seconds Imputed</P108>
+        <P207>C2825523</P207>
+        <P322>CDISC</P322>
+        <P325>Minutes Imputed: Minutes and seconds are imputed.</P325>
+        <P366>Minutes_Seconds_Imputed</P366>
+        <P90>M</P90>
+        <P90>Minutes Seconds Imputed</P90>
+        <P95>EM-ADaM</P95>
+        <P97>An imputed time that includes the minute and second of observation.</P97>
+        <rdfs:label>Minutes Seconds Imputed</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81214"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>Minutes Imputed: Minutes and seconds are imputed.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>100111</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81214"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>M</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81214"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Minutes Seconds Imputed</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81214"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>An imputed time that includes the minute and second of observation.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>090529</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81215 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81215">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81196"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81226"/>
+        <NHC0>C81215</NHC0>
+        <P106>Temporal Concept</P106>
+        <P108>Seconds Imputed</P108>
+        <P207>C2825524</P207>
+        <P322>CDISC</P322>
+        <P325>Seconds Imputed: Seconds are imputed.</P325>
+        <P366>Seconds_Imputed</P366>
+        <P90>S</P90>
+        <P90>Seconds Imputed</P90>
+        <P95>EM-ADaM</P95>
+        <P97>An imputed time that includes the second of observation.</P97>
+        <rdfs:label>Seconds Imputed</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81215"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>Seconds Imputed: Seconds are imputed.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>100111</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81215"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>S</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81215"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Seconds Imputed</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81215"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>An imputed time that includes the second of observation.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>090529</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C82868 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C82868">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80304"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81224"/>
+        <NHC0>C82868</NHC0>
+        <P106>Quantitative Concept</P106>
+        <P108>Maximum Value Derivation Technique</P108>
+        <P207>C2826546</P207>
+        <P322>CDISC</P322>
+        <P325>A data derivation or imputation technique which sets the analysis value on the record to the subject&apos;s maximum value over a defined set of records.</P325>
+        <P366>Maximum_Value_Derivation_Technique</P366>
+        <P90>MAXIMUM</P90>
+        <P90>Maximum</P90>
+        <P90>Maximum Value Derivation Technique</P90>
+        <P95>EM-ADaM</P95>
+        <P97>A data derivation technique used to calculate a subject&apos;s maximum value over a defined set of records.</P97>
+        <rdfs:label>Maximum Value Derivation Technique</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C82868"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>A data derivation or imputation technique which sets the analysis value on the record to the subject&apos;s maximum value over a defined set of records.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-03-02</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C82868"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>MAXIMUM</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C82868"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Maximum</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C82868"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Maximum Value Derivation Technique</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C82868"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>A data derivation technique used to calculate a subject&apos;s maximum value over a defined set of records.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>090818</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C82867 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C82867">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80304"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81224"/>
+        <NHC0>C82867</NHC0>
+        <P106>Quantitative Concept</P106>
+        <P108>Minimum Value Derivation Technique</P108>
+        <P207>C2826545</P207>
+        <P322>CDISC</P322>
+        <P325>A data derivation or imputation technique which sets the analysis value on the record to the subject&apos;s minimum value over a defined set of records.</P325>
+        <P366>Minimum_Value_Derivation_Technique</P366>
+        <P90>MINIMUM</P90>
+        <P90>Minimum</P90>
+        <P90>Minimum Value Derivation Technique</P90>
+        <P95>EM-ADaM</P95>
+        <P97>A data derivation technique used to calculate a subject&apos;s minimum value over a defined set of records.</P97>
+        <rdfs:label>Minimum Value Derivation Technique</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C82867"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>A data derivation or imputation technique which sets the analysis value on the record to the subject&apos;s minimum value over a defined set of records.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-03-02</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C82867"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>MINIMUM</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C82867"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Minimum</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C82867"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Minimum Value Derivation Technique</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C82867"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>A data derivation technique used to calculate a subject&apos;s minimum value over a defined set of records.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>090818</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C165858 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C165858">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25474"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C165644"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <NHC0>C165858</NHC0>
+        <P106>Idea or Concept</P106>
+        <P108>Overall Pooled Data</P108>
+        <P208>CL979283</P208>
+        <P322>CDISC</P322>
+        <P325>The pool that includes data across all studies within which the subject has participated, used for the overall integrated analysis.</P325>
+        <P90>OVERALL</P90>
+        <P90>Overall Pooled Data</P90>
+        <P95>EM-CDISC P40</P95>
+        <P97>A data pool that includes subject data across all studies within which the subject has participated.</P97>
+        <rdfs:label>Overall Pooled Data</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C165858"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>The pool that includes data across all studies within which the subject has participated, used for the overall integrated analysis.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2019-11-21</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C165858"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>OVERALL</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C165858"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Overall Pooled Data</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C165858"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>A data pool that includes subject data across all studies within which the subject has participated.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2019-11-21</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C132343 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C132343">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80304"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81224"/>
+        <NHC0>C132343</NHC0>
+        <P106>Quantitative Concept</P106>
+        <P108>Worst Observed Case Imputation Technique</P108>
+        <P208>CL521284</P208>
+        <P322>CDISC</P322>
+        <P325>A data derivation or imputation technique which sets the analysis value on the record to the worst recorded outcome within a subject.</P325>
+        <P90>WOC</P90>
+        <P90>Worst Observed Case</P90>
+        <P90>Worst Observed Case Imputation Technique</P90>
+        <P95>EM-P29 CDISC</P95>
+        <P97>A data imputation technique that populates analysis values with the worst recorded outcome within a subject.</P97>
+        <rdfs:label>Worst Observed Case Imputation Technique</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C132343"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>A data derivation or imputation technique which sets the analysis value on the record to the worst recorded outcome within a subject.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-03-02</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C132343"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>WOC</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C132343"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Worst Observed Case</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C132343"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Worst Observed Case Imputation Technique</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C132343"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>A data imputation technique that populates analysis values with the worst recorded outcome within a subject.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>170309</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C158115 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C158115">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <NHC0>C158115</NHC0>
+        <P106>Intellectual Product</P106>
+        <P108>CDISC ADaM Geriatric Depression Scale Short Form Questionnaire Parameter Name Terminology</P108>
+        <P208>CL937725</P208>
+        <P322>CDISC</P322>
+        <P325>A parameter name codelist for the Geriatric Depression Scale Short Form questionnaire (GDS02) to support the calculation of total score in ADaM.</P325>
+        <P361>No</P361>
+        <P372>Yes</P372>
+        <P373>TVS_ADaM_Component</P373>
+        <P374>EVS/CDISC/ADaM/ADaM Terminology.xls|2:2:C158115</P374>
+        <P376>&lt;p&gt;Terminology associated with the Geriatric Depression Scale Short Form questionnaire parameter name codelist of the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model (ADaM).&lt;/p&gt; &lt;p&gt;The terminology can be downloaded at this location: &lt;a href=&quot;https://evs.nci.nih.gov/ftp1/CDISC/ADaM/&quot;&gt; CDISC ADaM Terminology&lt;/a&gt;.&lt;/p&gt;</P376>
+        <P398>Yes</P398>
+        <P90>ADaM-GDS02PN</P90>
+        <P90>CDISC ADaM Geriatric Depression Scale Short Form Questionnaire Parameter Name Terminology</P90>
+        <P90>GDS02PN</P90>
+        <P90>Geriatric Depression Scale Short Form Questionnaire Parameter Name</P90>
+        <P95>EM-CDISC P37</P95>
+        <P97>Terminology associated with the Geriatric Depression Scale Short Form questionnaire parameter name codelist of the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model (ADaM).</P97>
+        <rdfs:label>CDISC ADaM Geriatric Depression Scale Short Form Questionnaire Parameter Name Terminology</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C158115"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>A parameter name codelist for the Geriatric Depression Scale Short Form questionnaire (GDS02) to support the calculation of total score in ADaM.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2019-03-08</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C158115"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>ADaM-GDS02PN</owl:annotatedTarget>
+        <P383>AB</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C158115"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>CDISC ADaM Geriatric Depression Scale Short Form Questionnaire Parameter Name Terminology</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C158115"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>GDS02PN</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C158115"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Geriatric Depression Scale Short Form Questionnaire Parameter Name</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C158115"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>Terminology associated with the Geriatric Depression Scale Short Form questionnaire parameter name codelist of the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model (ADaM).</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2019-03-08</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C132342 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C132342">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80304"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81224"/>
+        <NHC0>C132342</NHC0>
+        <P106>Quantitative Concept</P106>
+        <P108>Last Value Prior to Dosing Imputation Technique</P108>
+        <P208>CL521197</P208>
+        <P322>CDISC</P322>
+        <P325>A data derivation or imputation technique which sets the analysis value on the record to the subject&apos;s last observed value prior to the start of study treatment.</P325>
+        <P90>LVPD</P90>
+        <P90>Last Value Prior to Dosing</P90>
+        <P90>Last Value Prior to Dosing Imputation Technique</P90>
+        <P95>EM-P29 CDISC</P95>
+        <P97>A data imputation technique that populates missing values with the subject&apos;s last observed value prior to the start of study treatment.</P97>
+        <rdfs:label>Last Value Prior to Dosing Imputation Technique</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C132342"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>A data derivation or imputation technique which sets the analysis value on the record to the subject&apos;s last observed value prior to the start of study treatment.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-03-02</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C132342"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>LVPD</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C132342"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Last Value Prior to Dosing</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C132342"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Last Value Prior to Dosing Imputation Technique</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C132342"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>A data imputation technique that populates missing values with the subject&apos;s last observed value prior to the start of study treatment.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>170309</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C158155 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C158155">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C158127"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C158114"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C158115"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <NHC0>C158155</NHC0>
+        <P106>Intellectual Product</P106>
+        <P108>Geriatric Depression Scale Short Form - Total Score</P108>
+        <P208>CL937653</P208>
+        <P322>CDISC</P322>
+        <P325>Geriatric Depression Scale Short Form - Total score used for analysis.</P325>
+        <P90>GDS02-Total Score - Analysis</P90>
+        <P90>GDS02TS</P90>
+        <P90>Geriatric Depression Scale Short Form - Total Score</P90>
+        <P95>EM-CDISC P37</P95>
+        <P97>Geriatric Depression Scale Short Form total score.</P97>
+        <rdfs:label>Geriatric Depression Scale Short Form - Total Score</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C158155"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>Geriatric Depression Scale Short Form - Total score used for analysis.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-03-02</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C158155"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>GDS02-Total Score - Analysis</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+        <P385>ADaM-GDS02PN</P385>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C158155"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>GDS02-Total Score - Analysis</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C158155"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>GDS02TS</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+        <P385>ADaM-GDS02PC</P385>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C158155"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Geriatric Depression Scale Short Form - Total Score</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C158155"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>Geriatric Depression Scale Short Form total score.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2019-03-11</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C132341 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C132341">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80304"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81224"/>
+        <NHC0>C132341</NHC0>
+        <P106>Quantitative Concept</P106>
+        <P108>Last Observed Value Imputation Technique</P108>
+        <P208>CL521196</P208>
+        <P322>CDISC</P322>
+        <P325>A data derivation or imputation technique which sets the analysis value on the record to the subject&apos;s last recorded non-missing observation.</P325>
+        <P90>LOV</P90>
+        <P90>Last Observed Value</P90>
+        <P90>Last Observed Value Imputation Technique</P90>
+        <P95>EM-P29 CDISC</P95>
+        <P97>A data imputation technique that populates analysis values with the subject&apos;s last recorded nonmissing observation.</P97>
+        <rdfs:label>Last Observed Value Imputation Technique</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C132341"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>A data derivation or imputation technique which sets the analysis value on the record to the subject&apos;s last recorded non-missing observation.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-03-02</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C132341"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>LOV</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C132341"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Last Observed Value</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C132341"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Last Observed Value Imputation Technique</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C132341"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>A data imputation technique that populates analysis values with the subject&apos;s last recorded nonmissing observation.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>170309</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C132340 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C132340">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80304"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81224"/>
+        <NHC0>C132340</NHC0>
+        <P106>Quantitative Concept</P106>
+        <P108>Best Observed Case Imputation Technique</P108>
+        <P208>CL521665</P208>
+        <P322>CDISC</P322>
+        <P325>A data derivation or imputation technique which sets the analysis value on the record to the best outcome recorded within a subject.</P325>
+        <P90>BOC</P90>
+        <P90>Best Observed Case</P90>
+        <P90>Best Observed Case Imputation Technique</P90>
+        <P95>EM-P29 CDISC</P95>
+        <P97>A data imputation technique that populates analysis values with the best outcome recorded within a subject.</P97>
+        <rdfs:label>Best Observed Case Imputation Technique</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C132340"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>A data derivation or imputation technique which sets the analysis value on the record to the best outcome recorded within a subject.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-03-02</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C132340"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>BOC</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C132340"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Best Observed Case</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C132340"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Best Observed Case Imputation Technique</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C132340"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>A data imputation technique that populates analysis values with the best outcome recorded within a subject.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>170309</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C158114 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C158114">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A25 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C158115"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <NHC0>C158114</NHC0>
+        <P106>Intellectual Product</P106>
+        <P108>CDISC ADaM Geriatric Depression Scale Short Form Questionnaire Parameter Code Terminology</P108>
+        <P208>CL937724</P208>
+        <P322>CDISC</P322>
+        <P325>A parameter code codelist for the Geriatric Depression Scale Short Form questionnaire (GDS02) to support the calculation of total score in ADaM.</P325>
+        <P361>No</P361>
+        <P372>Yes</P372>
+        <P373>TVS_ADaM_Component</P373>
+        <P374>EVS/CDISC/ADaM/ADaM Terminology.xls|2:2:C158114</P374>
+        <P376>&lt;p&gt;Terminology associated with the Geriatric Depression Scale Short Form questionnaire parameter code codelist of the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model (ADaM).&lt;/p&gt; &lt;p&gt;The terminology can be downloaded at this location: &lt;a href=&quot;https://evs.nci.nih.gov/ftp1/CDISC/ADaM/&quot;&gt; CDISC ADaM Terminology&lt;/a&gt;.&lt;/p&gt;</P376>
+        <P398>Yes</P398>
+        <P90>ADaM-GDS02PC</P90>
+        <P90>CDISC ADaM Geriatric Depression Scale Short Form Questionnaire Parameter Code Terminology</P90>
+        <P90>GDS02PC</P90>
+        <P90>Geriatric Depression Scale Short Form Questionnaire Parameter Code</P90>
+        <P95>EM-CDISC P37</P95>
+        <P97>Terminology associated with the Geriatric Depression Scale Short Form questionnaire parameter code codelist of the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model (ADaM).</P97>
+        <rdfs:label>CDISC ADaM Geriatric Depression Scale Short Form Questionnaire Parameter Code Terminology</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C158114"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>A parameter code codelist for the Geriatric Depression Scale Short Form questionnaire (GDS02) to support the calculation of total score in ADaM.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2019-03-08</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C158114"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>ADaM-GDS02PC</owl:annotatedTarget>
+        <P383>AB</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C158114"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>CDISC ADaM Geriatric Depression Scale Short Form Questionnaire Parameter Code Terminology</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C158114"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>GDS02PC</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C158114"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Geriatric Depression Scale Short Form Questionnaire Parameter Code</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C158114"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>Terminology associated with the Geriatric Depression Scale Short Form questionnaire parameter code codelist of the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model (ADaM).</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2019-03-08</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C184383 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C184383">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80304"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81224"/>
+        <NHC0>C184383</NHC0>
+        <P106>Quantitative Concept</P106>
+        <P108>Copy Duplication Imputation Technique</P108>
+        <P322>CDISC</P322>
+        <P325>A technique that uses assignment logic to duplicate an analysis value to be used in additional evaluations.</P325>
+        <P90>COPY</P90>
+        <P90>Copy Duplication Imputation Technique</P90>
+        <P95>EM-CDISC P48</P95>
+        <P97>A technique that uses assignment logic to duplicate an analysis value to be used in additional evaluations.</P97>
+        <rdfs:label>Copy Duplication Imputation Technique</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C184383"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>A technique that uses assignment logic to duplicate an analysis value to be used in additional evaluations.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2021-12-02</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C184383"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>COPY</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C184383"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Copy Duplication Imputation Technique</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C184383"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>A technique that uses assignment logic to duplicate an analysis value to be used in additional evaluations.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2021-12-01</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25250 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25250">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C27993"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C91106"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C105551"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C105631"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C124296"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C183088"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C54452"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C66727"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C66830"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <NHC0>C25250</NHC0>
+        <P106>Qualitative Concept</P106>
+        <P108>Complete</P108>
+        <P207>C0205197</P207>
+        <P322>CDISC</P322>
+        <P322>DIPG/DMG</P322>
+        <P322>FDA</P322>
+        <P325>Brought to a conclusion; possessing all necessary parts; whole; finished.</P325>
+        <P325>To possess every necessary or normal part or component or step; having come or been brought to a conclusion. (NCI)</P325>
+        <P366>Complete</P366>
+        <P370>Rave</P370>
+        <P370>TCGA</P370>
+        <P90>COMPLETE</P90>
+        <P90>COMPLETED</P90>
+        <P90>Complete</P90>
+        <P90>Completed</P90>
+        <P90>Completely</P90>
+        <P90>Completion</P90>
+        <P95>DIPG/DMG918</P95>
+        <P95>EM-P24 CDISC</P95>
+        <P95>caDSR: QOL Responses</P95>
+        <P97>To possess every necessary or normal part or component or step; having come or been brought to a conclusion.</P97>
+        <rdfs:label>Complete</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25250"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>Brought to a conclusion; possessing all necessary parts; whole; finished.</owl:annotatedTarget>
+        <P378>SPL</P378>
+        <P379>Theresa Quinn</P379>
+        <P380>141016</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25250"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>To possess every necessary or normal part or component or step; having come or been brought to a conclusion. (NCI)</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Theresa Quinn</P379>
+        <P380>070116</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25250"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>COMPLETE</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>FDA</P384>
+        <P386>SPL</P386>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25250"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>COMPLETED</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25250"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Complete</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>DIPG/DMG</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25250"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Complete</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25250"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Complete</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>caDSR</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25250"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Completed</owl:annotatedTarget>
+        <P383>AD</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25250"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Completely</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>caDSR</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25250"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Completion</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25250"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>To possess every necessary or normal part or component or step; having come or been brought to a conclusion.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>DEFAULT_Review</P379>
+        <P380>070116</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C172335 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C172335">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <NHC0>C172335</NHC0>
+        <P106>Intellectual Product</P106>
+        <P108>CDISC ADaM Generalized Anxiety Disorder-7 Version 2 Questionnaire Parameter Name Terminology</P108>
+        <P208>CL1406496</P208>
+        <P322>CDISC</P322>
+        <P325>A parameter name codelist for the Generalized Anxiety Disorder - 7 Version 2 Questionnaire (GAD-7 V2) to support the calculation of total score in ADaM.</P325>
+        <P361>No</P361>
+        <P372>Yes</P372>
+        <P374>EVS/CDISC/ADaM/ADaM Terminology.xls|2:2:C172335</P374>
+        <P376>&lt;p&gt;Terminology associated with the Generalized Anxiety Disorder-7 version 2 questionnaire parameter name codelist of the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model (ADaM).&lt;/p&gt; &lt;p&gt;The terminology can be downloaded at this location: &lt;a href=&quot;https://evs.nci.nih.gov/ftp1/CDISC/ADaM/&quot;&gt; CDISC ADaM Terminology&lt;/a&gt;.&lt;/p&gt;</P376>
+        <P398>Yes</P398>
+        <P90>ADaM-GAD02PN</P90>
+        <P90>CDISC ADaM Generalized Anxiety Disorder-7 Version 2 Questionnaire Parameter Name Terminology</P90>
+        <P90>GAD02PN</P90>
+        <P90>Generalized Anxiety Disorder - 7 Version 2 Questionnaire Parameter Name</P90>
+        <P95>EM-CDISC P42</P95>
+        <P97>Terminology associated with the Generalized Anxiety Disorder-7 version 2 questionnaire parameter name codelist of the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model (ADaM).</P97>
+        <rdfs:label>CDISC ADaM Generalized Anxiety Disorder-7 Version 2 Questionnaire Parameter Name Terminology</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C172335"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>A parameter name codelist for the Generalized Anxiety Disorder - 7 Version 2 Questionnaire (GAD-7 V2) to support the calculation of total score in ADaM.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-05-26</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C172335"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>ADaM-GAD02PN</owl:annotatedTarget>
+        <P383>AB</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C172335"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>CDISC ADaM Generalized Anxiety Disorder-7 Version 2 Questionnaire Parameter Name Terminology</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C172335"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>GAD02PN</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C172335"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Generalized Anxiety Disorder - 7 Version 2 Questionnaire Parameter Name</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C172335"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>Terminology associated with the Generalized Anxiety Disorder-7 version 2 questionnaire parameter name codelist of the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model (ADaM).</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-05-26</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C172334 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C172334">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A25 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C172335"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <NHC0>C172334</NHC0>
+        <P106>Intellectual Product</P106>
+        <P108>CDISC ADaM Generalized Anxiety Disorder-7 Version 2 Questionnaire Parameter Code Terminology</P108>
+        <P208>CL1406497</P208>
+        <P322>CDISC</P322>
+        <P325>A parameter code codelist for the Generalized Anxiety Disorder - 7 Version 2 Questionnaire (GAD-7 V2) to support the calculation of total score in ADaM.</P325>
+        <P361>No</P361>
+        <P372>Yes</P372>
+        <P374>EVS/CDISC/ADaM/ADaM Terminology.xls|2:2:C172334</P374>
+        <P376>&lt;p&gt;Terminology associated with the Generalized Anxiety Disorder-7 version 2 questionnaire parameter code codelist of the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model (ADaM).&lt;/p&gt; &lt;p&gt;The terminology can be downloaded at this location: &lt;a href=&quot;https://evs.nci.nih.gov/ftp1/CDISC/ADaM/&quot;&gt; CDISC ADaM Terminology&lt;/a&gt;.&lt;/p&gt;</P376>
+        <P398>Yes</P398>
+        <P90>ADaM-GAD02PC</P90>
+        <P90>CDISC ADaM Generalized Anxiety Disorder-7 Version 2 Questionnaire Parameter Code Terminology</P90>
+        <P90>GAD02PC</P90>
+        <P90>Generalized Anxiety Disorder - 7 Version 2 Questionnaire Parameter Code</P90>
+        <P95>EM-CDISC P42</P95>
+        <P97>Terminology associated with the Generalized Anxiety Disorder-7 version 2 questionnaire parameter code codelist of the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model (ADaM).</P97>
+        <rdfs:label>CDISC ADaM Generalized Anxiety Disorder-7 Version 2 Questionnaire Parameter Code Terminology</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C172334"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>A parameter code codelist for the Generalized Anxiety Disorder - 7 Version 2 Questionnaire (GAD-7 V2) to support the calculation of total score in ADaM.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-05-26</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C172334"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>ADaM-GAD02PC</owl:annotatedTarget>
+        <P383>AB</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C172334"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>CDISC ADaM Generalized Anxiety Disorder-7 Version 2 Questionnaire Parameter Code Terminology</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C172334"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>GAD02PC</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C172334"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Generalized Anxiety Disorder - 7 Version 2 Questionnaire Parameter Code</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C172334"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>Terminology associated with the Generalized Anxiety Disorder-7 version 2 questionnaire parameter code codelist of the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model (ADaM).</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-05-26</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <NHC0>C81222</NHC0>
+        <P106>Intellectual Product</P106>
+        <P108>CDISC ADaM Terminology</P108>
+        <P207>C2825525</P207>
+        <P322>CDISC</P322>
+        <P325>The terminology subset that includes terms pertaining to the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model (ADaM).</P325>
+        <P366>CDISC_ADaM_Terminology</P366>
+        <P372>Yes</P372>
+        <P373>TVS_CDISC_ADaM</P373>
+        <P374>EVS/CDISC/ADaM/ADaM Terminology.xls|2:all</P374>
+        <P376>&lt;p&gt;The terminology subset that includes terms pertaining to the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model (ADaM).&lt;/p&gt; &lt;p&gt;The terminology can be downloaded at this location: &lt;a href=&quot;https://evs.nci.nih.gov/ftp1/CDISC/ADaM/&quot;&gt; CDISC ADaM Terminology&lt;/a&gt;.&lt;/p&gt;</P376>
+        <P398>No</P398>
+        <P90>ADaM</P90>
+        <P90>CDISC ADaM Terminology</P90>
+        <P95>EM-ADaM</P95>
+        <P95>EM-CDISC P42</P95>
+        <P97>The terminology subset that includes terms pertaining to the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model (ADaM).</P97>
+        <rdfs:label>CDISC ADaM Terminology</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>The terminology subset that includes terms pertaining to the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model (ADaM).</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-06-09</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>ADaM</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>CDISC ADaM Terminology</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>The terminology subset that includes terms pertaining to the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model (ADaM).</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>100105</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81223 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81223">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <NHC0>C81223</NHC0>
+        <P106>Intellectual Product</P106>
+        <P108>CDISC ADaM Date Imputation Flag Terminology</P108>
+        <P207>C2825526</P207>
+        <P322>CDISC</P322>
+        <P325>Date Imputation Flag: Indicates the level of imputation reflected in a date value.</P325>
+        <P361>No</P361>
+        <P366>CDISC_ADaM_Date_Imputation_Flag_Terminology</P366>
+        <P372>Yes</P372>
+        <P373>TVS_ADaM_Component</P373>
+        <P374>EVS/CDISC/ADaM/ADaM Terminology.xls|2:2:C81223</P374>
+        <P376>&lt;p&gt;Terminology associated with the Date Imputation Flag codelist of the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model (ADaM).&lt;/p&gt; &lt;p&gt;The terminology can be downloaded at this location: &lt;a href=&quot;https://evs.nci.nih.gov/ftp1/CDISC/ADaM/&quot;&gt; CDISC ADaM Terminology&lt;/a&gt;.&lt;/p&gt;</P376>
+        <P398>No</P398>
+        <P90>ADaM-DATEFL</P90>
+        <P90>CDISC ADaM Date Imputation Flag Terminology</P90>
+        <P90>DATEFL</P90>
+        <P90>Date Imputation Flag</P90>
+        <P95>EM-ADaM</P95>
+        <P97>Terminology associated with the Date Imputation Flag codelist of the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model (ADaM).</P97>
+        <rdfs:label>CDISC ADaM Date Imputation Flag Terminology</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81223"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>Date Imputation Flag: Indicates the level of imputation reflected in a date value.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>100105</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81223"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>ADaM-DATEFL</owl:annotatedTarget>
+        <P383>AB</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81223"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>CDISC ADaM Date Imputation Flag Terminology</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81223"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>DATEFL</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81223"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Date Imputation Flag</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81223"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>Terminology associated with the Date Imputation Flag codelist of the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model (ADaM).</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>100105</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81224 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81224">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <NHC0>C81224</NHC0>
+        <P106>Intellectual Product</P106>
+        <P108>CDISC ADaM Derivation Type Terminology</P108>
+        <P207>C2825527</P207>
+        <P322>CDISC</P322>
+        <P325>Derivation Type: Analysis value derivation method.</P325>
+        <P361>Yes</P361>
+        <P366>CDISC_ADaM_Derivation_Type_Terminology</P366>
+        <P372>Yes</P372>
+        <P373>TVS_ADaM_Component</P373>
+        <P374>EVS/CDISC/ADaM/ADaM Terminology.xls|2:2:C81224</P374>
+        <P376>&lt;p&gt;Terminology associated with the Derivation Type codelist of the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model (ADaM).&lt;/p&gt; &lt;p&gt;The terminology can be downloaded at this location: &lt;a href=&quot;https://evs.nci.nih.gov/ftp1/CDISC/ADaM/&quot;&gt; CDISC ADaM Terminology&lt;/a&gt;.&lt;/p&gt;</P376>
+        <P398>No</P398>
+        <P90>ADaM-DTYPE</P90>
+        <P90>CDISC ADaM Derivation Type Terminology</P90>
+        <P90>DTYPE</P90>
+        <P90>Derivation Type</P90>
+        <P95>EM-ADaM</P95>
+        <P97>Terminology associated with the Derivation Type codelist of the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model (ADaM).</P97>
+        <rdfs:label>CDISC ADaM Derivation Type Terminology</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81224"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>Derivation Type: Analysis value derivation method.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>100105</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81224"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>ADaM-DTYPE</owl:annotatedTarget>
+        <P383>AB</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81224"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>CDISC ADaM Derivation Type Terminology</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81224"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>DTYPE</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81224"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Derivation Type</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81224"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>Terminology associated with the Derivation Type codelist of the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model (ADaM).</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>100105</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C165644 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C165644">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <NHC0>C165644</NHC0>
+        <P106>Intellectual Product</P106>
+        <P108>CDISC ADaM Pool for Integration Terminology</P108>
+        <P208>CL978787</P208>
+        <P322>CDISC</P322>
+        <P325>Terminology relevant to the name of the Pool, often defined in the integrated statistical analysis plan, which identifies the combination of subjects&apos; clinical trial experience and will be the focus of the integrated analysis.</P325>
+        <P361>Yes</P361>
+        <P372>Yes</P372>
+        <P373>TVS_ADaM_Component</P373>
+        <P374>EVS/CDISC/ADaM/ADaM Terminology.xls|2:2:C165644</P374>
+        <P376>&lt;p&gt;Terminology associated with the Pool for Integration codelist of the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model (ADaM).&lt;/p&gt; &lt;p&gt;The terminology can be downloaded at this location: &lt;a href=&quot;https://evs.nci.nih.gov/ftp1/CDISC/ADaM/&quot;&gt; CDISC ADaM Terminology&lt;/a&gt;.&lt;/p&gt;</P376>
+        <P398>No</P398>
+        <P90>ADaM-POOLINT</P90>
+        <P90>CDISC ADaM Pool for Integration Terminology</P90>
+        <P90>POOLINT</P90>
+        <P90>Pool for Integration</P90>
+        <P95>EM-CDISC P40</P95>
+        <P97>Terminology associated with the Pool for Integration codelist of the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model (ADaM).</P97>
+        <rdfs:label>CDISC ADaM Pool for Integration Terminology</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C165644"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>Terminology relevant to the name of the Pool, often defined in the integrated statistical analysis plan, which identifies the combination of subjects&apos; clinical trial experience and will be the focus of the integrated analysis.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2019-11-04</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C165644"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>ADaM-POOLINT</owl:annotatedTarget>
+        <P383>AB</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C165644"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>CDISC ADaM Pool for Integration Terminology</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C165644"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>POOLINT</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C165644"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Pool for Integration</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C165644"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>Terminology associated with the Pool for Integration codelist of the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model (ADaM).</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2019-11-04</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81225 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81225">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <NHC0>C81225</NHC0>
+        <P106>Intellectual Product</P106>
+        <P108>CDISC ADaM Parameter Type Terminology</P108>
+        <P207>C2825528</P207>
+        <P322>CDISC</P322>
+        <P325>Parameter Type: Indicates whether the parameter is derived as a function of one or more other parameters.</P325>
+        <P361>No</P361>
+        <P366>CDISC_ADaM_Parameter_Type_Terminology</P366>
+        <P372>Yes</P372>
+        <P373>TVS_ADaM_Component</P373>
+        <P374>EVS/CDISC/ADaM/ADaM Terminology.xls|2:2:C81225</P374>
+        <P376>&lt;p&gt;Terminology associated with the Parameter Type codelist of the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model (ADaM).&lt;/p&gt; &lt;p&gt;The terminology can be downloaded at this location: &lt;a href=&quot;https://evs.nci.nih.gov/ftp1/CDISC/ADaM/&quot;&gt; CDISC ADaM Terminology&lt;/a&gt;.&lt;/p&gt;</P376>
+        <P398>No</P398>
+        <P90>ADaM-PARAMTYP</P90>
+        <P90>CDISC ADaM Parameter Type Terminology</P90>
+        <P90>PARAMTYP</P90>
+        <P90>Parameter Type</P90>
+        <P95>EM-ADaM</P95>
+        <P97>Terminology associated with the Parameter Type codelist of the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model (ADaM).</P97>
+        <rdfs:label>CDISC ADaM Parameter Type Terminology</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81225"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>Parameter Type: Indicates whether the parameter is derived as a function of one or more other parameters.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>100105</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81225"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>ADaM-PARAMTYP</owl:annotatedTarget>
+        <P383>AB</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81225"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>CDISC ADaM Parameter Type Terminology</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81225"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>PARAMTYP</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81225"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Parameter Type</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81225"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>Terminology associated with the Parameter Type codelist of the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model (ADaM).</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>100105</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C172451 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C172451">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C103494"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C172334"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C172335"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <NHC0>C172451</NHC0>
+        <P106>Intellectual Product</P106>
+        <P108>Generalized Anxiety Disorder - 7 Version 2 - Analysis</P108>
+        <P208>CL1406365</P208>
+        <P322>CDISC</P322>
+        <P325>Generalized Anxiety Disorder - 7 Version 2 - Total score used for analysis.</P325>
+        <P90>GAD02-Total Score - Analysis</P90>
+        <P90>GAD02TS</P90>
+        <P90>Generalized Anxiety Disorder - 7 Version 2 - Analysis</P90>
+        <P95>EM-CDISC P42</P95>
+        <P97>Generalized Anxiety Disorder - 7 Version 2 analysis.</P97>
+        <rdfs:label>Generalized Anxiety Disorder - 7 Version 2 - Analysis</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C172451"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>Generalized Anxiety Disorder - 7 Version 2 - Total score used for analysis.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-06-09</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C172451"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>GAD02-Total Score - Analysis</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+        <P385>ADaM-GAD02PN</P385>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C172451"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>GAD02-Total Score - Analysis</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C172451"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>GAD02TS</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+        <P385>ADaM-GAD02PC</P385>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C172451"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Generalized Anxiety Disorder - 7 Version 2 - Analysis</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C172451"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>Generalized Anxiety Disorder - 7 Version 2 analysis.</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Muhlbradt, Erin</P379>
+        <P380>2020-06-05</P380>
+    </owl:Axiom>
+<!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81226 -->
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81226">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61410"/>
+        <A8 rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81222"/>
+        <NHC0>C81226</NHC0>
+        <P106>Intellectual Product</P106>
+        <P108>CDISC ADaM Time Imputation Flag Terminology</P108>
+        <P207>C2825529</P207>
+        <P322>CDISC</P322>
+        <P325>Time Imputation Flag: Indicates the level of imputation reflected in a time value.</P325>
+        <P361>No</P361>
+        <P366>CDISC_ADaM_Time_Imputation_Flag_Terminology</P366>
+        <P372>Yes</P372>
+        <P373>TVS_ADaM_Component</P373>
+        <P374>EVS/CDISC/ADaM/ADaM Terminology.xls|2:2:C81226</P374>
+        <P376>&lt;p&gt;Terminology associated with the Time Imputation Flag codelist of the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model (ADaM).&lt;/p&gt; &lt;p&gt;The terminology can be downloaded at this location: &lt;a href=&quot;https://evs.nci.nih.gov/ftp1/CDISC/ADaM/&quot;&gt; CDISC ADaM Terminology&lt;/a&gt;.&lt;/p&gt;</P376>
+        <P398>No</P398>
+        <P90>ADaM-TIMEFL</P90>
+        <P90>CDISC ADaM Time Imputation Flag Terminology</P90>
+        <P90>TIMEFL</P90>
+        <P90>Time Imputation Flag</P90>
+        <P95>EM-ADaM</P95>
+        <P97>Terminology associated with the Time Imputation Flag codelist of the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model (ADaM).</P97>
+        <rdfs:label>CDISC ADaM Time Imputation Flag Terminology</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81226"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P325"/>
+        <owl:annotatedTarget>Time Imputation Flag: Indicates the level of imputation reflected in a time value.</owl:annotatedTarget>
+        <P378>CDISC</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>100105</P380>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81226"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>ADaM-TIMEFL</owl:annotatedTarget>
+        <P383>AB</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81226"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>CDISC ADaM Time Imputation Flag Terminology</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>NCI</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81226"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>TIMEFL</owl:annotatedTarget>
+        <P383>PT</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81226"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <owl:annotatedTarget>Time Imputation Flag</owl:annotatedTarget>
+        <P383>SY</P383>
+        <P384>CDISC</P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81226"/>
+        <owl:annotatedProperty rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <owl:annotatedTarget>Terminology associated with the Time Imputation Flag codelist of the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model (ADaM).</owl:annotatedTarget>
+        <P378>NCI</P378>
+        <P379>Erin Muhlbradt</P379>
+        <P380>100105</P380>
+    </owl:Axiom>
+</rdf:RDF>

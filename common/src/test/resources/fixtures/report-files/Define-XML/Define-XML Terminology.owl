@@ -1,0 +1,1112 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:mms="http://rdf.cdisc.org/mms#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://rdf.cdisc.org/define-xml-terminology#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:cts="http://rdf.cdisc.org/ct/schema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xml:base="http://rdf.cdisc.org/define-xml-terminology">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://rdf.cdisc.org/mms"/>
+    <owl:imports rdf:resource="http://rdf.cdisc.org/ct/schema"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Created with RDFGenerator</owl:versionInfo>
+    <owl:imports rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+  </owl:Ontology>
+  <mms:PermissibleValue rdf:ID="C172331.C180550">
+    <mms:inValueDomain>
+      <mms:EnumeratedValueDomain rdf:ID="C172331">
+        <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Terminology relevant to the classification of the CDISC controlled terminology standard described in the Define-XML document.</cts:cdiscDefinition>
+        <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >CDISC Define-XML CDISC Controlled Terminology Standard Type Terminology</cts:nciPreferredTerm>
+        <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >C172331</cts:nciCode>
+        <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >CDISC Controlled Terminology Standard Type</cts:cdiscSynonyms>
+        <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >CTSTDTYP</cts:cdiscSubmissionValue>
+        <cts:codelistName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >CDISC Controlled Terminology Standard Type</cts:codelistName>
+        <cts:isExtensibleCodelist rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >false</cts:isExtensibleCodelist>
+      </mms:EnumeratedValueDomain>
+    </mms:inValueDomain>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CDISC Define-XML Standard Terminology</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C180550</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The controlled terminology standard subset that includes terms relevant to the Clinical Data Interchange Standards Consortium (CDISC) Define-XML standard.</cts:cdiscDefinition>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >DEFINE-XML</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C66788.C163417">
+    <mms:inValueDomain>
+      <mms:EnumeratedValueDomain rdf:ID="C66788">
+        <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >A name given to a reference source that lists words and gives their meaning. (NCI)</cts:cdiscDefinition>
+        <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >CDISC Dictionary Name Terminology</cts:nciPreferredTerm>
+        <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >C66788</cts:nciCode>
+        <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Dictionary Name</cts:cdiscSynonyms>
+        <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >DICTNAM</cts:cdiscSubmissionValue>
+        <cts:codelistName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Dictionary Name</cts:codelistName>
+        <cts:isExtensibleCodelist rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >true</cts:isExtensibleCodelist>
+      </mms:EnumeratedValueDomain>
+    </mms:inValueDomain>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Substance Registration System-Unique Ingredient Identifier</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C163417</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A standard terminology developed and maintained by the Department of Veterans Affairs/Veterans Health Administration designated federal collaborative Structured Product Labeling Interagency Expert Panel (SPLIEP). It contains terminology to support the mechanism of action, physiologic effect, and asserted pharmacologic classification relationships of drug ingredients and food allergens.</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >SRS-UNII; Substance Registration System-Unique Ingredient Identifier</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >UNII</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C172331.C180551">
+    <mms:inValueDomain rdf:resource="#C172331"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CDISC SDTM Standard Terminology</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C180551</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The controlled terminology standard subset that includes terms pertaining to the Clinical Data Interchange Standards Consortium (CDISC) Study Data Tabulation Model (SDTM).</cts:cdiscDefinition>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >SDTM</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C66788.C163416">
+    <mms:inValueDomain rdf:resource="#C66788"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medication Reference Terminology</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C163416</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A standard terminology developed and maintained by the Veterans Health Administration (VHA) that includes terminology to support the mechanism of action, physiologic effect, and asserted pharmacologic classification relationships of medications. MED-RT incorporates terminology from RxNORM, MeSH, and SNOMED CT.</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medication Reference Terminology; NDF-RT</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MED-RT</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C66788.C163415">
+    <mms:inValueDomain rdf:resource="#C66788"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Clinical Data Interchange Standards Consortium Controlled Terminology</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C163415</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A standard terminology developed and maintained by Clinical Data Interchange Standards Consortium (CDISC) and the National Cancer Institute Enterprise Vocabulary Services (NCI-EVS) to support CDISC models, domains and specifications for data representation in regulated research.</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CDISC Controlled Terminology; Clinical Data Interchange Standards Consortium Controlled Terminology</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CDISC CT</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C170452.C163415">
+    <mms:inValueDomain>
+      <mms:EnumeratedValueDomain rdf:ID="C170452">
+        <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Terminology relevant to the name of the standard described in the Define-XML document.</cts:cdiscDefinition>
+        <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >CDISC Define-XML Standard Name Terminology</cts:nciPreferredTerm>
+        <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >C170452</cts:nciCode>
+        <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Standard Name</cts:cdiscSynonyms>
+        <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >STDNAM</cts:cdiscSubmissionValue>
+        <cts:codelistName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Standard Name</cts:codelistName>
+        <cts:isExtensibleCodelist rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >false</cts:isExtensibleCodelist>
+      </mms:EnumeratedValueDomain>
+    </mms:inValueDomain>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Clinical Data Interchange Standards Consortium Controlled Terminology</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C163415</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A standard terminology developed and maintained by Clinical Data Interchange Standards Consortium (CDISC) and the National Cancer Institute Enterprise Vocabulary Services (NCI-EVS) to support CDISC models, domains and specifications for data representation in regulated research.</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CDISC Controlled Terminology; Clinical Data Interchange Standards Consortium Controlled Terminology</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CDISC/NCI</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C170451.C163415">
+    <mms:inValueDomain>
+      <mms:EnumeratedValueDomain rdf:ID="C170451">
+        <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Terminology relevant to the classification of the standard described in the Define-XML document.</cts:cdiscDefinition>
+        <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >CDISC Define-XML Standard Type Terminology</cts:nciPreferredTerm>
+        <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >C170451</cts:nciCode>
+        <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Standard Type</cts:cdiscSynonyms>
+        <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >STDTYP</cts:cdiscSubmissionValue>
+        <cts:codelistName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Standard Type</cts:codelistName>
+        <cts:isExtensibleCodelist rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >false</cts:isExtensibleCodelist>
+      </mms:EnumeratedValueDomain>
+    </mms:inValueDomain>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Clinical Data Interchange Standards Consortium Controlled Terminology</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C163415</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A standard terminology developed and maintained by Clinical Data Interchange Standards Consortium (CDISC) and the National Cancer Institute Enterprise Vocabulary Services (NCI-EVS) to support CDISC models, domains and specifications for data representation in regulated research.</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CDISC Controlled Terminology; Clinical Data Interchange Standards Consortium Controlled Terminology</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CT</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C172331.C180552">
+    <mms:inValueDomain rdf:resource="#C172331"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CDISC SEND Standard Terminology</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C180552</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The controlled terminology standard subset that includes terms relevant to the Clinical Data Interchange Standards Consortium (CDISC) Standard for Exchange of Non-clinical Data (SEND) group.</cts:cdiscDefinition>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >SEND</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C117744.C117753">
+    <mms:inValueDomain>
+      <mms:EnumeratedValueDomain rdf:ID="C117744">
+        <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Reason for reporting a specific analysis result described in Define-XML analysis results metadata.</cts:cdiscDefinition>
+        <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >CDISC Define-XML Analysis Reason Terminology</cts:nciPreferredTerm>
+        <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >C117744</cts:nciCode>
+        <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Analysis Reason</cts:cdiscSynonyms>
+        <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >ANLREAS</cts:cdiscSubmissionValue>
+        <cts:codelistName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Analysis Reason</cts:codelistName>
+        <cts:isExtensibleCodelist rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >true</cts:isExtensibleCodelist>
+      </mms:EnumeratedValueDomain>
+    </mms:inValueDomain>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Analysis Specified in Statistical Analysis Plan</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C117753</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The analysis is specified in a statistical analysis plan.</cts:cdiscDefinition>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >SPECIFIED IN SAP</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C117744.C117752">
+    <mms:inValueDomain rdf:resource="#C117744"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Analysis Specified in Protocol</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C117752</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The analysis is specified in a protocol.</cts:cdiscDefinition>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >SPECIFIED IN PROTOCOL</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C170449.C170547">
+    <mms:inValueDomain>
+      <mms:EnumeratedValueDomain rdf:ID="C170449">
+        <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Terminology relevant to the origin type for datasets in the Define-XML document.</cts:cdiscDefinition>
+        <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >CDISC Define-XML Origin Type Terminology</cts:nciPreferredTerm>
+        <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >C170449</cts:nciCode>
+        <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Origin Type</cts:cdiscSynonyms>
+        <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >ORIGINT</cts:cdiscSubmissionValue>
+        <cts:codelistName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Origin Type</cts:codelistName>
+        <cts:isExtensibleCodelist rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >false</cts:isExtensibleCodelist>
+      </mms:EnumeratedValueDomain>
+    </mms:inValueDomain>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Assigned Value</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C170547</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A value that is derived through designation, such as values from a look up table or a label on a CRF.</cts:cdiscDefinition>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Assigned</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C170449.C170548">
+    <mms:inValueDomain rdf:resource="#C170449"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Collected Value</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C170548</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A value that is actually observed and recorded by a person or obtained by an instrument.</cts:cdiscDefinition>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Collected</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C170449.C170549">
+    <mms:inValueDomain rdf:resource="#C170449"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Derived Value</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C170549</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A value that is calculated by an algorithm or reproducible rule, and which is dependent upon other data values.</cts:cdiscDefinition>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Derived</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C170449.C126101">
+    <mms:inValueDomain rdf:resource="#C170449"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Not Available</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C126101</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A value that is not discoverable or accessible.</cts:cdiscDefinition>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Not Available</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C117745.C98781">
+    <mms:inValueDomain>
+      <mms:EnumeratedValueDomain rdf:ID="C117745">
+        <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Purpose of a specific analysis result described in Define-XML analysis results metadata.</cts:cdiscDefinition>
+        <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >CDISC Define-XML Analysis Purpose Terminology</cts:nciPreferredTerm>
+        <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >C117745</cts:nciCode>
+        <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Analysis Purpose</cts:cdiscSynonyms>
+        <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >ANLPURP</cts:cdiscSubmissionValue>
+        <cts:codelistName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Analysis Purpose</cts:codelistName>
+        <cts:isExtensibleCodelist rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >true</cts:isExtensibleCodelist>
+      </mms:EnumeratedValueDomain>
+    </mms:inValueDomain>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Secondary Outcome Measure</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C98781</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The outcome measure(s) that is part of a pre-specified analysis plan used to evaluate the secondary endpoint(s) associated with secondary study objective(s) and/or used to evaluate any measure(s) ancillary to the primary or secondary endpoint(s). (After Clinicaltrials.gov).</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Secondary Outcome Measure</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >SECONDARY OUTCOME MEASURE</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C165635.C165637">
+    <mms:inValueDomain>
+      <mms:EnumeratedValueDomain rdf:ID="C165635">
+        <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Terminology relevant to the subclasses of the ADaM basic data structure.</cts:cdiscDefinition>
+        <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >CDISC Define-XML ADaM Basic Data Structure Subclass Terminology</cts:nciPreferredTerm>
+        <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >C165635</cts:nciCode>
+        <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >ADaM Basic Data Structure Subclass</cts:cdiscSynonyms>
+        <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >BDSSC</cts:cdiscSubmissionValue>
+        <cts:codelistName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >ADaM Basic Data Structure Subclass</cts:codelistName>
+        <cts:isExtensibleCodelist rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >false</cts:isExtensibleCodelist>
+      </mms:EnumeratedValueDomain>
+    </mms:inValueDomain>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Time-to-Event Dataset</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C165637</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A dataset containing data that is used for Time-to-Event analyses.</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >TTE</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >TIME-TO-EVENT</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C66788.C49468">
+    <mms:inValueDomain rdf:resource="#C66788"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >World Health Organization Adverse Reaction Terminology</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C49468</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A terminology implemented by the World Health Organization to describe adverse reactions to a prescribed medication or treatment regimen. (NCI)</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >World Health Organization Adverse Reaction Terms</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >WHOART</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C66788.C53489">
+    <mms:inValueDomain rdf:resource="#C66788"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Systematized Nomenclature of Medicine</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C53489</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A multiaxial, hierarchical classification system for diseases in man developed by the College of American Pathologists. (NCI)</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Systematized Nomenclature of Medicine</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >SNOMED</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C66788.C154331">
+    <mms:inValueDomain rdf:resource="#C66788"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Anatomical Therapeutic Chemical Classification System</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C154331</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A World Health Organization (WHO) classification system, developed and maintained by the WHO Collaborating Centre for Drug Statistics Methodology, for medicinal substances where active substances are divided into different groups according to the organ or system on which they act and their therapeutic, pharmacological, and chemical properties.</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Anatomical Therapeutic Chemical Classification System</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >WHO ATC CLASSIFICATION SYSTEM</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C103329.C135396">
+    <mms:inValueDomain>
+      <mms:EnumeratedValueDomain rdf:ID="C103329">
+        <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Terminology related to the classification of a CDISC domain.</cts:cdiscDefinition>
+        <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >CDISC Define-XML General Observation Class Terminology</cts:nciPreferredTerm>
+        <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >C103329</cts:nciCode>
+        <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >General Observation Class</cts:cdiscSynonyms>
+        <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >GNRLOBSC</cts:cdiscSubmissionValue>
+        <cts:codelistName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >General Observation Class</cts:codelistName>
+        <cts:isExtensibleCodelist rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >false</cts:isExtensibleCodelist>
+      </mms:EnumeratedValueDomain>
+    </mms:inValueDomain>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CDISC Findings About Class</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C135396</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >This SDTM class is a specialization of the findings general observation class. It is intended, as its name implies, to be used when collected data represent findings about an event or intervention that cannot be represented within an event or intervention record or as a supplemental qualifier to such a record.</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Findings About</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >FINDINGS ABOUT</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C170448.C70885">
+    <mms:inValueDomain>
+      <mms:EnumeratedValueDomain rdf:ID="C170448">
+        <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Terminology relevant to the context in which the Define-XML document is used.</cts:cdiscDefinition>
+        <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >CDISC Define-XML ODM Context Terminology</cts:nciPreferredTerm>
+        <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >C170448</cts:nciCode>
+        <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >ODM Context</cts:cdiscSynonyms>
+        <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >ODMCNTX</cts:cdiscSubmissionValue>
+        <cts:codelistName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >ODM Context</cts:codelistName>
+        <cts:isExtensibleCodelist rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >false</cts:isExtensibleCodelist>
+      </mms:EnumeratedValueDomain>
+    </mms:inValueDomain>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Regulatory Submission</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C70885</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An assembly of one or more regulatory submission units supporting a specific regulatory purpose or decision. In most cases, the compilation of the submission units is utilized in the assessment of a regulated medical product quality, safety and/or effectiveness.</cts:cdiscDefinition>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Submission</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C170451.C170454">
+    <mms:inValueDomain rdf:resource="#C170451"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CDISC Implementation Guide</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C170454</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A standard document developed and maintained by Clinical Data Interchange Standards Consortium (CDISC) that contains instructions and requirements for the organization, structure, and format of standard clinical and non-clinical trial tabulation and analysis datasets.</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CDISC Implementation Guide</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >IG</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C170452.C170455">
+    <mms:inValueDomain rdf:resource="#C170452"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >SDTM Implementation Guide</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C170455</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The implementation guide for the Clinical Data Interchange Standards Consortium (CDISC) Study Data Tabulation Model standard.</cts:cdiscDefinition>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >SDTMIG</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C170452.C170456">
+    <mms:inValueDomain rdf:resource="#C170452"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >SEND Implementation Guide</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C170456</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The implementation guide for the Clinical Data Interchange Standards Consortium (CDISC) Standard for the Exchange of Nonclinical Data standard.</cts:cdiscDefinition>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >SENDIG</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C103329.C177923">
+    <mms:inValueDomain rdf:resource="#C103329"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CDISC Medical Device Occurrence Data Structure</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C177923</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The Medical Device Occurrence Data Structure (MDOCCDS) supports the analysis needs by adding SPDEVID as a required identifier and allowing USUBJID be a conditionally required variable. See the OCCDS class for further details.</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MDOCCDS; Medical Device Occurrence Data Structure</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MEDICAL DEVICE OCCURRENCE DATA STRUCTURE</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C117744.C117751">
+    <mms:inValueDomain rdf:resource="#C117744"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Analysis Requested by Regulatory Agency</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C117751</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The analysis has been requested by a regulatory agency.</cts:cdiscDefinition>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >REQUESTED BY REGULATORY AGENCY</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C103329.C177922">
+    <mms:inValueDomain rdf:resource="#C103329"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CDISC Medical Device Basic Data Structure</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C177922</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The Medical Device Basic Data Structure (MDBDS) supports the analysis needs by adding SPDEVID as a required key variable and USUBJID a conditionally required variable. See the BDS class for further details.</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MDBDS; Medical Device Basic Data Structure</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MEDICAL DEVICE BASIC DATA STRUCTURE</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C117744.C117750">
+    <mms:inValueDomain rdf:resource="#C117744"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Data Driven Analysis</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C117750</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The analysis was triggered by findings in the data.</cts:cdiscDefinition>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >DATA DRIVEN</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C103329.C177921">
+    <mms:inValueDomain rdf:resource="#C103329"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CDISC Device Level Analysis Dataset</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C177921</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The Device-Level Analysis Dataset (ADDL) is a one-record-per-device or one-record-per-subject-per-device dataset which contains variables that describe device characteristics and timing, and group the devices for analysis. ADDL is the primary source for device-level variables included in other analysis datasets.</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ADDL; Device Level Analysis Dataset</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >DEVICE LEVEL ANALYSIS DATASET</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C177903.C177920">
+    <mms:inValueDomain>
+      <mms:EnumeratedValueDomain rdf:ID="C177903">
+        <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Terminology relevant to the subclasses of the ADaM device level basic data structure.</cts:cdiscDefinition>
+        <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >CDISC Define-XML ADaM Medical Device Basic Data Structure Subclass Terminology</cts:nciPreferredTerm>
+        <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >C177903</cts:nciCode>
+        <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >ADaM Medical Device Basic Data Structure Subclass</cts:cdiscSynonyms>
+        <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >MDBDSSC</cts:cdiscSubmissionValue>
+        <cts:codelistName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >ADaM Medical Device Basic Data Structure Subclass</cts:codelistName>
+        <cts:isExtensibleCodelist rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >false</cts:isExtensibleCodelist>
+      </mms:EnumeratedValueDomain>
+    </mms:inValueDomain>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical Device Time-to-Event Dataset</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C177920</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A dataset containing data that is used for medical device Time-to-Event analyses.</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MDTTE</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MEDICAL DEVICE TIME-TO-EVENT</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C170450.C41189">
+    <mms:inValueDomain>
+      <mms:EnumeratedValueDomain rdf:ID="C170450">
+        <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Terminology relevant to the origin source for datasets in the Define-XML document.</cts:cdiscDefinition>
+        <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >CDISC Define-XML Origin Source Terminology</cts:nciPreferredTerm>
+        <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >C170450</cts:nciCode>
+        <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Origin Source</cts:cdiscSynonyms>
+        <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >ORIGINS</cts:cdiscSubmissionValue>
+        <cts:codelistName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Origin Source</cts:codelistName>
+        <cts:isExtensibleCodelist rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >false</cts:isExtensibleCodelist>
+      </mms:EnumeratedValueDomain>
+    </mms:inValueDomain>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Study Subject</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C41189</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An individual who is observed, analyzed, examined, investigated, experimented upon, or/and treated in the course of a particular study.</cts:cdiscDefinition>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Subject</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C170450.C68608">
+    <mms:inValueDomain rdf:resource="#C170450"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Vendor</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C68608</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A person or agency that promotes or exchanges goods or services for money. (NCI)</cts:cdiscDefinition>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Vendor</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C66788.C49704">
+    <mms:inValueDomain rdf:resource="#C66788"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Common Terminology Criteria for Adverse Events</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C49704</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A standard terminology developed and maintained by the National Cancer Institute to report adverse events occurring in clinical trials. The CTCAE contains a grading scale for each adverse event term representing the severity of the event.</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Common Terminology Criteria for Adverse Events</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CTCAE</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C103329.C103374">
+    <mms:inValueDomain rdf:resource="#C103329"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CDISC Interventions Class</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C103374</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >This SDTM class captures investigational, therapeutic and other treatments that are administered to the subject (with some actual or expected physiological effect) either as specified by the study protocol (e.g., exposure to study drug), coincident with the study assessment period (e.g., concomitant medications), or self-administered by the subject (such as use of alcohol, tobacco, or caffeine).</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Interventions</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >INTERVENTIONS</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C117745.C98724">
+    <mms:inValueDomain rdf:resource="#C117745"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Exploratory Outcome Measure</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C98724</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The outcome measure(s) that is part of a pre-specified analysis plan used to evaluate the exploratory endpoint(s) associated with exploratory study objective(s) and/or any other measures, excluding post-hoc measures, that are a focus of the study. (After clinicaltrials.gov)</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Exploratory Outcome Measure</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >EXPLORATORY OUTCOME MEASURE</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C66788.C49474">
+    <mms:inValueDomain rdf:resource="#C66788"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >International Classification of Diseases</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C49474</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A system of categories to which morbid entries are assigned according to established criteria. Included is the entire range of conditions in a manageable number of categories, grouped to facilitate mortality reporting. It is produced by the World Health Organization (from ICD-10, p1). The Clinical Modifications, produced by the United States Dept. of Health and Human Services, are larger extensions used for morbidity and general epidemiological purposes, primarily in the U.S. (MSH2005_2004_10_12)</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >International Classification of Diseases</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ICD</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C103329.C103373">
+    <mms:inValueDomain rdf:resource="#C103329"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CDISC Findings Class</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C103373</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >This SDTM class captures the observations resulting from planned evaluations to address specific tests or questions such as laboratory tests, ECG testing, and questions listed on questionnaires.</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Findings</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >FINDINGS</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C66788.C49475">
+    <mms:inValueDomain rdf:resource="#C66788"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >World Health Organization Drug Dictionary</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C49475</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A reference source of drugs and drug associated information maintained by the World Health Organization. (NCI)</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >WHODrug Global; World Health Organization Drug Dictionary</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >WHODD</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C103329.C103372">
+    <mms:inValueDomain rdf:resource="#C103329"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CDISC Events Class</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C103372</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >This SDTM class captures planned protocol milestones such as randomization and study completion, and occurrences, conditions, or incidents independent of planned study evaluations occurring during the trial (e.g., adverse events) or prior to the trial (e.g., medical history).</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Events</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >EVENTS</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C66788.C49476">
+    <mms:inValueDomain rdf:resource="#C66788"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Logical Observation Identifiers Names and Codes</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C49476</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Published by The Regenstrief Institute, the Logical Observation Identifiers Names and Codes covers clinical and clinical laboratory terminology. (NCI)</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Logical Observation Identifiers Names and Codes</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >LOINC</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C103329.C103371">
+    <mms:inValueDomain rdf:resource="#C103329"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CDISC Basic Data Structure Dataset</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C103371</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An ADaM BDS dataset contains one or more records per subject, per analysis parameter, per analysis time point. Variables include the value being analyzed (e.g., AVAL) and the description of the value being analyzed (e.g., PARAM). Other variables in the dataset provide more information about the value being analyzed (e.g., the subject identification) or describe and trace the derivation of it (e.g., DTYPE) or support the analysis of it (e.g., treatment variables, covariates).</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Basic Data Structure; BDS</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >BASIC DATA STRUCTURE</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C170450.C70793">
+    <mms:inValueDomain rdf:resource="#C170450"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Clinical Study Sponsor</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C70793</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An entity that is responsible for the initiation, management, and/or financing of a clinical study.</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Clinical Study Sponsor; Sponsor; Study Sponsor</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Sponsor</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C66788.C49471">
+    <mms:inValueDomain rdf:resource="#C66788"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Thesaurus of Adverse Reaction Term Coding Symbols</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C49471</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A terminology developed and used by the Food and Drug Administration (FDA) for the coding, filing and retrieving of post marketing adverse reaction reports. (NCI)</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Coding Symbols for a Thesaurus of Adverse Reaction Terms</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >COSTART</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C103329.C147271">
+    <mms:inValueDomain rdf:resource="#C103329"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CDISC Study Reference Class</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C147271</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >This special purpose SDTM class contains further descriptions of study-specific identifiers that will be used in subject based domains.</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Study Reference</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >STUDY REFERENCE</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C103329.C123454">
+    <mms:inValueDomain rdf:resource="#C103329"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CDISC Occurrence Data Structure</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C123454</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The Occurrence Data Structure (OCCDS) is the ADaM data structure for occurrence analysis. Occurrence analysis is the counting of subjects with a record or term, and often includes a structured hierarchy of dictionary coding categories.</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >OCCDS; Occurrence Data Structure</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >OCCURRENCE DATA STRUCTURE</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C170448.C17649">
+    <mms:inValueDomain rdf:resource="#C170448"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Other</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C17649</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Different than the one(s) previously specified or mentioned. (NCI)</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Other</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Other</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C170449.C17649">
+    <mms:inValueDomain rdf:resource="#C170449"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Other</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C17649</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Different than the one(s) previously specified or mentioned. (NCI)</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Other</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Other</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C176227.C176265">
+    <mms:inValueDomain>
+      <mms:EnumeratedValueDomain rdf:ID="C176227">
+        <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Terminology relevant to the subclasses of the ADaM occurrence data structure.</cts:cdiscDefinition>
+        <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >CDISC Define-XML ADaM Occurrence Data Structure Subclass Terminology</cts:nciPreferredTerm>
+        <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >C176227</cts:nciCode>
+        <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >ADaM Occurrence Data Structure Subclass</cts:cdiscSynonyms>
+        <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >OCCSC</cts:cdiscSubmissionValue>
+        <cts:codelistName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >ADaM Occurrence Data Structure Subclass</cts:codelistName>
+        <cts:isExtensibleCodelist rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >false</cts:isExtensibleCodelist>
+      </mms:EnumeratedValueDomain>
+    </mms:inValueDomain>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Adverse Event Dataset</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C176265</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A dataset containing data that is used for adverse event analyses.</cts:cdiscDefinition>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ADVERSE EVENT</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C117745.C98772">
+    <mms:inValueDomain rdf:resource="#C117745"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Primary Outcome Measure</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C98772</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The outcome measure(s) of greatest importance specified in the protocol, usually the one(s) used in the power calculation, to evaluate the primary endpoint(s) associated with the primary study objective(s). (After Clinicaltrials.gov)</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Primary Outcome Measure</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >PRIMARY OUTCOME MEASURE</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C66788.C134003">
+    <mms:inValueDomain rdf:resource="#C66788"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Data Universal Numbering System</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C134003</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A proprietary system developed and regulated by Dun &amp; Bradstreet that assigns a unique nine digit numeric identifier to a single business entity location.</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Data Universal Number System; DUNS Numbers</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >D-U-N-S NUMBER</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C170452.C181230">
+    <mms:inValueDomain rdf:resource="#C170452"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >SEND Implementation Guide-Animal Rule</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C181230</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The implementation guide for the Clinical Data Interchange Standards Consortium (CDISC) Standard for the Exchange of Nonclinical Data Animal Rule standard.</cts:cdiscDefinition>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >SENDIG-AR</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C170452.C170553">
+    <mms:inValueDomain rdf:resource="#C170452"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >SDTM Implementation Guide-Associated Persons</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C170553</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The implementation guide for the Clinical Data Interchange Standards Consortium (CDISC) Study Data Tabulation Model Associated Persons standard.</cts:cdiscDefinition>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >SDTMIG-AP</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C170452.C170554">
+    <mms:inValueDomain rdf:resource="#C170452"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >SDTM Implementation Guide-Medical Devices</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C170554</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The implementation guide for the Clinical Data Interchange Standards Consortium (CDISC) Study Data Tabulation Model Medical Devices standard.</cts:cdiscDefinition>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >SDTMIG-MD</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C170452.C170556">
+    <mms:inValueDomain rdf:resource="#C170452"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >SEND Implementation Guide-Developmental and Reproductive Toxicology</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C170556</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The implementation guide for the Clinical Data Interchange Standards Consortium (CDISC) Standard for the Exchange of Nonclinical Data Developmental and Reproductive Toxicology standard.</cts:cdiscDefinition>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >SENDIG-DART</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C172332.C172453">
+    <mms:inValueDomain>
+      <mms:EnumeratedValueDomain rdf:ID="C172332">
+        <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Terminology relevant to the development or publication status of the standard.</cts:cdiscDefinition>
+        <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >CDISC Define-XML Standard Status Terminology</cts:nciPreferredTerm>
+        <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >C172332</cts:nciCode>
+        <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Standard Status</cts:cdiscSynonyms>
+        <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >STDSTAT</cts:cdiscSubmissionValue>
+        <cts:codelistName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Standard Status</cts:codelistName>
+        <cts:isExtensibleCodelist rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >true</cts:isExtensibleCodelist>
+      </mms:EnumeratedValueDomain>
+    </mms:inValueDomain>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CDISC Draft Standard</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C172453</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A preliminary version of a CDISC standard that has not yet completed the CDISC standards development process. (NCI)</cts:cdiscDefinition>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >DRAFT</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C165635.C172452">
+    <mms:inValueDomain rdf:resource="#C165635"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Non-Compartmental Analysis Dataset</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C172452</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A dataset containing data that is used for non-compartmental analyses.</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >NCA</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >NON-COMPARTMENTAL ANALYSIS</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C170449.C170550">
+    <mms:inValueDomain rdf:resource="#C170449"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Copied Value</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C170550</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A value that is copied from a variable in another dataset.</cts:cdiscDefinition>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Predecessor</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C170449.C170551">
+    <mms:inValueDomain rdf:resource="#C170449"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Protocol Value</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C170551</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A value that is included as part of the study protocol.</cts:cdiscDefinition>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Protocol</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C172332.C172455">
+    <mms:inValueDomain rdf:resource="#C172332"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CDISC Final Standard</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C172455</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A final version of a CDISC standard that has completed the CDISC standards development process. (NCI)</cts:cdiscDefinition>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >FINAL</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C170452.C170552">
+    <mms:inValueDomain rdf:resource="#C170452"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ADaM Implementation Guide</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C170552</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The implementation guide for the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model standard.</cts:cdiscDefinition>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ADaMIG</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C172332.C172454">
+    <mms:inValueDomain rdf:resource="#C172332"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CDISC Provisional Standard</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C172454</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A version of a CDISC standard whose conclusiveness is dependent upon the fulfillment of some contingency or final alteration. (NCI)</cts:cdiscDefinition>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >PROVISIONAL</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C103329.C103378">
+    <mms:inValueDomain rdf:resource="#C103329"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CDISC Subject Level Analysis Dataset</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C103378</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The Subject-Level Analysis Dataset (ADSL) is a one-record-per-subject dataset which contains variables that describe subject demographic characteristics and group the subjects for analysis. ADSL is the primary source for subject-level variables included in other analysis datasets such as population flags and treatment variables.</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ADSL; Subject Level Analysis Dataset</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >SUBJECT LEVEL ANALYSIS DATASET</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C170450.C25936">
+    <mms:inValueDomain rdf:resource="#C170450"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Investigator</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C25936</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A person responsible for the conduct of the clinical trial at a trial site. If a trial is conducted by a team of individuals at the trial site, the investigator is the responsible leader of the team and may be called the principal investigator.</cts:cdiscDefinition>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Investigator</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C172331.C180548">
+    <mms:inValueDomain rdf:resource="#C172331"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CDISC ADaM Standard Terminology</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C180548</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The controlled terminology standard subset that includes terms pertaining to the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model (ADaM).</cts:cdiscDefinition>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ADaM</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C103329.C103377">
+    <mms:inValueDomain rdf:resource="#C103329"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CDISC Special Purpose Class</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C103377</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >This SDTM class contains a set of domains which do not conform to the Findings, Events or Interventions observation classes. The domains included are DM, CO, SE and SV.</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Special Purpose; SPECIAL-PURPOSE</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >SPECIAL PURPOSE</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C103329.C103376">
+    <mms:inValueDomain rdf:resource="#C103329"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CDISC Relationship Class</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C103376</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >This SDTM class provides a means to link related records between datasets. It includes the RELREC and SUPPQUAL datasets.</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Relationships</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >RELATIONSHIP</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C103329.C103375">
+    <mms:inValueDomain rdf:resource="#C103329"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CDISC Other ADaM Dataset</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C103375</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An analysis dataset that doesn't conform to a pre-defined ADaM dataset structure (e.g. ADSL, BDS or OCCDS).</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ADaM Other</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ADAM OTHER</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C66788.C43820">
+    <mms:inValueDomain rdf:resource="#C66788"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MedDRA</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C43820</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MedDRA is an international medical terminology designed to support the classification, retrieval, presentation, and communication of medical information throughout the medical product regulatory cycle. MedDRA was developed under the auspices of the International Conference on Harmonisation of Technical Requirements for Registration of Pharmaceuticals for Human Use (ICH). The MedDRA Maintenance and Support Services Organization (MSSO) holds a contract with the International Federation of Pharmaceutical Manufacturers Associations (IFPMA) to maintain and support the implementation of the terminology. (NCI)</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Medical Dictionary for Regulatory Activities</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MedDRA</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C172331.C180549">
+    <mms:inValueDomain rdf:resource="#C172331"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CDISC CDASH Standard Terminology</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C180549</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The controlled terminology standard subset that includes terms relevant to the Clinical Data Interchange Standards Consortium (CDISC) Clinical Data Acquisition Standards Harmonization (CDASH) group.</cts:cdiscDefinition>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CDASH</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+  <mms:PermissibleValue rdf:ID="C103329.C103379">
+    <mms:inValueDomain rdf:resource="#C103329"/>
+    <cts:nciPreferredTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CDISC Trial Design Class</cts:nciPreferredTerm>
+    <cts:nciCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C103379</cts:nciCode>
+    <cts:cdiscDefinition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >This SDTM class describes the plan for the procedures to be followed in a clinical trial, including planned and actual timing of events, control group, method of allocating treatments, blinding methods, assignment of epochs that subjects pass through in the course of a trial.</cts:cdiscDefinition>
+    <cts:cdiscSynonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Trial Design</cts:cdiscSynonyms>
+    <cts:cdiscSubmissionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >TRIAL DESIGN</cts:cdiscSubmissionValue>
+  </mms:PermissibleValue>
+
+</rdf:RDF>
+
+<!-- Created with RDFGenerator on 05-25-2022 -->
+

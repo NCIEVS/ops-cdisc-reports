@@ -10,11 +10,12 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
     implementation project(':common')
+    testImplementation 'org.xmlunit:xmlunit-core:2.9.0'
+    testImplementation 'org.xmlunit:xmlunit-matchers:2.9.0'
+    testImplementation project(":common").sourceSets.test.output
 }
 
 test {
-    useJUnitPlatform()
+    maxHeapSize = "4g"
 }

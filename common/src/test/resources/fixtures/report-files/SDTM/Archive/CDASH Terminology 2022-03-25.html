@@ -1,0 +1,1317 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <title>CDISC CDASH Controlled Terminology</title>
+        <style type="text/css">
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style:  normal;
+    font-weight: normal;
+    font-size:   14px;
+    margin: 0;
+    padding: 10px;
+}
+
+h1, #study_description {
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 10px 25px;
+    border: 2px solid black;
+}
+
+td {
+    vertical-align: top;
+    padding: 3px 4px;
+    border:  1px solid #dddddd;
+}
+
+thead tr th {
+    vertical-align: top;
+    padding: 3px 4px;
+    border:  2px solid black;
+}
+
+.header {
+    font-weight:bold;
+    white-space: nowrap;
+}
+
+.header td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+tr.item_last td {
+    border-bottom: solid 1px black;
+}
+
+.cl {
+    background: #ccffff;
+}
+
+.cli {
+    background: white;
+}
+
+.nci {
+    background: #ffffcc;
+}
+
+.pre {
+    white-space: pre-wrap;
+}
+
+#legend {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#toc {
+float:left;
+left:5px;
+width:300px;
+}
+#contents {
+position: absolute;
+left:300px;
+margin-right:10px;
+}
+
+
+tr.codelist td {
+    border-top: solid 1px black;
+}
+                </style>
+    </head>
+    <body>
+        <a id="top"></a>
+        <h1>CDISC CDASH Controlled Terminology</h1>
+        <div id="study_description">CDISC CDASH Controlled Terminology, 2022-03-25</div>
+        <table id="legend">
+            <caption>Legend:</caption>
+            <tr>
+                <td class="cl">CodeList</td>
+            </tr>
+            <tr>
+                <td class="cli">CodeListItem</td>
+            </tr>
+            <tr>
+                <td class="nci">NCI attributes</td>
+            </tr>
+        </table>
+        <div id="toc">
+            <table>
+                <tr>
+                    <td>C78418</td><td><a href="#CL.C78418.CMDOSFRM">Concomitant Medication Dose Form</a></td>
+                </tr>
+                <tr>
+                    <td>C78417</td><td><a href="#CL.C78417.CMDOSU">Concomitant Medication Dose Units</a></td>
+                </tr>
+                <tr>
+                    <td>C78419</td><td><a href="#CL.C78419.CMDOSFRQ">Concomitant Medication Dosing Frequency per Interval</a></td>
+                </tr>
+                <tr>
+                    <td>C78420</td><td><a href="#CL.C78420.CMROUTE">Concomitant Medication Route of Administration</a></td>
+                </tr>
+                <tr>
+                    <td>C78422</td><td><a href="#CL.C78422.EGORRESU">ECG Original Units</a></td>
+                </tr>
+                <tr>
+                    <td>C128690</td><td><a href="#CL.C128690.ETHNICC">Ethnicity As Collected</a></td>
+                </tr>
+                <tr>
+                    <td>C78426</td><td><a href="#CL.C78426.EXDOSFRM">Exposure Dose Form</a></td>
+                </tr>
+                <tr>
+                    <td>C78745</td><td><a href="#CL.C78745.EXDOSFRQ">Exposure Dosing Frequency per Interval</a></td>
+                </tr>
+                <tr>
+                    <td>C78425</td><td><a href="#CL.C78425.EXROUTE">Exposure Route of Administration</a></td>
+                </tr>
+                <tr>
+                    <td>C181165</td><td><a href="#CL.C181165.MODDLV">Mode of Delivery</a></td>
+                </tr>
+                <tr>
+                    <td>C128689</td><td><a href="#CL.C128689.RACEC">Race As Collected</a></td>
+                </tr>
+                <tr>
+                    <td>C177909</td><td><a href="#CL.C177909.SAERCAT">Serious Adverse Event Report Category</a></td>
+                </tr>
+                <tr>
+                    <td>C181164</td><td><a href="#CL.C181164.SADCRR">Study Agent Dechallenge Reaction Response</a></td>
+                </tr>
+                <tr>
+                    <td>C181163</td><td><a href="#CL.C181163.SARCRR">Study Agent Rechallenge Reaction Response</a></td>
+                </tr>
+                <tr>
+                    <td>C83004</td><td><a href="#CL.C83004.SUNCF">Substance Use Never/Current/Former Classification</a></td>
+                </tr>
+                <tr>
+                    <td>C78428</td><td><a href="#CL.C78428.EXVOLTU">Total Volume Administration Unit</a></td>
+                </tr>
+                <tr>
+                    <td>C78427</td><td><a href="#CL.C78427.EXINTPU">Unit for the Duration of Treatment Interruption</a></td>
+                </tr>
+                <tr>
+                    <td>C78421</td><td><a href="#CL.C78421.DAORRESU">Unit of Drug Dispensed or Returned</a></td>
+                </tr>
+                <tr>
+                    <td>C78429</td><td><a href="#CL.C78429.EXFLRTU">Unit of Measure for Flow Rate</a></td>
+                </tr>
+                <tr>
+                    <td>C78423</td><td><a href="#CL.C78423.EXDOSU">Units for Exposure</a></td>
+                </tr>
+                <tr>
+                    <td>C78430</td><td><a href="#CL.C78430.EXPDOSEU">Units for Planned Exposure</a></td>
+                </tr>
+                <tr>
+                    <td>C78431</td><td><a href="#CL.C78431.VSPOS">Vital Signs Position of Subject</a></td>
+                </tr>
+            </table>
+        </div>
+        <div id="contents">
+            <h2>Codelist Definitions</h2>
+            <table>
+                <thead>
+                    <tr class="header cl">
+                        <th>OID</th><th>Name
+                            <br>
+                            (CDISC Submission Value)</th><th>DataType
+                            <br>
+                            Extensible</th><th rowspan="2" class="nci">NCI Code</th><th rowspan="2" class="nci">CDISC Synonym</th><th rowspan="2" class="nci">CDISC Definition</th><th rowspan="2" class="nci">Preferred Term</th>
+                    </tr>
+                    <tr class="header cli">
+                        <th></th><th colspan="2">CDISC Submission Value [ODM:CodedValue]</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="cl">
+                        <td><a name="CL.C78418.CMDOSFRM">CL.C78418.CMDOSFRM</a></td><td>Concomitant Medication Dose Form
+                            <br>
+                            (CMDOSFRM)</td><td nowrap>text
+                            <br>
+                            Extensible: Yes</td><td>C78418</td><td>Concomitant Medication Dose Form</td><td>A terminology subset of the CDISC SDTM Pharmaceutical Dosage Form codelist created for CDASH Concomitant Medication Dose Form codelist. (NCI)</td><td>CDISC CDASH Concomitant Medication Dose Form Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">AEROSOL</td><td class="nci">C42887</td><td class="nci">aer</td><td class="nci">A product that is packaged under pressure and contains therapeutically active ingredients that are released upon activation of an appropriate valve system; it is intended for topical application to the skin as well as local application into the nose (nasal aerosols), mouth (lingual aerosols), or lungs (inhalation aerosols).</td><td class="nci">Aerosol Dosage Form</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">CAPSULE</td><td class="nci">C25158</td><td class="nci">cap</td><td class="nci">A solid pharmaceutical dosage form that contains medicinal agent within either a hard or soft soluble container or shell, usually used for the oral administration of medicine. The shells are made of a suitable form of gelatin or other substance. (NCI)</td><td class="nci">Capsule Dosage Form</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">CREAM</td><td class="nci">C28944</td><td class="nci"></td><td class="nci">A semisolid emulsion of either the oil-in-water or the water-in-oil type, ordinarily intended for topical use. (NCI)</td><td class="nci">Cream Dosage Form</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">GAS</td><td class="nci">C42933</td><td class="nci"></td><td class="nci">Any elastic aeriform fluid in which the molecules are separated from one another and have free paths. (NCI)</td><td class="nci">Gas Dosage Form</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">GEL</td><td class="nci">C42934</td><td class="nci"></td><td class="nci">A semisolid (1) dosage form that contains a gelling agent to provide stiffness to a solution or a colloidal dispersion (2). A gel may contain suspended particles. Note 1: A semisolid is not pourable; it does not flow or conform to its container at room temperature. It does not flow at low shear stress and generally exhibits plastic flow behavior. Note 2: A colloidal dispersion is a system in which particles of colloidal dimension (i.e., typically between 1 nm and 1 micrometer) are distributed uniformly throughout a liquid.</td><td class="nci">Gel Dosage Form</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">OINTMENT</td><td class="nci">C42966</td><td class="nci">oint</td><td class="nci">A suspension or emulsion, semisolid (1) dosage form, usually containing less than 20 percent water and volatiles (2) and greater than 50 percent hydrocarbons, waxes, or polyols as the vehicle. This dosage form is generally for external application to the skin or mucous membranes. Note 1: A semisolid is not pourable; it does not flow or conform to its container at room temperature. It does not flow at low shear stress and generally exhibits plastic flow behavior. Note 2: Percent water and volatiles are measured by a loss on drying test in which the sample is heated at 105 degrees C until constant weight is achieved.</td><td class="nci">Ointment Dosage Form</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">PATCH</td><td class="nci">C42968</td><td class="nci"></td><td class="nci">A drug delivery system that often contains an adhesive backing that is usually applied to an external site on the body. Its ingredients either passively diffuse from, or are actively transported from, some portion of the patch. Depending upon the patch, the ingredients are either delivered to the outer surface of the body or into the body. A patch is sometimes synonymous with the terms Extended Release Film and System.</td><td class="nci">Patch Dosage Form</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">POWDER</td><td class="nci">C42972</td><td class="nci"></td><td class="nci">An intimate mixture of dry, finely divided drugs and/or chemicals that may be intended for internal or external use. (NCI)</td><td class="nci">Powder Dosage Form</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SPRAY</td><td class="nci">C42989</td><td class="nci"></td><td class="nci">A liquid minutely divided as by a jet of air or steam. (NCI)</td><td class="nci">Spray Dosage Form</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SUPPOSITORY</td><td class="nci">C42993</td><td class="nci">supp</td><td class="nci">A solid body of various weights and shapes, adapted for introduction into the rectal, vaginal, or urethral orifice of the human body; they usually melt, soften, or dissolve at body temperature.</td><td class="nci">Suppository Dosage Form</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SUSPENSION</td><td class="nci">C42994</td><td class="nci">Ready to Use Suspension;susp</td><td class="nci">A liquid dosage form that contains solid particles dispersed in a liquid vehicle. Note: A liquid is pourable; it flows and conforms to its container at room temperature. It displays Newtonian or pseudoplastic flow behavior.</td><td class="nci">Suspension Dosage Form</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">TABLET</td><td class="nci">C42998</td><td class="nci">tab</td><td class="nci">A solid dosage form containing medicinal substances with or without suitable diluents. (NCI)</td><td class="nci">Tablet Dosage Form</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C78417.CMDOSU">CL.C78417.CMDOSU</a></td><td>Concomitant Medication Dose Units
+                            <br>
+                            (CMDOSU)</td><td nowrap>text
+                            <br>
+                            Extensible: Yes</td><td>C78417</td><td>Concomitant Medication Dose Units</td><td>A terminology subset of the CDISC SDTM Unit codelist created for CDASH Concomitant Medication Dose Units codelist. (NCI)</td><td>CDISC CDASH Concomitant Medication Dose Units Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">CAPSULE</td><td class="nci">C48480</td><td class="nci">cap;Capsule Dosing Unit</td><td class="nci">A dosing measurement based on the capsule unit.(NCI)</td><td class="nci">Capsule Dosing Unit</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">g</td><td class="nci">C48155</td><td class="nci">Gram</td><td class="nci">A unit of mass equal to one thousandth (1E-3) of a kilogram, the kilogram being the base unit of mass in the International System of Units (SI).</td><td class="nci">Gram</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">IU</td><td class="nci">C48579</td><td class="nci">IE;International Unit</td><td class="nci">The unitage assigned by the WHO (World Health Organization) to International Biological Standards - substances, classed as biological according to the criteria provided by WHO Expert Committee on Biological Standardization, to enable the results of biological and immunological assay procedures to be expressed in the same way throughout the world. The definition of an international unit is generally arbitrary and technical, and has to be officially approved by the International Conference for Unification of Formulae.(NCI)</td><td class="nci">International Unit</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">mg</td><td class="nci">C28253</td><td class="nci">Milligram</td><td class="nci">A unit of mass equal to one thousandth (1E-3) of a gram.</td><td class="nci">Milligram</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">mL</td><td class="nci">C28254</td><td class="nci">cm3;Milliliter</td><td class="nci">A unit of volume equal to one thousandth (1E-3) of a liter.</td><td class="nci">Milliliter</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">PUFF</td><td class="nci">C65060</td><td class="nci">Puff Dosing Unit</td><td class="nci">A means of delivering a defined dose of a therapeutic aerolized solution into either the upper or lower respiratory tract. Metered-dose inhalers or spray pumps are devices that provide a puff dose for delivery into either the oral or the nasal cavity.(NCI)</td><td class="nci">Puff Dosing Unit</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">TABLET</td><td class="nci">C48542</td><td class="nci">tab;Tablet Dosing Unit</td><td class="nci">A dosing measurement based on the tablet unit.(NCI)</td><td class="nci">Tablet Dosing Unit</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">ug</td><td class="nci">C48152</td><td class="nci">mcg;Microgram</td><td class="nci">A unit of mass equal to one millionth (1E-6) of a gram.</td><td class="nci">Microgram</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C78419.CMDOSFRQ">CL.C78419.CMDOSFRQ</a></td><td>Concomitant Medication Dosing Frequency per Interval
+                            <br>
+                            (CMDOSFRQ)</td><td nowrap>text
+                            <br>
+                            Extensible: Yes</td><td>C78419</td><td>Concomitant Medication Dosing Frequency per Interval</td><td>A terminology subset of the CDISC SDTM Frequency codelist created for CDASH Concomitant Medication Dosing Frequency per Interval codelist. (NCI)</td><td>CDISC CDASH Concomitant Medication Dosing Frequency per Interval Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">BID</td><td class="nci">C64496</td><td class="nci">BD;Twice per day</td><td class="nci">Two times per day, at unspecified times. (NCI)</td><td class="nci">Twice Daily</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">PRN</td><td class="nci">C64499</td><td class="nci">As needed</td><td class="nci">As needed. (NCI)</td><td class="nci">As Needed</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">QD</td><td class="nci">C25473</td><td class="nci">/day;Daily;Per Day</td><td class="nci">A rate of occurrences within a period of time equal to one day.</td><td class="nci">Daily</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">QID</td><td class="nci">C64530</td><td class="nci">4 times per day</td><td class="nci">Four times per day. (NCI)</td><td class="nci">Four Times Daily</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">QM</td><td class="nci">C64498</td><td class="nci">Every Month;Per Month</td><td class="nci">Every month. (NCI)</td><td class="nci">Monthly</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">QOD</td><td class="nci">C64525</td><td class="nci">Every other day;Every Second Day;Every Two Days;Q2D</td><td class="nci">Every other day. (NCI)</td><td class="nci">Every Other Day</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">TID</td><td class="nci">C64527</td><td class="nci">3 times per day</td><td class="nci">Three times per day. (NCI)</td><td class="nci">Three Times Daily</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">UNKNOWN</td><td class="nci">C17998</td><td class="nci">U;UNK;Unknown</td><td class="nci">Not known, not observed, not recorded, or refused. (NCI)</td><td class="nci">Unknown</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C78420.CMROUTE">CL.C78420.CMROUTE</a></td><td>Concomitant Medication Route of Administration
+                            <br>
+                            (CMROUTE)</td><td nowrap>text
+                            <br>
+                            Extensible: Yes</td><td>C78420</td><td>Concomitant Medication Route of Administration</td><td>A terminology subset of the CDISC SDTM Route codelist created for CDASH Concomitant Medication Route of Administration codelist. (NCI)</td><td>CDISC CDASH Concomitant Medication Route of Administration Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">INTRALESIONAL</td><td class="nci">C38250</td><td class="nci"></td><td class="nci">Administration within or introduced directly into a localized lesion. (FDA)</td><td class="nci">Intralesional Route of Administration</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">INTRAMUSCULAR</td><td class="nci">C28161</td><td class="nci"></td><td class="nci">Administration within a muscle. (FDA)</td><td class="nci">Intramuscular Route of Administration</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">INTRAOCULAR</td><td class="nci">C38255</td><td class="nci"></td><td class="nci">Administration within the eye. (FDA)</td><td class="nci">Intraocular Route of Administration</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">INTRAPERITONEAL</td><td class="nci">C38258</td><td class="nci"></td><td class="nci">Administration within the peritoneal cavity. (FDA)</td><td class="nci">Intraperitoneal Route of Administration</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">NASAL</td><td class="nci">C38284</td><td class="nci">Intranasal Route of Administration</td><td class="nci">Administration to the nose; administered by way of the nose. (FDA)</td><td class="nci">Nasal Route of Administration</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">ORAL</td><td class="nci">C38288</td><td class="nci">Intraoral Route of Administration;PO</td><td class="nci">Administration to or by way of the mouth. (FDA)</td><td class="nci">Oral Route of Administration</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">RECTAL</td><td class="nci">C38295</td><td class="nci"></td><td class="nci">Administration to the rectum. (FDA)</td><td class="nci">Rectal Route of Administration</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">RESPIRATORY (INHALATION)</td><td class="nci">C38216</td><td class="nci"></td><td class="nci">Administration within the respiratory tract by inhaling orally or nasally for local or systemic effect. (FDA)</td><td class="nci">Inhalation Route of Administration</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SUBCUTANEOUS</td><td class="nci">C38299</td><td class="nci">SC;Subdermal Route of Administration</td><td class="nci">Administration beneath the skin; hypodermic. Synonymous with the term SUBDERMAL. (FDA)</td><td class="nci">Subcutaneous Route of Administration</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">TOPICAL</td><td class="nci">C38304</td><td class="nci">TOP</td><td class="nci">Administration to a particular spot on the outer surface of the body. The E2B term TRANSMAMMARY is a subset of the term TOPICAL. (FDA)</td><td class="nci">Topical Route of Administration</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">TRANSDERMAL</td><td class="nci">C38305</td><td class="nci"></td><td class="nci">Administration through the dermal layer of the skin to the systemic circulation by diffusion. (FDA)</td><td class="nci">Transdermal Route of Administration</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">VAGINAL</td><td class="nci">C38313</td><td class="nci"></td><td class="nci">Administration into the vagina. (FDA)</td><td class="nci">Vaginal Route of Administration</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C78422.EGORRESU">CL.C78422.EGORRESU</a></td><td>ECG Original Units
+                            <br>
+                            (EGORRESU)</td><td nowrap>text
+                            <br>
+                            Extensible: Yes</td><td>C78422</td><td>ECG Original Units</td><td>A terminology subset of the CDISC SDTM Unit codelist created for CDASH ECG Original Units codelist. (NCI)</td><td>CDISC CDASH ECG Original Units Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">beats/min</td><td class="nci">C49673</td><td class="nci">Beats per Minute;bpm;BPM</td><td class="nci">The number of heartbeats measured per minute time. (NCI)</td><td class="nci">Beats per Minute</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">msec</td><td class="nci">C41140</td><td class="nci">Millisecond;ms</td><td class="nci">A unit of time, which is equal to one thousandth of a second.(NCI)</td><td class="nci">Millisecond</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">sec</td><td class="nci">C42535</td><td class="nci">Second</td><td class="nci">The base unit of time in the International System of Units (SI) equal to the duration of 9,192,631,770 periods of the specified light radiation corresponding to the transition between the two hyperfine levels of the cesium 133 atom in its ground state at 0 K.</td><td class="nci">Second</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C128690.ETHNICC">CL.C128690.ETHNICC</a></td><td>Ethnicity As Collected
+                            <br>
+                            (ETHNICC)</td><td nowrap>text
+                            <br>
+                            Extensible: Yes</td><td>C128690</td><td>Ethnicity As Collected</td><td>A terminology codelist relevant to the ethnicity of an individual as collected on the case report form.</td><td>CDISC SDTM Collected Ethnicity Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">ACHANG</td><td class="nci">C158197</td><td class="nci">AC</td><td class="nci">A Chinese person from the Achang ethnic group.</td><td class="nci">Achang Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">ASHKENAZI JEW</td><td class="nci">C17950</td><td class="nci"></td><td class="nci">A person of Ashkenazi Jewish descent.</td><td class="nci">Ashkenazi Jew</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">BAI</td><td class="nci">C158171</td><td class="nci">BA</td><td class="nci">A Chinese person from the Bai ethnic group.</td><td class="nci">Bai Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">BLANG</td><td class="nci">C158193</td><td class="nci">BL</td><td class="nci">A Chinese person from the Blang ethnic group.</td><td class="nci">Blang Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">BONAN</td><td class="nci">C158203</td><td class="nci">BN</td><td class="nci">A Chinese person from the Bonan ethnic group.</td><td class="nci">Bonan Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">BUYEI</td><td class="nci">C158169</td><td class="nci">BY</td><td class="nci">A Chinese person from the Buyei ethnic group.</td><td class="nci">Buyei Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">CENTRAL AMERICAN</td><td class="nci">C67118</td><td class="nci"></td><td class="nci">A person of Central American descent.</td><td class="nci">Central American</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">CHOSEN</td><td class="nci">C158172</td><td class="nci">CS</td><td class="nci">A Chinese person from the Chosen ethnic group.</td><td class="nci">Chosen Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">CUBAN AMERICAN</td><td class="nci">C67115</td><td class="nci"></td><td class="nci">A person of Cuban and American descent.</td><td class="nci">Cuban or Cuban American</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">CUBAN</td><td class="nci">C107608</td><td class="nci"></td><td class="nci">A person of Cuban descent.</td><td class="nci">Cuban</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">DAI</td><td class="nci">C158176</td><td class="nci">DA</td><td class="nci">A Chinese person from the Dai (including several different Tai-speaking groups historically referred to as Bai-yi) ethnic group.</td><td class="nci">Dai Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">DAUR</td><td class="nci">C158191</td><td class="nci">DU</td><td class="nci">A Chinese person from the Daur ethnic group.</td><td class="nci">Daur Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">DEANG</td><td class="nci">C158202</td><td class="nci">DE</td><td class="nci">A Chinese person from the Deang ethnic group.</td><td class="nci">Deang Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">DERUNG</td><td class="nci">C158209</td><td class="nci">DR</td><td class="nci">A Chinese person from the Derung ethnic group.</td><td class="nci">Derung Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">DONG</td><td class="nci">C158168</td><td class="nci">DO</td><td class="nci">A Chinese person from the Dong ethnic group.</td><td class="nci">Dong Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">DONGXIANG</td><td class="nci">C158179</td><td class="nci">DX</td><td class="nci">A Chinese person from the Dongxiang ethnic group.</td><td class="nci">Dongxiang Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">EWENKI</td><td class="nci">C158199</td><td class="nci">EW</td><td class="nci">A Chinese person from the Ewenki ethnic group.</td><td class="nci">Ewenki Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">GAOSHAN</td><td class="nci">C158211</td><td class="nci">GS</td><td class="nci">A Chinese person from the Gaoshan ethnic group.</td><td class="nci">Gaoshan Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">GELAO</td><td class="nci">C158180</td><td class="nci">GL</td><td class="nci">A Chinese person from the Gelao ethnic group.</td><td class="nci">Gelao Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">GIN</td><td class="nci">C158200</td><td class="nci">GI</td><td class="nci">A Chinese person from the Gin ethnic group.</td><td class="nci">Gin Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">HAN</td><td class="nci">C158158</td><td class="nci">HA</td><td class="nci">A Chinese person from the Han ethnic group (including Chuanqing).</td><td class="nci">Han Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">HANI</td><td class="nci">C158173</td><td class="nci">HN</td><td class="nci">A Chinese person from the Hani (including Sangkong) ethnic group.</td><td class="nci">Hani Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">HEZHEN</td><td class="nci">C158210</td><td class="nci">HZ</td><td class="nci">A Chinese person from the Hezhen ethnic group.</td><td class="nci">Hezhen Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">HISPANIC OR LATINO</td><td class="nci">C17459</td><td class="nci"></td><td class="nci">A person of Mexican, Puerto Rican, Cuban, Central or South American or other Spanish culture or origin, regardless of race. (NCI)</td><td class="nci">Hispanic or Latino</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">HUI</td><td class="nci">C158160</td><td class="nci">HU</td><td class="nci">A Chinese person from the Hui (including Utsuls of Hainan, descended from Cham refugees) ethnic group.</td><td class="nci">Hui Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">JINGPO</td><td class="nci">C158190</td><td class="nci">JP</td><td class="nci">A Chinese person from the Jingpo ethnic group.</td><td class="nci">Jingpo Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">JINO</td><td class="nci">C158201</td><td class="nci">JN</td><td class="nci">A Chinese person from the Jino ethnic group.</td><td class="nci">Jino Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">KAZAK</td><td class="nci">C158175</td><td class="nci">KZ</td><td class="nci">A Chinese person from the Kazak ethnic group.</td><td class="nci">Kazak Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">KIRGIZ</td><td class="nci">C158189</td><td class="nci">KG</td><td class="nci">A Chinese person from the Kirgiz ethnic group.</td><td class="nci">Kirgiz Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">LAHU</td><td class="nci">C158181</td><td class="nci">LH</td><td class="nci">A Chinese person from the Lahu ethnic group.</td><td class="nci">Lahu Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">LATIN AMERICAN</td><td class="nci">C126531</td><td class="nci"></td><td class="nci">A person of Latin American descent.</td><td class="nci">Latin American</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">LHOBA</td><td class="nci">C158212</td><td class="nci">LB</td><td class="nci">A Chinese person from the Lhoba ethnic group.</td><td class="nci">Lhoba Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">LI</td><td class="nci">C158174</td><td class="nci">LI</td><td class="nci">A Chinese person from the Li ethnic group.</td><td class="nci">Li Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">LISU</td><td class="nci">C158178</td><td class="nci">LS</td><td class="nci">A Chinese person from the Lisu ethnic group.</td><td class="nci">Lisu Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">MAN</td><td class="nci">C158161</td><td class="nci">MA</td><td class="nci">A Chinese person from the Man ethnic group.</td><td class="nci">Man Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">MAONAN</td><td class="nci">C158194</td><td class="nci">MN</td><td class="nci">A Chinese person from the Maonan (including the Then) ethnic group.</td><td class="nci">Maonan Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">MEXICAN AMERICAN</td><td class="nci">C67114</td><td class="nci"></td><td class="nci">A person of Mexican and American descent.</td><td class="nci">Mexican American</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">MEXICAN</td><td class="nci">C67113</td><td class="nci"></td><td class="nci">A person of Mexican descent.</td><td class="nci">Mexican</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">MIAO</td><td class="nci">C158163</td><td class="nci">MH</td><td class="nci">A Chinese person from the Miao (Including Hmong) ethnic group.</td><td class="nci">Miao Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">MONBA</td><td class="nci">C158207</td><td class="nci">MB</td><td class="nci">A Chinese person from the Monba ethnic group.</td><td class="nci">Monba Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">MONGOL</td><td class="nci">C158167</td><td class="nci">MG</td><td class="nci">A Chinese person from the Mongol ethnic group.</td><td class="nci">Mongol Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">MULAO</td><td class="nci">C158187</td><td class="nci">ML</td><td class="nci">A Chinese person from the Mulao (including the Qago) ethnic group.</td><td class="nci">Mulao Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">NAXI</td><td class="nci">C158184</td><td class="nci">NX</td><td class="nci">A Chinese person from the Naxi (including Mosuo) ethnic group.</td><td class="nci">Naxi Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">NOT HISPANIC OR LATINO</td><td class="nci">C41222</td><td class="nci"></td><td class="nci">A person not of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin, regardless of race. An arbitrary ethnic classification. (NCI)</td><td class="nci">Not Hispanic or Latino</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">NOT REPORTED</td><td class="nci">C43234</td><td class="nci">Not reported</td><td class="nci">Not provided or available.</td><td class="nci">Not Reported</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">NU</td><td class="nci">C158198</td><td class="nci">NU</td><td class="nci">A Chinese person from the Nu ethnic group.</td><td class="nci">Nu Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">OROQEN</td><td class="nci">C158208</td><td class="nci">OR</td><td class="nci">A Chinese person from the Oroqen ethnic group.</td><td class="nci">Oroqen Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">PUERTO RICAN</td><td class="nci">C67112</td><td class="nci"></td><td class="nci">A person of Puerto Rican descent.</td><td class="nci">Puerto Rican</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">PUMI</td><td class="nci">C158196</td><td class="nci">PM</td><td class="nci">A Chinese person from the Pumi ethnic group.</td><td class="nci">Pumi Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">QIANG</td><td class="nci">C158185</td><td class="nci">QI</td><td class="nci">A Chinese person from the Qiang ethnic group.</td><td class="nci">Qiang Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">RUSS</td><td class="nci">C158204</td><td class="nci">RS</td><td class="nci">A Chinese person from the Russ ethnic group.</td><td class="nci">Russ Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SALAR</td><td class="nci">C158192</td><td class="nci">SL</td><td class="nci">A Chinese person from the Salar ethnic group.</td><td class="nci">Salar Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SEPHARDIC JEW</td><td class="nci">C103283</td><td class="nci"></td><td class="nci">A person of Sephardic Jewish descent.</td><td class="nci">Sephardic Jew</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SHE</td><td class="nci">C158177</td><td class="nci">SH</td><td class="nci">A Chinese person from the She ethnic group.</td><td class="nci">She Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SOUTH AMERICAN</td><td class="nci">C126532</td><td class="nci"></td><td class="nci">A person of South American descent.</td><td class="nci">South American</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SPANISH</td><td class="nci">C67120</td><td class="nci"></td><td class="nci">A person from Spain or of Spanish descent.</td><td class="nci">Spanish</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SUI</td><td class="nci">C158183</td><td class="nci">SU</td><td class="nci">A Chinese person from the Sui ethnic group.</td><td class="nci">Sui Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">TAJIK</td><td class="nci">C158195</td><td class="nci">TA</td><td class="nci">A Chinese person from the Tajik ethnic group.</td><td class="nci">Tajik Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">TATAR</td><td class="nci">C158213</td><td class="nci">TT</td><td class="nci">A Chinese person from the Tatar ethnic group.</td><td class="nci">Tatar Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">TU</td><td class="nci">C158186</td><td class="nci">TU</td><td class="nci">A Chinese person from the Tu ethnic group.</td><td class="nci">Tu Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">TUJIA</td><td class="nci">C158165</td><td class="nci">TJ</td><td class="nci">A Chinese person from the Tujia ethnic group.</td><td class="nci">Tujia Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">UNKNOWN</td><td class="nci">C17998</td><td class="nci">U;UNK;Unknown</td><td class="nci">Not known, not observed, not recorded, or refused. (NCI)</td><td class="nci">Unknown</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">UYGUR</td><td class="nci">C158162</td><td class="nci">UG</td><td class="nci">A Chinese person from the Uygur ethnic group.</td><td class="nci">Uygur Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">UZBEK</td><td class="nci">C158206</td><td class="nci">UZ</td><td class="nci">A Chinese person from the Uzbek ethnic group.</td><td class="nci">Uzbek Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">VA</td><td class="nci">C158182</td><td class="nci">VA</td><td class="nci">A Chinese person from the Va ethnic group.</td><td class="nci">Va Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">XIBE</td><td class="nci">C158188</td><td class="nci">XB</td><td class="nci">A Chinese person from the Xibe ethnic group.</td><td class="nci">Xibe Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">YAO</td><td class="nci">C158170</td><td class="nci">YA</td><td class="nci">A Chinese person from the Yao ethnic group.</td><td class="nci">Yao Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">YI</td><td class="nci">C158164</td><td class="nci">YI</td><td class="nci">A Chinese person from the Yi ethnic group.</td><td class="nci">Yi Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">YUGUR</td><td class="nci">C158205</td><td class="nci">YG</td><td class="nci">A Chinese person from the Yugur ethnic group.</td><td class="nci">Yugur Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">ZANG</td><td class="nci">C158166</td><td class="nci">ZA</td><td class="nci">A Chinese person from the Zang (including Amdowa, Khampa and some Pumi speakers) ethnic group.</td><td class="nci">Zang Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">ZHUANG</td><td class="nci">C158159</td><td class="nci">ZH</td><td class="nci">A Chinese person from the Zhuang ethnic group.</td><td class="nci">Zhuang Chinese</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C78426.EXDOSFRM">CL.C78426.EXDOSFRM</a></td><td>Exposure Dose Form
+                            <br>
+                            (EXDOSFRM)</td><td nowrap>text
+                            <br>
+                            Extensible: Yes</td><td>C78426</td><td>Exposure Dose Form</td><td>A terminology subset of the CDISC SDTM Pharmaceutical Dosage Form codelist created for CDASH Exposure Dose Form codelist. (NCI)</td><td>CDISC CDASH Exposure Dose Form Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">AEROSOL</td><td class="nci">C42887</td><td class="nci">aer</td><td class="nci">A product that is packaged under pressure and contains therapeutically active ingredients that are released upon activation of an appropriate valve system; it is intended for topical application to the skin as well as local application into the nose (nasal aerosols), mouth (lingual aerosols), or lungs (inhalation aerosols).</td><td class="nci">Aerosol Dosage Form</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">CAPSULE</td><td class="nci">C25158</td><td class="nci">cap</td><td class="nci">A solid pharmaceutical dosage form that contains medicinal agent within either a hard or soft soluble container or shell, usually used for the oral administration of medicine. The shells are made of a suitable form of gelatin or other substance. (NCI)</td><td class="nci">Capsule Dosage Form</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">CREAM</td><td class="nci">C28944</td><td class="nci"></td><td class="nci">A semisolid emulsion of either the oil-in-water or the water-in-oil type, ordinarily intended for topical use. (NCI)</td><td class="nci">Cream Dosage Form</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">GAS</td><td class="nci">C42933</td><td class="nci"></td><td class="nci">Any elastic aeriform fluid in which the molecules are separated from one another and have free paths. (NCI)</td><td class="nci">Gas Dosage Form</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">GEL</td><td class="nci">C42934</td><td class="nci"></td><td class="nci">A semisolid (1) dosage form that contains a gelling agent to provide stiffness to a solution or a colloidal dispersion (2). A gel may contain suspended particles. Note 1: A semisolid is not pourable; it does not flow or conform to its container at room temperature. It does not flow at low shear stress and generally exhibits plastic flow behavior. Note 2: A colloidal dispersion is a system in which particles of colloidal dimension (i.e., typically between 1 nm and 1 micrometer) are distributed uniformly throughout a liquid.</td><td class="nci">Gel Dosage Form</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">OINTMENT</td><td class="nci">C42966</td><td class="nci">oint</td><td class="nci">A suspension or emulsion, semisolid (1) dosage form, usually containing less than 20 percent water and volatiles (2) and greater than 50 percent hydrocarbons, waxes, or polyols as the vehicle. This dosage form is generally for external application to the skin or mucous membranes. Note 1: A semisolid is not pourable; it does not flow or conform to its container at room temperature. It does not flow at low shear stress and generally exhibits plastic flow behavior. Note 2: Percent water and volatiles are measured by a loss on drying test in which the sample is heated at 105 degrees C until constant weight is achieved.</td><td class="nci">Ointment Dosage Form</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">PATCH</td><td class="nci">C42968</td><td class="nci"></td><td class="nci">A drug delivery system that often contains an adhesive backing that is usually applied to an external site on the body. Its ingredients either passively diffuse from, or are actively transported from, some portion of the patch. Depending upon the patch, the ingredients are either delivered to the outer surface of the body or into the body. A patch is sometimes synonymous with the terms Extended Release Film and System.</td><td class="nci">Patch Dosage Form</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">POWDER</td><td class="nci">C42972</td><td class="nci"></td><td class="nci">An intimate mixture of dry, finely divided drugs and/or chemicals that may be intended for internal or external use. (NCI)</td><td class="nci">Powder Dosage Form</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SPRAY</td><td class="nci">C42989</td><td class="nci"></td><td class="nci">A liquid minutely divided as by a jet of air or steam. (NCI)</td><td class="nci">Spray Dosage Form</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SUPPOSITORY</td><td class="nci">C42993</td><td class="nci">supp</td><td class="nci">A solid body of various weights and shapes, adapted for introduction into the rectal, vaginal, or urethral orifice of the human body; they usually melt, soften, or dissolve at body temperature.</td><td class="nci">Suppository Dosage Form</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SUSPENSION</td><td class="nci">C42994</td><td class="nci">Ready to Use Suspension;susp</td><td class="nci">A liquid dosage form that contains solid particles dispersed in a liquid vehicle. Note: A liquid is pourable; it flows and conforms to its container at room temperature. It displays Newtonian or pseudoplastic flow behavior.</td><td class="nci">Suspension Dosage Form</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">TABLET</td><td class="nci">C42998</td><td class="nci">tab</td><td class="nci">A solid dosage form containing medicinal substances with or without suitable diluents. (NCI)</td><td class="nci">Tablet Dosage Form</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C78745.EXDOSFRQ">CL.C78745.EXDOSFRQ</a></td><td>Exposure Dosing Frequency per Interval
+                            <br>
+                            (EXDOSFRQ)</td><td nowrap>text
+                            <br>
+                            Extensible: Yes</td><td>C78745</td><td>Exposure Dosing Frequency per Interval</td><td>A terminology subset of the CDISC SDTM Frequency codelist created for CDASH Exposure Dosing Frequency per Interval codelist. (NCI)</td><td>CDISC CDASH Exposure Dosing Frequency per Interval Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">BID</td><td class="nci">C64496</td><td class="nci">BD;Twice per day</td><td class="nci">Two times per day, at unspecified times. (NCI)</td><td class="nci">Twice Daily</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">PRN</td><td class="nci">C64499</td><td class="nci">As needed</td><td class="nci">As needed. (NCI)</td><td class="nci">As Needed</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">QD</td><td class="nci">C25473</td><td class="nci">/day;Daily;Per Day</td><td class="nci">A rate of occurrences within a period of time equal to one day.</td><td class="nci">Daily</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">QID</td><td class="nci">C64530</td><td class="nci">4 times per day</td><td class="nci">Four times per day. (NCI)</td><td class="nci">Four Times Daily</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">QM</td><td class="nci">C64498</td><td class="nci">Every Month;Per Month</td><td class="nci">Every month. (NCI)</td><td class="nci">Monthly</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">QOD</td><td class="nci">C64525</td><td class="nci">Every other day;Every Second Day;Every Two Days;Q2D</td><td class="nci">Every other day. (NCI)</td><td class="nci">Every Other Day</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">TID</td><td class="nci">C64527</td><td class="nci">3 times per day</td><td class="nci">Three times per day. (NCI)</td><td class="nci">Three Times Daily</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">UNKNOWN</td><td class="nci">C17998</td><td class="nci">U;UNK;Unknown</td><td class="nci">Not known, not observed, not recorded, or refused. (NCI)</td><td class="nci">Unknown</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C78425.EXROUTE">CL.C78425.EXROUTE</a></td><td>Exposure Route of Administration
+                            <br>
+                            (EXROUTE)</td><td nowrap>text
+                            <br>
+                            Extensible: Yes</td><td>C78425</td><td>Exposure Route of Administration</td><td>A terminology subset of the CDISC SDTM Route codelist created for CDASH Exposure Route of Administration codelist. (NCI)</td><td>CDISC CDASH Exposure Route of Administration Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">INTRALESIONAL</td><td class="nci">C38250</td><td class="nci"></td><td class="nci">Administration within or introduced directly into a localized lesion. (FDA)</td><td class="nci">Intralesional Route of Administration</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">INTRAMUSCULAR</td><td class="nci">C28161</td><td class="nci"></td><td class="nci">Administration within a muscle. (FDA)</td><td class="nci">Intramuscular Route of Administration</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">INTRAOCULAR</td><td class="nci">C38255</td><td class="nci"></td><td class="nci">Administration within the eye. (FDA)</td><td class="nci">Intraocular Route of Administration</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">INTRAPERITONEAL</td><td class="nci">C38258</td><td class="nci"></td><td class="nci">Administration within the peritoneal cavity. (FDA)</td><td class="nci">Intraperitoneal Route of Administration</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">NASAL</td><td class="nci">C38284</td><td class="nci">Intranasal Route of Administration</td><td class="nci">Administration to the nose; administered by way of the nose. (FDA)</td><td class="nci">Nasal Route of Administration</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">ORAL</td><td class="nci">C38288</td><td class="nci">Intraoral Route of Administration;PO</td><td class="nci">Administration to or by way of the mouth. (FDA)</td><td class="nci">Oral Route of Administration</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">RECTAL</td><td class="nci">C38295</td><td class="nci"></td><td class="nci">Administration to the rectum. (FDA)</td><td class="nci">Rectal Route of Administration</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">RESPIRATORY (INHALATION)</td><td class="nci">C38216</td><td class="nci"></td><td class="nci">Administration within the respiratory tract by inhaling orally or nasally for local or systemic effect. (FDA)</td><td class="nci">Inhalation Route of Administration</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SUBCUTANEOUS</td><td class="nci">C38299</td><td class="nci">SC;Subdermal Route of Administration</td><td class="nci">Administration beneath the skin; hypodermic. Synonymous with the term SUBDERMAL. (FDA)</td><td class="nci">Subcutaneous Route of Administration</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">TOPICAL</td><td class="nci">C38304</td><td class="nci">TOP</td><td class="nci">Administration to a particular spot on the outer surface of the body. The E2B term TRANSMAMMARY is a subset of the term TOPICAL. (FDA)</td><td class="nci">Topical Route of Administration</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">TRANSDERMAL</td><td class="nci">C38305</td><td class="nci"></td><td class="nci">Administration through the dermal layer of the skin to the systemic circulation by diffusion. (FDA)</td><td class="nci">Transdermal Route of Administration</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">VAGINAL</td><td class="nci">C38313</td><td class="nci"></td><td class="nci">Administration into the vagina. (FDA)</td><td class="nci">Vaginal Route of Administration</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C181165.MODDLV">CL.C181165.MODDLV</a></td><td>Mode of Delivery
+                            <br>
+                            (MODDLV)</td><td nowrap>text
+                            <br>
+                            Extensible: Yes</td><td>C181165</td><td>Mode of Delivery</td><td>A terminology codelist relevant to the mode of delivery of a fetus or neonate.</td><td>CDISC SDTM Mode of Delivery Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">BREECH EXTRACTION</td><td class="nci">C114136</td><td class="nci"></td><td class="nci">The delivery of a breech-presenting fetus, which is manually pulled through the birth canal.</td><td class="nci">Breech Extraction</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">CESAREAN SECTION</td><td class="nci">C46088</td><td class="nci"></td><td class="nci">Surgical delivery of one or more intrauterine fetuses though an abdominal incision.</td><td class="nci">Cesarean Section</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">DELIVERY BY DESTRUCTIVE OPERATION</td><td class="nci">C114143</td><td class="nci"></td><td class="nci">Extraction of a fetus through the cervix using destructive surgical techniques.</td><td class="nci">Delivery by Destructive Operation</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">VAGINAL ASSISTED DELIVERY</td><td class="nci">C81301</td><td class="nci">Operative Vaginal Delivery</td><td class="nci">Birth of the fetus through the vagina with the application of vacuum or forceps or any other instrument.</td><td class="nci">Vaginal Assisted Delivery</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">VAGINAL BIRTH AFTER CESAREAN DELIVERY</td><td class="nci">C81302</td><td class="nci"></td><td class="nci">A vaginal birth in a woman with one or more previous cesarean births. (reVITALize)</td><td class="nci">Vaginal Birth after Cesarean Delivery</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">VAGINAL DELIVERY</td><td class="nci">C81303</td><td class="nci"></td><td class="nci">Birth of the fetus through the vagina.</td><td class="nci">Vaginal Delivery</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C128689.RACEC">CL.C128689.RACEC</a></td><td>Race As Collected
+                            <br>
+                            (RACEC)</td><td nowrap>text
+                            <br>
+                            Extensible: Yes</td><td>C128689</td><td>Race As Collected</td><td>A terminology codelist relevant to the race of an individual as collected on the case report form.</td><td>CDISC SDTM Collected Race Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">ABORIGINAL AUSTRALIAN</td><td class="nci">C154875</td><td class="nci"></td><td class="nci">The native people of Australia.</td><td class="nci">Aboriginal Australian</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">AFRICAN AMERICAN</td><td class="nci">C128937</td><td class="nci"></td><td class="nci">A person having origins in the original peoples of sub-Saharan Africa and the United States.</td><td class="nci">African American</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">AFRICAN CARIBBEAN</td><td class="nci">C41226</td><td class="nci"></td><td class="nci">A person having origins in the original peoples of sub-Saharan Africa and the Caribbean.</td><td class="nci">African Caribbean</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">AFRICAN</td><td class="nci">C42331</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of sub-Saharan Africa.</td><td class="nci">African</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">ALASKA NATIVE</td><td class="nci">C18237</td><td class="nci"></td><td class="nci">The native people of Alaska.</td><td class="nci">Alaska Native</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">AMERICAN INDIAN OR ALASKA NATIVE</td><td class="nci">C41259</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of North and South America (including Central America), and who maintains tribal affiliation or community attachment. (FDA)</td><td class="nci">American Indian or Alaska Native</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">AMERICAN INDIAN</td><td class="nci">C43877</td><td class="nci"></td><td class="nci">The native people of North America.</td><td class="nci">American Indian</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">ARAB</td><td class="nci">C43876</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of the Arabian peninsula and surrounding territories in the Middle East and northern Africa.</td><td class="nci">Arab</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">ASIAN AMERICAN</td><td class="nci">C16310</td><td class="nci"></td><td class="nci">A person having origins in the original peoples of Asia and the United States.</td><td class="nci">Asian American</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">ASIAN INDIAN</td><td class="nci">C41262</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of the Indian subcontinent.</td><td class="nci">Asian Indian</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">ASIAN</td><td class="nci">C41260</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of the Far East, Southeast Asia, or the Indian subcontinent including, for example, Cambodia, China, India, Japan, Korea, Malaysia, Pakistan, the Philippine Islands, Thailand, and Vietnam. (FDA)</td><td class="nci">Asian</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">BAHAMIAN</td><td class="nci">C67271</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of the Bahamas.</td><td class="nci">Bahamian</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">BANGLADESHI</td><td class="nci">C43671</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Bangladesh.</td><td class="nci">Bangladeshi</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">BARBADIAN</td><td class="nci">C43823</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Barbados.</td><td class="nci">Barbadian</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">BHUTANESE</td><td class="nci">C43673</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Bhutan.</td><td class="nci">Bhutanese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">BLACK CENTRAL AMERICAN</td><td class="nci">C128991</td><td class="nci"></td><td class="nci">A person having origins in the original peoples of sub-Saharan Africa and Central America.</td><td class="nci">Black Central American</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">BLACK OR AFRICAN AMERICAN</td><td class="nci">C16352</td><td class="nci"></td><td class="nci">A person having origins in any of the black racial groups of Africa. Terms such as "Haitian" or "Negro" can be used in addition to "Black or African American." (FDA)</td><td class="nci">Black or African American</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">BLACK SOUTH AMERICAN</td><td class="nci">C128992</td><td class="nci"></td><td class="nci">A person having origins in the original peoples of sub-Saharan Africa and South America.</td><td class="nci">Black South American</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">BLACK</td><td class="nci">C128938</td><td class="nci"></td><td class="nci">A person having origins in the original peoples of sub-Saharan Africa or the Caribbean.</td><td class="nci">Black</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">BOTSWANAN</td><td class="nci">C43830</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Botswana.</td><td class="nci">Botswanan</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">BURMESE</td><td class="nci">C43674</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Myanmar (formerly Burma).</td><td class="nci">Burmese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">CAMBODIAN</td><td class="nci">C43399</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Cambodia (formerly Kampuchea).</td><td class="nci">Cambodian</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">CARIBBEAN INDIAN</td><td class="nci">C77810</td><td class="nci"></td><td class="nci">The native people of the Caribbean.</td><td class="nci">Caribbean Indian</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">CENTRAL AMERICAN INDIAN</td><td class="nci">C44950</td><td class="nci"></td><td class="nci">The native people of Central America.</td><td class="nci">Central American Indian</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">CENTRAL ASIAN</td><td class="nci">C126534</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Central Asia.</td><td class="nci">Central Asian</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">CHAMORRO</td><td class="nci">C43403</td><td class="nci"></td><td class="nci">The native people of the Mariana Islands, including the United States territories of Guam and the Commonwealth of the Northern Mariana Islands in Micronesia.</td><td class="nci">Chamorran</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">CHINESE</td><td class="nci">C43391</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of China.</td><td class="nci">Chinese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">DOMINICA ISLANDER</td><td class="nci">C43824</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Dominica.</td><td class="nci">Dominica Islander</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">DOMINICAN</td><td class="nci">C67117</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of the Dominican Republic.</td><td class="nci">Dominican</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">EAST ASIAN</td><td class="nci">C161419</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of East Asia.</td><td class="nci">East Asian</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">EASTERN EUROPEAN</td><td class="nci">C77819</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Eastern Europe.</td><td class="nci">Eastern European</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">ETHIOPIAN</td><td class="nci">C43831</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Ethiopia.</td><td class="nci">Ethiopian</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">EUROPEAN</td><td class="nci">C43851</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Europe.</td><td class="nci">European</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">FILIPINO</td><td class="nci">C43393</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of the Philippines.</td><td class="nci">Filipino</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">GREENLAND INUIT</td><td class="nci">C44265</td><td class="nci"></td><td class="nci">The native people of Greenland.</td><td class="nci">Greenland Eskimo</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">GUAMANIAN OR CHAMORRO</td><td class="nci">C43837</td><td class="nci"></td><td class="nci">A person having origins in the original peoples of the United States territories of Guam and the Commonwealth of the Northern Mariana Islands in Micronesia.</td><td class="nci">Guamanian or Chamorro</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">GUAMANIAN</td><td class="nci">C43404</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Guam.</td><td class="nci">Guamanian</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">HAITIAN</td><td class="nci">C43825</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Haiti.</td><td class="nci">Haitian</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">HMONG</td><td class="nci">C43398</td><td class="nci"></td><td class="nci">The native people originating in China around the Yellow River or Hoang Ho.</td><td class="nci">Hmong</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">INDONESIAN</td><td class="nci">C43715</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Indonesia.</td><td class="nci">Indonesian</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">INUPIAT INUIT</td><td class="nci">C44268</td><td class="nci"></td><td class="nci">The native people inhabiting the territory spanning the Norton Sound on the Bering Sea to the Canadian border.</td><td class="nci">Inupiat Eskimo</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">IWO JIMAN</td><td class="nci">C43718</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Iwo Jima.</td><td class="nci">Iwo Jiman</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">JAMAICAN</td><td class="nci">C43826</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Jamaica.</td><td class="nci">Jamaican</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">JAPANESE</td><td class="nci">C43392</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Japan.</td><td class="nci">Japanese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">KHOISAN</td><td class="nci">C154874</td><td class="nci"></td><td class="nci">The native people of the Western Cape in southern Africa.</td><td class="nci">Khoisan</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">KOREAN</td><td class="nci">C43395</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of North and South Korea.</td><td class="nci">Korean</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">LAOTIAN</td><td class="nci">C43397</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Laos.</td><td class="nci">Laotian</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">LATIN AMERICAN</td><td class="nci">C126531</td><td class="nci"></td><td class="nci">A person of Latin American descent.</td><td class="nci">Latin American</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">LIBERIAN</td><td class="nci">C43832</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Liberia.</td><td class="nci">Liberian</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">MALAGASY</td><td class="nci">C43722</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Madagascar.</td><td class="nci">Malagasy</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">MALAYSIAN</td><td class="nci">C43716</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Malaysia.</td><td class="nci">Malaysian</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">MALDIVIAN</td><td class="nci">C43719</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of the Maldives.</td><td class="nci">Maldivian</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">MAORI</td><td class="nci">C158274</td><td class="nci"></td><td class="nci">The native people of New Zealand.</td><td class="nci">Maori</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">MEDITERRANEAN</td><td class="nci">C77811</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of the countries surrounding the Mediterranean sea.</td><td class="nci">Mediterranean</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">MELANESIAN</td><td class="nci">C43409</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Melanesia.</td><td class="nci">Melanesian</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">MICRONESIAN</td><td class="nci">C43402</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Micronesia.</td><td class="nci">Micronesian</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">MIDDLE EASTERN</td><td class="nci">C77820</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of the Middle East.</td><td class="nci">Middle Eastern</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">MONGOLIAN</td><td class="nci">C43864</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Mongolia.</td><td class="nci">Mongolian</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">NAMIBIAN</td><td class="nci">C43833</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Namibia.</td><td class="nci">Namibian</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">NATIVE HAWAIIAN OR OTHER PACIFIC ISLANDER</td><td class="nci">C41219</td><td class="nci"></td><td class="nci">Denotes a person having origins in any of the original peoples of Hawaii, Guam, Samoa, or other Pacific Islands. The term covers particularly people who identify themselves as part-Hawaiian, Native Hawaiian, Guamanian or Chamorro, Carolinian, Samoan, Chuu. (FDA)</td><td class="nci">Native Hawaiian or Other Pacific Islander</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">NATIVE HAWAIIAN</td><td class="nci">C43394</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Hawaii. (NCI)</td><td class="nci">Native Hawaiian</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">NEPALESE</td><td class="nci">C43720</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Nepal.</td><td class="nci">Nepalese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">NIGERIAN</td><td class="nci">C43834</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Nigeria.</td><td class="nci">Nigerian</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">NORTH AFRICAN</td><td class="nci">C77813</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of North Africa.</td><td class="nci">North Coast of Africa</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">NORTHERN EUROPEAN</td><td class="nci">C77814</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Northern Europe.</td><td class="nci">Northern European</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">NOT REPORTED</td><td class="nci">C43234</td><td class="nci">Not reported</td><td class="nci">Not provided or available.</td><td class="nci">Not Reported</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">OKINAWAN</td><td class="nci">C43717</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Okinawa.</td><td class="nci">Okinawan</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">OTHER PACIFIC ISLANDER</td><td class="nci">C107602</td><td class="nci"></td><td class="nci">A person having origins in the original peoples of the Pacific Islands, but not Guam, Hawaii, the Mariana Islands or Samoa. (NCI)</td><td class="nci">Other Pacific Islander</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">PAKISTANI</td><td class="nci">C43427</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Pakistan.</td><td class="nci">Pakistani</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">POLYNESIAN</td><td class="nci">C43405</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Polynesia.</td><td class="nci">Polynesian</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">RUSSIAN</td><td class="nci">C43860</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Russia.</td><td class="nci">Russian</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SAMOAN</td><td class="nci">C43407</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Samoa. (NCI)</td><td class="nci">Samoan</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SIBERIAN ESKIMO</td><td class="nci">C44269</td><td class="nci"></td><td class="nci">The native Yupik people inhabiting the coast of the Chukchi Peninsula in the far northeast of the Russian Federation and on St. Lawrence Island in Alaska.</td><td class="nci">Siberian Eskimo</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SINGAPOREAN</td><td class="nci">C43721</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Singapore.</td><td class="nci">Singaporean</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SOUTH AMERICAN INDIAN</td><td class="nci">C44953</td><td class="nci"></td><td class="nci">The native people of South America.</td><td class="nci">South American Indian</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SOUTH ASIAN</td><td class="nci">C41263</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of the South Asia.</td><td class="nci">South Asian</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SOUTHEAST ASIAN</td><td class="nci">C126533</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Southeast Asia.</td><td class="nci">Southeast Asian</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SOUTHERN AFRICAN COLOURED</td><td class="nci">C156583</td><td class="nci"></td><td class="nci">A person of mixed race, whose ancestry is from one or more of the naturalized racial groups of Southern Africa (typically Western European, South Asian, or Southeastern Asian) and one or more of the indigenous Southern African peoples.</td><td class="nci">Southern African Coloured</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SRI LANKAN</td><td class="nci">C43672</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Sri Lanka.</td><td class="nci">Sri Lankan</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">TAIWANESE</td><td class="nci">C43675</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Taiwan.</td><td class="nci">Taiwanese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">THAI</td><td class="nci">C43400</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Thailand.</td><td class="nci">Thai</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">TOBAGOAN</td><td class="nci">C43827</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Tobago.</td><td class="nci">Tobagoan</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">TRINIDADIAN</td><td class="nci">C43828</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Trinidad.</td><td class="nci">Trinidadian</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">UNKNOWN</td><td class="nci">C17998</td><td class="nci">U;UNK;Unknown</td><td class="nci">Not known, not observed, not recorded, or refused. (NCI)</td><td class="nci">Unknown</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">VIETNAMESE</td><td class="nci">C43396</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Viet Nam.</td><td class="nci">Vietnamese</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">WEST ASIAN</td><td class="nci">C153343</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Western Asia.</td><td class="nci">Western Asian</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">WEST INDIAN</td><td class="nci">C43829</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of the West Indies.</td><td class="nci">West Indian</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">WESTERN EUROPEAN</td><td class="nci">C77817</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Western Europe.</td><td class="nci">Western European</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">WHITE CARIBBEAN</td><td class="nci">C77816</td><td class="nci"></td><td class="nci">A person having origins in the original peoples of Europe, the Middle East, or North Africa, and the Caribbean.</td><td class="nci">White Caribbean</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">WHITE CENTRAL AMERICAN</td><td class="nci">C128993</td><td class="nci"></td><td class="nci">A person having origins in the original peoples of Europe, the Middle East, or North Africa, and Central America.</td><td class="nci">White Central American</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">WHITE SOUTH AMERICAN</td><td class="nci">C128994</td><td class="nci"></td><td class="nci">A person having origins in the original peoples of Europe, the Middle East, or North Africa, and South America.</td><td class="nci">White South American</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">WHITE</td><td class="nci">C41261</td><td class="nci"></td><td class="nci">Denotes a person with European, Middle Eastern, or North African ancestral origin who identifies, or is identified, as White. (FDA)</td><td class="nci">White</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">YUPIK ESKIMO</td><td class="nci">C44270</td><td class="nci"></td><td class="nci">The native people inhabiting western, southwestern, and southcentral Alaska and the Russian Far East.</td><td class="nci">Yupik Eskimo</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">ZAIREAN</td><td class="nci">C43835</td><td class="nci"></td><td class="nci">A person having origins in any of the original peoples of Zaire.</td><td class="nci">Zairean</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C177909.SAERCAT">CL.C177909.SAERCAT</a></td><td>Serious Adverse Event Report Category
+                            <br>
+                            (SAERCAT)</td><td nowrap>text
+                            <br>
+                            Extensible: No</td><td>C177909</td><td>Serious Adverse Event Report Category</td><td>Terminology relevant to the classification of a serious adverse event report.</td><td>CDISC CDASH Serious Adverse Event Report Category Response Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">AMENDMENT</td><td class="nci">C41200</td><td class="nci">Amended</td><td class="nci">Action(s) undertaken to modify by means of correction, addition, subtraction, or replacement.</td><td class="nci">Amendment</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">NULLIFICATION</td><td class="nci">C178052</td><td class="nci">Nullified</td><td class="nci">Action(s) undertaken to void, negate, or invalidate.</td><td class="nci">Nullification</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">ORIGINAL</td><td class="nci">C25604</td><td class="nci"></td><td class="nci">Preceding all others in time or being as first made or performed.</td><td class="nci">Original</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C181164.SADCRR">CL.C181164.SADCRR</a></td><td>Study Agent Dechallenge Reaction Response
+                            <br>
+                            (SADCRR)</td><td nowrap>text
+                            <br>
+                            Extensible: Yes</td><td>C181164</td><td>Study Agent Dechallenge Reaction Response</td><td>A terminology codelist relevant to the resultant reaction due to withdrawing, interrupting, or otherwise altering administration of study treatment.</td><td>CDISC CDASH Study Agent Dechallenge Reaction Response Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">NEGATIVE DECHALLENGE</td><td class="nci">C181222</td><td class="nci"></td><td class="nci">Continued presence of an adverse event after decrease or change in dose, or withdrawal of the product/drug.</td><td class="nci">Negative Dechallenge Response</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">NOT APPLICABLE DECHALLENGE</td><td class="nci">C181224</td><td class="nci"></td><td class="nci">The outcome of decreasing the dose or discontinuation of the product/drug is not relevant in the current context.</td><td class="nci">Not Applicable Dechallenge Response</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">POSITIVE DECHALLENGE</td><td class="nci">C181223</td><td class="nci"></td><td class="nci">Partial or complete abatement of an adverse event after decrease or change in dose, or withdrawal of the product/drug.</td><td class="nci">Positive Dechallenge Response</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">UNKNOWN DECHALLENGE</td><td class="nci">C181225</td><td class="nci"></td><td class="nci">No information regarding the outcome of decreasing the dose or discontinuation of the product/drug.</td><td class="nci">Unknown Dechallenge Response</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C181163.SARCRR">CL.C181163.SARCRR</a></td><td>Study Agent Rechallenge Reaction Response
+                            <br>
+                            (SARCRR)</td><td nowrap>text
+                            <br>
+                            Extensible: Yes</td><td>C181163</td><td>Study Agent Rechallenge Reaction Response</td><td>A terminology codelist relevant to the resultant reaction due to restarting or otherwise returning administration of study treatment to previous level, after a dechallenge event.</td><td>CDISC CDASH Study Agent Rechallenge Reaction Response Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">NEGATIVE RECHALLENGE</td><td class="nci">C181226</td><td class="nci"></td><td class="nci">Failure of the product/drug, when reintroduced, to produce signs or symptoms similar to those observed when the product/drug was previously used.</td><td class="nci">Negative Rechallenge Response</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">NOT APPLICABLE RECHALLENGE</td><td class="nci">C181228</td><td class="nci"></td><td class="nci">The outcome of reintroduction of product/drug is not relevant in the current context.</td><td class="nci">Not Applicable Rechallenge Response</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">POSITIVE RECHALLENGE</td><td class="nci">C181227</td><td class="nci"></td><td class="nci">Recurrence of similar or new signs and symptoms upon reintroduction of the product/drug.</td><td class="nci">Positive Rechallenge Response</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">UKNOWN RECHALLENGE</td><td class="nci">C181229</td><td class="nci"></td><td class="nci">No information regarding the outcome of reintroduction of product/drug.</td><td class="nci">Unknown Rechallenge Response</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C83004.SUNCF">CL.C83004.SUNCF</a></td><td>Substance Use Never/Current/Former Classification
+                            <br>
+                            (SUNCF)</td><td nowrap>text
+                            <br>
+                            Extensible: Yes</td><td>C83004</td><td>Substance Use Never/Current/Former Classification</td><td>A terminology subset of the CDISC SDTM Never/Current/Former Classification codelist created for CDASH Substance Use Never/Current/Former Classification codelist. (NCI)</td><td>CDISC CDASH Substance Use Never/Current/Former Classification Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">CURRENT</td><td class="nci">C25471</td><td class="nci"></td><td class="nci">Occurring in or belonging to the present time. (NCI)</td><td class="nci">Current</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">FORMER</td><td class="nci">C25627</td><td class="nci">Previous</td><td class="nci">Occurring prior to something else. (NCI)</td><td class="nci">Previous</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">NEVER</td><td class="nci">C70543</td><td class="nci"></td><td class="nci">Not ever; at no time in the past.</td><td class="nci">Never</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C78428.EXVOLTU">CL.C78428.EXVOLTU</a></td><td>Total Volume Administration Unit
+                            <br>
+                            (EXVOLTU)</td><td nowrap>text
+                            <br>
+                            Extensible: Yes</td><td>C78428</td><td>Total Volume Administration Unit</td><td>A terminology subset of the CDISC SDTM Unit codelist created for CDASH Total Volume Administration Unit codelist. (NCI)</td><td>CDISC CDASH Total Volume Administration Unit Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">mg</td><td class="nci">C28253</td><td class="nci">Milligram</td><td class="nci">A unit of mass equal to one thousandth (1E-3) of a gram.</td><td class="nci">Milligram</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">mL</td><td class="nci">C28254</td><td class="nci">cm3;Milliliter</td><td class="nci">A unit of volume equal to one thousandth (1E-3) of a liter.</td><td class="nci">Milliliter</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">ug</td><td class="nci">C48152</td><td class="nci">mcg;Microgram</td><td class="nci">A unit of mass equal to one millionth (1E-6) of a gram.</td><td class="nci">Microgram</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C78427.EXINTPU">CL.C78427.EXINTPU</a></td><td>Unit for the Duration of Treatment Interruption
+                            <br>
+                            (EXINTPU)</td><td nowrap>text
+                            <br>
+                            Extensible: Yes</td><td>C78427</td><td>Unit for the Duration of Treatment Interruption</td><td>A terminology subset of the CDISC SDTM Unit codelist created for CDASH Unit for Duration of Treatment Interruption codelist. (NCI)</td><td>CDISC CDASH Unit for Duration of Treatment Interruption Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">HOURS</td><td class="nci">C25529</td><td class="nci">h;Hours;hr</td><td class="nci">A unit of measurement of time equal to 60 minutes.</td><td class="nci">Hour</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">min</td><td class="nci">C48154</td><td class="nci">Minute</td><td class="nci">A unit of measurement of time equal to 60 seconds.</td><td class="nci">Minute</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">sec</td><td class="nci">C42535</td><td class="nci">Second</td><td class="nci">The base unit of time in the International System of Units (SI) equal to the duration of 9,192,631,770 periods of the specified light radiation corresponding to the transition between the two hyperfine levels of the cesium 133 atom in its ground state at 0 K.</td><td class="nci">Second</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C78421.DAORRESU">CL.C78421.DAORRESU</a></td><td>Unit of Drug Dispensed or Returned
+                            <br>
+                            (DAORRESU)</td><td nowrap>text
+                            <br>
+                            Extensible: Yes</td><td>C78421</td><td>Unit of Drug Dispensed or Returned</td><td>A terminology subset of the CDISC SDTM Unit codelist created for CDASH Unit of Drug Dispensed or Returned codelist. (NCI)</td><td>CDISC CDASH Unit of Drug Dispensed or Returned Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">BAG</td><td class="nci">C48474</td><td class="nci">Bag Dosing Unit</td><td class="nci">A dosing measurement based on the bag unit.(NCI)</td><td class="nci">Bag Dosing Unit</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">BOTTLE</td><td class="nci">C48477</td><td class="nci">Bottle Dosing Unit</td><td class="nci">A dosing measurement based on the bottle unit.(NCI)</td><td class="nci">Bottle Dosing Unit</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">BOX</td><td class="nci">C48478</td><td class="nci">Box Dosing Unit</td><td class="nci">A dosing measurement based on the box unit.(NCI)</td><td class="nci">Box Dosing Unit</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">CAPSULE</td><td class="nci">C48480</td><td class="nci">cap;Capsule Dosing Unit</td><td class="nci">A dosing measurement based on the capsule unit.(NCI)</td><td class="nci">Capsule Dosing Unit</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">CONTAINER</td><td class="nci">C48484</td><td class="nci">Container Dosing Unit</td><td class="nci">A dosing measurement based on the container unit.(NCI)</td><td class="nci">Container Dosing Unit</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">DISK</td><td class="nci">C48490</td><td class="nci">Disk Dosing Unit</td><td class="nci">A dosing measurement based on the disk unit.(NCI)</td><td class="nci">Disk Dosing Unit</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">PACKAGE</td><td class="nci">C48520</td><td class="nci">Pack Dosing Unit;Package Dosing Unit</td><td class="nci">A dosing measurement based on the package unit.(NCI)</td><td class="nci">Package Dosing Unit</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">PACKET</td><td class="nci">C48521</td><td class="nci">Packet Dosing Unit</td><td class="nci">A dosing measurement based on the packet unit.(NCI)</td><td class="nci">Packet Dosing Unit</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">PATCH</td><td class="nci">C48524</td><td class="nci">Patch Dosing Unit</td><td class="nci">A dosing measurement based on the patch unit.(NCI)</td><td class="nci">Patch Dosing Unit</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">TABLET</td><td class="nci">C48542</td><td class="nci">tab;Tablet Dosing Unit</td><td class="nci">A dosing measurement based on the tablet unit.(NCI)</td><td class="nci">Tablet Dosing Unit</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">TUBE</td><td class="nci">C48549</td><td class="nci">Tube Dosing Unit</td><td class="nci">A dosing measurement based on the tube unit.(NCI)</td><td class="nci">Tube Dosing Unit</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">VIAL</td><td class="nci">C48551</td><td class="nci">Vial Dosing Unit</td><td class="nci">A dosing measurement based on the vial unit.(NCI)</td><td class="nci">Vial Dosing Unit</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C78429.EXFLRTU">CL.C78429.EXFLRTU</a></td><td>Unit of Measure for Flow Rate
+                            <br>
+                            (EXFLRTU)</td><td nowrap>text
+                            <br>
+                            Extensible: Yes</td><td>C78429</td><td>Unit of Measure for Flow Rate</td><td>A terminology subset of the CDISC SDTM Unit codelist created for CDASH Unit of Measure for Flow Rate codelist. (NCI)</td><td>CDISC CDASH Unit of Measure for Flow Rate Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">mL/min</td><td class="nci">C64777</td><td class="nci"></td><td class="nci">A unit of flow rate equal to one milliliter per minute.</td><td class="nci">Milliliter per Minute</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">mmol/day</td><td class="nci">C67420</td><td class="nci">mmol/24h</td><td class="nci">A unit of substance flow rate equal to one millimole per day.</td><td class="nci">Millimole per 24 Hours</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">ug/day</td><td class="nci">C71205</td><td class="nci">mcg/day</td><td class="nci">A unit of mass flow rate equal to one microgram per day.</td><td class="nci">Microgram per Day</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">ug/min</td><td class="nci">C71211</td><td class="nci">mcg/min</td><td class="nci">A unit of mass flow rate equal to one microgram per minute.</td><td class="nci">Microgram per Minute</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">umol/day</td><td class="nci">C67406</td><td class="nci">mcmol/day</td><td class="nci">A unit of substance flow rate equal to one micromole per day.</td><td class="nci">Micromole per 24 Hours</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C78423.EXDOSU">CL.C78423.EXDOSU</a></td><td>Units for Exposure
+                            <br>
+                            (EXDOSU)</td><td nowrap>text
+                            <br>
+                            Extensible: Yes</td><td>C78423</td><td>Units for Exposure</td><td>A terminology subset of the CDISC SDTM Unit codelist created for CDASH Units for Exposure codelist. (NCI)</td><td>CDISC CDASH Units for Exposure Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">CAPSULE</td><td class="nci">C48480</td><td class="nci">cap;Capsule Dosing Unit</td><td class="nci">A dosing measurement based on the capsule unit.(NCI)</td><td class="nci">Capsule Dosing Unit</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">g</td><td class="nci">C48155</td><td class="nci">Gram</td><td class="nci">A unit of mass equal to one thousandth (1E-3) of a kilogram, the kilogram being the base unit of mass in the International System of Units (SI).</td><td class="nci">Gram</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">mg</td><td class="nci">C28253</td><td class="nci">Milligram</td><td class="nci">A unit of mass equal to one thousandth (1E-3) of a gram.</td><td class="nci">Milligram</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">mL</td><td class="nci">C28254</td><td class="nci">cm3;Milliliter</td><td class="nci">A unit of volume equal to one thousandth (1E-3) of a liter.</td><td class="nci">Milliliter</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">PUFF</td><td class="nci">C65060</td><td class="nci">Puff Dosing Unit</td><td class="nci">A means of delivering a defined dose of a therapeutic aerolized solution into either the upper or lower respiratory tract. Metered-dose inhalers or spray pumps are devices that provide a puff dose for delivery into either the oral or the nasal cavity.(NCI)</td><td class="nci">Puff Dosing Unit</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">TABLET</td><td class="nci">C48542</td><td class="nci">tab;Tablet Dosing Unit</td><td class="nci">A dosing measurement based on the tablet unit.(NCI)</td><td class="nci">Tablet Dosing Unit</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">ug</td><td class="nci">C48152</td><td class="nci">mcg;Microgram</td><td class="nci">A unit of mass equal to one millionth (1E-6) of a gram.</td><td class="nci">Microgram</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C78430.EXPDOSEU">CL.C78430.EXPDOSEU</a></td><td>Units for Planned Exposure
+                            <br>
+                            (EXPDOSEU)</td><td nowrap>text
+                            <br>
+                            Extensible: Yes</td><td>C78430</td><td>Units for Planned Exposure</td><td>A terminology subset of the CDISC SDTM Unit codelist created for CDASH Units for Planned Exposure codelist. (NCI)</td><td>CDISC CDASH Units for Planned Exposure Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">CAPSULE</td><td class="nci">C48480</td><td class="nci">cap;Capsule Dosing Unit</td><td class="nci">A dosing measurement based on the capsule unit.(NCI)</td><td class="nci">Capsule Dosing Unit</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">g</td><td class="nci">C48155</td><td class="nci">Gram</td><td class="nci">A unit of mass equal to one thousandth (1E-3) of a kilogram, the kilogram being the base unit of mass in the International System of Units (SI).</td><td class="nci">Gram</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">mg</td><td class="nci">C28253</td><td class="nci">Milligram</td><td class="nci">A unit of mass equal to one thousandth (1E-3) of a gram.</td><td class="nci">Milligram</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">mL</td><td class="nci">C28254</td><td class="nci">cm3;Milliliter</td><td class="nci">A unit of volume equal to one thousandth (1E-3) of a liter.</td><td class="nci">Milliliter</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">PUFF</td><td class="nci">C65060</td><td class="nci">Puff Dosing Unit</td><td class="nci">A means of delivering a defined dose of a therapeutic aerolized solution into either the upper or lower respiratory tract. Metered-dose inhalers or spray pumps are devices that provide a puff dose for delivery into either the oral or the nasal cavity.(NCI)</td><td class="nci">Puff Dosing Unit</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">TABLET</td><td class="nci">C48542</td><td class="nci">tab;Tablet Dosing Unit</td><td class="nci">A dosing measurement based on the tablet unit.(NCI)</td><td class="nci">Tablet Dosing Unit</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">ug</td><td class="nci">C48152</td><td class="nci">mcg;Microgram</td><td class="nci">A unit of mass equal to one millionth (1E-6) of a gram.</td><td class="nci">Microgram</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C78431.VSPOS">CL.C78431.VSPOS</a></td><td>Vital Signs Position of Subject
+                            <br>
+                            (VSPOS)</td><td nowrap>text
+                            <br>
+                            Extensible: Yes</td><td>C78431</td><td>Vital Signs Position of Subject</td><td>A terminology subset of the CDISC SDTM Position codelist created for CDASH Vital Signs Position of Subject codelist. (NCI)</td><td>CDISC CDASH Vital Signs Position of Subject Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SITTING</td><td class="nci">C62122</td><td class="nci">Sitting</td><td class="nci">The state or act of one who sits; the posture of one who occupies a seat. (NCI)</td><td class="nci">Sitting</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">STANDING</td><td class="nci">C62166</td><td class="nci">Orthostatic;Standing</td><td class="nci">The act of assuming or maintaining an erect upright position. (NCI)</td><td class="nci">Standing</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SUPINE</td><td class="nci">C62167</td><td class="nci">Supine</td><td class="nci">A posterior recumbent body position whereby the person lies on its back and faces upward. (NCI)</td><td class="nci">Supine Position</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
