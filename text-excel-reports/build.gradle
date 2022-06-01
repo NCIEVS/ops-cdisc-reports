@@ -9,4 +9,10 @@ dependencies {
     implementation 'com.amazonaws:aws-lambda-java-core:1.2.1'
     implementation 'com.amazonaws:aws-lambda-java-runtime-interface-client:1.0.0'
     implementation project(':common')
+
+    testImplementation project(":common").sourceSets.test.output
+}
+
+test {
+    maxHeapSize = "4g"
 }

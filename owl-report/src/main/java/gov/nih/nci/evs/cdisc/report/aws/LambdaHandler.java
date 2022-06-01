@@ -20,16 +20,16 @@ public class LambdaHandler implements RequestHandler<ReportSummary, ReportSummar
   public ReportSummary handleRequest(ReportSummary input, Context context) {
     validate(input);
     for (ReportDetail reportDetail : input.getReportDetails()) {
-      String excelFile = reportDetail.getReports().get(ReportEnum.MAIN_TEXT);
-      if (excelFile != null && new File(excelFile).exists()) {
-        String baseName = FilenameUtils.removeExtension(excelFile);
+      String textFile = reportDetail.getReports().get(ReportEnum.MAIN_TEXT);
+      if (textFile != null && new File(textFile).exists()) {
+        String baseName = FilenameUtils.removeExtension(textFile);
         String owlFile = baseName + ".owl";
 
         RDFGenerator rdfGenerator = new RDFGenerator();
-        rdfGenerator.generate(excelFile, owlFile);
+        rdfGenerator.generate(textFile, owlFile);
         reportDetail.getReports().put(ReportEnum.MAIN_OWL, owlFile);
       } else {
-        throw new RuntimeException(String.format("File %s does not exist.", excelFile));
+        throw new RuntimeException(String.format("File %s does not exist.", textFile));
       }
     }
     // The Excel file report gets formatted in place, so

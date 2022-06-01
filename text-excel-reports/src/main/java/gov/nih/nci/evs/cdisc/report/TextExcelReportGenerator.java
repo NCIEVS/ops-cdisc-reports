@@ -2,10 +2,10 @@ package gov.nih.nci.evs.cdisc.report;
 
 import gov.nih.nci.evs.cdisc.report.model.ReportDetail;
 import gov.nih.nci.evs.cdisc.report.model.Synonym;
+import gov.nih.nci.evs.cdisc.report.util.SortUtils;
 import gov.nih.nci.evs.cdisc.report.utils.CDISCScanner;
 import gov.nih.nci.evs.cdisc.report.utils.ReportUtils;
 import gov.nih.nci.evs.reportwriter.formatter.AsciiToExcelFormatter;
-import gov.nih.nci.evs.restapi.util.SortUtils;
 
 import java.io.File;
 import java.io.FileOutputStream;

@@ -1,0 +1,390 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <title>CDISC ADaM Controlled Terminology</title>
+        <style type="text/css">
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style:  normal;
+    font-weight: normal;
+    font-size:   14px;
+    margin: 0;
+    padding: 10px;
+}
+
+h1, #study_description {
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 10px 25px;
+    border: 2px solid black;
+}
+
+td {
+    vertical-align: top;
+    padding: 3px 4px;
+    border:  1px solid #dddddd;
+}
+
+thead tr th {
+    vertical-align: top;
+    padding: 3px 4px;
+    border:  2px solid black;
+}
+
+.header {
+    font-weight:bold;
+    white-space: nowrap;
+}
+
+.header td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+tr.item_last td {
+    border-bottom: solid 1px black;
+}
+
+.cl {
+    background: #ccffff;
+}
+
+.cli {
+    background: white;
+}
+
+.nci {
+    background: #ffffcc;
+}
+
+.pre {
+    white-space: pre-wrap;
+}
+
+#legend {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#toc {
+float:left;
+left:5px;
+width:300px;
+}
+#contents {
+position: absolute;
+left:300px;
+margin-right:10px;
+}
+
+
+tr.codelist td {
+    border-top: solid 1px black;
+}
+                </style>
+    </head>
+    <body>
+        <a id="top"></a>
+        <h1>CDISC ADaM Controlled Terminology</h1>
+        <div id="study_description">CDISC ADaM Controlled Terminology, 2022-03-25</div>
+        <table id="legend">
+            <caption>Legend:</caption>
+            <tr>
+                <td class="cl">CodeList</td>
+            </tr>
+            <tr>
+                <td class="cli">CodeListItem</td>
+            </tr>
+            <tr>
+                <td class="nci">NCI attributes</td>
+            </tr>
+        </table>
+        <div id="toc">
+            <table>
+                <tr>
+                    <td>C81223</td><td><a href="#CL.C81223.DATEFL">Date Imputation Flag</a></td>
+                </tr>
+                <tr>
+                    <td>C81224</td><td><a href="#CL.C81224.DTYPE">Derivation Type</a></td>
+                </tr>
+                <tr>
+                    <td>C172334</td><td><a href="#CL.C172334.GAD02PC">Generalized Anxiety Disorder - 7 Version 2 Questionnaire Parameter Code</a></td>
+                </tr>
+                <tr>
+                    <td>C172335</td><td><a href="#CL.C172335.GAD02PN">Generalized Anxiety Disorder - 7 Version 2 Questionnaire Parameter Name</a></td>
+                </tr>
+                <tr>
+                    <td>C158114</td><td><a href="#CL.C158114.GDS02PC">Geriatric Depression Scale Short Form Questionnaire Parameter Code</a></td>
+                </tr>
+                <tr>
+                    <td>C158115</td><td><a href="#CL.C158115.GDS02PN">Geriatric Depression Scale Short Form Questionnaire Parameter Name</a></td>
+                </tr>
+                <tr>
+                    <td>C81225</td><td><a href="#CL.C81225.PARAMTYP">Parameter Type</a></td>
+                </tr>
+                <tr>
+                    <td>C165644</td><td><a href="#CL.C165644.POOLINT">Pool for Integration</a></td>
+                </tr>
+                <tr>
+                    <td>C124296</td><td><a href="#CL.C124296.SBJTSTAT">Subject Trial Status</a></td>
+                </tr>
+                <tr>
+                    <td>C81226</td><td><a href="#CL.C81226.TIMEFL">Time Imputation Flag</a></td>
+                </tr>
+            </table>
+        </div>
+        <div id="contents">
+            <h2>Codelist Definitions</h2>
+            <table>
+                <thead>
+                    <tr class="header cl">
+                        <th>OID</th><th>Name
+                            <br>
+                            (CDISC Submission Value)</th><th>DataType
+                            <br>
+                            Extensible</th><th rowspan="2" class="nci">NCI Code</th><th rowspan="2" class="nci">CDISC Synonym</th><th rowspan="2" class="nci">CDISC Definition</th><th rowspan="2" class="nci">Preferred Term</th>
+                    </tr>
+                    <tr class="header cli">
+                        <th></th><th colspan="2">CDISC Submission Value [ODM:CodedValue]</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="cl">
+                        <td><a name="CL.C81223.DATEFL">CL.C81223.DATEFL</a></td><td>Date Imputation Flag
+                            <br>
+                            (DATEFL)</td><td nowrap>text
+                            <br>
+                            Extensible: No</td><td>C81223</td><td>Date Imputation Flag</td><td>Date Imputation Flag: Indicates the level of imputation reflected in a date value.</td><td>CDISC ADaM Date Imputation Flag Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">D</td><td class="nci">C81212</td><td class="nci"></td><td class="nci">Day Imputed: Day is imputed.</td><td class="nci">Day Imputed</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">M</td><td class="nci">C81211</td><td class="nci"></td><td class="nci">Month Imputed: Month and day are imputed.</td><td class="nci">Month Day Imputed</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Y</td><td class="nci">C81210</td><td class="nci"></td><td class="nci">Year Imputed: Entire date (year, month and day) is imputed.</td><td class="nci">Year Month Day Imputed</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C81224.DTYPE">CL.C81224.DTYPE</a></td><td>Derivation Type
+                            <br>
+                            (DTYPE)</td><td nowrap>text
+                            <br>
+                            Extensible: Yes</td><td>C81224</td><td>Derivation Type</td><td>Derivation Type: Analysis value derivation method.</td><td>CDISC ADaM Derivation Type Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">AVERAGE</td><td class="nci">C81209</td><td class="nci">Average</td><td class="nci">A data derivation or imputation technique which sets the analysis value on the record to the subject's average value over a defined set of records.</td><td class="nci">Average of Value Derivation Technique</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">BC</td><td class="nci">C92225</td><td class="nci">Best Case</td><td class="nci">A data derivation or imputation technique which sets the analysis value on the record to the best possible outcome.</td><td class="nci">Best Case Imputation Technique</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">BLOCF</td><td class="nci">C81201</td><td class="nci">Baseline Observation Carried Forward</td><td class="nci">A data derivation or imputation technique which sets the analysis value on the record to the subject's non-missing baseline observation.</td><td class="nci">Baseline Observation Carried Forward Imputation Technique</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">BOC</td><td class="nci">C132340</td><td class="nci">Best Observed Case</td><td class="nci">A data derivation or imputation technique which sets the analysis value on the record to the best outcome recorded within a subject.</td><td class="nci">Best Observed Case Imputation Technique</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">BOCF</td><td class="nci">C92226</td><td class="nci">Best Observation Carried Forward</td><td class="nci">A data derivation or imputation technique which sets the analysis value on the record to the subject's previous best-case non-missing value.</td><td class="nci">Best Observation Carried Forward Imputation Technique</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">COPY</td><td class="nci">C184383</td><td class="nci"></td><td class="nci">A technique that uses assignment logic to duplicate an analysis value to be used in additional evaluations.</td><td class="nci">Copy Duplication Imputation Technique</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">EXTRAP</td><td class="nci">C139176</td><td class="nci">Extrapolation</td><td class="nci">A data derivation or imputation technique which sets the analysis value on the record to an estimation of a value based on extending a known sequence of values.</td><td class="nci">Extrapolation Imputation Technique</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">HALFLLOQ</td><td class="nci">C170546</td><td class="nci">One Half of Lower Limit of Quantification</td><td class="nci">A data derivation or imputation technique which sets the analysis value on the record to one half of the lower limit of quantification of a test.</td><td class="nci">One Half of Lower Limit of Quantification Derivation Technique</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">INTERP</td><td class="nci">C81208</td><td class="nci">Interpolation</td><td class="nci">A data derivation or imputation technique which sets the analysis value on the record to a function of known values to estimate a value within the range.</td><td class="nci">Interpolation Imputation Technique</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">LLOD</td><td class="nci">C105701</td><td class="nci">Lower Limit of Detection</td><td class="nci">A data derivation or imputation technique which sets the analysis value on the record to the lower limit of detection of a test.</td><td class="nci">Detection Limit</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">LLOQ</td><td class="nci">C170543</td><td class="nci">Lower Limit of Quantification</td><td class="nci">A data derivation or imputation technique which sets the analysis value on the record to the lower limit of quantification of a test.</td><td class="nci">Lower Limit of Quantification Derivation Technique</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">LOCF</td><td class="nci">C81198</td><td class="nci">Last Observation Carried Forward</td><td class="nci">A data derivation or imputation technique which sets the analysis value on the record to the subject's previous non-missing value.</td><td class="nci">Last Observation Carried Forward Imputation Technique</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">LOV</td><td class="nci">C132341</td><td class="nci">Last Observed Value</td><td class="nci">A data derivation or imputation technique which sets the analysis value on the record to the subject's last recorded non-missing observation.</td><td class="nci">Last Observed Value Imputation Technique</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">LVPD</td><td class="nci">C132342</td><td class="nci">Last Value Prior to Dosing</td><td class="nci">A data derivation or imputation technique which sets the analysis value on the record to the subject's last observed value prior to the start of study treatment.</td><td class="nci">Last Value Prior to Dosing Imputation Technique</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">MAXIMUM</td><td class="nci">C82868</td><td class="nci">Maximum</td><td class="nci">A data derivation or imputation technique which sets the analysis value on the record to the subject's maximum value over a defined set of records.</td><td class="nci">Maximum Value Derivation Technique</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">MINIMUM</td><td class="nci">C82867</td><td class="nci">Minimum</td><td class="nci">A data derivation or imputation technique which sets the analysis value on the record to the subject's minimum value over a defined set of records.</td><td class="nci">Minimum Value Derivation Technique</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">ML</td><td class="nci">C53331</td><td class="nci">Maximum Likelihood</td><td class="nci">A data derivation or imputation technique which sets the analysis value on the record to the estimate that maximizes the probability of observing what has in fact been observed.</td><td class="nci">Maximum Likelihood Estimation</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">MOTH</td><td class="nci">C81204</td><td class="nci">Mean of Other Group</td><td class="nci">A data derivation or imputation technique which sets the analysis value on the record to the mean value from a comparator or reference group.</td><td class="nci">Mean of Other Group Imputation Technique</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">MOV</td><td class="nci">C81207</td><td class="nci">Mean Observed Value in a Group</td><td class="nci">A data derivation or imputation technique which sets the analysis value on the record to the mean value observed in a group of subjects.</td><td class="nci">Mean Observed Value in a Group Imputation Technique</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">PHANTOM</td><td class="nci">C170545</td><td class="nci">Phantom Record</td><td class="nci">A technique that creates a record with a missing analysis value when there is no observed record for a given analysis visit or analysis timepoint.</td><td class="nci">Phantom Record Imputation Technique</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">POCF</td><td class="nci">C81205</td><td class="nci">Penultimate Observation Carried Forward</td><td class="nci">A data derivation or imputation technique which sets the analysis value on the record to the subject's next-to-last non-missing value.</td><td class="nci">Penultimate Observation Carried Forward Imputation Technique</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SOCF</td><td class="nci">C81200</td><td class="nci">Screening Observation Carried Forward</td><td class="nci">A data derivation or imputation technique which sets the analysis value on the record to the subject's non-missing screening observation.</td><td class="nci">Screening Observation Carried Forward Imputation Technique</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">ULOD</td><td class="nci">C174264</td><td class="nci">Upper Limit of Detection</td><td class="nci">A data derivation or imputation technique which sets the analysis value on the record to the upper limit of detection of a test.</td><td class="nci">Upper Limit of Detection Imputation Technique</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">ULOQ</td><td class="nci">C170544</td><td class="nci">Upper Limit of Quantification</td><td class="nci">A data derivation or imputation technique which sets the analysis value on the record to the upper limit of quantification of a test.</td><td class="nci">Upper Limit of Quantification Derivation Technique</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">WC</td><td class="nci">C81203</td><td class="nci">Worst Case</td><td class="nci">A data derivation or imputation technique which sets the analysis value on the record to the worst possible outcome.</td><td class="nci">Worst Case Imputation Technique</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">WOC</td><td class="nci">C132343</td><td class="nci">Worst Observed Case</td><td class="nci">A data derivation or imputation technique which sets the analysis value on the record to the worst recorded outcome within a subject.</td><td class="nci">Worst Observed Case Imputation Technique</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">WOCF</td><td class="nci">C81199</td><td class="nci">Worst Observed Value Carried Forward</td><td class="nci">A data derivation or imputation technique which sets the analysis value on the record to the subject's worst-case non-missing observation.</td><td class="nci">Worst Observation Carried Forward Imputation Technique</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">WOV</td><td class="nci">C81206</td><td class="nci">Worst Observed Value in a Group</td><td class="nci">A data derivation or imputation technique which sets the analysis value on the record to the worst value observed in a group of subjects.</td><td class="nci">Worst Observed Value in a Group Imputation Technique</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C172334.GAD02PC">CL.C172334.GAD02PC</a></td><td>Generalized Anxiety Disorder - 7 Version 2 Questionnaire Parameter Code
+                            <br>
+                            (GAD02PC)</td><td nowrap>text
+                            <br>
+                            Extensible: No</td><td>C172334</td><td>Generalized Anxiety Disorder - 7 Version 2 Questionnaire Parameter Code</td><td>A parameter code codelist for the Generalized Anxiety Disorder - 7 Version 2 Questionnaire (GAD-7 V2) to support the calculation of total score in ADaM.</td><td>CDISC ADaM Generalized Anxiety Disorder-7 Version 2 Questionnaire Parameter Code Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">GAD02TS</td><td class="nci">C172451</td><td class="nci">GAD02-Total Score - Analysis</td><td class="nci">Generalized Anxiety Disorder - 7 Version 2 - Total score used for analysis.</td><td class="nci">Generalized Anxiety Disorder - 7 Version 2 - Analysis</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C172335.GAD02PN">CL.C172335.GAD02PN</a></td><td>Generalized Anxiety Disorder - 7 Version 2 Questionnaire Parameter Name
+                            <br>
+                            (GAD02PN)</td><td nowrap>text
+                            <br>
+                            Extensible: No</td><td>C172335</td><td>Generalized Anxiety Disorder - 7 Version 2 Questionnaire Parameter Name</td><td>A parameter name codelist for the Generalized Anxiety Disorder - 7 Version 2 Questionnaire (GAD-7 V2) to support the calculation of total score in ADaM.</td><td>CDISC ADaM Generalized Anxiety Disorder-7 Version 2 Questionnaire Parameter Name Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">GAD02-Total Score - Analysis</td><td class="nci">C172451</td><td class="nci">GAD02-Total Score - Analysis</td><td class="nci">Generalized Anxiety Disorder - 7 Version 2 - Total score used for analysis.</td><td class="nci">Generalized Anxiety Disorder - 7 Version 2 - Analysis</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C158114.GDS02PC">CL.C158114.GDS02PC</a></td><td>Geriatric Depression Scale Short Form Questionnaire Parameter Code
+                            <br>
+                            (GDS02PC)</td><td nowrap>text
+                            <br>
+                            Extensible: No</td><td>C158114</td><td>Geriatric Depression Scale Short Form Questionnaire Parameter Code</td><td>A parameter code codelist for the Geriatric Depression Scale Short Form questionnaire (GDS02) to support the calculation of total score in ADaM.</td><td>CDISC ADaM Geriatric Depression Scale Short Form Questionnaire Parameter Code Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">GDS02TS</td><td class="nci">C158155</td><td class="nci">GDS02-Total Score - Analysis</td><td class="nci">Geriatric Depression Scale Short Form - Total score used for analysis.</td><td class="nci">Geriatric Depression Scale Short Form - Total Score</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C158115.GDS02PN">CL.C158115.GDS02PN</a></td><td>Geriatric Depression Scale Short Form Questionnaire Parameter Name
+                            <br>
+                            (GDS02PN)</td><td nowrap>text
+                            <br>
+                            Extensible: No</td><td>C158115</td><td>Geriatric Depression Scale Short Form Questionnaire Parameter Name</td><td>A parameter name codelist for the Geriatric Depression Scale Short Form questionnaire (GDS02) to support the calculation of total score in ADaM.</td><td>CDISC ADaM Geriatric Depression Scale Short Form Questionnaire Parameter Name Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">GDS02-Total Score - Analysis</td><td class="nci">C158155</td><td class="nci">GDS02-Total Score - Analysis</td><td class="nci">Geriatric Depression Scale Short Form - Total score used for analysis.</td><td class="nci">Geriatric Depression Scale Short Form - Total Score</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C81225.PARAMTYP">CL.C81225.PARAMTYP</a></td><td>Parameter Type
+                            <br>
+                            (PARAMTYP)</td><td nowrap>text
+                            <br>
+                            Extensible: No</td><td>C81225</td><td>Parameter Type</td><td>Parameter Type: Indicates whether the parameter is derived as a function of one or more other parameters.</td><td>CDISC ADaM Parameter Type Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">DERIVED</td><td class="nci">C81197</td><td class="nci"></td><td class="nci">Derived: Indicates that a parameter is derived as a function of one or more other parameters.</td><td class="nci">Derived Flag</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C165644.POOLINT">CL.C165644.POOLINT</a></td><td>Pool for Integration
+                            <br>
+                            (POOLINT)</td><td nowrap>text
+                            <br>
+                            Extensible: Yes</td><td>C165644</td><td>Pool for Integration</td><td>Terminology relevant to the name of the Pool, often defined in the integrated statistical analysis plan, which identifies the combination of subjects' clinical trial experience and will be the focus of the integrated analysis.</td><td>CDISC ADaM Pool for Integration Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">OVERALL</td><td class="nci">C165858</td><td class="nci"></td><td class="nci">The pool that includes data across all studies within which the subject has participated, used for the overall integrated analysis.</td><td class="nci">Overall Pooled Data</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C124296.SBJTSTAT">CL.C124296.SBJTSTAT</a></td><td>Subject Trial Status
+                            <br>
+                            (SBJTSTAT)</td><td nowrap>text
+                            <br>
+                            Extensible: Yes</td><td>C124296</td><td>Subject Trial Status</td><td>Indicates the status of the subject in the trial.</td><td>CDISC ADaM Subject Trial Status Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">COMPLETED</td><td class="nci">C25250</td><td class="nci"></td><td class="nci">To possess every necessary or normal part or component or step; having come or been brought to a conclusion. (NCI)</td><td class="nci">Complete</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">DISCONTINUED</td><td class="nci">C25484</td><td class="nci"></td><td class="nci">To stop or end, permanently or temporarily.</td><td class="nci">Discontinue</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">ONGOING</td><td class="nci">C53279</td><td class="nci">Continuous</td><td class="nci">Remain in force or carry on without letup; keep or maintain in unaltered condition; exist in time or space without stop or interruption. (NCI)</td><td class="nci">Continue</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C81226.TIMEFL">CL.C81226.TIMEFL</a></td><td>Time Imputation Flag
+                            <br>
+                            (TIMEFL)</td><td nowrap>text
+                            <br>
+                            Extensible: No</td><td>C81226</td><td>Time Imputation Flag</td><td>Time Imputation Flag: Indicates the level of imputation reflected in a time value.</td><td>CDISC ADaM Time Imputation Flag Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">H</td><td class="nci">C81213</td><td class="nci"></td><td class="nci">Hours Imputed: Entire time (hours, minutes and seconds) is imputed.</td><td class="nci">Hours Minutes Seconds Imputed</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">M</td><td class="nci">C81214</td><td class="nci"></td><td class="nci">Minutes Imputed: Minutes and seconds are imputed.</td><td class="nci">Minutes Seconds Imputed</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">S</td><td class="nci">C81215</td><td class="nci"></td><td class="nci">Seconds Imputed: Seconds are imputed.</td><td class="nci">Seconds Imputed</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

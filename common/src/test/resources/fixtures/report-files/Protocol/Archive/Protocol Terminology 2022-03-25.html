@@ -1,0 +1,1727 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <title>CDISC Protocol Controlled Terminology</title>
+        <style type="text/css">
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style:  normal;
+    font-weight: normal;
+    font-size:   14px;
+    margin: 0;
+    padding: 10px;
+}
+
+h1, #study_description {
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 10px 25px;
+    border: 2px solid black;
+}
+
+td {
+    vertical-align: top;
+    padding: 3px 4px;
+    border:  1px solid #dddddd;
+}
+
+thead tr th {
+    vertical-align: top;
+    padding: 3px 4px;
+    border:  2px solid black;
+}
+
+.header {
+    font-weight:bold;
+    white-space: nowrap;
+}
+
+.header td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+tr.item_last td {
+    border-bottom: solid 1px black;
+}
+
+.cl {
+    background: #ccffff;
+}
+
+.cli {
+    background: white;
+}
+
+.nci {
+    background: #ffffcc;
+}
+
+.pre {
+    white-space: pre-wrap;
+}
+
+#legend {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#toc {
+float:left;
+left:5px;
+width:300px;
+}
+#contents {
+position: absolute;
+left:300px;
+margin-right:10px;
+}
+
+
+tr.codelist td {
+    border-top: solid 1px black;
+}
+                </style>
+    </head>
+    <body>
+        <a id="top"></a>
+        <h1>CDISC Protocol Controlled Terminology</h1>
+        <div id="study_description">CDISC Protocol Controlled Terminology, 2022-03-25</div>
+        <table id="legend">
+            <caption>Legend:</caption>
+            <tr>
+                <td class="cl">CodeList</td>
+            </tr>
+            <tr>
+                <td class="cli">CodeListItem</td>
+            </tr>
+            <tr>
+                <td class="nci">NCI attributes</td>
+            </tr>
+        </table>
+        <div id="toc">
+            <table>
+                <tr>
+                    <td>C179587</td><td><a href="#CL.C179587.Biological Sample Attribute Terminology">Biological Sample Attribute Terminology</a></td>
+                </tr>
+                <tr>
+                    <td>C142191</td><td><a href="#CL.C142191.Clinical Study Attribute Terminology">Clinical Study Attribute Terminology</a></td>
+                </tr>
+                <tr>
+                    <td>C139020</td><td><a href="#CL.C139020.Clinical Trial Attribute Terminology">Clinical Trial Attribute Terminology</a></td>
+                </tr>
+                <tr>
+                    <td>C170440</td><td><a href="#CL.C170440.Endpoint Attribute Terminology">Endpoint Attribute Terminology</a></td>
+                </tr>
+                <tr>
+                    <td>C170441</td><td><a href="#CL.C170441.Endpoint Type Value Set Terminology">Endpoint Type Value Set Terminology</a></td>
+                </tr>
+                <tr>
+                    <td>C184334</td><td><a href="#CL.C184334.Informed Consent Attribute Terminology">Informed Consent Attribute Terminology</a></td>
+                </tr>
+                <tr>
+                    <td>C177906</td><td><a href="#CL.C177906.Ingredient Attribute Terminology">Ingredient Attribute Terminology</a></td>
+                </tr>
+                <tr>
+                    <td>C177907</td><td><a href="#CL.C177907.Ingredient Type Value Set Terminology">Ingredient Type Value Set Terminology</a></td>
+                </tr>
+                <tr>
+                    <td>C177905</td><td><a href="#CL.C177905.Intervention Attribute Terminology">Intervention Attribute Terminology</a></td>
+                </tr>
+                <tr>
+                    <td>C99076</td><td><a href="#CL.C99076.INTMODEL">Intervention Model Response</a></td>
+                </tr>
+                <tr>
+                    <td>C99078</td><td><a href="#CL.C99078.INTTYPE">Intervention Type Response</a></td>
+                </tr>
+                <tr>
+                    <td>C66742</td><td><a href="#CL.C66742.NY">No Yes Response</a></td>
+                </tr>
+                <tr>
+                    <td>C127259</td><td><a href="#CL.C127259.OBSSMO">Observational Study Model</a></td>
+                </tr>
+                <tr>
+                    <td>C165641</td><td><a href="#CL.C165641.Outcome Measure Attribute Terminology">Outcome Measure Attribute Terminology</a></td>
+                </tr>
+                <tr>
+                    <td>C170442</td><td><a href="#CL.C170442.Outcome Measure Type Value Set Terminology">Outcome Measure Type Value Set Terminology</a></td>
+                </tr>
+                <tr>
+                    <td>C165642</td><td><a href="#CL.C165642.Oversight Entity Value Set">Oversight Entity Value Set</a></td>
+                </tr>
+                <tr>
+                    <td>C147068</td><td><a href="#CL.C147068.Participant Allocation Value Set">Participant Allocation Value Set</a></td>
+                </tr>
+                <tr>
+                    <td>C132308</td><td><a href="#CL.C132308.Physical Address Attribute Terminology">Physical Address Attribute Terminology</a></td>
+                </tr>
+                <tr>
+                    <td>C181167</td><td><a href="#CL.C181167.Protocol Amendment Attribute Terminology">Protocol Amendment Attribute Terminology</a></td>
+                </tr>
+                <tr>
+                    <td>C154681</td><td><a href="#CL.C154681.Protocol Contact Role Value Set">Protocol Contact Role Value Set</a></td>
+                </tr>
+                <tr>
+                    <td>C132310</td><td><a href="#CL.C132310.Protocol Entity Terminology">Protocol Entity Terminology</a></td>
+                </tr>
+                <tr>
+                    <td>C181168</td><td><a href="#CL.C181168.Protocol Statement Attribute Terminology">Protocol Statement Attribute Terminology</a></td>
+                </tr>
+                <tr>
+                    <td>C147069</td><td><a href="#CL.C147069.Randomization Type Value Set">Randomization Type Value Set</a></td>
+                </tr>
+                <tr>
+                    <td>C184333</td><td><a href="#CL.C184333.Reference Attribute Terminology">Reference Attribute Terminology</a></td>
+                </tr>
+                <tr>
+                    <td>C172329</td><td><a href="#CL.C172329.Study Arm Attribute Terminology">Study Arm Attribute Terminology</a></td>
+                </tr>
+                <tr>
+                    <td>C174222</td><td><a href="#CL.C174222.Study Arm Type Value Set Terminology">Study Arm Type Value Set Terminology</a></td>
+                </tr>
+                <tr>
+                    <td>C154682</td><td><a href="#CL.C154682.Study Contact Information Attribute Terminology">Study Contact Information Attribute Terminology</a></td>
+                </tr>
+                <tr>
+                    <td>C147066</td><td><a href="#CL.C147066.Study Design Attribute Terminology">Study Design Attribute Terminology</a></td>
+                </tr>
+                <tr>
+                    <td>C163026</td><td><a href="#CL.C163026.Study Monitoring Attribute Terminology">Study Monitoring Attribute Terminology</a></td>
+                </tr>
+                <tr>
+                    <td>C165640</td><td><a href="#CL.C165640.Study Oversight Entity Attribute Terminology">Study Oversight Entity Attribute Terminology</a></td>
+                </tr>
+                <tr>
+                    <td>C160921</td><td><a href="#CL.C160921.Study Population Attribute Terminology">Study Population Attribute Terminology</a></td>
+                </tr>
+                <tr>
+                    <td>C177904</td><td><a href="#CL.C177904.Study Product Administration Attribute">Study Product Administration Attribute</a></td>
+                </tr>
+                <tr>
+                    <td>C174220</td><td><a href="#CL.C174220.Study Product Attribute Terminology">Study Product Attribute Terminology</a></td>
+                </tr>
+                <tr>
+                    <td>C174221</td><td><a href="#CL.C174221.Study Product Type Value Set Terminology">Study Product Type Value Set Terminology</a></td>
+                </tr>
+                <tr>
+                    <td>C132309</td><td><a href="#CL.C132309.Study Protocol Attribute Terminology">Study Protocol Attribute Terminology</a></td>
+                </tr>
+                <tr>
+                    <td>C147067</td><td><a href="#CL.C147067.Study Purpose Value Set">Study Purpose Value Set</a></td>
+                </tr>
+                <tr>
+                    <td>C185851</td><td><a href="#CL.C185851.Study Subject Discontinuation Attribute Terminology">Study Subject Discontinuation Attribute Terminology</a></td>
+                </tr>
+                <tr>
+                    <td>C99077</td><td><a href="#CL.C99077.STYPE">Study Type Response</a></td>
+                </tr>
+                <tr>
+                    <td>C185850</td><td><a href="#CL.C185850.Subject Replacement Attribute Terminology">Subject Replacement Attribute Terminology</a></td>
+                </tr>
+                <tr>
+                    <td>C66736</td><td><a href="#CL.C66736.TINDTP">Trial Intent Type Response</a></td>
+                </tr>
+                <tr>
+                    <td>C66737</td><td><a href="#CL.C66737.TPHASE">Trial Phase Response</a></td>
+                </tr>
+                <tr>
+                    <td>C66739</td><td><a href="#CL.C66739.TTYPE">Trial Type Response</a></td>
+                </tr>
+            </table>
+        </div>
+        <div id="contents">
+            <h2>Codelist Definitions</h2>
+            <table>
+                <thead>
+                    <tr class="header cl">
+                        <th>OID</th><th>Name
+                            <br>
+                            (CDISC Submission Value)</th><th>DataType
+                            <br>
+                            Extensible</th><th rowspan="2" class="nci">NCI Code</th><th rowspan="2" class="nci">CDISC Synonym</th><th rowspan="2" class="nci">CDISC Definition</th><th rowspan="2" class="nci">Preferred Term</th>
+                    </tr>
+                    <tr class="header cli">
+                        <th></th><th colspan="2">CDISC Submission Value [ODM:CodedValue]</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="cl">
+                        <td><a name="CL.C179587.Biological Sample Attribute Terminology">CL.C179587.Biological Sample Attribute Terminology</a></td><td>Biological Sample Attribute Terminology
+                            <br>
+                            (Biological Sample Attribute Terminology)</td><td nowrap>text
+                            <br>
+                            Extensible: </td><td>C179587</td><td>Biological Sample Attribute Terminology</td><td>A terminology value set relevant to the attributes of the biological sample.</td><td>CDISC Protocol Biological Sample Attribute Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Biological Sample Accountability</td><td class="nci">C179744</td><td class="nci"></td><td class="nci">The activities describing the documentation of the storage, inventory tracking, and disposition of the biological sample.</td><td class="nci">Biospecimen Handling Accountability Record</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Biological Sample Collection Method</td><td class="nci">C70700</td><td class="nci"></td><td class="nci">A description of the methodology by which biological material is obtained from a subject.</td><td class="nci">Biospecimen Collection Method</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Biological Sample Collection Timing</td><td class="nci">C178869</td><td class="nci"></td><td class="nci">A description of the timing for the collection of a biological sample, in relation to a study-specific event or time period.</td><td class="nci">Biospecimen Collection Time</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Biological Sample Collection</td><td class="nci">C70945</td><td class="nci"></td><td class="nci">The activities describing biological sample collection, such as specimen type, timing and methodology.</td><td class="nci">Biospecimen Collection</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Biological Sample Handling</td><td class="nci">C179745</td><td class="nci">Biospecimen Handling;Handling of Biological Samples;Handling of Biological Specimens</td><td class="nci">A description of the management of biological sample handling, including methods of collection, processing, shipping, and storage.</td><td class="nci">Biospecimen Handling</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Biological Sample Preparation</td><td class="nci">C179746</td><td class="nci"></td><td class="nci">The activities describing how the biological sample is made ready for storage, processing, and/or analysis.</td><td class="nci">Biospecimen Preparation</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Biological Sample Retention</td><td class="nci">C181231</td><td class="nci">Biospecimen Retention</td><td class="nci">A textual description as to whether and/or how biological samples are retained for research purposes.</td><td class="nci">Biological Sample Retention Description</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Biological Sample Shipping</td><td class="nci">C179747</td><td class="nci">Biological Sample Shipment;Biological Sample Transport</td><td class="nci">The activities describing the logistical considerations for transporting a biological sample from the sender to the receiver.</td><td class="nci">Biospecimen Shipping</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Biological Sample Storage</td><td class="nci">C179748</td><td class="nci"></td><td class="nci">The activities describing the physical or environmental conditions under which the biological sample is maintained.</td><td class="nci">Biospecimen Storage</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C142191.Clinical Study Attribute Terminology">CL.C142191.Clinical Study Attribute Terminology</a></td><td>Clinical Study Attribute Terminology
+                            <br>
+                            (Clinical Study Attribute Terminology)</td><td nowrap>text
+                            <br>
+                            Extensible: </td><td>C142191</td><td>Clinical Study Attribute Terminology</td><td>A terminology value set relevant to the attributes of the clinical study entity.</td><td>CDISC Protocol Entities Clinical Study Attribute Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Primary Clinical Study Sponsor</td><td class="nci">C70794</td><td class="nci"></td><td class="nci">The individual, organization, group or other legal person taking responsibility for securing the arrangements to initiate and/or manage a study (including arrangements to ensure that the study design meets appropriate standards and to ensure appropriate conduct and reporting). In commercial trials, the primary sponsor is normally the main applicant for regulatory authorization to begin the study. It may or may not be the main funder. (NCI)</td><td class="nci">Primary Clinical Study Sponsor</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Secondary Clinical Study Sponsor</td><td class="nci">C70795</td><td class="nci"></td><td class="nci">Additional individuals, organizations or other legal persons, if any, that have agreed with the primary sponsor to take on responsibilities of sponsorship. A secondary sponsor may have agreed to take on all the responsibilities of sponsorship jointly with the primary sponsor; or to form a group with the primary sponsor in which the responsibilities of sponsorship are allocated among the members of the group; or to act as the sponsor's legal representative in relation to some or all of the study sites; or to take responsibility for the accuracy of study registration information submitted.</td><td class="nci">Secondary Clinical Study Sponsor</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Activity</td><td class="nci">C71473</td><td class="nci"></td><td class="nci">An action, undertaking, or event, which is anticipated to be performed or observed, or was performed or observed, according to the study protocol during the execution of the study.</td><td class="nci">Study Activity</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Rationale</td><td class="nci">C94122</td><td class="nci">Study Purpose</td><td class="nci">A statement describing the overall rationale of the study. This field describes the contribution of this study to product development, i.e., what knowledge is being contributed from the conduct of this study.</td><td class="nci">Study Protocol Version Purpose Statement</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Schematic Diagram</td><td class="nci">C93682</td><td class="nci">Study Schema</td><td class="nci">A diagram that outlines the decision points (e.g. randomization, response evaluation) that define the different paths a participant could take through the study. This is typically a block diagram and may include epochs, timing of randomization, treatment arms, and duration of treatments.</td><td class="nci">Study Schematic</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Type</td><td class="nci">C142175</td><td class="nci">Study Type</td><td class="nci">The nature of the investigation for which study information is being collected. (After clinicaltrials.gov)</td><td class="nci">Study Type</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C139020.Clinical Trial Attribute Terminology">CL.C139020.Clinical Trial Attribute Terminology</a></td><td>Clinical Trial Attribute Terminology
+                            <br>
+                            (Clinical Trial Attribute Terminology)</td><td nowrap>text
+                            <br>
+                            Extensible: </td><td>C139020</td><td>Clinical Trial Attribute Terminology</td><td>A terminology value set relevant to the attributes of the clinical trial entity.</td><td>CDISC Protocol Entities Clinical Trial Attribute Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Country of Recruitment</td><td class="nci">C139170</td><td class="nci"></td><td class="nci">The country in which participants are located when enrolling in a trial or study.</td><td class="nci">Country of Recruitment</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Date of First Enrollment</td><td class="nci">C139171</td><td class="nci"></td><td class="nci">Date or date and time of first subject enrollment into a study, as verifiable by a convention that is consistent with authoritative regulatory criteria. Compare with study start. [Modified from ICH E3] (CDISC Glossary)</td><td class="nci">Date of First Enrollment into Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Exclusion Criteria</td><td class="nci">C25370</td><td class="nci"></td><td class="nci">List of characteristics in a protocol, any one of which may exclude a potential subject from participation in a study. (CDISC glossary)</td><td class="nci">Exclusion Criteria</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Inclusion Criteria</td><td class="nci">C25532</td><td class="nci"></td><td class="nci">The criteria in a protocol that prospective subjects must meet to be eligible for participation in a study. NOTE: Exclusion and inclusion criteria define the study population. See also exclusion criteria. (CDISC glossary)</td><td class="nci">Inclusion Criteria</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Planned Trial Duration</td><td class="nci">C127796</td><td class="nci">Planned Trial Duration</td><td class="nci">The approximate period of time over which the clinical trial is expected to occur.</td><td class="nci">Planned Trial Duration</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Primary Sponsor Name</td><td class="nci">C139168</td><td class="nci"></td><td class="nci">The name of the entity that is considered the primary sponsor for the trial or study. (NCI)</td><td class="nci">Primary Study Sponsor Name</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Secondary Sponsor Name</td><td class="nci">C139169</td><td class="nci"></td><td class="nci">The name of the entity that is considered the secondary sponsor for the trial or study. (NCI)</td><td class="nci">Secondary Study Sponsor Name</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Source of Monetary or Material Support for Study</td><td class="nci">C139167</td><td class="nci"></td><td class="nci">The major organizations providing monetary or material support for the conduct of the trial, including, but not limited to, funding, design, implementation, data analysis and reporting. (EudraCT)</td><td class="nci">Source of Monetary or Material Support for Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Target Sample Size</td><td class="nci">C139172</td><td class="nci"></td><td class="nci">The total number of planned participants in a study or trial.</td><td class="nci">Target Sample Size</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Therapeutic Area</td><td class="nci">C101302</td><td class="nci">Therapeutic Area</td><td class="nci">A knowledge field that focuses on research and development of specific treatments for diseases and pathologic findings, as well as prevention of conditions that negatively impact the health of an individual. (NCI)</td><td class="nci">Therapeutic Area</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Trial Design</td><td class="nci">C15787</td><td class="nci"></td><td class="nci">The detailed planning of a study of the safety, efficacy, or optimum dosage schedule (if appropriate) of one or more diagnostic, therapeutic, or prophylactic drugs, devices, or techniques selected according to predetermined criteria of eligibility and observed for predefined evidence of favorable and unfavorable effects. (NCI)</td><td class="nci">Clinical Trials Design</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Trial Disease/Condition Indication</td><td class="nci">C112038</td><td class="nci">Trial Disease/Condition Indication</td><td class="nci">The condition, disease or disorder that the clinical trial is intended to investigate or address.</td><td class="nci">Trial Indication</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Trial Intent</td><td class="nci">C49652</td><td class="nci">Trial Intent Type</td><td class="nci">The planned purpose of the therapy, device, or agent under study in the clinical trial.</td><td class="nci">Clinical Study by Intent</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Trial Phase</td><td class="nci">C48281</td><td class="nci">Trial Phase Classification</td><td class="nci">Any defined stage in the lifecycle of a clinical trial.</td><td class="nci">Trial Phase</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Trial Primary Objective</td><td class="nci">C85826</td><td class="nci">Trial Primary Objective</td><td class="nci">The principal purpose of the trial.</td><td class="nci">Trial Primary Objective</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Trial Registration Indicator</td><td class="nci">C139166</td><td class="nci"></td><td class="nci">An indication as to whether the clinical trial has been registered with a trial registry system.</td><td class="nci">Trial Registration Indicator</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Trial Secondary Objective</td><td class="nci">C85827</td><td class="nci">Trial Secondary Objective</td><td class="nci">The auxiliary purpose of the trial.</td><td class="nci">Trial Secondary Objective</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Trial Site</td><td class="nci">C85838</td><td class="nci">Investigative Site;Investigator Site</td><td class="nci">Any healthcare organization, institution, facility or provider directly involved in conducting or facilitating a particular clinical trial. (NCI)</td><td class="nci">Clinical Trial Site</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Trial Type</td><td class="nci">C49660</td><td class="nci">Trial Scope;Trial Type</td><td class="nci">The nature of the interventional study for which information is being collected.</td><td class="nci">Trial Type</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C170440.Endpoint Attribute Terminology">CL.C170440.Endpoint Attribute Terminology</a></td><td>Endpoint Attribute Terminology
+                            <br>
+                            (Endpoint Attribute Terminology)</td><td nowrap>text
+                            <br>
+                            Extensible: </td><td>C170440</td><td>Endpoint Attribute Terminology</td><td>A terminology value set relevant to the attributes of the endpoint entity.</td><td>CDISC Protocol Endpoint Attribute Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Endpoint Type</td><td class="nci">C170557</td><td class="nci"></td><td class="nci">A characterization or classification of the defined variable intended to reflect an outcome measure of interest that is statistically analyzed to address a particular research question.</td><td class="nci">Study Endpoint Type</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Justification for Endpoint</td><td class="nci">C170558</td><td class="nci"></td><td class="nci">The rationale or explanation for why each study endpoint was chosen.</td><td class="nci">Justification for Study Endpoint</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C170441.Endpoint Type Value Set Terminology">CL.C170441.Endpoint Type Value Set Terminology</a></td><td>Endpoint Type Value Set Terminology
+                            <br>
+                            (Endpoint Type Value Set Terminology)</td><td nowrap>text
+                            <br>
+                            Extensible: </td><td>C170441</td><td>Endpoint Type Value Set Terminology</td><td>The terminology relevant to the type of endpoint for the study.</td><td>CDISC Protocol Endpoint Type Value Set Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Composite Endpoint</td><td class="nci">C170561</td><td class="nci">Combined Endpoint</td><td class="nci">Endpoint(s) constructed from two or more endpoints that represents an overall clinically relevant measure of clinical benefit.</td><td class="nci">Composite Endpoint</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Direct Endpoint</td><td class="nci">C170560</td><td class="nci"></td><td class="nci">Endpoint(s) used in clinical studies to directly measure how a patient feels, functions, or survives. These endpoint(s) in themselves represent or characterize the clinical outcome of interest. (FDA: https://www.fda.gov/media/84987/download)</td><td class="nci">Direct Endpoint</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Exploratory Endpoint</td><td class="nci">C170559</td><td class="nci"></td><td class="nci">Endpoint(s) that may include clinically important events that are expected to occur too infrequently to show a treatment effect or endpoints that for other reasons are thought to be less likely to show an effect but are included to explore new hypotheses. (After FDA-NIH Protocol Template)</td><td class="nci">Exploratory Endpoint</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Primary Endpoint</td><td class="nci">C94496</td><td class="nci"></td><td class="nci">Endpoint(s) of greatest importance that is the basis for concluding whether the study met its objective(s) and provides a clinically relevant, valid, and reliable measure of the primary objective(s). (After FDA-NIH Protocol Template)</td><td class="nci">Primary Endpoint</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Secondary Endpoint</td><td class="nci">C139173</td><td class="nci"></td><td class="nci">Endpoint(s) that may provide supportive information about the effect of the study intervention(s) on the primary endpoint or demonstrate additional effects on the disease or condition. (After FDA-NIH Protocol Template)</td><td class="nci">Secondary Endpoint</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Surrogate Endpoint</td><td class="nci">C68772</td><td class="nci"></td><td class="nci">Endpoint(s) used in clinical studies as a substitute for a direct measure of how a patient feels, functions, or survives. A surrogate endpoint is expected to predict clinical benefit or harm based on epidemiologic, therapeutic, pathophysiologic, or other scientific evidence. A surrogate endpoint does not measure the clinical benefit of primary interest in and of itself. (After NIH-FDA BEST (Biomarkers, Endpoints, and other Tools) Resource, https://www.ncbi.nlm.nih.gov/books/NBK338448/)</td><td class="nci">Surrogate Endpoint</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C184334.Informed Consent Attribute Terminology">CL.C184334.Informed Consent Attribute Terminology</a></td><td>Informed Consent Attribute Terminology
+                            <br>
+                            (Informed Consent Attribute Terminology)</td><td nowrap>text
+                            <br>
+                            Extensible: </td><td>C184334</td><td>Informed Consent Attribute Terminology</td><td>A terminology value set relevant to the attributes of the informed consent.</td><td>CDISC Protocol Informed Consent Attribute Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Assent</td><td class="nci">C161418</td><td class="nci">Informed Assent</td><td class="nci">Assent given by a minor or adult who is unable to give informed consent on their own behalf, to participate in a clinical trial. Assent must be accompanied by consent from a parent or legal guardian for full participation in the study.</td><td class="nci">Informed Assent</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Informed Consent Form</td><td class="nci">C16468</td><td class="nci">Informed Consent Document</td><td class="nci">A formal document explaining the potential risks and benefits of participation in a study and the rights and responsibilities of the parties involved, in a manner that is understandable to the subject or their legally authorized representative.</td><td class="nci">Consent Form</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Informed Consent Process</td><td class="nci">C184390</td><td class="nci">Informed Consent Procedure</td><td class="nci">The procedure by which informed consent is obtained and documented by means of a written, signed, and dated informed consent form. This process may include obtaining assent from subjects with legally authorized representatives. (ICH GCP)</td><td class="nci">Informed Consent Process</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C177906.Ingredient Attribute Terminology">CL.C177906.Ingredient Attribute Terminology</a></td><td>Ingredient Attribute Terminology
+                            <br>
+                            (Ingredient Attribute Terminology)</td><td nowrap>text
+                            <br>
+                            Extensible: </td><td>C177906</td><td>Ingredient Attribute Terminology</td><td>A terminology value set relevant to the attributes of the ingredient.</td><td>CDISC Protocol Ingredient Attribute Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Drug Product Component</td><td class="nci">C177929</td><td class="nci">Component</td><td class="nci">Any ingredient intended for use in the manufacture of a drug product, including those that may not appear in such drug product. (FDA 21 CFR 314.3(a))</td><td class="nci">Drug Product Component</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Ingredient Type</td><td class="nci">C177928</td><td class="nci"></td><td class="nci">A characterization or classification of the component that constitutes a part of a compound or mixture.</td><td class="nci">Ingredient Type</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C177907.Ingredient Type Value Set Terminology">CL.C177907.Ingredient Type Value Set Terminology</a></td><td>Ingredient Type Value Set Terminology
+                            <br>
+                            (Ingredient Type Value Set Terminology)</td><td nowrap>text
+                            <br>
+                            Extensible: </td><td>C177907</td><td>Ingredient Type Value Set Terminology</td><td>The terminology relevant to the identification of the kind of ingredient.</td><td>CDISC Protocol Ingredient Type Value Set Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Active Ingredient</td><td class="nci">C82533</td><td class="nci"></td><td class="nci">Any component of a study product intended to exert pharmacological activity or other direct effect in the diagnosis, cure, mitigation, treatment, or prevention of disease, or to affect the structure or any function of the body of humans or other animals. (After 21 CFR 210.3(b)(7))</td><td class="nci">Active Ingredient</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Inactive Ingredient</td><td class="nci">C42637</td><td class="nci">Inert Ingredient</td><td class="nci">Any component of a study product other than an active ingredient. (After FDA 21 CFR 210.3(b)(8))</td><td class="nci">Pharmaceutical Excipient</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C177905.Intervention Attribute Terminology">CL.C177905.Intervention Attribute Terminology</a></td><td>Intervention Attribute Terminology
+                            <br>
+                            (Intervention Attribute Terminology)</td><td nowrap>text
+                            <br>
+                            Extensible: </td><td>C177905</td><td>Intervention Attribute Terminology</td><td>A terminology value set relevant to the attributes of the intervention.</td><td>CDISC Protocol Intervention Attribute Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Intervention Description</td><td class="nci">C177931</td><td class="nci"></td><td class="nci">The textual representation of the study intervention.</td><td class="nci">Intervention Description</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Intervention Name</td><td class="nci">C177930</td><td class="nci"></td><td class="nci">The identifying name for the study intervention.</td><td class="nci">Intervention Name</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Intervention Type</td><td class="nci">C98747</td><td class="nci">Intervention Type</td><td class="nci">The kind of product or procedure studied in a trial.</td><td class="nci">Intervention Type</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C99076.INTMODEL">CL.C99076.INTMODEL</a></td><td>Intervention Model Response
+                            <br>
+                            (INTMODEL)</td><td nowrap>text
+                            <br>
+                            Extensible: Yes</td><td>C99076</td><td>Intervention Model Response</td><td>A terminology codelist relevant to the trial design developed to compare treatment groups.</td><td>CDISC SDTM Intervention Model Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">CROSS-OVER</td><td class="nci">C82637</td><td class="nci"></td><td class="nci">Participants receive one of two or more alternative intervention(s) during the initial epoch of the study and receive other intervention(s) during the subsequent epoch(s) of the study.</td><td class="nci">Crossover Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">FACTORIAL</td><td class="nci">C82638</td><td class="nci"></td><td class="nci">Two or more interventions, each alone or in combination, are evaluated in parallel against a control group. This study design allows for the comparison of active drug to placebo, presence of drug-drug interactions, and comparison of active drugs against each other.</td><td class="nci">Factorial Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">PARALLEL</td><td class="nci">C82639</td><td class="nci"></td><td class="nci">Participants are assigned to one of two or more treatment groups in parallel for the duration of the study.</td><td class="nci">Parallel Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SEQUENTIAL</td><td class="nci">C142568</td><td class="nci"></td><td class="nci">Groups of participants are assigned to receive interventions based on prior milestones being reached in the study. (clinicaltrials.gov)</td><td class="nci">Group Sequential Design</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SINGLE GROUP</td><td class="nci">C82640</td><td class="nci"></td><td class="nci">All trial participants are assigned to a single treatment group for the duration of the study.</td><td class="nci">Single Group Study</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C99078.INTTYPE">CL.C99078.INTTYPE</a></td><td>Intervention Type Response
+                            <br>
+                            (INTTYPE)</td><td nowrap>text
+                            <br>
+                            Extensible: No</td><td>C99078</td><td>Intervention Type Response</td><td>A terminology codelist relevant to the kind of product or procedure studied in a trial.</td><td>CDISC SDTM Intervention Type Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">BEHAVIORAL THERAPY</td><td class="nci">C15184</td><td class="nci"></td><td class="nci">A technique used to change the behavior of a subject (e.g., psychotherapy, lifestyle counseling, or hypnosis).</td><td class="nci">Behavioral Intervention</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">BIOLOGIC</td><td class="nci">C307</td><td class="nci"></td><td class="nci">A substance made from living organisms or things they produce, for example: virus, therapeutic serum, toxin, antitoxin, vaccine, blood, blood component or derivative, allergenic product, or analogous product.</td><td class="nci">Biological Agent</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">DEVICE</td><td class="nci">C16830</td><td class="nci">Medical Device</td><td class="nci">Any instrument, apparatus, implement, machine, appliance, implant, reagent for in vitro use, software, material or other similar or related article, intended by the manufacturer to be used, alone or in combination for, one or more specific medical purpose(s).</td><td class="nci">Medical Device</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">DIETARY SUPPLEMENT</td><td class="nci">C1505</td><td class="nci"></td><td class="nci">Preparations containing ingredient(s) intended to supplement the diet.</td><td class="nci">Dietary Supplement</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">DRUG</td><td class="nci">C1909</td><td class="nci"></td><td class="nci">An active natural, synthetic or semi-synthetic ingredient including endogenous body substance that is intended to furnish pharmacological activity or other direct effect in the diagnosis, cure, mitigation, treatment, or prevention of disease or to affect the structure or any function of the human body, but does not include intermediates used in the synthesis of such ingredient (21 CFR 314.3(b)).</td><td class="nci">Pharmacologic Substance</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">GENETIC</td><td class="nci">C15238</td><td class="nci">Gene Therapy</td><td class="nci">Introduction of genetic material into cells in order to correct or treat an inherited or acquired disease.</td><td class="nci">Gene Therapy</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">OTHER</td><td class="nci">C17649</td><td class="nci">Other</td><td class="nci">Different than the one(s) previously specified or mentioned. (NCI)</td><td class="nci">Other</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">PROCEDURE</td><td class="nci">C98769</td><td class="nci">Medical Procedure</td><td class="nci">Any activity performed by manual and/or instrumental means for the purpose of diagnosis, assessment, therapy, prevention, or palliative care.</td><td class="nci">Physical Medical Procedure</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">RADIATION</td><td class="nci">C15313</td><td class="nci">Radiation Therapy;Radiotherapy</td><td class="nci">Use of targeted or whole body radiation to treat a disease.</td><td class="nci">Radiation Therapy</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C66742.NY">CL.C66742.NY</a></td><td>No Yes Response
+                            <br>
+                            (NY)</td><td nowrap>text
+                            <br>
+                            Extensible: No</td><td>C66742</td><td>No Yes Response</td><td>A term that is used to indicate a question with permissible values of yes/no/unknown/not applicable.</td><td>CDISC SDTM Yes No Unknown or Not Applicable Response Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">N</td><td class="nci">C49487</td><td class="nci">No</td><td class="nci">The non-affirmative response to a question. (NCI)</td><td class="nci">No</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">NA</td><td class="nci">C48660</td><td class="nci">NA;Not Applicable</td><td class="nci">Determination of a value is not relevant in the current context. (NCI)</td><td class="nci">Not Applicable</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">U</td><td class="nci">C17998</td><td class="nci">U;UNK;Unknown</td><td class="nci">Not known, not observed, not recorded, or refused. (NCI)</td><td class="nci">Unknown</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Y</td><td class="nci">C49488</td><td class="nci">Yes</td><td class="nci">The affirmative response to a question. (NCI)</td><td class="nci">Yes</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C127259.OBSSMO">CL.C127259.OBSSMO</a></td><td>Observational Study Model
+                            <br>
+                            (OBSSMO)</td><td nowrap>text
+                            <br>
+                            Extensible: Yes</td><td>C127259</td><td>Observational Study Model</td><td>The terminology relevant to the trial design for observational studies.</td><td>CDISC SDTM Observational Study Model Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">CASE CONTROL</td><td class="nci">C15197</td><td class="nci"></td><td class="nci">A study that compares groups of people with generally similar characteristics, those with the condition under study (case) and those without the condition under study (control).</td><td class="nci">Case-Control Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">CASE CROSSOVER</td><td class="nci">C127779</td><td class="nci"></td><td class="nci">A study in which the subject characteristics of the case, immediately prior to disease onset (sometimes called the hazard period), are compared to characteristics of same case at a prior time (i.e., control period). (ClinicalTrials.gov)</td><td class="nci">Observational Case-Crossover Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">CASE ONLY</td><td class="nci">C15362</td><td class="nci"></td><td class="nci">A study in which the subject with the condition under study (the case) is compared against a theoretical/historical model of distribution that serves as a control.</td><td class="nci">Case Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">COHORT</td><td class="nci">C15208</td><td class="nci"></td><td class="nci">A study in which subjects are grouped based on a predefined personal or administrative characteristic.</td><td class="nci">Cohort Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">ECOLOGIC OR COMMUNITY</td><td class="nci">C127780</td><td class="nci"></td><td class="nci">A study in which geographically distinct study populations are compared with respect to a particular outcome.</td><td class="nci">Ecologic or Community Based Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">FAMILY BASED</td><td class="nci">C15407</td><td class="nci"></td><td class="nci">A study in which related or non-related family members are compared with respect to a particular outcome.</td><td class="nci">Family Study</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C165641.Outcome Measure Attribute Terminology">CL.C165641.Outcome Measure Attribute Terminology</a></td><td>Outcome Measure Attribute Terminology
+                            <br>
+                            (Outcome Measure Attribute Terminology)</td><td nowrap>text
+                            <br>
+                            Extensible: </td><td>C165641</td><td>Outcome Measure Attribute Terminology</td><td>A terminology value set relevant to the attributes of the outcome measure entity.</td><td>CDISC Protocol Outcome Measure Attribute Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Outcome Measure Description</td><td class="nci">C165138</td><td class="nci"></td><td class="nci">A full description of the outcome measure.</td><td class="nci">Study Outcome Measure Description</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Outcome Measure Time Frame</td><td class="nci">C165859</td><td class="nci"></td><td class="nci">The period of time over which the study outcome measure is assessed.</td><td class="nci">Outcome Measure Time Frame</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Outcome Measure Title</td><td class="nci">C165860</td><td class="nci"></td><td class="nci">The descriptive name of the outcome measure.</td><td class="nci">Outcome Measure Title</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Outcome Measure Type</td><td class="nci">C165861</td><td class="nci"></td><td class="nci">A characterization or classification of the specific key measurement(s) or observation(s) used to measure the effect of experimental variables on the participants in a study, or for observational studies, to describe patterns of diseases or traits or associations with exposures, risk factors or treatment.</td><td class="nci">Outcome Measure Type</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C170442.Outcome Measure Type Value Set Terminology">CL.C170442.Outcome Measure Type Value Set Terminology</a></td><td>Outcome Measure Type Value Set Terminology
+                            <br>
+                            (Outcome Measure Type Value Set Terminology)</td><td nowrap>text
+                            <br>
+                            Extensible: </td><td>C170442</td><td>Outcome Measure Type Value Set Terminology</td><td>The terminology relevant to the type of outcome measure for the study.</td><td>CDISC Protocol Outcome Measure Type Value Set Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Exploratory Outcome Measure</td><td class="nci">C98724</td><td class="nci">Exploratory Outcome Measure</td><td class="nci">The outcome measure(s) that is part of a pre-specified analysis plan used to evaluate the exploratory endpoint(s) associated with exploratory study objective(s) and/or any other measures, excluding post-hoc measures, that are a focus of the study. (After clinicaltrials.gov)</td><td class="nci">Exploratory Outcome Measure</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Primary Outcome Measure</td><td class="nci">C98772</td><td class="nci">Primary Outcome Measure</td><td class="nci">The outcome measure(s) of greatest importance specified in the protocol, usually the one(s) used in the power calculation, to evaluate the primary endpoint(s) associated with the primary study objective(s). (After Clinicaltrials.gov)</td><td class="nci">Primary Outcome Measure</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Secondary Outcome Measure</td><td class="nci">C98781</td><td class="nci">Secondary Outcome Measure</td><td class="nci">The outcome measure(s) that is part of a pre-specified analysis plan used to evaluate the secondary endpoint(s) associated with secondary study objective(s) and/or used to evaluate any measure(s) ancillary to the primary or secondary endpoint(s). (After Clinicaltrials.gov).</td><td class="nci">Secondary Outcome Measure</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C165642.Oversight Entity Value Set">CL.C165642.Oversight Entity Value Set</a></td><td>Oversight Entity Value Set
+                            <br>
+                            (Oversight Entity Value Set)</td><td nowrap>text
+                            <br>
+                            Extensible: </td><td>C165642</td><td>Oversight Entity Value Set</td><td>The terminology relevant to the type of oversight entity for the study.</td><td>CDISC Protocol Oversight Entity Value Set Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Data Monitoring Committee</td><td class="nci">C142489</td><td class="nci">Data and Safety Monitoring Board;Data and Safety Monitoring Committee DSMB;Data Monitoring and Oversight Committee;DMC;DMOC;DSMC;IDMC;Independent Data Monitoring Committee</td><td class="nci">A group of independent experts who are appointed to monitor the safety and scientific integrity of a research intervention, protect the confidentiality of participant data, and to make recommendations to the sponsor regarding the stopping of the trial for safety, efficacy, or for futility. (clinicaltrials.gov)</td><td class="nci">Data Monitoring Committee</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Independent Ethics Committee</td><td class="nci">C142579</td><td class="nci">IEC</td><td class="nci">An independent body (a review board or a committee, institutional, regional, national, or supranational), constituted of medical professionals and non-medical members, whose responsibility it is to ensure the protection of the rights, safety and well-being of human subjects involved in a study and to provide public assurance of that protection, by, among other things, reviewing and approving/providing favorable opinion on, the study protocol, the suitability of the investigator(s), facilities, and the methods and material to be used in obtaining and documenting informed consent of the study subjects. The legal status, composition, function, operations and regulatory requirements pertaining to Independent Ethics Committees may differ among countries, but should allow the Independent Ethics Committee to act in agreement with GCP as described in the ICH E6 guideline. (ICH E6 R2)</td><td class="nci">Independent Ethics Committee</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Independent Safety Monitor</td><td class="nci">C165865</td><td class="nci">ISM</td><td class="nci">An independent physician or health-care professional who evaluates individual and cumulative participant data to make recommendations regarding the safe continuation of the study. (NIH)</td><td class="nci">Independent Safety Monitor</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Institutional Review Board</td><td class="nci">C16741</td><td class="nci">IRB</td><td class="nci">An independent body constituted of medical, scientific, and non-scientific members, whose responsibility is to ensure the protection of the rights, safety and well-being of human subjects involved in a study by, among other things, reviewing, approving, and providing continuing review of study protocol and amendments and of the methods and material to be used in obtaining and documenting informed consent of the study subjects. (ICH E6 R2)</td><td class="nci">Institutional Review Board</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Observational Study Monitoring Committee</td><td class="nci">C165866</td><td class="nci">Observational Study Monitoring Board;OSMB;OSMC</td><td class="nci">A group of independent experts who are appointed to monitor the safety and scientific integrity of an observational study, including protecting the confidentiality of participant data and to make recommendations regarding the stopping of the study for safety or for futility. (clinicaltrials.gov)</td><td class="nci">Observational Study Monitoring Committee</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Safety Monitoring Committee</td><td class="nci">C165867</td><td class="nci">Safety Assessment Committee;Safety Monitoring Board;SMC</td><td class="nci">Group of individuals with pertinent expertise that reviews, on a regular basis, accumulating safety data from an ongoing clinical study. This independent committee monitors the safety of participants during the study.</td><td class="nci">Safety Monitoring Committee</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C147068.Participant Allocation Value Set">CL.C147068.Participant Allocation Value Set</a></td><td>Participant Allocation Value Set
+                            <br>
+                            (Participant Allocation Value Set)</td><td nowrap>text
+                            <br>
+                            Extensible: </td><td>C147068</td><td>Participant Allocation Value Set</td><td>A terminology codelist for the method of assigning participants, or subjects, to groups or categories within a clinical study.</td><td>CDISC Protocol Subject Allocation Response Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Nonrandomized</td><td class="nci">C93043</td><td class="nci"></td><td class="nci">Participants are expressly assigned to intervention groups through a non-random method. (clinicaltrials.gov)</td><td class="nci">Nonrandomized Clinical Trial</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Not Applicable</td><td class="nci">C48660</td><td class="nci">NA;Not Applicable</td><td class="nci">Determination of a value is not relevant in the current context. (NCI)</td><td class="nci">Not Applicable</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Randomized</td><td class="nci">C25196</td><td class="nci">Trial is Randomized</td><td class="nci">The process of assigning trial subjects to treatment or control groups using an element of chance to determine the assignments in order to reduce bias. NOTE: Unequal randomization is used to allocate subjects into groups at a differential rate; for example, three subjects may be assigned to a treatment group for every one assigned to the control group. [ICH E6 1.48] See also balanced study. (CDISC glossary)</td><td class="nci">Randomization</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C132308.Physical Address Attribute Terminology">CL.C132308.Physical Address Attribute Terminology</a></td><td>Physical Address Attribute Terminology
+                            <br>
+                            (Physical Address Attribute Terminology)</td><td nowrap>text
+                            <br>
+                            Extensible: </td><td>C132308</td><td>Physical Address Attribute Terminology</td><td>A terminology value set relevant to the attributes of the physical address entity.</td><td>CDISC Protocol Entities Physical Address Attribute Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">City</td><td class="nci">C25160</td><td class="nci"></td><td class="nci">A relatively large and/or densely populated area of human habitation with administrative or legal status that may be specified as a component of a postal address.</td><td class="nci">City</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Country</td><td class="nci">C25464</td><td class="nci"></td><td class="nci">A sovereign nation occupying a distinct territory and ruled by an autonomous government.</td><td class="nci">Country</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Geographic Locality</td><td class="nci">C87189</td><td class="nci"></td><td class="nci">A distinct geographic area in the immediate vicinity of a particular place, such as a city, neighborhood or district.</td><td class="nci">Locality</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Geographic Region</td><td class="nci">C16632</td><td class="nci"></td><td class="nci">Any demarcated area of the Earth; may be determined by both natural and human boundaries, such as a state or province.</td><td class="nci">Geographic Area</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Postal Code</td><td class="nci">C25621</td><td class="nci"></td><td class="nci">An alphanumeric code assigned to a mail delivery area.</td><td class="nci">Postal Code</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Province</td><td class="nci">C25632</td><td class="nci"></td><td class="nci">A sub-division of a country created by the central government for administrative purposes. Provinces are usually, but not always, less autonomous than states, and must obey the laws of the central government.</td><td class="nci">Province</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">State</td><td class="nci">C87194</td><td class="nci"></td><td class="nci">A sub-division of a country that forms part of a federal union. States are usually, but not always, more autonomous than provinces and may have different laws from the central government.</td><td class="nci">State</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Street Address</td><td class="nci">C25690</td><td class="nci"></td><td class="nci">The street name and building number where an entity is located.</td><td class="nci">Street Address</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C181167.Protocol Amendment Attribute Terminology">CL.C181167.Protocol Amendment Attribute Terminology</a></td><td>Protocol Amendment Attribute Terminology
+                            <br>
+                            (Protocol Amendment Attribute Terminology)</td><td nowrap>text
+                            <br>
+                            Extensible: </td><td>C181167</td><td>Protocol Amendment Attribute Terminology</td><td>A terminology value set relevant to the attributes of the protocol amendment.</td><td>CDISC Protocol Amendment Attribute Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Brief Rationale for Protocol Change</td><td class="nci">C181233</td><td class="nci">Brief Rationale for Protocol Modification;Brief Rationale for Protocol Revision</td><td class="nci">A concise explanation justifying an individual change in the protocol.</td><td class="nci">Brief Rationale for Protocol Change</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Overall Rationale for Protocol Amendment</td><td class="nci">C181234</td><td class="nci">Overall Justification for Amendment</td><td class="nci">A summarized explanation justifying a protocol amendment.</td><td class="nci">Overall Rationale for Protocol Amendment</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Protocol Version Approval by Sponsor Date</td><td class="nci">C132352</td><td class="nci">Protocol Amendment Approval by Sponsor Date;Study Protocol Version Approval Date</td><td class="nci">The date on which a version of the protocol was finalized or approved by the sponsor.</td><td class="nci">Protocol Approval by Sponsor Date</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Protocol Version Number</td><td class="nci">C181232</td><td class="nci">Study Protocol Amendment Number</td><td class="nci">A string of numerals that uniquely identifies a specific version of a study protocol.</td><td class="nci">Study Protocol Version Number</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C154681.Protocol Contact Role Value Set">CL.C154681.Protocol Contact Role Value Set</a></td><td>Protocol Contact Role Value Set
+                            <br>
+                            (Protocol Contact Role Value Set)</td><td nowrap>text
+                            <br>
+                            Extensible: </td><td>C154681</td><td>Protocol Contact Role Value Set</td><td>The terminology relevant to the role that the individual or entity plays with respect to being a contact within a study protocol.</td><td>CDISC Protocol Entities Protocol Contact Role Response Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Biostatistician</td><td class="nci">C154709</td><td class="nci"></td><td class="nci">A person who is responsible for the statistical aspects of the clinical or pre-clinical study. (NCI)</td><td class="nci">Biostatistician</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Clinical Informaticist</td><td class="nci">C154708</td><td class="nci">Clinical Informatician</td><td class="nci">An individual that designs, implements, evaluates and/or analyzes information technology in a healthcare or research setting. (NCI)</td><td class="nci">Clinical Informaticist</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Clinical Research Coordinator</td><td class="nci">C51811</td><td class="nci">CRC</td><td class="nci">A person to whom a clinical investigator delegates routine administrative requirements of a protocol. The duties and responsibilities of a clinical research coordinator may vary across different infrastructures. Generally, the coordinator manages the subject's clinical trial participation and provides a vital linkage between the subject, the investigator, and the sponsor. (NCI)</td><td class="nci">Clinical Coordinator</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Contact for Public Queries</td><td class="nci">C127526</td><td class="nci"></td><td class="nci">The study contact person who is responsible for questions from the public.</td><td class="nci">Public Queries Study Contact</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Coordinating Investigator</td><td class="nci">C51818</td><td class="nci"></td><td class="nci">An investigator assigned the responsibility for the coordination of investigators at different centers participating in a multi-center trial. While a single-center study would not include a coordinating investigator, the investigator at the site would fulfill the same responsibilities as a principal investigator. (after ICH E6)</td><td class="nci">Coordinating Investigator</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Data Manager</td><td class="nci">C51820</td><td class="nci"></td><td class="nci">An individual who is responsible for the development and implementation of architectures, policies and procedures for the effective management of data across its business lifecycle.</td><td class="nci">Data Manager</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Investigator</td><td class="nci">C25936</td><td class="nci"></td><td class="nci">A person responsible for the conduct of the clinical trial at a trial site. If a trial is conducted by a team of individuals at the trial site, the investigator is the responsible leader of the team and may be called the principal investigator.</td><td class="nci">Investigator</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Legal Representative for the Study</td><td class="nci">C127532</td><td class="nci"></td><td class="nci">An individual with expertise in the law who provides legal counsel and representation for a study.</td><td class="nci">Legal Representative for the Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Medical Monitor</td><td class="nci">C51836</td><td class="nci"></td><td class="nci">A sponsor representative who has medical authority for the evaluation of the safety aspects of a clinical trial. (CDISC Glossary)</td><td class="nci">Medical Monitor</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">National Coordinating Investigator</td><td class="nci">C154706</td><td class="nci"></td><td class="nci">In the case of a multinational study, a person who has the responsibilities of the sponsor of the study in his/her country and will be responsible for the coordination of the principal investigators at different sites within that member state. (EMA)</td><td class="nci">National Coordinating Investigator</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Primary Sponsor</td><td class="nci">C70794</td><td class="nci"></td><td class="nci">The individual, organization, group or other legal person taking responsibility for securing the arrangements to initiate and/or manage a study (including arrangements to ensure that the study design meets appropriate standards and to ensure appropriate conduct and reporting). In commercial trials, the primary sponsor is normally the main applicant for regulatory authorization to begin the study. It may or may not be the main funder. (NCI)</td><td class="nci">Primary Clinical Study Sponsor</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Principal Investigator</td><td class="nci">C19924</td><td class="nci"></td><td class="nci">A person who has the primary responsibility for the conduct of a clinical study and study-related personnel at a study site. While a single-center study would not include a coordinating investigator, the investigator at the site would fulfill the same responsibilities as a principal investigator.</td><td class="nci">Principal Investigator</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Secondary Sponsor</td><td class="nci">C70795</td><td class="nci"></td><td class="nci">Additional individuals, organizations or other legal persons, if any, that have agreed with the primary sponsor to take on responsibilities of sponsorship. A secondary sponsor may have agreed to take on all the responsibilities of sponsorship jointly with the primary sponsor; or to form a group with the primary sponsor in which the responsibilities of sponsorship are allocated among the members of the group; or to act as the sponsor's legal representative in relation to some or all of the study sites; or to take responsibility for the accuracy of study registration information submitted.</td><td class="nci">Secondary Clinical Study Sponsor</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Sponsor</td><td class="nci">C70793</td><td class="nci">Clinical Study Sponsor;Sponsor;Study Sponsor</td><td class="nci">An entity that is responsible for the initiation, management, and/or financing of a clinical study.</td><td class="nci">Clinical Study Sponsor</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Chair</td><td class="nci">C51878</td><td class="nci">Study Director</td><td class="nci">A person who has overall responsibility for the technical conduct of a study, as well as for the interpretation, analysis, documentation and reporting of results, and represents the single point of study control. (FDA)</td><td class="nci">Study Chair</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Subinvestigator</td><td class="nci">C54622</td><td class="nci"></td><td class="nci">Any member of the clinical trial team designated and supervised by the investigator at a trial site to perform critical trial-related procedures and/or to make important trial-related decisions (e.g., associates, residents, research fellows). (ICH)</td><td class="nci">Subinvestigator</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Technical Lead</td><td class="nci">C154707</td><td class="nci"></td><td class="nci">An individual who is responsible for the delivery of technical aspects of a project. (NCI)</td><td class="nci">Technical Lead</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C132310.Protocol Entity Terminology">CL.C132310.Protocol Entity Terminology</a></td><td>Protocol Entity Terminology
+                            <br>
+                            (Protocol Entity Terminology)</td><td nowrap>text
+                            <br>
+                            Extensible: </td><td>C132310</td><td>Protocol Entity Terminology</td><td>A terminology value set relevant to the entities within a protocol.</td><td>CDISC Protocol Entities Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Biological Sample</td><td class="nci">C70699</td><td class="nci">Biological Sample;Biological Specimen;Biospecimen;Sample</td><td class="nci">Any material collected from a biological entity for testing, diagnostic, propagation, treatment, or research purposes.</td><td class="nci">Biospecimen</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Clinical Study</td><td class="nci">C15206</td><td class="nci"></td><td class="nci">A clinical study involves research using human volunteers (also called participants) that is intended to add to medical knowledge. There are two main types of clinical studies: clinical trials (also called interventional studies) and observational studies. [ClinicalTrials.gov] See also clinical trial. (CDISC Glossary)</td><td class="nci">Clinical Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Clinical Trial</td><td class="nci">C71104</td><td class="nci"></td><td class="nci">1) A research investigation involving human subjects that is designed to answer specific questions about the safety and efficacy of a biomedical intervention (drug, treatment, device) or new ways of using a known drug, treatment, or device). 2) A research study in which one or more human subjects are prospectively assigned to one or more interventions (which may include placebo or other control) to evaluate the effects of those interventions on health-related biomedical or behavioral outcomes.(1. modified from ICH E6 Glossary, Directive 2001/20/EC. 2. NIH revised definition 2015) (CDISC Glossary)</td><td class="nci">Clinical Trial</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Endpoint</td><td class="nci">C25212</td><td class="nci"></td><td class="nci">A defined variable intended to reflect an outcome measure of interest that is statistically analyzed to address a particular research question. NOTE: A precise definition of an endpoint typically specifies the type of assessments made, the timing of those assessments, the assessment tools used, and possibly other details, as applicable, such as how multiple assessments within an individual are to be combined. [After BEST Resource] (CDISC Glossary)</td><td class="nci">End Point</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Informed Consent</td><td class="nci">C16735</td><td class="nci"></td><td class="nci">Consent given by a subject, or in the case of an individual that can only give assent, by a parent or legal guardian, for the participation in a clinical study only after having achieved an understanding of both the relevant medical facts and the relevant risks involved.</td><td class="nci">Informed Consent</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Ingredient</td><td class="nci">C51981</td><td class="nci"></td><td class="nci">Any component that constitutes a part of a compound or mixture.</td><td class="nci">Ingredient</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Intervention</td><td class="nci">C25218</td><td class="nci"></td><td class="nci">The drug, device, therapy, or process under investigation in a clinical study that is believed to have an effect on outcomes of interest in a study. [After https://grants.nih.gov/grants/policy/faq_clinical_trial_definition.htm#5224] (CDISC-Glossary)</td><td class="nci">Intervention or Procedure</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Outcome Measure</td><td class="nci">C93407</td><td class="nci"></td><td class="nci">Specific key measurement(s) or observation(s) used to measure the effect of experimental variables on the participants in a study, or for observational studies, to describe patterns of diseases or traits or associations with exposures, risk factors or treatment. (BRIDG)</td><td class="nci">Study Outcome Measurement</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Outcome</td><td class="nci">C20200</td><td class="nci"></td><td class="nci">Events or experiences that clinicians or investigators examining the impact of an intervention or exposure measure because they believe such events or experiences may be influenced by the research intervention or exposure. Outcome is a general term in that it does not necessarily relate to a planned objective of the study. (FDA)</td><td class="nci">Outcome</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Physical Address</td><td class="nci">C25407</td><td class="nci"></td><td class="nci">A standardized representation of the location of a person, business, building, or organization. (NCI)</td><td class="nci">Address</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Protocol Amendment</td><td class="nci">C132347</td><td class="nci"></td><td class="nci">A written description of a change(s) to, or formal clarification of, a protocol. (ICH E6)</td><td class="nci">Protocol Amendment</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Protocol Statement</td><td class="nci">C181183</td><td class="nci"></td><td class="nci">A written message providing an official assurance, account, or assertion within the study protocol.</td><td class="nci">Protocol Statement</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Quality Assurance</td><td class="nci">C15381</td><td class="nci">QA</td><td class="nci">All those planned and systematic actions that are established to ensure that the study is performed and the data are generated, documented (recorded), and reported in compliance with good clinical practice (GCP) and the applicable regulatory requirement(s). (ICH)</td><td class="nci">Quality Assurance</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Quality Control</td><td class="nci">C15311</td><td class="nci">QC</td><td class="nci">The operational techniques and activities undertaken within the quality assurance system to verify that the requirements for quality of the study related activities have been fulfilled. (ICH)</td><td class="nci">Quality Control</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Reference</td><td class="nci">C184397</td><td class="nci">Reference List</td><td class="nci">The curated list of sources that are cited within the reference section of the document.</td><td class="nci">Reference List</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Arm</td><td class="nci">C174447</td><td class="nci">Arm</td><td class="nci">A planned pathway assigned to the subject as they progress through the study, usually referred to by a name that reflects one or more treatments, exposures, and/or controls included in the path.</td><td class="nci">Study Arm</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Contact Information</td><td class="nci">C154705</td><td class="nci"></td><td class="nci">Information regarding the means of contacting a person or group that performs a function within a clinical study.</td><td class="nci">Study Contact Information</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Design</td><td class="nci">C15320</td><td class="nci"></td><td class="nci">A plan detailing how a study will be performed in order to represent the phenomenon under examination, to answer the research questions that have been asked, and informing the statistical approach.</td><td class="nci">Study Design</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Monitoring</td><td class="nci">C142707</td><td class="nci"></td><td class="nci">The act of overseeing the progress of a clinical study and of ensuring that it is conducted, recorded, and reported in accordance with the protocol, standard operating procedures (SOPs), good clinical practice (GCP), and regulatory requirement(s) where applicable. [after ICH E6 Glossary]</td><td class="nci">Study Monitoring</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Oversight Entity</td><td class="nci">C93450</td><td class="nci"></td><td class="nci">A group of individuals that approves, monitors and reviews biomedical research to protect the rights, safety and welfare of the study participants, by providing critical scientific, ethical, and/or regulatory oversight functions.</td><td class="nci">Study Oversight Authority</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Population</td><td class="nci">C70833</td><td class="nci"></td><td class="nci">A group of individuals taken from the general population who share a set of common characteristics, such as age, sex, or health condition, precisely defined in the study protocol. This is a population to which the study results could be reasonably generalized.</td><td class="nci">Study Population</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Product Administration</td><td class="nci">C177924</td><td class="nci"></td><td class="nci">The act of the dispensing, applying, or tendering a study product to the participant. (NCI)</td><td class="nci">Study Product Administration</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Product</td><td class="nci">C174271</td><td class="nci"></td><td class="nci">The material artifact(s), such as the trial product, interventional product, study drug, device, or procedure and their comparator(s), that is the focus of the study.</td><td class="nci">Study Product</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Protocol</td><td class="nci">C70817</td><td class="nci"></td><td class="nci">The formal plan of an experiment or research activity, including the objective, rationale, design, materials and methods for the conduct of the study, intervention description, and method of data analysis.</td><td class="nci">Study Protocol</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Subject Discontinuation</td><td class="nci">C142444</td><td class="nci"></td><td class="nci">The act of concluding participation, prior to completion of all protocol-required elements, in a study by an enrolled subject. Examples of discontinuation type include: subject withdrawal (active discontinuation by a subject); investigator initiated discontinuation; lost to follow-up (cessation of participation without notice or action by the subject); sponsor initiated discontinuation. (CDISC Glossary)</td><td class="nci">Study Subject Discontinuation</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Subject Replacement</td><td class="nci">C142738</td><td class="nci">Study Subject Replacement</td><td class="nci">The act of enrolling a new study subject to compensate for another subject no longer participating in the study.</td><td class="nci">Trial Subject Replacement</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C181168.Protocol Statement Attribute Terminology">CL.C181168.Protocol Statement Attribute Terminology</a></td><td>Protocol Statement Attribute Terminology
+                            <br>
+                            (Protocol Statement Attribute Terminology)</td><td nowrap>text
+                            <br>
+                            Extensible: </td><td>C181168</td><td>Protocol Statement Attribute Terminology</td><td>A terminology value set relevant to the attributes of the protocol statement.</td><td>CDISC Protocol Statement Attribute Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Biological Sample Use Statement</td><td class="nci">C181244</td><td class="nci">Biological Specimen Use Statement;Biospecimen Use Statement</td><td class="nci">A written message within the study protocol that describes the provisions for use of biological samples for the duration of the study and, as applicable, for future use.</td><td class="nci">Biological Sample Use Statement</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Conflict of Interest Statement</td><td class="nci">C181240</td><td class="nci"></td><td class="nci">A written message within the study protocol that describes how the study will manage actual or perceived conflicts of interest, including report to regulatory authorities and oversight entities.</td><td class="nci">Conflict of Interest Statement</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Data Integrity Statement</td><td class="nci">C181237</td><td class="nci"></td><td class="nci">A written message within the study protocol that asserts that the data are complete, consistent, accurate, trustworthy, and reliable throughout the life cycle of the study.</td><td class="nci">Data Integrity Statement</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Data Sharing Statement</td><td class="nci">C184394</td><td class="nci"></td><td class="nci">A written message within the study protocol that asserts compliance with data sharing policies.</td><td class="nci">Data Sharing Compliance Policy Statement</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Financial Disclosure Statement</td><td class="nci">C181241</td><td class="nci"></td><td class="nci">A written message within the study protocol that asserts how any and all financial interests of the study stakeholders will be managed in relation to the study.</td><td class="nci">Study Protocol Financial Disclosure Statement</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Protocol Confidentiality Statement</td><td class="nci">C181236</td><td class="nci"></td><td class="nci">A written message within the study protocol that asserts a statement of non-disclosure, such that information contained within the protocol document may only be shared with authorized parties.</td><td class="nci">Protocol Confidentiality Statement</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Protocol Regulatory Compliance Statement</td><td class="nci">C181235</td><td class="nci">Regulatory Compliance Statement</td><td class="nci">A written message within the study protocol that asserts that the study will be conducted in compliance with Good Clinical Practice (GCP) guidelines, study protocol, and any other applicable regulatory requirements.</td><td class="nci">Protocol Regulatory Compliance Statement</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Publication Policy Statement</td><td class="nci">C184393</td><td class="nci"></td><td class="nci">A written message within the study protocol that describes the policies pertaining to the publication of study results.</td><td class="nci">Publication Policy Statement</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Statement of Ethical Conduct</td><td class="nci">C181239</td><td class="nci"></td><td class="nci">A written message within the study protocol that asserts that the study will be conducted in accordance with the ethical principles outlined in the Declaration of Helsinki and applicable regional regulations and guidelines.</td><td class="nci">Statement of Ethical Conduct</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Statement of Progress Reporting</td><td class="nci">C181238</td><td class="nci"></td><td class="nci">A written message within the study protocol that asserts timely communication of study progress and results to the study stakeholders as well as regulatory authorities and study registries.</td><td class="nci">Statement of Progress Reporting</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Investigator Conduct Statement</td><td class="nci">C184392</td><td class="nci">Investigator Statement;Study Investigator Statement</td><td class="nci">A written message within the study protocol that asserts that a study investigator will be responsible for the performance and conduct of the study as described in the protocol, and in accordance with relevant laws, regulations, and guidelines.</td><td class="nci">Study Investigator Conduct Statement</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Sponsor Conduct Statement</td><td class="nci">C184391</td><td class="nci">Sponsor Statement;Study Sponsor Statement</td><td class="nci">A written message within the study protocol that asserts that the study sponsor will be responsible for overseeing all aspects of study conduct.</td><td class="nci">Study Sponsor Conduct Statement</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Subject Data Confidentiality Statement</td><td class="nci">C181243</td><td class="nci">Study Participant Data Confidentiality Statement</td><td class="nci">A written message within the study protocol that asserts compliance with applicable regulations and guidelines to preserve and maintain study data confidentiality.</td><td class="nci">Subject Data Confidentiality Statement</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Subject Privacy Statement</td><td class="nci">C181242</td><td class="nci">Study Participant Privacy Statement</td><td class="nci">A written message within the study protocol that asserts compliance with applicable regulations and guidelines regarding the protection of study subject, or participant, privacy.</td><td class="nci">Subject Privacy Statement</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C147069.Randomization Type Value Set">CL.C147069.Randomization Type Value Set</a></td><td>Randomization Type Value Set
+                            <br>
+                            (Randomization Type Value Set)</td><td nowrap>text
+                            <br>
+                            Extensible: </td><td>C147069</td><td>Randomization Type Value Set</td><td>A terminology codelist relevant to the types of randomization schemas associated with a randomized controlled trial.</td><td>CDISC Protocol Randomization Type Response Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Adaptive Randomization</td><td class="nci">C147126</td><td class="nci"></td><td class="nci">A type of randomization schema in which the group assignment probability of a participant is adjusted based on the group assignments of those participants already randomized in the trial.</td><td class="nci">Adaptive Randomization</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Block Randomization</td><td class="nci">C147127</td><td class="nci">Constrained Randomization</td><td class="nci">A type of adaptive randomization in which a pre-specified number of participants is assigned to a block containing the same pre-specified number of balanced group assignments in random order.</td><td class="nci">Block Randomization</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Minimization Randomization</td><td class="nci">C147143</td><td class="nci">Covariate Adaptive Randomization</td><td class="nci">A type of adaptive randomization in which the participant is assigned to the treatment group in an attempt to minimize imbalances in the number of participants for each stratification covariate across treatment groups.</td><td class="nci">Minimization Randomization</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Simple Randomization</td><td class="nci">C147144</td><td class="nci">Unrestricted Randomization</td><td class="nci">A type of randomization schema in which each participant has the same chance of being randomized into any one group as all other participants.</td><td class="nci">Simple Randomization</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Stratified Randomization</td><td class="nci">C147145</td><td class="nci"></td><td class="nci">A type of block randomization in which participants are stratified into groups based on prognostic variables and then randomized into balanced treatment groups.</td><td class="nci">Stratified Randomization</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Unequal Randomization</td><td class="nci">C142743</td><td class="nci"></td><td class="nci">A type of randomization schema in which unequal numbers of participants are purposely assigned to multiple treatment groups.</td><td class="nci">Unequal Randomization</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C184333.Reference Attribute Terminology">CL.C184333.Reference Attribute Terminology</a></td><td>Reference Attribute Terminology
+                            <br>
+                            (Reference Attribute Terminology)</td><td nowrap>text
+                            <br>
+                            Extensible: </td><td>C184333</td><td>Reference Attribute Terminology</td><td>A terminology value set relevant to the attributes of the reference.</td><td>CDISC Protocol Reference Attribute Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Citation</td><td class="nci">C41196</td><td class="nci"></td><td class="nci">A reference to an authoritative source.</td><td class="nci">Citation</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C172329.Study Arm Attribute Terminology">CL.C172329.Study Arm Attribute Terminology</a></td><td>Study Arm Attribute Terminology
+                            <br>
+                            (Study Arm Attribute Terminology)</td><td nowrap>text
+                            <br>
+                            Extensible: </td><td>C172329</td><td>Study Arm Attribute Terminology</td><td>A terminology value set relevant to the attributes of the study arm entity.</td><td>CDISC Protocol Study Arm Attribute Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Planned Number of Subjects Per Study Arm</td><td class="nci">C172458</td><td class="nci"></td><td class="nci">The total number of subjects intended to be included within each arm for the study. (NCI)</td><td class="nci">Planned Number of Subjects Per Study Arm</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Arm Description</td><td class="nci">C93728</td><td class="nci">Arm Description</td><td class="nci">The textual representation of the arm for the study.</td><td class="nci">Arm Description</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Arm Label</td><td class="nci">C172456</td><td class="nci">Arm Label</td><td class="nci">The given name of the arm for the study. (NCI)</td><td class="nci">Study Arm Label</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Arm Type</td><td class="nci">C172457</td><td class="nci">Arm Type</td><td class="nci">The identification of the kind of arm(s) for the study. (NCI)</td><td class="nci">Study Arm Type</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C174222.Study Arm Type Value Set Terminology">CL.C174222.Study Arm Type Value Set Terminology</a></td><td>Study Arm Type Value Set Terminology
+                            <br>
+                            (Study Arm Type Value Set Terminology)</td><td nowrap>text
+                            <br>
+                            Extensible: </td><td>C174222</td><td>Study Arm Type Value Set Terminology</td><td>The terminology relevant to the identification of the kind of arm.</td><td>CDISC Protocol Study Arm Type Value Set Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Active Comparator Arm</td><td class="nci">C174267</td><td class="nci"></td><td class="nci">An arm describing the active comparator.</td><td class="nci">Active Comparator Arm</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Control Arm</td><td class="nci">C174226</td><td class="nci"></td><td class="nci">An arm describing the intervention or treatment plan for a group of participants in the study receiving a control. The control may comprise a non-investigational product (active control) or regimen, placebo, or no treatment.</td><td class="nci">Control Arm</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Experimental Arm</td><td class="nci">C174266</td><td class="nci">Investigational Arm</td><td class="nci">An arm describing the intervention or treatment plan for a group of participants in the study receiving test product(s).</td><td class="nci">Investigational Arm</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">No Intervention Arm</td><td class="nci">C174270</td><td class="nci"></td><td class="nci">A study arm without an intervention or treatment.</td><td class="nci">No Intervention Arm</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Placebo Comparator Arm</td><td class="nci">C174268</td><td class="nci">Placebo Control Arm</td><td class="nci">An arm describing the placebo comparator.</td><td class="nci">Placebo Control Arm</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Sham Comparator Arm</td><td class="nci">C174269</td><td class="nci">Sham Intervention Arm</td><td class="nci">An arm describing the sham comparator.</td><td class="nci">Sham Comparator Arm</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Treatment Arm</td><td class="nci">C15538</td><td class="nci"></td><td class="nci">An arm describing the intervention or treatment plan for a group of participants in the study. Treatment may consist of either experimental or control products under investigation.</td><td class="nci">Protocol Treatment Arm</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C154682.Study Contact Information Attribute Terminology">CL.C154682.Study Contact Information Attribute Terminology</a></td><td>Study Contact Information Attribute Terminology
+                            <br>
+                            (Study Contact Information Attribute Terminology)</td><td nowrap>text
+                            <br>
+                            Extensible: </td><td>C154682</td><td>Study Contact Information Attribute Terminology</td><td>A terminology value set relevant to the attributes of the study contact information entity.</td><td>CDISC Protocol Entities Study Contact Information Attribute Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Academic Degree</td><td class="nci">C25354</td><td class="nci"></td><td class="nci">An academic rank conferred by a college, university, or other postsecondary education institution as official recognition for the successful completion of a program of studies.</td><td class="nci">Academic Degree</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">E-mail Address</td><td class="nci">C42775</td><td class="nci">Email Address</td><td class="nci">A text string identifier for a location to which electronic mail can be delivered. (NCI)</td><td class="nci">E-mail Address</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Fax Number</td><td class="nci">C42879</td><td class="nci">Facsimile Number</td><td class="nci">A telephone number that is used for identifying a specific fax machine in a telephone network.</td><td class="nci">Fax Number</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Organizational Affiliation</td><td class="nci">C154704</td><td class="nci"></td><td class="nci">The name of the organization or entity that the person or group has an established relationship with.</td><td class="nci">Organizational Affiliation Name</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Person Name</td><td class="nci">C25191</td><td class="nci">Individual's Name;Name</td><td class="nci">A word or group of words indicating the identity of a person usually consisting of a first (personal) name and a last (family) name with an optional middle name. In some cultural traditions the family name comes first.</td><td class="nci">Person Name</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Physical Address</td><td class="nci">C25407</td><td class="nci"></td><td class="nci">A standardized representation of the location of a person, business, building, or organization. (NCI)</td><td class="nci">Address</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Role</td><td class="nci">C48835</td><td class="nci"></td><td class="nci">The usual or expected function of something; the part something plays in an action or event. (NCI)</td><td class="nci">Role</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Telephone Number</td><td class="nci">C40978</td><td class="nci">Phone Number</td><td class="nci">A sequence of decimal digits (0-9) that is used for identifying a specific telephone line or other device in a telephone network.</td><td class="nci">Telephone Number</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C147066.Study Design Attribute Terminology">CL.C147066.Study Design Attribute Terminology</a></td><td>Study Design Attribute Terminology
+                            <br>
+                            (Study Design Attribute Terminology)</td><td nowrap>text
+                            <br>
+                            Extensible: </td><td>C147066</td><td>Study Design Attribute Terminology</td><td>A terminology value set relevant to the attributes of the study design entity.</td><td>CDISC Protocol Entities Study Design Attribute Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Blinding</td><td class="nci">C49068</td><td class="nci">Masking</td><td class="nci">A process to limit bias by preventing subjects and/ or study personnel from identifying which treatments or procedures are administered, or from learning the results of tests and measures undertaken as part of a clinical investigation. (CDISC Glossary)</td><td class="nci">Blinded</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Interventional Study Design</td><td class="nci">C98746</td><td class="nci">Intervention Model</td><td class="nci">The general design of the strategy for assigning interventions to participants in a clinical study. (clinicaltrials.gov)</td><td class="nci">Intervention Model</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Observational Study Design</td><td class="nci">C147138</td><td class="nci">Observation Model</td><td class="nci">The general design of the strategy for identifying and following up with participants during observational studies. (clinicaltrials.gov)</td><td class="nci">Observational Study Model</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Overall Study Design</td><td class="nci">C147139</td><td class="nci">Overall Design;Study Design Description;Study Design Overview;Summary of Study Design</td><td class="nci">Summary description of the overall study plan and design, should include treatments studied, population studied, level and method of blinding/unmasking, kind of controls, method of assignment to treatment, sequence and duration of study periods, any safety, data monitoring or special steering or evaluation committees, and interim analyses. (ICH E3)</td><td class="nci">Study Design Description</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Participant Allocation</td><td class="nci">C52580</td><td class="nci">Subject Allocation</td><td class="nci">The process of assigning participants to particular treatment groups or cohorts in a clinical study.</td><td class="nci">Allocation</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Planned Number of Arms</td><td class="nci">C98771</td><td class="nci">Planned Number of Arms</td><td class="nci">The planned number of intervention groups.</td><td class="nci">Planned Number of Arms</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Planned Number of Cohorts</td><td class="nci">C147137</td><td class="nci"></td><td class="nci">The planned number of study groups.</td><td class="nci">Planned Number of Cohorts</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Planned Number of Participants</td><td class="nci">C49692</td><td class="nci">Anticipated Enrollment;Planned Enrollment;Planned Number of Subjects;Target Enrollment</td><td class="nci">The planned number of subjects to be entered in a clinical trial. (NCI)</td><td class="nci">Planned Subject Number</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Randomization Type</td><td class="nci">C147140</td><td class="nci"></td><td class="nci">A characterization or classification of the process of assigning trial subjects to treatment or control groups using an element of chance to determine the assignments in order to reduce bias.</td><td class="nci">Randomization Method</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Stratification Factor</td><td class="nci">C16153</td><td class="nci">Stratification Factor</td><td class="nci">Selected factors that are used during randomization to ensure there is balance of these factors across all subjects within each arm of a study. The subject level values of these factors may be used as fixed effects in statistical models and for sensitivity analyses.</td><td class="nci">Stratification Factors</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Stratification</td><td class="nci">C25689</td><td class="nci"></td><td class="nci">Grouping defined by important prognostic factors measured at baseline. (ICH E9)</td><td class="nci">Stratification</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Design Rationale</td><td class="nci">C142705</td><td class="nci"></td><td class="nci">Reason(s) for choosing the study design. This may include reasons for the choice of control or comparator, as well as the scientific rationale for the study design.</td><td class="nci">Study Design Rationale</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Hypothesis</td><td class="nci">C142668</td><td class="nci"></td><td class="nci">A supposition or proposal made to explain certain observations or facts, which requires further investigation or exploration within a clinical study. (NCI)</td><td class="nci">Research Hypothesis</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Primary Purpose</td><td class="nci">C147141</td><td class="nci"></td><td class="nci">The principal reason or intention for the execution of an interventional or non-interventional clinical study. (NCI)</td><td class="nci">Study Primary Purpose</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Secondary Purpose</td><td class="nci">C147142</td><td class="nci"></td><td class="nci">The ancillary reason or intention for the execution of an interventional or non-interventional clinical study. (NCI)</td><td class="nci">Study Secondary Purpose</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Trial Blinding Schema</td><td class="nci">C49658</td><td class="nci">Trial Blinding Schema</td><td class="nci">The type of experimental design used to describe the level of awareness of the clinical trial subjects and/or investigators of the intervention(s) that they are receiving and/or administering.</td><td class="nci">Trial Blinding Schema</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C163026.Study Monitoring Attribute Terminology">CL.C163026.Study Monitoring Attribute Terminology</a></td><td>Study Monitoring Attribute Terminology
+                            <br>
+                            (Study Monitoring Attribute Terminology)</td><td nowrap>text
+                            <br>
+                            Extensible: </td><td>C163026</td><td>Study Monitoring Attribute Terminology</td><td>A terminology value set relevant to the attributes of the study monitoring entity.</td><td>CDISC Protocol Study Monitoring Attribute Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Clinical Monitoring Plan</td><td class="nci">C115753</td><td class="nci"></td><td class="nci">A description of the strategy, methods, responsibilities, and requirements for monitoring the study. (ICH E6(R2))</td><td class="nci">Clinical Trial Monitoring Plan</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Data and Safety Monitoring Plan</td><td class="nci">C163406</td><td class="nci">Data Safety Monitoring Plan;DSMP;Safety Data Monitoring Plan</td><td class="nci">A written plan that prospectively identifies and documents monitoring activities intended to protect the safety of the participants, the validity of the data and the integrity of the research study. The DSMP may also identify when to terminate a participant's participation (i.e. individual stopping rules) and/or the appropriate termination of a study (i.e. study stopping rules). (Mayo Clinic)</td><td class="nci">Data and Safety Monitoring Plan</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Data Monitoring</td><td class="nci">C142488</td><td class="nci"></td><td class="nci">Review of study data for completeness, consistency, and accuracy for the duration of the study lifecycle.</td><td class="nci">Data Monitoring</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">GCP Adherence Statement</td><td class="nci">C163407</td><td class="nci">Good Clinical Practice Adherence Statement</td><td class="nci">A written message that asserts, affirms, or declares that the study is conducted in accordance with Good Clinical Practice (GCP).</td><td class="nci">GCP Adherence Statement</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Risk Monitoring</td><td class="nci">C142674</td><td class="nci"></td><td class="nci">A systematic, prioritized approach that involves identifying, assessing, monitoring and mitigating the risks that could affect the quality of the study or safety of the study participants.</td><td class="nci">Risk Based Monitoring</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Safety Data Monitoring</td><td class="nci">C163408</td><td class="nci"></td><td class="nci">Review of cumulative safety data to identify possible safety concerns.</td><td class="nci">Safety Data Monitoring</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Safety Monitoring</td><td class="nci">C163409</td><td class="nci"></td><td class="nci">Review of safety data to ensure safety of the individuals who are participating in the study, or to identify potential safety concerns for the duration of the study lifecycle.</td><td class="nci">Safety Monitoring</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Audit Statement</td><td class="nci">C184395</td><td class="nci"></td><td class="nci">A written message within the study protocol that describes the auditing activities that are to occur within a study and the intent to address findings from an audit report.</td><td class="nci">Study Audit Statement</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Audit</td><td class="nci">C184396</td><td class="nci"></td><td class="nci">A systematic and independent examination of study-related activities and documents to determine whether the evaluated trial-related activities were conducted and the data were recorded, analyzed, and accurately reported according to the protocol, sponsor's standard operating procedures (SOPs), good clinical practice (GCP), and the applicable regulatory requirement(s). (ICH E6 Glossary)</td><td class="nci">Study Audit</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Monitoring Statement</td><td class="nci">C163410</td><td class="nci"></td><td class="nci">A written message that asserts, affirms, or declares that the study will be monitored in adherence to a clinical monitoring plan and in accordance with Good Clinical Practice (GCP).</td><td class="nci">Study Monitoring Statement</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Suicidal Risk Monitoring</td><td class="nci">C163411</td><td class="nci"></td><td class="nci">A systematic approach to identify and assess the risks of participant suicidal ideation and/or suicide.</td><td class="nci">Suicidal Risk Monitoring</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Trial Monitoring</td><td class="nci">C15789</td><td class="nci"></td><td class="nci">The act of overseeing the progress of a clinical trial and of ensuring that it is conducted, recorded, and reported in accordance with the protocol, standard operating procedures (SOPs), good clinical practice (GCP), and the applicable regulatory requirement(s). [ICH E6 Glossary]</td><td class="nci">Clinical Trials, Monitoring</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C165640.Study Oversight Entity Attribute Terminology">CL.C165640.Study Oversight Entity Attribute Terminology</a></td><td>Study Oversight Entity Attribute Terminology
+                            <br>
+                            (Study Oversight Entity Attribute Terminology)</td><td nowrap>text
+                            <br>
+                            Extensible: </td><td>C165640</td><td>Study Oversight Entity Attribute Terminology</td><td>A terminology value set relevant to the attributes of the study oversight entity.</td><td>CDISC Protocol Study Oversight Entity Attribute Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Oversight Entity Approval Date</td><td class="nci">C165862</td><td class="nci"></td><td class="nci">The date on which the study oversight entity grants approval.</td><td class="nci">Study Oversight Entity Approval Date</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Oversight Entity Approval Status</td><td class="nci">C165863</td><td class="nci"></td><td class="nci">The state of the study oversight entity approval process.</td><td class="nci">Study Oversight Entity Approval Status</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Oversight Entity Type</td><td class="nci">C165864</td><td class="nci"></td><td class="nci">A characterization or classification of the group of individuals that approves, monitors and reviews biomedical research to protect the rights, safety and welfare of the study participants, by providing critical scientific, ethical, and/or regulatory oversight functions.</td><td class="nci">Study Oversight Entity Type</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C160921.Study Population Attribute Terminology">CL.C160921.Study Population Attribute Terminology</a></td><td>Study Population Attribute Terminology
+                            <br>
+                            (Study Population Attribute Terminology)</td><td nowrap>text
+                            <br>
+                            Extensible: </td><td>C160921</td><td>Study Population Attribute Terminology</td><td>A terminology value set relevant to the attributes of the study population entity.</td><td>CDISC Protocol Study Population Attribute Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Comorbid Condition</td><td class="nci">C161320</td><td class="nci"></td><td class="nci">Medical or health condition that is concomitant or concurrent with the primary condition or disease under study.</td><td class="nci">Comorbid Condition</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Condition or Disease under Study</td><td class="nci">C161319</td><td class="nci"></td><td class="nci">Primary disease(s) or condition(s) being studied in the trial, or the focus of the study. (clinicaltrials.gov)</td><td class="nci">Condition or Disease under Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Control Group</td><td class="nci">C28143</td><td class="nci"></td><td class="nci">A study population that is defined for the purpose of comparison to the treatment group in a controlled trial. In an epidemiological study, a study population that does not have the outcome of interest.</td><td class="nci">Control Group</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Demographic Group</td><td class="nci">C161324</td><td class="nci"></td><td class="nci">A descriptive characterization of the study population (e.g., age, sex, race, education, etc.).</td><td class="nci">Demographic Group</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Experimental Group</td><td class="nci">C161323</td><td class="nci"></td><td class="nci">A study population that receives the intervention that is the focus of the study.</td><td class="nci">Experimental Group</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Females of Childbearing Potential</td><td class="nci">C161316</td><td class="nci">FOCBP;WOCBP;Women of Childbearing Potential</td><td class="nci">Female study subjects or patients who have the potential to become pregnant, i.e., those who have experienced menarche and who have not undergone surgical sterilization and are not postmenopausal.</td><td class="nci">Female of Childbearing Potential</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">General Health Status</td><td class="nci">C16669</td><td class="nci"></td><td class="nci">The state of a subject's mental or physical condition.</td><td class="nci">Health Status</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Healthy Volunteer</td><td class="nci">C49651</td><td class="nci">Healthy Subject</td><td class="nci">An individual who is or becomes a participant in a research study and has no significant health-related issues. (NCI)</td><td class="nci">Healthy Subject</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Justification of Special Population</td><td class="nci">C161318</td><td class="nci"></td><td class="nci">An explanation with defensible proof as to the reason why a special population of subjects is included in the clinical study.</td><td class="nci">Justification of Special Population</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Population Rationale</td><td class="nci">C161317</td><td class="nci"></td><td class="nci">An explanation as to the logical reasons for why a specific population of subjects is being considered for inclusion in a clinical study.</td><td class="nci">Population Rationale</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Reference Group</td><td class="nci">C161321</td><td class="nci">Reference Group for Study Sample Population</td><td class="nci">The study population that is defined for the purpose of comparison to the population under investigation.</td><td class="nci">Reference Group</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Target Study Population</td><td class="nci">C142728</td><td class="nci">Target Population</td><td class="nci">The population within the general population for which the study results can be generalized.</td><td class="nci">Target Study Population</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Treatment Group</td><td class="nci">C161322</td><td class="nci"></td><td class="nci">A study population that receives an intervention(s) within a trial. This could include the investigational product(s) or a comparator (e.g., placebo or an approved intervention).</td><td class="nci">Treatment Group</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Vulnerable Population</td><td class="nci">C142747</td><td class="nci"></td><td class="nci">Individuals whose willingness to volunteer in a clinical trial may be unduly influenced by the expectation, whether justified or not, of benefits associated with participation, or of a retaliatory response from senior members of a hierarchy in case of refusal to participate. Examples include subordinate members of a group with a hierarchical structure, patients with incurable diseases, persons in nursing homes, unemployed or impoverished persons, patients in emergency situations, ethnic minority groups, homeless persons, nomads, refugees, minors, and those incapable of giving consent. (ICH)</td><td class="nci">Vulnerable Subjects</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C177904.Study Product Administration Attribute">CL.C177904.Study Product Administration Attribute</a></td><td>Study Product Administration Attribute
+                            <br>
+                            (Study Product Administration Attribute)</td><td nowrap>text
+                            <br>
+                            Extensible: </td><td>C177904</td><td>Study Product Administration Attribute</td><td>A terminology value set relevant to the attributes of the study product administration.</td><td>CDISC Protocol Study Product Administration Attribute Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Dosage Form</td><td class="nci">C42636</td><td class="nci">Dose Form</td><td class="nci">The physical form in which active and/or inert ingredient(s) are presented.</td><td class="nci">Pharmaceutical Dosage Form</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Dosage Regimen</td><td class="nci">C142516</td><td class="nci"></td><td class="nci">The schedule of doses of a therapeutic agent per unit of time, including: the time between doses (e.g., every 6 hours) or the time when the dose(s) are to be given (e.g., at 8 a.m. and 4 p.m. daily), and the amount of a medicine (e.g., number of capsules) to be given at each specific time. (Segen's Medical Dictionary)</td><td class="nci">Dosage Regimen</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Dose Frequency</td><td class="nci">C89081</td><td class="nci">Dosing Frequency</td><td class="nci">The number of doses administered per a specific interval.</td><td class="nci">Dose Frequency</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Dose</td><td class="nci">C25488</td><td class="nci">Dose Level;Dose per Administration</td><td class="nci">The amount of study drug (or placebo) administered to a patient or test subject to be taken at one time or at stated intervals.</td><td class="nci">Dose</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Justification for Dosage</td><td class="nci">C177925</td><td class="nci"></td><td class="nci">The rationale or explanation for the planned dose(s).</td><td class="nci">Justification for Planned Dosage</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Justification of Administration</td><td class="nci">C177926</td><td class="nci"></td><td class="nci">The rationale or explanation for the planned mode of delivery.</td><td class="nci">Justification of Planned Administration</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Route of Administration</td><td class="nci">C38114</td><td class="nci">Route of Administration</td><td class="nci">The pathway by which a substance is administered in order to reach the site of action in the body.</td><td class="nci">Route of Administration</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C174220.Study Product Attribute Terminology">CL.C174220.Study Product Attribute Terminology</a></td><td>Study Product Attribute Terminology
+                            <br>
+                            (Study Product Attribute Terminology)</td><td nowrap>text
+                            <br>
+                            Extensible: </td><td>C174220</td><td>Study Product Attribute Terminology</td><td>A terminology value set relevant to the attributes of the study product.</td><td>CDISC Protocol Study Product Attribute Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Product Accountability</td><td class="nci">C176267</td><td class="nci"></td><td class="nci">The act or process for documenting the storage, inventory tracking, and disposition of the study product.</td><td class="nci">Study Product Accountability</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Product Acquisition</td><td class="nci">C176266</td><td class="nci"></td><td class="nci">The act or process by which the study product is obtained by the study site or investigator.</td><td class="nci">Study Product Acquisition</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Product Appearance</td><td class="nci">C176269</td><td class="nci"></td><td class="nci">The outward or visible aspect of the study product.</td><td class="nci">Study Product Appearance</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Product Formulation</td><td class="nci">C176268</td><td class="nci"></td><td class="nci">The composition of the study product, which may include active and inactive ingredients, dose, and dosage form.</td><td class="nci">Study Product Formulation</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Product Labeling</td><td class="nci">C176271</td><td class="nci"></td><td class="nci">The written, printed, or graphic matter on, or accompanying, the study product or its packaging.</td><td class="nci">Study Product Labeling</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Product Manufacturer</td><td class="nci">C176275</td><td class="nci"></td><td class="nci">The enterprise or entity that produces the study product.</td><td class="nci">Study Product Manufacturer</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Product Packaging</td><td class="nci">C176270</td><td class="nci"></td><td class="nci">The material type and configuration used to contain the study product.</td><td class="nci">Study Product Packaging</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Product Pharmacologic Class</td><td class="nci">C98768</td><td class="nci">Pharmacologic Class</td><td class="nci">The pharmacological class of the investigational product.</td><td class="nci">Pharmacological Class of Investigational Therapy</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Product Preparation</td><td class="nci">C176274</td><td class="nci"></td><td class="nci">Instructions for the act of making ready the study product for use or administration.</td><td class="nci">Study Product Preparation</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Product Stability</td><td class="nci">C176273</td><td class="nci"></td><td class="nci">The parameters under which the study product retains the same properties and characteristics that it possessed at the time of its manufacture for its intended use or administration. (After Anissa W. Wong, Aruna Datla.13-Assay and Stability Testing, Editor(s): Satinder Ahuja, Michael W. Dong, Separation Science and Technology, Academic Press, Volume 6, 2005, Pages 335-358)</td><td class="nci">Study Product Stability</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Product Storage</td><td class="nci">C176272</td><td class="nci"></td><td class="nci">The physical or environmental conditions under which the study product is maintained.</td><td class="nci">Study Product Storage</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Product Therapeutic Class</td><td class="nci">C177927</td><td class="nci">Study Product Therapeutic Category</td><td class="nci">The classification of a study product based on the disease, disorder, or condition it is intended to treat.</td><td class="nci">Study Product Therapeutic Class</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Product Type</td><td class="nci">C174265</td><td class="nci"></td><td class="nci">The characterization or classification of the material artifact(s) that is the focus of the study.</td><td class="nci">Study Product Type</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C174221.Study Product Type Value Set Terminology">CL.C174221.Study Product Type Value Set Terminology</a></td><td>Study Product Type Value Set Terminology
+                            <br>
+                            (Study Product Type Value Set Terminology)</td><td nowrap>text
+                            <br>
+                            Extensible: </td><td>C174221</td><td>Study Product Type Value Set Terminology</td><td>The terminology relevant to the identification of the kind of study product.</td><td>CDISC Protocol Study Product Type Value Set Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Active Comparator</td><td class="nci">C68609</td><td class="nci">Active Control</td><td class="nci">A type of control, which has a demonstrated effect, administered as a comparator to subjects in a clinical trial. [From ICH E10]</td><td class="nci">Active Comparator</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Control Product</td><td class="nci">C142703</td><td class="nci"></td><td class="nci">A comparator product against which the study treatment is evaluated [e.g., concurrent (placebo, no treatment, dose-response, active), and external (historical, published literature)]. [After ICH E10]</td><td class="nci">Study Control</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Investigational Product</td><td class="nci">C142587</td><td class="nci">Experimental Product</td><td class="nci">A material (such as a drug, biologic, or device) produced by or resulting from a process, which is being tested in a study. This may also include a product with a marketing authorization when used or assembled (formulated or packaged) in a way different from the approved form, or when used for an unapproved indication, or when used to gain further information about an approved use. [After ICH]</td><td class="nci">Investigational Product</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Placebo Comparator</td><td class="nci">C49648</td><td class="nci">Placebo;Placebo Control</td><td class="nci">An inactive, identical-appearing drug or treatment that does not contain the test product.</td><td class="nci">Placebo Control</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Sham Comparator</td><td class="nci">C116527</td><td class="nci">Sham Intervention</td><td class="nci">A procedure or device that appears to be the same as the actual procedure or device being studied but does not contain active processes or components.</td><td class="nci">Sham Intervention</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C132309.Study Protocol Attribute Terminology">CL.C132309.Study Protocol Attribute Terminology</a></td><td>Study Protocol Attribute Terminology
+                            <br>
+                            (Study Protocol Attribute Terminology)</td><td nowrap>text
+                            <br>
+                            Extensible: </td><td>C132309</td><td>Study Protocol Attribute Terminology</td><td>A terminology value set relevant to the attributes of the study protocol entity.</td><td>CDISC Protocol Entities Study Protocol Attribute Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Alternate Protocol Identifier</td><td class="nci">C132344</td><td class="nci"></td><td class="nci">A unique code assigned by an affiliated governing body or other organization that identifies a specific protocol (e.g., grant number, national number).</td><td class="nci">Alternate Protocol Identifier</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Brief Protocol Title</td><td class="nci">C132345</td><td class="nci">Abbreviated Protocol Title</td><td class="nci">The short descriptive name for the protocol.</td><td class="nci">Brief Protocol Title</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Official Protocol Title</td><td class="nci">C132346</td><td class="nci"></td><td class="nci">The formal descriptive name for the protocol.</td><td class="nci">Official Protocol Title</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Protocol Amendment</td><td class="nci">C132347</td><td class="nci"></td><td class="nci">A written description of a change(s) to, or formal clarification of, a protocol. (ICH E6)</td><td class="nci">Protocol Amendment</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Protocol Author</td><td class="nci">C51853</td><td class="nci"></td><td class="nci">A person who is the writer of a structured research study protocol.</td><td class="nci">Protocol Author</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Protocol Synopsis</td><td class="nci">C115628</td><td class="nci">Protocol Scientific Summary</td><td class="nci">A scientific summary of the key points of the protocol.</td><td class="nci">Clinical Trial Protocol Synopsis</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Public Protocol Title</td><td class="nci">C94105</td><td class="nci"></td><td class="nci">The descriptive name of the protocol that is intended for the lay public, written in easily understood language.</td><td class="nci">Study Protocol Document Version Public Title</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Registry Protocol Identifier</td><td class="nci">C132348</td><td class="nci"></td><td class="nci">A unique code assigned by a clinical trial registry that identifies a specific protocol.</td><td class="nci">Registry Protocol Identifier</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Schedule of Activities</td><td class="nci">C132349</td><td class="nci">Schedule of Events;SoA</td><td class="nci">A standardized representation of planned clinical trial activities including interventions (e.g., administering drug, surgery) and study administrative activities (e.g., obtaining informed consent, distributing clinical trial material and diaries, randomization) as well as assessments. (CDISC Glossary)</td><td class="nci">Schedule of Activities</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Scientific Protocol Title</td><td class="nci">C132350</td><td class="nci"></td><td class="nci">A more extensive descriptive name of the protocol that is intended for medical professionals, written using medical and scientific language.</td><td class="nci">Scientific Protocol Title</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Sponsor Protocol Identifier</td><td class="nci">C132351</td><td class="nci">Sponsor Protocol Code;Sponsor Protocol Number</td><td class="nci">A unique code assigned by the sponsor that identifies a specific protocol.</td><td class="nci">Sponsor Protocol Identifier</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Acronym</td><td class="nci">C94108</td><td class="nci">Trial Acronym</td><td class="nci">A word or words formed from the beginning letters or a combination of syllables and letters of a compound term, which identifies a clinical study.</td><td class="nci">Study Protocol Version Acronym</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Protocol Version Approval by Oversight Committee Date</td><td class="nci">C181245</td><td class="nci"></td><td class="nci">The date on which a version of the protocol was finalized or approved by the study oversight committee.</td><td class="nci">Study Protocol Version Approval by Oversight Committee Date</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Protocol Version Approval by Sponsor Date</td><td class="nci">C132352</td><td class="nci">Protocol Amendment Approval by Sponsor Date;Study Protocol Version Approval Date</td><td class="nci">The date on which a version of the protocol was finalized or approved by the sponsor.</td><td class="nci">Protocol Approval by Sponsor Date</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Protocol Version</td><td class="nci">C93490</td><td class="nci"></td><td class="nci">A plan at a particular point in time for a formal investigation to assess the utility, impact, pharmacological, physiological, and/or psychological effects of a particular treatment, procedure, drug, device, biologic, food product, cosmetic, care plan, or subject characteristic. (BRIDG)</td><td class="nci">Study Protocol Version</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C147067.Study Purpose Value Set">CL.C147067.Study Purpose Value Set</a></td><td>Study Purpose Value Set
+                            <br>
+                            (Study Purpose Value Set)</td><td nowrap>text
+                            <br>
+                            Extensible: </td><td>C147067</td><td>Study Purpose Value Set</td><td>A terminology codelist relevant to the reason(s) or intention(s) for the execution of an interventional or non-interventional clinical study.</td><td>CDISC Protocol Study Purpose Response Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Basic Science</td><td class="nci">C15714</td><td class="nci">Basic Research</td><td class="nci">A type of study designed to examine the basic mechanism of action (e.g., physiology, biomechanics) of an intervention. (ClinicalTrials.gov)</td><td class="nci">Basic Research</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Device Feasibility</td><td class="nci">C139174</td><td class="nci"></td><td class="nci">An intervention of a device product is being evaluated to determine the feasibility of the product or to test a prototype device and not health outcomes. Such studies are conducted to confirm the design and operating specifications of a device before beginning a full clinical trial. (ClinicalTrials.gov)</td><td class="nci">Device Feasibility Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Diagnosis</td><td class="nci">C15220</td><td class="nci">Diagnostic</td><td class="nci">The investigation, analysis and recognition of the presence and nature of disease, condition, or injury from expressed signs and symptoms; also, the scientific determination of any kind; the concise results or summary of such an investigation. (NCI)</td><td class="nci">Diagnosis</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Exploratory Research</td><td class="nci">C147146</td><td class="nci"></td><td class="nci">Any action or process to perform research on a hypothetical or theoretical idea in order to determine whether the phenomena is new (which may lead to additional studies) or can be explained by an existing and well-substantiated theory. (NCI)</td><td class="nci">Exploratory Research</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Health Services Research</td><td class="nci">C15245</td><td class="nci"></td><td class="nci">A type of study designed to evaluate the delivery, processes, management, organization or financing of health care. (ClinicalTrials.gov)</td><td class="nci">Health Services Research</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Hypothesis Generation</td><td class="nci">C147147</td><td class="nci"></td><td class="nci">Any action or process to create a tentative proposal to explain certain observations or facts, and which requires further investigation to be verified. (NCI)</td><td class="nci">Hypothesis Generation</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Prevention</td><td class="nci">C15843</td><td class="nci">Prophylaxis</td><td class="nci">Any action or response to modify or stop the development of a disease.</td><td class="nci">Preventive Intervention</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Screening</td><td class="nci">C15419</td><td class="nci"></td><td class="nci">Any action or process to identify a condition, or risk factors for a condition, in humans who are not yet known to have the condition or risk factor. (clinicaltrials.gov)</td><td class="nci">Disease Screening</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Supportive Care</td><td class="nci">C15747</td><td class="nci"></td><td class="nci">Any action or process to maximize comfort, minimize side effects, or mitigate against a decline in the participant's health or function. (clinicaltrials.gov)</td><td class="nci">Supportive Care</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Treatment</td><td class="nci">C70742</td><td class="nci"></td><td class="nci">Any action or process to improve or remedy a syndrome, disease, or condition.</td><td class="nci">Treat</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C185851.Study Subject Discontinuation Attribute Terminology">CL.C185851.Study Subject Discontinuation Attribute Terminology</a></td><td>Study Subject Discontinuation Attribute Terminology
+                            <br>
+                            (Study Subject Discontinuation Attribute Terminology)</td><td nowrap>text
+                            <br>
+                            Extensible: </td><td>C185851</td><td>Study Subject Discontinuation Attribute Terminology</td><td>A terminology value set relevant to the attributes of the subject discontinuation.</td><td>CDISC Protocol Study Subject Discontinuation Attribute Terminology</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C99077.STYPE">CL.C99077.STYPE</a></td><td>Study Type Response
+                            <br>
+                            (STYPE)</td><td nowrap>text
+                            <br>
+                            Extensible: No</td><td>C99077</td><td>Study Type Response</td><td>A terminology codelist relevant to the role the study plays in determining the interventions a subject receives.</td><td>CDISC SDTM Study Type Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">EXPANDED ACCESS</td><td class="nci">C98722</td><td class="nci"></td><td class="nci">Studies that provide a means for obtaining an experimental drug or device for patients who are not adequately treated by existing therapy, who do not meet the eligibility criteria for enrollment, or who are otherwise unable to participate in another clinical study. Expanded Access studies include individual-patient IND, treatment IND, compassionate use, emergency use or continued access.</td><td class="nci">Expanded Access Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">INTERVENTIONAL</td><td class="nci">C98388</td><td class="nci"></td><td class="nci">Studies in which individuals are assigned by an investigator based on a protocol to receive specific interventions. Subjects may receive diagnostic, therapeutic or other types of interventions. The assignment of the intervention may or may not be random. The individuals are then followed and biomedical and/or health outcomes are assessed.</td><td class="nci">Interventional Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">OBSERVATIONAL</td><td class="nci">C16084</td><td class="nci"></td><td class="nci">Studies in which biomedical and/or health outcomes are assessed in pre-defined groups of individuals. Subjects in the study may receive diagnostic, therapeutic, or other interventions, but the investigator does not assign specific interventions to the subjects of the study.</td><td class="nci">Observational Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">PATIENT REGISTRY</td><td class="nci">C129000</td><td class="nci"></td><td class="nci">Observational studies which include an organized system that uses observational methods to collect uniform data (clinical and other) prospectively for a population defined by a particular disorder/disease, condition (including susceptibility to a disorder), or exposure (including products, health care services, and/or procedures) and that serves a predetermined scientific, clinical, or policy purpose. Patient registries may be single purpose or on-going data collection programs that address one or more questions. (AHRQ)</td><td class="nci">Patient Registry Study</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C185850.Subject Replacement Attribute Terminology">CL.C185850.Subject Replacement Attribute Terminology</a></td><td>Subject Replacement Attribute Terminology
+                            <br>
+                            (Subject Replacement Attribute Terminology)</td><td nowrap>text
+                            <br>
+                            Extensible: </td><td>C185850</td><td>Subject Replacement Attribute Terminology</td><td>A terminology value set relevant to the attributes of the subject replacement.</td><td>CDISC Protocol Subject Replacement Attribute Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Conditions of Subject Withdrawal</td><td class="nci">C185956</td><td class="nci"></td><td class="nci">A description of the provisions or stipulations under which the subject may withdraw themselves from the study, following local and national regulations.</td><td class="nci">Conditions of Subject Withdrawal</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Follow-up for Withdrawn Subject</td><td class="nci">C185957</td><td class="nci"></td><td class="nci">A description of the process by which information about the health status of a subject is obtained after that subject has withdrawn from the study.</td><td class="nci">Withdrawn Subject Follow-Up Process Description</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Lost to Follow-up Criteria</td><td class="nci">C185958</td><td class="nci"></td><td class="nci">The set of protocol-defined criteria that qualifies a study subject as being lost to follow-up.</td><td class="nci">Lost to Follow-up Criteria</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">PROT-Attr Subject Replacement</td><td class="nci">C49634</td><td class="nci">Dropout</td><td class="nci">The subject-initiated act of discontinuing participation in the study as a whole or one or more aspects of the study (e.g., a study period or use of biospecimens).</td><td class="nci">Withdrawal by Subject</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Reason for Study Discontinuation</td><td class="nci">C49627</td><td class="nci"></td><td class="nci">The explanation for why the enrolled subject concluded participation, prior to completion of all protocol-required elements, in a study.</td><td class="nci">Reason for Non-Completion</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Reason for Subject Withdrawal from Study</td><td class="nci">C185959</td><td class="nci"></td><td class="nci">The explanation or rationale as to why the subject withdrew from the study.</td><td class="nci">Reason for Subject Withdrawal from Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Study Subject Discontinuation Criteria</td><td class="nci">C185960</td><td class="nci"></td><td class="nci">The set of protocol-defined criteria that serves to determine whether and how an enrolled subject may conclude participation in a study, prior to completion of all protocol-required elements.</td><td class="nci">Study Subject Discontinuation Criteria</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Subject Discontinuation Process</td><td class="nci">C185961</td><td class="nci">Subject Discontinuation Procedure</td><td class="nci">A description of the stepwise set of actions taken when a subject discontinues participation in a study.</td><td class="nci">Subject Discontinuation Process Description</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Subject Replacement Criteria</td><td class="nci">C185962</td><td class="nci">Study Subject Replacement Criteria</td><td class="nci">A description of the scenario(s) that would justify subject replacement.</td><td class="nci">Study Subject Replacement Criteria</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Subject Replacement Statement</td><td class="nci">C185963</td><td class="nci">Study Subject Replacement Statement</td><td class="nci">A statement asserting whether subject replacement is permitted within a study.</td><td class="nci">Study Subject Replacement Statement</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C66736.TINDTP">CL.C66736.TINDTP</a></td><td>Trial Intent Type Response
+                            <br>
+                            (TINDTP)</td><td nowrap>text
+                            <br>
+                            Extensible: Yes</td><td>C66736</td><td>Trial Intent Type Response</td><td>A terminology codelist relevant to the responses for the planned purpose of the therapy, device, or agent under study in the clinical trial.</td><td>CDISC SDTM Trial Indication Type Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">BASIC SCIENCE</td><td class="nci">C15714</td><td class="nci">Basic Research</td><td class="nci">A type of study designed to examine the basic mechanism of action (e.g., physiology, biomechanics) of an intervention. (ClinicalTrials.gov)</td><td class="nci">Basic Research</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">CURE</td><td class="nci">C49654</td><td class="nci"></td><td class="nci">A type of study designed to evaluate intervention(s) aimed to cure a disease or condition.</td><td class="nci">Cure Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">DEVICE FEASIBILITY</td><td class="nci">C139174</td><td class="nci"></td><td class="nci">An intervention of a device product is being evaluated to determine the feasibility of the product or to test a prototype device and not health outcomes. Such studies are conducted to confirm the design and operating specifications of a device before beginning a full clinical trial. (ClinicalTrials.gov)</td><td class="nci">Device Feasibility Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">DIAGNOSIS</td><td class="nci">C49653</td><td class="nci"></td><td class="nci">A type of study designed to evaluate intervention(s) aimed at identifying a disease or condition.</td><td class="nci">Diagnosis Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">DISEASE MODIFYING</td><td class="nci">C170629</td><td class="nci"></td><td class="nci">A type of study designed to evaluate the effects of treatment(s) intended to cause a change in disease, syndrome, or condition beyond the point of treatment administration.</td><td class="nci">Disease Modifying Treatment Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">HEALTH SERVICES RESEARCH</td><td class="nci">C15245</td><td class="nci"></td><td class="nci">A type of study designed to evaluate the delivery, processes, management, organization or financing of health care. (ClinicalTrials.gov)</td><td class="nci">Health Services Research</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">MITIGATION</td><td class="nci">C49655</td><td class="nci"></td><td class="nci">A type of study designed to identify actions necessary to eliminate or reduce the risk to human life or well-being as a result of a particular medication or treatment regimen. (NCI)</td><td class="nci">Adverse Effect Mitigation Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">PREVENTION</td><td class="nci">C49657</td><td class="nci">Prophylaxis Study</td><td class="nci">A type of study designed to identify actions necessary to permanently eliminate or reduce the long-term risk to human life as a result of a particular medication or treatment regimen.</td><td class="nci">Prevention Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SCREENING</td><td class="nci">C71485</td><td class="nci"></td><td class="nci">A type of study designed to assess or examine methods of identifying a condition (or risk factors for a condition) in people who are not yet known to have the condition (or risk factor). (Clinicaltrials.gov)</td><td class="nci">Screening Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SUPPORTIVE CARE</td><td class="nci">C71486</td><td class="nci"></td><td class="nci">A type of study designed to evaluate one or more interventions where the primary intent is to maximize comfort, minimize side effects or mitigate against a decline in the subject's health or function. In general, supportive care interventions are not intended to cure a disease. (ClinicalTrials.gov)</td><td class="nci">Supportive Care Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">TREATMENT</td><td class="nci">C49656</td><td class="nci">Therapy Trial</td><td class="nci">A type of study designed to evaluate intervention(s) for treatment of disease, syndrome or condition.</td><td class="nci">Treatment Study</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C66737.TPHASE">CL.C66737.TPHASE</a></td><td>Trial Phase Response
+                            <br>
+                            (TPHASE)</td><td nowrap>text
+                            <br>
+                            Extensible: Yes</td><td>C66737</td><td>Trial Phase Response</td><td>A terminology codelist relevant to the phase, or stage, of the clinical trial.</td><td>CDISC SDTM Trial Phase Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">NOT APPLICABLE</td><td class="nci">C48660</td><td class="nci">NA;Not Applicable</td><td class="nci">Determination of a value is not relevant in the current context. (NCI)</td><td class="nci">Not Applicable</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">PHASE 0 TRIAL</td><td class="nci">C54721</td><td class="nci">0;Pre-clinical Trial;Trial Phase 0</td><td class="nci">First-in-human trials, in a small number of subjects, that are conducted before Phase 1 trials and are intended to assess new candidate therapeutic and imaging agents. The study agent is administered at a low dose for a limited time, and there is no therapeutic or diagnostic intent. NOTE: FDA Guidance for Industry, Investigators, and Reviewers: Exploratory IND Studies, January 2006 classifies such studies as Phase 1. NOTE: A Phase 0 study might not include any drug delivery but may be an exploration of human material from a study (e.g., tissue samples or biomarker determinations). [Improving the Quality of Cancer Clinical Trials: Workshop summary-Proceedings of the National Cancer Policy Forum Workshop, improving the Quality of Cancer Clinical Trials (Washington, DC, Oct 2007)] (CDISC glossary)</td><td class="nci">Phase 0 Trial</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">PHASE I TRIAL</td><td class="nci">C15600</td><td class="nci">1;Trial Phase 1</td><td class="nci">The initial introduction of an investigational new drug into humans. Phase 1 studies are typically closely monitored and may be conducted in patients or normal volunteer subjects. NOTE: These studies are designed to determine the metabolism and pharmacologic actions of the drug in humans, the side effects associated with increasing doses, and, if possible, to gain early evidence on effectiveness. During Phase 1, sufficient information about the drug's pharmacokinetics and pharmacological effects should be obtained to permit the design of well-controlled, scientifically valid, Phase 2 studies. The total number of subjects and patients included in Phase I studies varies with the drug, but is generally in the range of 20 to 80. Phase 1 studies also include studies of drug metabolism, structure-activity relationships, and mechanism of action in humans, as well as studies in which investigational drugs are used as research tools to explore biological phenomena or disease processes. [After FDA CDER Handbook, ICH E8] (CDISC glossary)</td><td class="nci">Phase I Trial</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">PHASE I/II TRIAL</td><td class="nci">C15693</td><td class="nci">1-2;Trial Phase 1-2</td><td class="nci">A class of clinical study that combines elements characteristic of traditional Phase I and Phase II trials. See also Phase I, Phase II.</td><td class="nci">Phase I/II Trial</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">PHASE II TRIAL</td><td class="nci">C15601</td><td class="nci">2;Trial Phase 2</td><td class="nci">Phase 2. Controlled clinical studies conducted to evaluate the effectiveness of the drug for a particular indication or indications in patients with the disease or condition under study and to determine the common short-term side effects and risks associated with the drug. NOTE: Phase 2 studies are typically well controlled, closely monitored, and conducted in a relatively small number of patients, usually involving no more than several hundred subjects. [After FDA CDER Handbook, ICH E8] (CDISC glossary)</td><td class="nci">Phase II Trial</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">PHASE II/III TRIAL</td><td class="nci">C15694</td><td class="nci">2-3;Trial Phase 2-3</td><td class="nci">A class of clinical study that combines elements characteristic of traditional Phase II and Phase III trials.</td><td class="nci">Phase II/III Trial</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">PHASE IIA TRIAL</td><td class="nci">C49686</td><td class="nci">2A;Trial Phase 2A</td><td class="nci">A clinical research protocol generally referred to as a pilot or feasibility trial that aims to prove the concept of the new intervention in question. (NCI)</td><td class="nci">Phase IIa Trial</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">PHASE IIB TRIAL</td><td class="nci">C49688</td><td class="nci">2B;Trial Phase 2B</td><td class="nci">A clinical research protocol generally referred to as a well-controlled and pivotal trial that aims to prove the mechanism of action of the new intervention in question. A pivotal study will generally be well-controlled, randomized, of adequate size, and whenever possible, double-blind. (NCI)</td><td class="nci">Phase IIb Trial</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">PHASE III TRIAL</td><td class="nci">C15602</td><td class="nci">3;Trial Phase 3</td><td class="nci">Phase 3. Studies are expanded controlled and uncontrolled trials. They are performed after preliminary evidence suggesting effectiveness of the drug has been obtained, and are intended to gather the additional information about effectiveness and safety that is needed to confirm efficacy and evaluate the overall benefit-risk relationship of the drug and to provide an adequate basis for physician labeling. NOTE: Phase 3 studies usually include from several hundred to several thousand subjects. [After FDA CDER Handbook, ICH E8] (CDISC glossary)</td><td class="nci">Phase III Trial</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">PHASE IIIA TRIAL</td><td class="nci">C49687</td><td class="nci">3A;Trial Phase 3A</td><td class="nci">A classification typically assigned retrospectively to a Phase III trial upon determination by regulatory authorities of a need for a Phase III B trial. (NCI)</td><td class="nci">Phase IIIa Trial</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">PHASE IIIB TRIAL</td><td class="nci">C49689</td><td class="nci">3B;Trial Phase 3B</td><td class="nci">A subcategory of Phase III trials done near the time of approval to elicit additional findings. NOTE: Dossier review may continue while associated Phase IIIB trials are conducted. These trials may be required as a condition of regulatory authority approval.</td><td class="nci">Phase IIIb Trial</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">PHASE IV TRIAL</td><td class="nci">C15603</td><td class="nci">4;Trial Phase 4</td><td class="nci">Phase 4. Postmarketing (Phase 4) studies to delineate additional information about the drug's risks, benefits, and optimal use that may be requested by regulatory authorities in conjunction with marketing approval. NOTE: These studies could include, but would not be limited to, studying different doses or schedules of administration than were used in Phase 2 studies, use of the drug in other patient populations or other stages of the disease, or use of the drug over a longer period of time. [After FDA CDER Handbook, ICH E8] (CDISC glossary)</td><td class="nci">Phase IV Trial</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">PHASE V TRIAL</td><td class="nci">C47865</td><td class="nci">5;Trial Phase 5</td><td class="nci">Postmarketing surveillance is sometimes referred to as Phase V.</td><td class="nci">Phase V Trial</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C66739.TTYPE">CL.C66739.TTYPE</a></td><td>Trial Type Response
+                            <br>
+                            (TTYPE)</td><td nowrap>text
+                            <br>
+                            Extensible: Yes</td><td>C66739</td><td>Trial Type Response</td><td>A terminology codelist relevant to the type of primary outcome or endpoint that the protocol is designed to evaluate.</td><td>CDISC SDTM Trial Type Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">ADHESION PERFORMANCE</td><td class="nci">C158283</td><td class="nci"></td><td class="nci">A type of study designed to evaluate the strength of the bond between an adhesive and the application surface.</td><td class="nci">Adhesion Performance Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">ALCOHOL EFFECT</td><td class="nci">C158284</td><td class="nci"></td><td class="nci">A type of study designed to evaluate the effects of alcohol on investigational product safety and/or efficacy.</td><td class="nci">Alcohol Effect Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">BIO-AVAILABILITY</td><td class="nci">C49664</td><td class="nci"></td><td class="nci">A study of the degree to which or rate at which a drug or other substance is absorbed or becomes available at the site of physiological activity after administration. (NCI)</td><td class="nci">Bioavailability Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">BIO-EQUIVALENCE</td><td class="nci">C49665</td><td class="nci"></td><td class="nci">A study most often used to compare the efficacy of different formulations to treat a given disease. It is the testing of an old versus a new formulation in healthy volunteers or subjects with the disease under study and usually in one dose. (NCI)</td><td class="nci">Therapeutic Equivalency Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">BIOSIMILARITY</td><td class="nci">C158288</td><td class="nci"></td><td class="nci">A type of study designed to evaluate whether a biologic test article is highly similar in function and effect to an existing biologic that has already been clinically tested and approved for use.</td><td class="nci">Biosimilarity Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">DEVICE-DRUG INTERACTION</td><td class="nci">C158285</td><td class="nci"></td><td class="nci">A type of study designed to evaluate the interaction between a device and a drug, where the use of one may affect the disposition, function, efficacy, or safety of the other.</td><td class="nci">Device-Drug Interaction Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">DIAGNOSIS</td><td class="nci">C49653</td><td class="nci"></td><td class="nci">A type of study designed to evaluate intervention(s) aimed at identifying a disease or condition.</td><td class="nci">Diagnosis Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">DOSE FINDING</td><td class="nci">C158289</td><td class="nci"></td><td class="nci">An early phase clinical study with the objective of determining the optimal dose of an investigational product.</td><td class="nci">Dose Finding Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">DOSE PROPORTIONALITY</td><td class="nci">C158290</td><td class="nci"></td><td class="nci">A type of study designed to evaluate the relationship between dose and resulting exposure.</td><td class="nci">Dose Proportionality Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">DOSE RESPONSE</td><td class="nci">C127803</td><td class="nci"></td><td class="nci">A study of the effect of dose changes on the efficacy of a drug in order to determine the dose-response relationship and optimal dose of a therapy.</td><td class="nci">Dose Response Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">DRUG-DRUG INTERACTION</td><td class="nci">C158286</td><td class="nci"></td><td class="nci">A type of study designed to evaluate the interaction between drugs, where the use of one may affect the disposition, efficacy, or safety of the other.</td><td class="nci">Drug-Drug Interaction Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">ECG</td><td class="nci">C178057</td><td class="nci">Electrocardiographic Study</td><td class="nci">A study that evaluates the effect of a treatment on cardiac electrical activity, as assessed by electrocardiography.</td><td class="nci">Electrocardiographic Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">EFFICACY</td><td class="nci">C49666</td><td class="nci"></td><td class="nci">A study of the relative therapeutic efficacy of treatment of a disease. Usually this is a Phase II or III study. (NCI)</td><td class="nci">Efficacy Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">FOOD EFFECT</td><td class="nci">C98729</td><td class="nci"></td><td class="nci">Studies that are conducted to assess the effect of food on the rate and extent of absorption of a drug, either compared to a fasted state or to a reference drug.</td><td class="nci">Food Effect Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">IMMUNOGENICITY</td><td class="nci">C120842</td><td class="nci"></td><td class="nci">A study that assesses an agent's ability to provoke an immune response.</td><td class="nci">Immunogenicity Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">PHARMACODYNAMIC</td><td class="nci">C49662</td><td class="nci"></td><td class="nci">A study of the biochemical and physiological effect of a drug and the mechanism of drug action and the relationship between drug concentration and effect. (NCI)</td><td class="nci">Pharmacodynamic Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">PHARMACOECONOMIC</td><td class="nci">C39493</td><td class="nci"></td><td class="nci">A study that assesses the value associated with a given drug in therapeutic and economic terms. This type of study is multidisciplinary in nature and takes into consideration the social and economic costs (resource utilization costs including direct, indirect, and intangible costs) of drug therapy in addition to its direct therapeutic benefits. Analyses relate the difference in therapeutic benefits to the difference in costs between treatment alternatives. (NCI)</td><td class="nci">Pharmacoeconomic Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">PHARMACOGENETIC</td><td class="nci">C129001</td><td class="nci"></td><td class="nci">A study that assesses variation in DNA sequence, usually within a single gene, and its effect on drug response.</td><td class="nci">Pharmacogenetic Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">PHARMACOGENOMIC</td><td class="nci">C49661</td><td class="nci"></td><td class="nci">A study that identifies or assesses variations within the entire genome, including DNA, RNA, or transcriptional elements, and its effects on drug response.</td><td class="nci">Pharmacogenomic Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">PHARMACOKINETIC</td><td class="nci">C49663</td><td class="nci"></td><td class="nci">A study of the process by which a drug is absorbed, distributed, metabolized, and eliminated by the body. (NCI)</td><td class="nci">Pharmacokinetic Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">POSITION EFFECT</td><td class="nci">C161477</td><td class="nci"></td><td class="nci">A type of study designed to evaluate the effect of body position during and/or after administration of the investigational product.</td><td class="nci">Position Effect Trial</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">PREVENTION</td><td class="nci">C49657</td><td class="nci">Prophylaxis Study</td><td class="nci">A type of study designed to identify actions necessary to permanently eliminate or reduce the long-term risk to human life as a result of a particular medication or treatment regimen.</td><td class="nci">Prevention Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">REACTOGENICITY</td><td class="nci">C174366</td><td class="nci"></td><td class="nci">A type of study designed to evaluate the expected, acute types of immunological responses, sometimes considered excessive, following agent administration.</td><td class="nci">Reactogenicity Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SAFETY</td><td class="nci">C49667</td><td class="nci"></td><td class="nci">A study that assesses the medical risks to a subject. Safety is usually assessed by examining a wide range of clinical parameters, including adverse events, vital signs, physical exam, laboratory tests.</td><td class="nci">Safety Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SWALLOWING FUNCTION</td><td class="nci">C161478</td><td class="nci"></td><td class="nci">A type of study designed to evaluate the effect of the investigational product on the physiologic act of swallowing.</td><td class="nci">Swallowing Function Trial</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">THOROUGH QT</td><td class="nci">C158287</td><td class="nci">TQT Study</td><td class="nci">A type of study designed to evaluate the ability of an investigational product and/or approved drug to delay cardiac ventricular repolarization as detected by QT prolongation and other ECG parameters.</td><td class="nci">Thorough QT Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">TOLERABILITY</td><td class="nci">C98791</td><td class="nci"></td><td class="nci">A type of safety study that assesses the degree to which overt adverse effects can be tolerated by the subject.</td><td class="nci">Tolerability Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">TREATMENT</td><td class="nci">C49656</td><td class="nci">Therapy Trial</td><td class="nci">A type of study designed to evaluate intervention(s) for treatment of disease, syndrome or condition.</td><td class="nci">Treatment Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">USABILITY TESTING</td><td class="nci">C161479</td><td class="nci"></td><td class="nci">A type of study designed to evaluate the user experience with a product.</td><td class="nci">Usability Testing Study</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">WATER EFFECT</td><td class="nci">C161480</td><td class="nci"></td><td class="nci">A type of study designed to evaluate the effects of water on investigational product safety and/or efficacy.</td><td class="nci">Water Effect Trial</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

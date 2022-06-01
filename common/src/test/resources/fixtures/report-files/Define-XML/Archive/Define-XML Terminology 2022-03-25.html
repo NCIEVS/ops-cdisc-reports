@@ -1,0 +1,523 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <title>CDISC Define-XML Controlled Terminology</title>
+        <style type="text/css">
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style:  normal;
+    font-weight: normal;
+    font-size:   14px;
+    margin: 0;
+    padding: 10px;
+}
+
+h1, #study_description {
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 10px 25px;
+    border: 2px solid black;
+}
+
+td {
+    vertical-align: top;
+    padding: 3px 4px;
+    border:  1px solid #dddddd;
+}
+
+thead tr th {
+    vertical-align: top;
+    padding: 3px 4px;
+    border:  2px solid black;
+}
+
+.header {
+    font-weight:bold;
+    white-space: nowrap;
+}
+
+.header td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+tr.item_last td {
+    border-bottom: solid 1px black;
+}
+
+.cl {
+    background: #ccffff;
+}
+
+.cli {
+    background: white;
+}
+
+.nci {
+    background: #ffffcc;
+}
+
+.pre {
+    white-space: pre-wrap;
+}
+
+#legend {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#toc {
+float:left;
+left:5px;
+width:300px;
+}
+#contents {
+position: absolute;
+left:300px;
+margin-right:10px;
+}
+
+
+tr.codelist td {
+    border-top: solid 1px black;
+}
+                </style>
+    </head>
+    <body>
+        <a id="top"></a>
+        <h1>CDISC Define-XML Controlled Terminology</h1>
+        <div id="study_description">CDISC Define-XML Controlled Terminology, 2022-03-25</div>
+        <table id="legend">
+            <caption>Legend:</caption>
+            <tr>
+                <td class="cl">CodeList</td>
+            </tr>
+            <tr>
+                <td class="cli">CodeListItem</td>
+            </tr>
+            <tr>
+                <td class="nci">NCI attributes</td>
+            </tr>
+        </table>
+        <div id="toc">
+            <table>
+                <tr>
+                    <td>C165635</td><td><a href="#CL.C165635.BDSSC">ADaM Basic Data Structure Subclass</a></td>
+                </tr>
+                <tr>
+                    <td>C177903</td><td><a href="#CL.C177903.MDBDSSC">ADaM Medical Device Basic Data Structure Subclass</a></td>
+                </tr>
+                <tr>
+                    <td>C176227</td><td><a href="#CL.C176227.OCCSC">ADaM Occurrence Data Structure Subclass</a></td>
+                </tr>
+                <tr>
+                    <td>C117745</td><td><a href="#CL.C117745.ANLPURP">Analysis Purpose</a></td>
+                </tr>
+                <tr>
+                    <td>C117744</td><td><a href="#CL.C117744.ANLREAS">Analysis Reason</a></td>
+                </tr>
+                <tr>
+                    <td>C172331</td><td><a href="#CL.C172331.CTSTDTYP">CDISC Controlled Terminology Standard Type</a></td>
+                </tr>
+                <tr>
+                    <td>C66788</td><td><a href="#CL.C66788.DICTNAM">Dictionary Name</a></td>
+                </tr>
+                <tr>
+                    <td>C103329</td><td><a href="#CL.C103329.GNRLOBSC">General Observation Class</a></td>
+                </tr>
+                <tr>
+                    <td>C170448</td><td><a href="#CL.C170448.ODMCNTX">ODM Context</a></td>
+                </tr>
+                <tr>
+                    <td>C170450</td><td><a href="#CL.C170450.ORIGINS">Origin Source</a></td>
+                </tr>
+                <tr>
+                    <td>C170449</td><td><a href="#CL.C170449.ORIGINT">Origin Type</a></td>
+                </tr>
+                <tr>
+                    <td>C170452</td><td><a href="#CL.C170452.STDNAM">Standard Name</a></td>
+                </tr>
+                <tr>
+                    <td>C172332</td><td><a href="#CL.C172332.STDSTAT">Standard Status</a></td>
+                </tr>
+                <tr>
+                    <td>C170451</td><td><a href="#CL.C170451.STDTYP">Standard Type</a></td>
+                </tr>
+            </table>
+        </div>
+        <div id="contents">
+            <h2>Codelist Definitions</h2>
+            <table>
+                <thead>
+                    <tr class="header cl">
+                        <th>OID</th><th>Name
+                            <br>
+                            (CDISC Submission Value)</th><th>DataType
+                            <br>
+                            Extensible</th><th rowspan="2" class="nci">NCI Code</th><th rowspan="2" class="nci">CDISC Synonym</th><th rowspan="2" class="nci">CDISC Definition</th><th rowspan="2" class="nci">Preferred Term</th>
+                    </tr>
+                    <tr class="header cli">
+                        <th></th><th colspan="2">CDISC Submission Value [ODM:CodedValue]</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="cl">
+                        <td><a name="CL.C165635.BDSSC">CL.C165635.BDSSC</a></td><td>ADaM Basic Data Structure Subclass
+                            <br>
+                            (BDSSC)</td><td nowrap>text
+                            <br>
+                            Extensible: No</td><td>C165635</td><td>ADaM Basic Data Structure Subclass</td><td>Terminology relevant to the subclasses of the ADaM basic data structure.</td><td>CDISC Define-XML ADaM Basic Data Structure Subclass Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">NON-COMPARTMENTAL ANALYSIS</td><td class="nci">C172452</td><td class="nci">NCA</td><td class="nci">A dataset containing data that is used for non-compartmental analyses.</td><td class="nci">Non-Compartmental Analysis Dataset</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">TIME-TO-EVENT</td><td class="nci">C165637</td><td class="nci">TTE</td><td class="nci">A dataset containing data that is used for Time-to-Event analyses.</td><td class="nci">Time-to-Event Dataset</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C177903.MDBDSSC">CL.C177903.MDBDSSC</a></td><td>ADaM Medical Device Basic Data Structure Subclass
+                            <br>
+                            (MDBDSSC)</td><td nowrap>text
+                            <br>
+                            Extensible: No</td><td>C177903</td><td>ADaM Medical Device Basic Data Structure Subclass</td><td>Terminology relevant to the subclasses of the ADaM device level basic data structure.</td><td>CDISC Define-XML ADaM Medical Device Basic Data Structure Subclass Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">MEDICAL DEVICE TIME-TO-EVENT</td><td class="nci">C177920</td><td class="nci">MDTTE</td><td class="nci">A dataset containing data that is used for medical device Time-to-Event analyses.</td><td class="nci">Medical Device Time-to-Event Dataset</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C176227.OCCSC">CL.C176227.OCCSC</a></td><td>ADaM Occurrence Data Structure Subclass
+                            <br>
+                            (OCCSC)</td><td nowrap>text
+                            <br>
+                            Extensible: No</td><td>C176227</td><td>ADaM Occurrence Data Structure Subclass</td><td>Terminology relevant to the subclasses of the ADaM occurrence data structure.</td><td>CDISC Define-XML ADaM Occurrence Data Structure Subclass Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">ADVERSE EVENT</td><td class="nci">C176265</td><td class="nci"></td><td class="nci">A dataset containing data that is used for adverse event analyses.</td><td class="nci">Adverse Event Dataset</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C117745.ANLPURP">CL.C117745.ANLPURP</a></td><td>Analysis Purpose
+                            <br>
+                            (ANLPURP)</td><td nowrap>text
+                            <br>
+                            Extensible: Yes</td><td>C117745</td><td>Analysis Purpose</td><td>Purpose of a specific analysis result described in Define-XML analysis results metadata.</td><td>CDISC Define-XML Analysis Purpose Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">EXPLORATORY OUTCOME MEASURE</td><td class="nci">C98724</td><td class="nci">Exploratory Outcome Measure</td><td class="nci">The outcome measure(s) that is part of a pre-specified analysis plan used to evaluate the exploratory endpoint(s) associated with exploratory study objective(s) and/or any other measures, excluding post-hoc measures, that are a focus of the study. (After clinicaltrials.gov)</td><td class="nci">Exploratory Outcome Measure</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">PRIMARY OUTCOME MEASURE</td><td class="nci">C98772</td><td class="nci">Primary Outcome Measure</td><td class="nci">The outcome measure(s) of greatest importance specified in the protocol, usually the one(s) used in the power calculation, to evaluate the primary endpoint(s) associated with the primary study objective(s). (After Clinicaltrials.gov)</td><td class="nci">Primary Outcome Measure</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SECONDARY OUTCOME MEASURE</td><td class="nci">C98781</td><td class="nci">Secondary Outcome Measure</td><td class="nci">The outcome measure(s) that is part of a pre-specified analysis plan used to evaluate the secondary endpoint(s) associated with secondary study objective(s) and/or used to evaluate any measure(s) ancillary to the primary or secondary endpoint(s). (After Clinicaltrials.gov).</td><td class="nci">Secondary Outcome Measure</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C117744.ANLREAS">CL.C117744.ANLREAS</a></td><td>Analysis Reason
+                            <br>
+                            (ANLREAS)</td><td nowrap>text
+                            <br>
+                            Extensible: Yes</td><td>C117744</td><td>Analysis Reason</td><td>Reason for reporting a specific analysis result described in Define-XML analysis results metadata.</td><td>CDISC Define-XML Analysis Reason Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">DATA DRIVEN</td><td class="nci">C117750</td><td class="nci"></td><td class="nci">The analysis was triggered by findings in the data.</td><td class="nci">Data Driven Analysis</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">REQUESTED BY REGULATORY AGENCY</td><td class="nci">C117751</td><td class="nci"></td><td class="nci">The analysis has been requested by a regulatory agency.</td><td class="nci">Analysis Requested by Regulatory Agency</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SPECIFIED IN PROTOCOL</td><td class="nci">C117752</td><td class="nci"></td><td class="nci">The analysis is specified in a protocol.</td><td class="nci">Analysis Specified in Protocol</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SPECIFIED IN SAP</td><td class="nci">C117753</td><td class="nci"></td><td class="nci">The analysis is specified in a statistical analysis plan.</td><td class="nci">Analysis Specified in Statistical Analysis Plan</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C172331.CTSTDTYP">CL.C172331.CTSTDTYP</a></td><td>CDISC Controlled Terminology Standard Type
+                            <br>
+                            (CTSTDTYP)</td><td nowrap>text
+                            <br>
+                            Extensible: No</td><td>C172331</td><td>CDISC Controlled Terminology Standard Type</td><td>Terminology relevant to the classification of the CDISC controlled terminology standard described in the Define-XML document.</td><td>CDISC Define-XML CDISC Controlled Terminology Standard Type Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">ADaM</td><td class="nci">C180548</td><td class="nci"></td><td class="nci">The controlled terminology standard subset that includes terms pertaining to the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model (ADaM).</td><td class="nci">CDISC ADaM Standard Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">CDASH</td><td class="nci">C180549</td><td class="nci"></td><td class="nci">The controlled terminology standard subset that includes terms relevant to the Clinical Data Interchange Standards Consortium (CDISC) Clinical Data Acquisition Standards Harmonization (CDASH) group.</td><td class="nci">CDISC CDASH Standard Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">DEFINE-XML</td><td class="nci">C180550</td><td class="nci"></td><td class="nci">The controlled terminology standard subset that includes terms relevant to the Clinical Data Interchange Standards Consortium (CDISC) Define-XML standard.</td><td class="nci">CDISC Define-XML Standard Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SDTM</td><td class="nci">C180551</td><td class="nci"></td><td class="nci">The controlled terminology standard subset that includes terms pertaining to the Clinical Data Interchange Standards Consortium (CDISC) Study Data Tabulation Model (SDTM).</td><td class="nci">CDISC SDTM Standard Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SEND</td><td class="nci">C180552</td><td class="nci"></td><td class="nci">The controlled terminology standard subset that includes terms relevant to the Clinical Data Interchange Standards Consortium (CDISC) Standard for Exchange of Non-clinical Data (SEND) group.</td><td class="nci">CDISC SEND Standard Terminology</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C66788.DICTNAM">CL.C66788.DICTNAM</a></td><td>Dictionary Name
+                            <br>
+                            (DICTNAM)</td><td nowrap>text
+                            <br>
+                            Extensible: Yes</td><td>C66788</td><td>Dictionary Name</td><td>A name given to a reference source that lists words and gives their meaning. (NCI)</td><td>CDISC Dictionary Name Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">CDISC CT</td><td class="nci">C163415</td><td class="nci">CDISC Controlled Terminology;Clinical Data Interchange Standards Consortium Controlled Terminology</td><td class="nci">A standard terminology developed and maintained by Clinical Data Interchange Standards Consortium (CDISC) and the National Cancer Institute Enterprise Vocabulary Services (NCI-EVS) to support CDISC models, domains and specifications for data representation in regulated research.</td><td class="nci">Clinical Data Interchange Standards Consortium Controlled Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">COSTART</td><td class="nci">C49471</td><td class="nci">Coding Symbols for a Thesaurus of Adverse Reaction Terms</td><td class="nci">A terminology developed and used by the Food and Drug Administration (FDA) for the coding, filing and retrieving of post marketing adverse reaction reports. (NCI)</td><td class="nci">Thesaurus of Adverse Reaction Term Coding Symbols</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">CTCAE</td><td class="nci">C49704</td><td class="nci">Common Terminology Criteria for Adverse Events</td><td class="nci">A standard terminology developed and maintained by the National Cancer Institute to report adverse events occurring in clinical trials. The CTCAE contains a grading scale for each adverse event term representing the severity of the event.</td><td class="nci">Common Terminology Criteria for Adverse Events</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">D-U-N-S NUMBER</td><td class="nci">C134003</td><td class="nci">Data Universal Number System;DUNS Numbers</td><td class="nci">A proprietary system developed and regulated by Dun &amp; Bradstreet that assigns a unique nine digit numeric identifier to a single business entity location.</td><td class="nci">Data Universal Numbering System</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">ICD</td><td class="nci">C49474</td><td class="nci">International Classification of Diseases</td><td class="nci">A system of categories to which morbid entries are assigned according to established criteria. Included is the entire range of conditions in a manageable number of categories, grouped to facilitate mortality reporting. It is produced by the World Health Organization (from ICD-10, p1). The Clinical Modifications, produced by the United States Dept. of Health and Human Services, are larger extensions used for morbidity and general epidemiological purposes, primarily in the U.S. (MSH2005_2004_10_12)</td><td class="nci">International Classification of Diseases</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">LOINC</td><td class="nci">C49476</td><td class="nci">Logical Observation Identifiers Names and Codes</td><td class="nci">Published by The Regenstrief Institute, the Logical Observation Identifiers Names and Codes covers clinical and clinical laboratory terminology. (NCI)</td><td class="nci">Logical Observation Identifiers Names and Codes</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">MED-RT</td><td class="nci">C163416</td><td class="nci">Medication Reference Terminology;NDF-RT</td><td class="nci">A standard terminology developed and maintained by the Veterans Health Administration (VHA) that includes terminology to support the mechanism of action, physiologic effect, and asserted pharmacologic classification relationships of medications. MED-RT incorporates terminology from RxNORM, MeSH, and SNOMED CT.</td><td class="nci">Medication Reference Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">MedDRA</td><td class="nci">C43820</td><td class="nci">Medical Dictionary for Regulatory Activities</td><td class="nci">MedDRA is an international medical terminology designed to support the classification, retrieval, presentation, and communication of medical information throughout the medical product regulatory cycle. MedDRA was developed under the auspices of the International Conference on Harmonisation of Technical Requirements for Registration of Pharmaceuticals for Human Use (ICH). The MedDRA Maintenance and Support Services Organization (MSSO) holds a contract with the International Federation of Pharmaceutical Manufacturers Associations (IFPMA) to maintain and support the implementation of the terminology. (NCI)</td><td class="nci">MedDRA</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SNOMED</td><td class="nci">C53489</td><td class="nci">Systematized Nomenclature of Medicine</td><td class="nci">A multiaxial, hierarchical classification system for diseases in man developed by the College of American Pathologists. (NCI)</td><td class="nci">Systematized Nomenclature of Medicine</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">UNII</td><td class="nci">C163417</td><td class="nci">SRS-UNII;Substance Registration System-Unique Ingredient Identifier</td><td class="nci">A standard terminology developed and maintained by the Department of Veterans Affairs/Veterans Health Administration designated federal collaborative Structured Product Labeling Interagency Expert Panel (SPLIEP). It contains terminology to support the mechanism of action, physiologic effect, and asserted pharmacologic classification relationships of drug ingredients and food allergens.</td><td class="nci">Substance Registration System-Unique Ingredient Identifier</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">WHO ATC CLASSIFICATION SYSTEM</td><td class="nci">C154331</td><td class="nci">Anatomical Therapeutic Chemical Classification System</td><td class="nci">A World Health Organization (WHO) classification system, developed and maintained by the WHO Collaborating Centre for Drug Statistics Methodology, for medicinal substances where active substances are divided into different groups according to the organ or system on which they act and their therapeutic, pharmacological, and chemical properties.</td><td class="nci">Anatomical Therapeutic Chemical Classification System</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">WHOART</td><td class="nci">C49468</td><td class="nci">World Health Organization Adverse Reaction Terms</td><td class="nci">A terminology implemented by the World Health Organization to describe adverse reactions to a prescribed medication or treatment regimen. (NCI)</td><td class="nci">World Health Organization Adverse Reaction Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">WHODD</td><td class="nci">C49475</td><td class="nci">WHODrug Global;World Health Organization Drug Dictionary</td><td class="nci">A reference source of drugs and drug associated information maintained by the World Health Organization. (NCI)</td><td class="nci">World Health Organization Drug Dictionary</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C103329.GNRLOBSC">CL.C103329.GNRLOBSC</a></td><td>General Observation Class
+                            <br>
+                            (GNRLOBSC)</td><td nowrap>text
+                            <br>
+                            Extensible: No</td><td>C103329</td><td>General Observation Class</td><td>Terminology related to the classification of a CDISC domain.</td><td>CDISC Define-XML General Observation Class Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">ADAM OTHER</td><td class="nci">C103375</td><td class="nci">ADaM Other</td><td class="nci">An analysis dataset that doesn't conform to a pre-defined ADaM dataset structure (e.g. ADSL, BDS or OCCDS).</td><td class="nci">CDISC Other ADaM Dataset</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">BASIC DATA STRUCTURE</td><td class="nci">C103371</td><td class="nci">Basic Data Structure;BDS</td><td class="nci">An ADaM BDS dataset contains one or more records per subject, per analysis parameter, per analysis time point. Variables include the value being analyzed (e.g., AVAL) and the description of the value being analyzed (e.g., PARAM). Other variables in the dataset provide more information about the value being analyzed (e.g., the subject identification) or describe and trace the derivation of it (e.g., DTYPE) or support the analysis of it (e.g., treatment variables, covariates).</td><td class="nci">CDISC Basic Data Structure Dataset</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">DEVICE LEVEL ANALYSIS DATASET</td><td class="nci">C177921</td><td class="nci">ADDL;Device Level Analysis Dataset</td><td class="nci">The Device-Level Analysis Dataset (ADDL) is a one-record-per-device or one-record-per-subject-per-device dataset which contains variables that describe device characteristics and timing, and group the devices for analysis. ADDL is the primary source for device-level variables included in other analysis datasets.</td><td class="nci">CDISC Device Level Analysis Dataset</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">EVENTS</td><td class="nci">C103372</td><td class="nci">Events</td><td class="nci">This SDTM class captures planned protocol milestones such as randomization and study completion, and occurrences, conditions, or incidents independent of planned study evaluations occurring during the trial (e.g., adverse events) or prior to the trial (e.g., medical history).</td><td class="nci">CDISC Events Class</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">FINDINGS ABOUT</td><td class="nci">C135396</td><td class="nci">Findings About</td><td class="nci">This SDTM class is a specialization of the findings general observation class. It is intended, as its name implies, to be used when collected data represent findings about an event or intervention that cannot be represented within an event or intervention record or as a supplemental qualifier to such a record.</td><td class="nci">CDISC Findings About Class</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">FINDINGS</td><td class="nci">C103373</td><td class="nci">Findings</td><td class="nci">This SDTM class captures the observations resulting from planned evaluations to address specific tests or questions such as laboratory tests, ECG testing, and questions listed on questionnaires.</td><td class="nci">CDISC Findings Class</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">INTERVENTIONS</td><td class="nci">C103374</td><td class="nci">Interventions</td><td class="nci">This SDTM class captures investigational, therapeutic and other treatments that are administered to the subject (with some actual or expected physiological effect) either as specified by the study protocol (e.g., exposure to study drug), coincident with the study assessment period (e.g., concomitant medications), or self-administered by the subject (such as use of alcohol, tobacco, or caffeine).</td><td class="nci">CDISC Interventions Class</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">MEDICAL DEVICE BASIC DATA STRUCTURE</td><td class="nci">C177922</td><td class="nci">MDBDS;Medical Device Basic Data Structure</td><td class="nci">The Medical Device Basic Data Structure (MDBDS) supports the analysis needs by adding SPDEVID as a required key variable and USUBJID a conditionally required variable. See the BDS class for further details.</td><td class="nci">CDISC Medical Device Basic Data Structure</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">MEDICAL DEVICE OCCURRENCE DATA STRUCTURE</td><td class="nci">C177923</td><td class="nci">MDOCCDS;Medical Device Occurrence Data Structure</td><td class="nci">The Medical Device Occurrence Data Structure (MDOCCDS) supports the analysis needs by adding SPDEVID as a required identifier and allowing USUBJID be a conditionally required variable. See the OCCDS class for further details.</td><td class="nci">CDISC Medical Device Occurrence Data Structure</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">OCCURRENCE DATA STRUCTURE</td><td class="nci">C123454</td><td class="nci">OCCDS;Occurrence Data Structure</td><td class="nci">The Occurrence Data Structure (OCCDS) is the ADaM data structure for occurrence analysis. Occurrence analysis is the counting of subjects with a record or term, and often includes a structured hierarchy of dictionary coding categories.</td><td class="nci">CDISC Occurrence Data Structure</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">RELATIONSHIP</td><td class="nci">C103376</td><td class="nci">Relationships</td><td class="nci">This SDTM class provides a means to link related records between datasets. It includes the RELREC and SUPPQUAL datasets.</td><td class="nci">CDISC Relationship Class</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SPECIAL PURPOSE</td><td class="nci">C103377</td><td class="nci">Special Purpose;SPECIAL-PURPOSE</td><td class="nci">This SDTM class contains a set of domains which do not conform to the Findings, Events or Interventions observation classes. The domains included are DM, CO, SE and SV.</td><td class="nci">CDISC Special Purpose Class</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">STUDY REFERENCE</td><td class="nci">C147271</td><td class="nci">Study Reference</td><td class="nci">This special purpose SDTM class contains further descriptions of study-specific identifiers that will be used in subject based domains.</td><td class="nci">CDISC Study Reference Class</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SUBJECT LEVEL ANALYSIS DATASET</td><td class="nci">C103378</td><td class="nci">ADSL;Subject Level Analysis Dataset</td><td class="nci">The Subject-Level Analysis Dataset (ADSL) is a one-record-per-subject dataset which contains variables that describe subject demographic characteristics and group the subjects for analysis. ADSL is the primary source for subject-level variables included in other analysis datasets such as population flags and treatment variables.</td><td class="nci">CDISC Subject Level Analysis Dataset</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">TRIAL DESIGN</td><td class="nci">C103379</td><td class="nci">Trial Design</td><td class="nci">This SDTM class describes the plan for the procedures to be followed in a clinical trial, including planned and actual timing of events, control group, method of allocating treatments, blinding methods, assignment of epochs that subjects pass through in the course of a trial.</td><td class="nci">CDISC Trial Design Class</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C170448.ODMCNTX">CL.C170448.ODMCNTX</a></td><td>ODM Context
+                            <br>
+                            (ODMCNTX)</td><td nowrap>text
+                            <br>
+                            Extensible: No</td><td>C170448</td><td>ODM Context</td><td>Terminology relevant to the context in which the Define-XML document is used.</td><td>CDISC Define-XML ODM Context Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Other</td><td class="nci">C17649</td><td class="nci">Other</td><td class="nci">Different than the one(s) previously specified or mentioned. (NCI)</td><td class="nci">Other</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Submission</td><td class="nci">C70885</td><td class="nci"></td><td class="nci">An assembly of one or more regulatory submission units supporting a specific regulatory purpose or decision. In most cases, the compilation of the submission units is utilized in the assessment of a regulated medical product quality, safety and/or effectiveness.</td><td class="nci">Regulatory Submission</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C170450.ORIGINS">CL.C170450.ORIGINS</a></td><td>Origin Source
+                            <br>
+                            (ORIGINS)</td><td nowrap>text
+                            <br>
+                            Extensible: No</td><td>C170450</td><td>Origin Source</td><td>Terminology relevant to the origin source for datasets in the Define-XML document.</td><td>CDISC Define-XML Origin Source Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Investigator</td><td class="nci">C25936</td><td class="nci"></td><td class="nci">A person responsible for the conduct of the clinical trial at a trial site. If a trial is conducted by a team of individuals at the trial site, the investigator is the responsible leader of the team and may be called the principal investigator.</td><td class="nci">Investigator</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Sponsor</td><td class="nci">C70793</td><td class="nci">Clinical Study Sponsor;Sponsor;Study Sponsor</td><td class="nci">An entity that is responsible for the initiation, management, and/or financing of a clinical study.</td><td class="nci">Clinical Study Sponsor</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Subject</td><td class="nci">C41189</td><td class="nci"></td><td class="nci">An individual who is observed, analyzed, examined, investigated, experimented upon, or/and treated in the course of a particular study.</td><td class="nci">Study Subject</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Vendor</td><td class="nci">C68608</td><td class="nci"></td><td class="nci">A person or agency that promotes or exchanges goods or services for money. (NCI)</td><td class="nci">Vendor</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C170449.ORIGINT">CL.C170449.ORIGINT</a></td><td>Origin Type
+                            <br>
+                            (ORIGINT)</td><td nowrap>text
+                            <br>
+                            Extensible: No</td><td>C170449</td><td>Origin Type</td><td>Terminology relevant to the origin type for datasets in the Define-XML document.</td><td>CDISC Define-XML Origin Type Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Assigned</td><td class="nci">C170547</td><td class="nci"></td><td class="nci">A value that is derived through designation, such as values from a look up table or a label on a CRF.</td><td class="nci">Assigned Value</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Collected</td><td class="nci">C170548</td><td class="nci"></td><td class="nci">A value that is actually observed and recorded by a person or obtained by an instrument.</td><td class="nci">Collected Value</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Derived</td><td class="nci">C170549</td><td class="nci"></td><td class="nci">A value that is calculated by an algorithm or reproducible rule, and which is dependent upon other data values.</td><td class="nci">Derived Value</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Not Available</td><td class="nci">C126101</td><td class="nci"></td><td class="nci">A value that is not discoverable or accessible.</td><td class="nci">Not Available</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Other</td><td class="nci">C17649</td><td class="nci">Other</td><td class="nci">Different than the one(s) previously specified or mentioned. (NCI)</td><td class="nci">Other</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Predecessor</td><td class="nci">C170550</td><td class="nci"></td><td class="nci">A value that is copied from a variable in another dataset.</td><td class="nci">Copied Value</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">Protocol</td><td class="nci">C170551</td><td class="nci"></td><td class="nci">A value that is included as part of the study protocol.</td><td class="nci">Protocol Value</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C170452.STDNAM">CL.C170452.STDNAM</a></td><td>Standard Name
+                            <br>
+                            (STDNAM)</td><td nowrap>text
+                            <br>
+                            Extensible: No</td><td>C170452</td><td>Standard Name</td><td>Terminology relevant to the name of the standard described in the Define-XML document.</td><td>CDISC Define-XML Standard Name Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">ADaMIG</td><td class="nci">C170552</td><td class="nci"></td><td class="nci">The implementation guide for the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model standard.</td><td class="nci">ADaM Implementation Guide</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">CDISC/NCI</td><td class="nci">C163415</td><td class="nci">CDISC Controlled Terminology;Clinical Data Interchange Standards Consortium Controlled Terminology</td><td class="nci">A standard terminology developed and maintained by Clinical Data Interchange Standards Consortium (CDISC) and the National Cancer Institute Enterprise Vocabulary Services (NCI-EVS) to support CDISC models, domains and specifications for data representation in regulated research.</td><td class="nci">Clinical Data Interchange Standards Consortium Controlled Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SDTMIG</td><td class="nci">C170455</td><td class="nci"></td><td class="nci">The implementation guide for the Clinical Data Interchange Standards Consortium (CDISC) Study Data Tabulation Model standard.</td><td class="nci">SDTM Implementation Guide</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SDTMIG-AP</td><td class="nci">C170553</td><td class="nci"></td><td class="nci">The implementation guide for the Clinical Data Interchange Standards Consortium (CDISC) Study Data Tabulation Model Associated Persons standard.</td><td class="nci">SDTM Implementation Guide-Associated Persons</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SDTMIG-MD</td><td class="nci">C170554</td><td class="nci"></td><td class="nci">The implementation guide for the Clinical Data Interchange Standards Consortium (CDISC) Study Data Tabulation Model Medical Devices standard.</td><td class="nci">SDTM Implementation Guide-Medical Devices</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SENDIG</td><td class="nci">C170456</td><td class="nci"></td><td class="nci">The implementation guide for the Clinical Data Interchange Standards Consortium (CDISC) Standard for the Exchange of Nonclinical Data standard.</td><td class="nci">SEND Implementation Guide</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SENDIG-AR</td><td class="nci">C181230</td><td class="nci"></td><td class="nci">The implementation guide for the Clinical Data Interchange Standards Consortium (CDISC) Standard for the Exchange of Nonclinical Data Animal Rule standard.</td><td class="nci">SEND Implementation Guide-Animal Rule</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">SENDIG-DART</td><td class="nci">C170556</td><td class="nci"></td><td class="nci">The implementation guide for the Clinical Data Interchange Standards Consortium (CDISC) Standard for the Exchange of Nonclinical Data Developmental and Reproductive Toxicology standard.</td><td class="nci">SEND Implementation Guide-Developmental and Reproductive Toxicology</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C172332.STDSTAT">CL.C172332.STDSTAT</a></td><td>Standard Status
+                            <br>
+                            (STDSTAT)</td><td nowrap>text
+                            <br>
+                            Extensible: Yes</td><td>C172332</td><td>Standard Status</td><td>Terminology relevant to the development or publication status of the standard.</td><td>CDISC Define-XML Standard Status Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">DRAFT</td><td class="nci">C172453</td><td class="nci"></td><td class="nci">A preliminary version of a CDISC standard that has not yet completed the CDISC standards development process. (NCI)</td><td class="nci">CDISC Draft Standard</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">FINAL</td><td class="nci">C172455</td><td class="nci"></td><td class="nci">A final version of a CDISC standard that has completed the CDISC standards development process. (NCI)</td><td class="nci">CDISC Final Standard</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">PROVISIONAL</td><td class="nci">C172454</td><td class="nci"></td><td class="nci">A version of a CDISC standard whose conclusiveness is dependent upon the fulfillment of some contingency or final alteration. (NCI)</td><td class="nci">CDISC Provisional Standard</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                    <tr class="cl">
+                        <td><a name="CL.C170451.STDTYP">CL.C170451.STDTYP</a></td><td>Standard Type
+                            <br>
+                            (STDTYP)</td><td nowrap>text
+                            <br>
+                            Extensible: No</td><td>C170451</td><td>Standard Type</td><td>Terminology relevant to the classification of the standard described in the Define-XML document.</td><td>CDISC Define-XML Standard Type Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">CT</td><td class="nci">C163415</td><td class="nci">CDISC Controlled Terminology;Clinical Data Interchange Standards Consortium Controlled Terminology</td><td class="nci">A standard terminology developed and maintained by Clinical Data Interchange Standards Consortium (CDISC) and the National Cancer Institute Enterprise Vocabulary Services (NCI-EVS) to support CDISC models, domains and specifications for data representation in regulated research.</td><td class="nci">Clinical Data Interchange Standards Consortium Controlled Terminology</td>
+                    </tr>
+                    <tr class="cli">
+                        <td></td><td colspan="2">IG</td><td class="nci">C170454</td><td class="nci">CDISC Implementation Guide</td><td class="nci">A standard document developed and maintained by Clinical Data Interchange Standards Consortium (CDISC) that contains instructions and requirements for the organization, structure, and format of standard clinical and non-clinical trial tabulation and analysis datasets.</td><td class="nci">CDISC Implementation Guide</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="#top">Back to top</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
