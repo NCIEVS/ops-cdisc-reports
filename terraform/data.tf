@@ -1,5 +1,9 @@
 data "aws_caller_identity" "current" {}
 
+locals {
+  account_id  = data.aws_caller_identity.current.account_id
+}
+
 data "aws_subnet" "private_subnets" {
   count = length(var.availability_zones)
   filter {
@@ -17,4 +21,8 @@ data "aws_vpc" "nci_vpc" {
 
 data "aws_security_group" "default_security_group" {
   id = var.security_group_id
+}
+
+data "aws_secretsmanager_secret" "google_secret" {
+  name = "/nci/cdisc/gdrive"
 }

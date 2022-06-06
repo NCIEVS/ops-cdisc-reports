@@ -16,7 +16,6 @@ variable "aws_tags" {
 
 variable "availability_zones" {
   type    = list(string)
-  default = ["us-west-2a"]
 }
 
 variable "network_resources" {

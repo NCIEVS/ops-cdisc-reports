@@ -32,7 +32,7 @@ resource "aws_datasync_location_efs" "efs_ds_location" {
   }
 }
 
-data "aws_s3_bucket" "thesaurus-bucket" {
+data "aws_s3_bucket" "thesaurus_bucket" {
   bucket = var.thesaurus_bucket
 }
 
@@ -60,22 +60,49 @@ resource "aws_iam_role_policy" "cdisc_report_data_sync_policy" {
       {
         Effect = "Allow",
         Action = [
-          "ec2:CreateNetworkInterface",
-          "elasticfilesystem:*",
-          "iam:PassRole",
-          "ec2:DescribeNetworkInterfaces",
-          "s3:*",
-          "ec2:DeleteNetworkInterface",
-          "datasync:*"
+          "datasync:CreateLocationEfs",
+          "datasync:CreateTask"
         ],
-        Resource = "*"
+        Resource = [aws_efs_file_system.cdisc_report_fs.arn,data.aws_s3_bucket.thesaurus_bucket.arn]
+      },
+      {
+        "Action": [
+          "s3:GetBucketLocation",
+          "s3:ListBucket",
+          "s3:ListBucketMultipartUploads"
+        ],
+        "Effect": "Allow",
+        "Resource": data.aws_s3_bucket.thesaurus_bucket.arn
+      },
+      {
+        "Action": [
+          "s3:AbortMultipartUpload",
+          "s3:DeleteObject",
+          "s3:GetObject",
+          "s3:ListMultipartUploadParts",
+          "s3:GetObjectTagging",
+          "s3:PutObjectTagging",
+          "s3:PutObject"
+        ],
+        "Effect": "Allow",
+        "Resource": "${data.aws_s3_bucket.thesaurus_bucket.arn}/*"
+      },
+      {
+        Effect = "Allow"
+        Action = [
+          "elasticfilesystem:ClientMount",
+          "elasticfilesystem:ClientWrite"
+        ],
+        Resource = [
+          aws_efs_file_system.cdisc_report_fs.arn
+        ]
       }
     ]
   })
 }
 
 resource "aws_datasync_location_s3" "s3_ds_location" {
-  s3_bucket_arn = data.aws_s3_bucket.thesaurus-bucket.arn
+  s3_bucket_arn = data.aws_s3_bucket.thesaurus_bucket.arn
   subdirectory  = "/NCI/Thesaurus"
 
   s3_config {

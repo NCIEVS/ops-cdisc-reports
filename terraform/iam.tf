@@ -11,22 +11,18 @@ resource "aws_iam_policy" "cdisc_report_policy" {
           "lambda:InvokeFunction"
         ],
         Resource = [
-          "arn:aws:secretsmanager:*:340229005005:secret:*",
-          "arn:aws:lambda:us-west-2:340229005005:function:*"
+          data.aws_secretsmanager_secret.google_secret.arn,
         ]
       },
       {
-        Effect = "Allow",
+        Effect = "Allow"
         Action = [
-          "ec2:CreateNetworkInterface",
-          "elasticfilesystem:*",
-          "iam:PassRole",
-          "ec2:DescribeNetworkInterfaces",
-          "s3:*",
-          "ec2:DeleteNetworkInterface",
-          "datasync:*"
+          "elasticfilesystem:ClientMount",
+          "elasticfilesystem:ClientWrite"
         ],
-        Resource = "*"
+        Resource = [
+          aws_efs_file_system.cdisc_report_fs.arn,
+        ]
       }
     ]
   })
@@ -57,7 +53,7 @@ resource "aws_iam_role_policy" "step_function_policy" {
       {
         Effect   = "Allow",
         Action   = "lambda:InvokeFunction",
-        Resource = "arn:aws:lambda:us-west-2:340229005005:function:cdisc*"
+        Resource = "arn:aws:lambda:${var.aws_region}:${local.account_id}:function:cdisc*"
       }
     ]
   })
