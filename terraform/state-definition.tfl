@@ -44,7 +44,7 @@
               "OutputPath": "$.Payload",
               "Parameters": {
                 "Payload.$": "$",
-                "FunctionName": "arn:aws:lambda:us-west-2:340229005005:function:text-excel-report-generator:$LATEST"
+                "FunctionName": "${text_excel_report_generator_arn}"
               },
               "Retry": [
                 {
@@ -66,7 +66,7 @@
               "OutputPath": "$.Payload",
               "Parameters": {
                 "Payload.$": "$",
-                "FunctionName": "arn:aws:lambda:us-west-2:340229005005:function:excel-formatter:$LATEST"
+                "FunctionName": "${excel_report_formatter_arn}"
               },
               "Retry": [
                 {
@@ -110,7 +110,7 @@
                       "OutputPath": "$.Payload",
                       "Parameters": {
                         "Payload.$": "$",
-                        "FunctionName": "arn:aws:lambda:us-west-2:340229005005:function:changes-report:$LATEST"
+                        "FunctionName": "${changes_report_generator_arn}"
                       },
                       "Retry": [
                         {
@@ -152,7 +152,7 @@
                       "OutputPath": "$.Payload",
                       "Parameters": {
                         "Payload.$": "$",
-                        "FunctionName": "arn:aws:lambda:us-west-2:340229005005:function:odm-xml-report:$LATEST"
+                        "FunctionName": "${odm_xml_report_generator_arn}"
                       },
                       "Retry": [
                         {
@@ -196,7 +196,7 @@
                               "OutputPath": "$.Payload",
                               "Parameters": {
                                 "Payload.$": "$",
-                                "FunctionName": "arn:aws:lambda:us-west-2:340229005005:function:html-report:$LATEST"
+                                "FunctionName": "${html_report_generator_arn}"
                               },
                               "Retry": [
                                 {
@@ -234,7 +234,7 @@
                               "OutputPath": "$.Payload",
                               "Parameters": {
                                 "Payload.$": "$",
-                                "FunctionName": "arn:aws:lambda:us-west-2:340229005005:function:html-report:$LATEST"
+                                "FunctionName": "${html_report_generator_arn}"
                               },
                               "Retry": [
                                 {
@@ -256,7 +256,7 @@
                               "OutputPath": "$.Payload",
                               "Parameters": {
                                 "Payload.$": "$",
-                                "FunctionName": "arn:aws:lambda:us-west-2:340229005005:function:pdf-report:$LATEST"
+                                "FunctionName": "${pdf_report_generator_arn}"
                               },
                               "Retry": [
                                 {
@@ -302,7 +302,7 @@
                               "OutputPath": "$.Payload",
                               "Parameters": {
                                 "Payload.$": "$",
-                                "FunctionName": "arn:aws:lambda:us-west-2:340229005005:function:owl-report:$LATEST"
+                                "FunctionName": "${owl_report_generator_arn}"
                               },
                               "Retry": [
                                 {
@@ -352,7 +352,7 @@
               "OutputPath": "$.Payload",
               "Parameters": {
                 "Payload.$": "$.pairingReportRequest",
-                "FunctionName": "arn:aws:lambda:us-west-2:340229005005:function:pairing-report-generator:$LATEST"
+                "FunctionName": "${pairing_report_generator_arn}"
               },
               "Retry": [
                 {
@@ -378,8 +378,8 @@
       "Resource": "arn:aws:states:::lambda:invoke",
       "OutputPath": "$.Payload",
       "Parameters": {
-        "Payload.$": "$",
-        "FunctionName": "arn:aws:lambda:us-west-2:340229005005:function:upload-reports:$LATEST"
+        "Payload.$": "$[0][0]",
+        "FunctionName": "${upload_report_arn}"
       },
       "Retry": [
         {
