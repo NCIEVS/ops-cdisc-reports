@@ -24,8 +24,6 @@ public class LambdaHandler implements RequestHandler<ReportSummary, ReportSummar
   }
 
   private void validate(ReportSummary request) {
-    AssertUtils.assertRequired(request.getReportDetails(), "reportDetails");
-    AssertUtils.assertRequired(request.getPublicationDate(), "publicationDate");
     AssertUtils.assertRequired(request.getDeliveryEmailAddresses(), "deliveryEmailAddresses");
   }
 }

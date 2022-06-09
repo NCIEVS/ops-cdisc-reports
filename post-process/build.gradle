@@ -1,0 +1,15 @@
+plugins {
+    id 'parent'
+}
+
+version '1.0'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    implementation project(':common')
+    testImplementation project(":common").sourceSets.test.output
+}

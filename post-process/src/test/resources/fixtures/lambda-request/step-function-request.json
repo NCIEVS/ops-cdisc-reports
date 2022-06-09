@@ -1,0 +1,190 @@
+[
+  [
+    {
+      "reportDetails": [
+        {
+          "code": "C81222",
+          "label": "CDISC ADaM Terminology",
+          "reports": {
+            "MAIN_EXCEL": "/mnt/cdisc/work/current/ADaM/ADaM Terminology.xls",
+            "MAIN_TEXT": "/mnt/cdisc/work/current/ADaM/ADaM Terminology.txt",
+            "CHANGES_TEXT": "/mnt/cdisc/work/current/ADaM/ADaM Changes.txt"
+          }
+        },
+        {
+          "code": "C66830",
+          "label": "CDISC SDTM Terminology",
+          "reports": {
+            "MAIN_EXCEL": "/mnt/cdisc/work/current/SDTM/SDTM Terminology.xls",
+            "MAIN_TEXT": "/mnt/cdisc/work/current/SDTM/SDTM Terminology.txt",
+            "CHANGES_TEXT": "/mnt/cdisc/work/current/SDTM/SDTM Changes.txt"
+          }
+        },
+        {
+          "code": "C77526",
+          "label": "CDISC SEND Terminology",
+          "reports": {
+            "MAIN_EXCEL": "/mnt/cdisc/work/current/SEND/SEND Terminology.xls",
+            "MAIN_TEXT": "/mnt/cdisc/work/current/SEND/SEND Terminology.txt",
+            "CHANGES_TEXT": "/mnt/cdisc/work/current/SEND/SEND Changes.txt"
+          }
+        }
+      ],
+      "publicationDate": "04-25-2022",
+      "deliveryEmailAddresses": [
+        "test@test.com"
+      ]
+    },
+    [
+      {
+        "reportDetails": [
+          {
+            "code": "C81222",
+            "label": "CDISC ADaM Terminology",
+            "reports": {
+              "MAIN_EXCEL": "/mnt/cdisc/work/current/ADaM/ADaM Terminology.xls",
+              "MAIN_TEXT": "/mnt/cdisc/work/current/ADaM/ADaM Terminology.txt",
+              "ODM_XML": "/mnt/cdisc/work/current/ADaM/ADaM Terminology.odm.xml",
+              "MAIN_HTML": "/mnt/cdisc/work/current/ADaM/ADaM Terminology.html",
+              "PDF_HTML": "/mnt/cdisc/work/current/ADaM/ADaM Terminology-pdf.html"
+            }
+          },
+          {
+            "code": "C66830",
+            "label": "CDISC SDTM Terminology",
+            "reports": {
+              "MAIN_EXCEL": "/mnt/cdisc/work/current/SDTM/SDTM Terminology.xls",
+              "MAIN_TEXT": "/mnt/cdisc/work/current/SDTM/SDTM Terminology.txt",
+              "ODM_XML": "/mnt/cdisc/work/current/SDTM/SDTM Terminology.odm.xml",
+              "MAIN_HTML": "/mnt/cdisc/work/current/SDTM/SDTM Terminology.html",
+              "PDF_HTML": "/mnt/cdisc/work/current/SDTM/SDTM Terminology-pdf.html"
+            }
+          },
+          {
+            "code": "C77526",
+            "label": "CDISC SEND Terminology",
+            "reports": {
+              "MAIN_EXCEL": "/mnt/cdisc/work/current/SEND/SEND Terminology.xls",
+              "MAIN_TEXT": "/mnt/cdisc/work/current/SEND/SEND Terminology.txt",
+              "ODM_XML": "/mnt/cdisc/work/current/SEND/SEND Terminology.odm.xml",
+              "MAIN_HTML": "/mnt/cdisc/work/current/SEND/SEND Terminology.html",
+              "PDF_HTML": "/mnt/cdisc/work/current/SEND/SEND Terminology-pdf.html"
+            }
+          }
+        ],
+        "publicationDate": "04-25-2022",
+        "deliveryEmailAddresses": [
+          "test@test.com"
+        ]
+      },
+      {
+        "reportDetails": [
+          {
+            "code": "C81222",
+            "label": "CDISC ADaM Terminology",
+            "reports": {
+              "MAIN_EXCEL": "/mnt/cdisc/work/current/ADaM/ADaM Terminology.xls",
+              "MAIN_TEXT": "/mnt/cdisc/work/current/ADaM/ADaM Terminology.txt",
+              "ODM_XML": "/mnt/cdisc/work/current/ADaM/ADaM Terminology.odm.xml",
+              "MAIN_HTML": "/mnt/cdisc/work/current/ADaM/ADaM Terminology.html",
+              "PDF_HTML": "/mnt/cdisc/work/current/ADaM/ADaM Terminology-pdf.html",
+              "MAIN_PDF": "/mnt/cdisc/work/current/ADaM/ADaM Terminology.pdf"
+            }
+          },
+          {
+            "code": "C66830",
+            "label": "CDISC SDTM Terminology",
+            "reports": {
+              "MAIN_EXCEL": "/mnt/cdisc/work/current/SDTM/SDTM Terminology.xls",
+              "MAIN_TEXT": "/mnt/cdisc/work/current/SDTM/SDTM Terminology.txt",
+              "ODM_XML": "/mnt/cdisc/work/current/SDTM/SDTM Terminology.odm.xml",
+              "MAIN_HTML": "/mnt/cdisc/work/current/SDTM/SDTM Terminology.html",
+              "PDF_HTML": "/mnt/cdisc/work/current/SDTM/SDTM Terminology-pdf.html",
+              "MAIN_PDF": "/mnt/cdisc/work/current/SDTM/SDTM Terminology.pdf"
+            }
+          },
+          {
+            "code": "C77526",
+            "label": "CDISC SEND Terminology",
+            "reports": {
+              "MAIN_EXCEL": "/mnt/cdisc/work/current/SEND/SEND Terminology.xls",
+              "MAIN_TEXT": "/mnt/cdisc/work/current/SEND/SEND Terminology.txt",
+              "ODM_XML": "/mnt/cdisc/work/current/SEND/SEND Terminology.odm.xml",
+              "MAIN_HTML": "/mnt/cdisc/work/current/SEND/SEND Terminology.html",
+              "PDF_HTML": "/mnt/cdisc/work/current/SEND/SEND Terminology-pdf.html",
+              "MAIN_PDF": "/mnt/cdisc/work/current/SEND/SEND Terminology.pdf"
+            }
+          }
+        ],
+        "publicationDate": "04-25-2022",
+        "deliveryEmailAddresses": [
+          "test@test.com"
+        ]
+      },
+      {
+        "reportDetails": [
+          {
+            "code": "C81222",
+            "label": "CDISC ADaM Terminology",
+            "reports": {
+              "MAIN_EXCEL": "/mnt/cdisc/work/current/ADaM/ADaM Terminology.xls",
+              "MAIN_TEXT": "/mnt/cdisc/work/current/ADaM/ADaM Terminology.txt",
+              "ODM_XML": "/mnt/cdisc/work/current/ADaM/ADaM Terminology.odm.xml",
+              "MAIN_OWL": "/mnt/cdisc/work/current/ADaM/ADaM Terminology.owl"
+            }
+          },
+          {
+            "code": "C66830",
+            "label": "CDISC SDTM Terminology",
+            "reports": {
+              "MAIN_EXCEL": "/mnt/cdisc/work/current/SDTM/SDTM Terminology.xls",
+              "MAIN_TEXT": "/mnt/cdisc/work/current/SDTM/SDTM Terminology.txt",
+              "ODM_XML": "/mnt/cdisc/work/current/SDTM/SDTM Terminology.odm.xml",
+              "MAIN_OWL": "/mnt/cdisc/work/current/SDTM/SDTM Terminology.owl"
+            }
+          },
+          {
+            "code": "C77526",
+            "label": "CDISC SEND Terminology",
+            "reports": {
+              "MAIN_EXCEL": "/mnt/cdisc/work/current/SEND/SEND Terminology.xls",
+              "MAIN_TEXT": "/mnt/cdisc/work/current/SEND/SEND Terminology.txt",
+              "ODM_XML": "/mnt/cdisc/work/current/SEND/SEND Terminology.odm.xml",
+              "MAIN_OWL": "/mnt/cdisc/work/current/SEND/SEND Terminology.owl"
+            }
+          }
+        ],
+        "publicationDate": "04-25-2022",
+        "deliveryEmailAddresses": [
+          "test@test.com"
+        ]
+      }
+    ]
+  ],
+  {
+    "reportDetails": [
+      {
+        "code": "C81222",
+        "label": "ADaM",
+        "reports": {
+          "PAIRING_EXCEL": "/mnt/cdisc/work/current/ADaM/ADaM_paired_view_04_25_2022.xlsx"
+        }
+      },
+      {
+        "code": "C66830",
+        "label": "SDTM",
+        "reports": {
+          "PAIRING_EXCEL": "/mnt/cdisc/work/current/SDTM/SDTM_paired_view_04_25_2022.xlsx"
+        }
+      },
+      {
+        "code": "C77526",
+        "label": "SEND",
+        "reports": {
+          "PAIRING_EXCEL": "/mnt/cdisc/work/current/SEND/SEND_paired_view_04_25_2022.xlsx"
+        }
+      }
+    ],
+    "publicationDate": "04-25-2022"
+  }
+]

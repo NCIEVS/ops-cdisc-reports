@@ -4,30 +4,39 @@ import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 import gov.nih.nci.evs.cdisc.report.CDISCPairing;
 import gov.nih.nci.evs.cdisc.report.model.ReportDetail;
+import gov.nih.nci.evs.cdisc.report.model.ReportSummary;
 import gov.nih.nci.evs.cdisc.report.model.ThesaurusRequest;
 import gov.nih.nci.evs.cdisc.report.utils.AssertUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 import static gov.nih.nci.evs.cdisc.report.utils.ReportUtils.getBaseOutputDirectory;
 
-public class LambdaHandler implements RequestHandler<ThesaurusRequest, String> {
+public class LambdaHandler implements RequestHandler<ThesaurusRequest, ReportSummary> {
   Logger log = LoggerFactory.getLogger(LambdaHandler.class);
 
   @Override
-  public String handleRequest(ThesaurusRequest input, Context context) {
+  public ReportSummary handleRequest(ThesaurusRequest input, Context context) {
     validate(input);
+    List<ReportDetail> details = new ArrayList<>();
     for (String code : input.getConceptCodes()) {
-      ReportDetail reportResponseList =
+      ReportDetail reportDetail =
           new CDISCPairing(
                   new File(input.getThesaurusOwlFile()),
                   getBaseOutputDirectory(),
                   input.getPublicationDate())
               .run(code, CDISCPairing.DATA_SOURCE_NCIT_OWL);
+      details.add(reportDetail);
     }
-    return "{'status':'success'}";
+    return ReportSummary.builder()
+            .reportDetails(details)
+            .publicationDate(input.getPublicationDate())
+            .deliveryEmailAddresses(input.getDeliveryEmailAddresses())
+            .build();
   }
 
   private void validate(ThesaurusRequest request) {
