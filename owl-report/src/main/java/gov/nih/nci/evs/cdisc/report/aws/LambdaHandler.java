@@ -32,9 +32,9 @@ public class LambdaHandler implements RequestHandler<ReportSummary, ReportSummar
 
         OwlZipFileGenerator owlZipFileGenerator =
             new OwlZipFileGenerator(ReportUtils.getStaticFilesPath());
-        String owlZipFile = owlZipFileGenerator.generateOwlZipFile(new File(owlFile));
+        File owlZipFile = owlZipFileGenerator.generateOwlZipFile(new File(owlFile));
         reportDetail.getReports().put(ReportEnum.MAIN_OWL, owlFile);
-        reportDetail.getReports().put(ReportEnum.OWL_ZIP, owlZipFile);
+        reportDetail.getReports().put(ReportEnum.OWL_ZIP, owlZipFile.getAbsolutePath());
       } else {
         throw new RuntimeException(String.format("File %s does not exist.", textFile));
       }

@@ -9,6 +9,7 @@ locals {
   html_report_generator_configuration       = local.lambda_configuration["cdisc-html-report-generator"]
   pdf_report_generator_configuration        = local.lambda_configuration["cdisc-pdf-report-generator"]
   owl_report_generator_configuration        = local.lambda_configuration["cdisc-owl-report-generator"]
+  post_process_report_configuration         = local.lambda_configuration["cdisc-post-process-report"]
   upload_report_configuration               = local.lambda_configuration["cdisc-upload-report"]
 }
 
@@ -141,6 +142,23 @@ module "owl_report_generator_lambda" {
   docker_file_path             = "./Dockerfile"
   timeout_in_seconds           = local.owl_report_generator_configuration.timeout_in_mins * 60
   memory_size_in_mb            = local.owl_report_generator_configuration.memory_in_mb
+  subnet_ids                   = [data.aws_subnet.private_subnets[0].id]
+  security_group_ids           = [data.aws_security_group.default_security_group.id]
+  file_system_access_point_arn = aws_efs_access_point.cdisc_report_fs_ap.arn
+  file_system_local_mount_path = "/mnt/cdisc"
+  policies                     = [aws_iam_policy.cdisc_report_policy.arn]
+}
+
+module "post_process_lambda" {
+  source                       = "./modules/lambda-container-image"
+  architecture                 = var.architecture
+  function_name                = "cdisc-post-process-reports"
+  description                  = "Lambda to consolidate reports outputs and package reports"
+  image_version                = local.post_process_report_configuration.version
+  source_path                  = "../post-process-reports"
+  docker_file_path             = "./Dockerfile"
+  timeout_in_seconds           = local.post_process_report_configuration.timeout_in_mins * 60
+  memory_size_in_mb            = local.post_process_report_configuration.memory_in_mb
   subnet_ids                   = [data.aws_subnet.private_subnets[0].id]
   security_group_ids           = [data.aws_security_group.default_security_group.id]
   file_system_access_point_arn = aws_efs_access_point.cdisc_report_fs_ap.arn

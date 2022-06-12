@@ -50,9 +50,10 @@ public class OwlZipFileGeneratorTest {
     Path tempOwlFilePath = outFolder.toPath().resolve(OWL_FILE.getName());
     Files.copy(OWL_FILE.toPath(), tempOwlFilePath);
 
-    String zipFile = owlZipFileGenerator.generateOwlZipFile(tempOwlFilePath.toFile());
-    Path zipFilePath = outFolder.toPath().resolve(zipFile);
-    assertThat(zipFilePath.toFile()).exists();
+    File zipFile = owlZipFileGenerator.generateOwlZipFile(tempOwlFilePath.toFile());
+    assertThat(zipFile).exists();
+
+    Path zipFilePath = outFolder.toPath().resolve(zipFile.getName());
 
     Path unzipedFilesFolder = outFolder.toPath().resolve("unzip-files");
     ReportUtils.createDirectories(unzipedFilesFolder);

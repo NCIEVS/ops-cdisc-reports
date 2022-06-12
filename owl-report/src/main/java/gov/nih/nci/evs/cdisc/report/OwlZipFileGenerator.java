@@ -18,7 +18,7 @@ public class OwlZipFileGenerator {
     this.staticFilesPath = staticFilesPath;
   }
 
-  public String generateOwlZipFile(File owlFile) {
+  public File generateOwlZipFile(File owlFile) {
     AssertUtils.assertRequired(owlFile, "owlFile");
     AssertUtils.assertFileExists(owlFile, "owlFile");
 
@@ -27,7 +27,7 @@ public class OwlZipFileGenerator {
 
     String owlZipFileName = owlFile.getAbsolutePath() + ".zip";
     ZipUtils.zipFiles(files, owlZipFileName);
-    return new File(owlZipFileName).getName();
+    return new File(owlZipFileName);
   }
 
   private Set<File> copyStaticFiles(File owlFile) {

@@ -16,6 +16,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 import static gov.nih.nci.evs.cdisc.report.utils.ReportUtils.getOutputPath;
+import static gov.nih.nci.evs.cdisc.report.utils.ReportUtils.log;
 import static org.apache.commons.io.FilenameUtils.getBaseName;
 import static org.apache.commons.io.FilenameUtils.getExtension;
 
@@ -39,6 +40,7 @@ public class PostProcessService {
   }
 
   public void archiveFiles(ReportSummary reportSummary) {
+    AssertUtils.assertRequired(reportSummary, "reportSummary");
     AssertUtils.assertRequired(reportSummary.getReportDetails(), "reportDetails");
     AssertUtils.assertRequired(reportSummary.getPublicationDate(), "publicationDate");
     String publicationDate = reportSummary.getPublicationDate();
@@ -52,6 +54,10 @@ public class PostProcessService {
   private void copyToArchive(
       ReportEnum reportEnum, Map<ReportEnum, String> reportMap, String publicationDate) {
     String reportFile = reportMap.get(reportEnum);
+    if (reportFile == null) {
+      log.info("No report found for report {}. Nothing to archive", reportEnum);
+      return;
+    }
     Path archiveFilePath = getArchiveFilePath(reportFile, publicationDate);
     try {
       Files.copy(Path.of(reportFile), archiveFilePath);
@@ -66,15 +72,19 @@ public class PostProcessService {
 
   private Path getArchiveFilePath(String reportFilePath, String publicationDate) {
     File reportFile = new File(reportFilePath);
+    Path archiveFolderPath = getOutputPath(reportFile.getParentFile().toPath(), ARCHIVE_DIRECTORY);
     String reportFileName = reportFile.getName();
-    String archiveFileName =
-        new StringBuilder(getBaseName(reportFileName))
-            .append(" ")
-            .append(publicationDate)
-            .append(FilenameUtils.EXTENSION_SEPARATOR)
-            .append(getExtension(reportFileName))
-            .toString();
-    return getOutputPath(reportFile.getParentFile().toPath(), ARCHIVE_DIRECTORY, archiveFileName);
+    String archiveFileName = getArchiveFileName(reportFileName, publicationDate);
+    return archiveFolderPath.resolve(archiveFileName);
+  }
+
+  static String getArchiveFileName(String reportFileName, String publicationDate) {
+    return new StringBuilder(getBaseName(reportFileName))
+        .append(" ")
+        .append(publicationDate)
+        .append(FilenameUtils.EXTENSION_SEPARATOR)
+        .append(getExtension(reportFileName))
+        .toString();
   }
   /**
    * Converts the raw list and maps into a list of summary objects that were created within each

@@ -19,5 +19,5 @@ include 'html-report'
 include 'pdf-report'
 include 'upload-reports'
 include 'owl-reader'
-include 'post-process'
+include 'post-process-reports'
 
