@@ -130,7 +130,8 @@
               "MAIN_EXCEL": "/mnt/cdisc/work/current/ADaM/ADaM Terminology.xls",
               "MAIN_TEXT": "/mnt/cdisc/work/current/ADaM/ADaM Terminology.txt",
               "ODM_XML": "/mnt/cdisc/work/current/ADaM/ADaM Terminology.odm.xml",
-              "MAIN_OWL": "/mnt/cdisc/work/current/ADaM/ADaM Terminology.owl"
+              "MAIN_OWL": "/mnt/cdisc/work/current/ADaM/ADaM Terminology.owl",
+              "OWL_ZIP": "/mnt/cdisc/work/current/ADaM/ADaM Terminology.owl.zip"
             }
           },
           {
@@ -140,7 +141,8 @@
               "MAIN_EXCEL": "/mnt/cdisc/work/current/SDTM/SDTM Terminology.xls",
               "MAIN_TEXT": "/mnt/cdisc/work/current/SDTM/SDTM Terminology.txt",
               "ODM_XML": "/mnt/cdisc/work/current/SDTM/SDTM Terminology.odm.xml",
-              "MAIN_OWL": "/mnt/cdisc/work/current/SDTM/SDTM Terminology.owl"
+              "MAIN_OWL": "/mnt/cdisc/work/current/SDTM/SDTM Terminology.owl",
+              "OWL_ZIP": "/mnt/cdisc/work/current/SDTM/SDTM Terminology.owl.zip"
             }
           },
           {
@@ -150,7 +152,8 @@
               "MAIN_EXCEL": "/mnt/cdisc/work/current/SEND/SEND Terminology.xls",
               "MAIN_TEXT": "/mnt/cdisc/work/current/SEND/SEND Terminology.txt",
               "ODM_XML": "/mnt/cdisc/work/current/SEND/SEND Terminology.odm.xml",
-              "MAIN_OWL": "/mnt/cdisc/work/current/SEND/SEND Terminology.owl"
+              "MAIN_OWL": "/mnt/cdisc/work/current/SEND/SEND Terminology.owl",
+              "OWL_ZIP": "/mnt/cdisc/work/current/SEND/SEND Terminology.owl.zip"
             }
           }
         ],
