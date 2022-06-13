@@ -2,6 +2,7 @@ package gov.nih.nci.evs.cdisc.report.utils;
 
 import org.apache.commons.lang3.StringUtils;
 
+import java.io.File;
 import java.util.Collection;
 import java.util.function.Predicate;
 
@@ -25,8 +26,12 @@ public class AssertUtils {
   }
 
   public static <T> void assertCondition(Predicate<T> value, T object, String fieldName) {
-    if (value.test(object)) {
+    if (!value.test(object)) {
       throw new IllegalArgumentException(String.format("%s failed precondition", fieldName));
     }
+  }
+
+  public static void assertFileExists(File file, String fieldName) {
+    assertCondition(f -> f.exists(), file, fieldName);
   }
 }

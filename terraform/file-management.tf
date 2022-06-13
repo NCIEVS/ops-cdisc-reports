@@ -63,19 +63,19 @@ resource "aws_iam_role_policy" "cdisc_report_data_sync_policy" {
           "datasync:CreateLocationEfs",
           "datasync:CreateTask"
         ],
-        Resource = [aws_efs_file_system.cdisc_report_fs.arn,data.aws_s3_bucket.thesaurus_bucket.arn]
+        Resource = [aws_efs_file_system.cdisc_report_fs.arn, data.aws_s3_bucket.thesaurus_bucket.arn]
       },
       {
-        "Action": [
+        "Action" : [
           "s3:GetBucketLocation",
           "s3:ListBucket",
           "s3:ListBucketMultipartUploads"
         ],
-        "Effect": "Allow",
-        "Resource": data.aws_s3_bucket.thesaurus_bucket.arn
+        "Effect" : "Allow",
+        "Resource" : data.aws_s3_bucket.thesaurus_bucket.arn
       },
       {
-        "Action": [
+        "Action" : [
           "s3:AbortMultipartUpload",
           "s3:DeleteObject",
           "s3:GetObject",
@@ -84,8 +84,8 @@ resource "aws_iam_role_policy" "cdisc_report_data_sync_policy" {
           "s3:PutObjectTagging",
           "s3:PutObject"
         ],
-        "Effect": "Allow",
-        "Resource": "${data.aws_s3_bucket.thesaurus_bucket.arn}/*"
+        "Effect" : "Allow",
+        "Resource" : "${data.aws_s3_bucket.thesaurus_bucket.arn}/*"
       },
       {
         Effect = "Allow"

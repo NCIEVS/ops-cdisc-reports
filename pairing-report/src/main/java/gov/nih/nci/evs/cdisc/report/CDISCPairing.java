@@ -573,6 +573,8 @@ public class CDISCPairing {
         ExcelReadWriteUtils.writeXLSXFile(excelFileName, textfiles, sheetNames, '|');
       } catch (Exception ex) {
         ex.printStackTrace();
+      } finally {
+        textfiles.stream().forEach(fileName -> new File(fileName).delete());
       }
       // ExcelFormatter.reformat(excelFileName, excelFileName);
       XLSXFormatter.reformat(excelFileName, excelFileName);

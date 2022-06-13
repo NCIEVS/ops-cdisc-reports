@@ -371,6 +371,28 @@
           }
         }
       ],
+      "Next": "Post Process Reports"
+    },
+    "Post Process Reports": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "OutputPath": "$.Payload",
+      "Parameters": {
+        "Payload.$": "$",
+        "FunctionName": "arn:aws:lambda:us-west-2:340229005005:function:cdisc-post-process-reports:$LATEST"
+      },
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "Lambda.ServiceException",
+            "Lambda.AWSLambdaException",
+            "Lambda.SdkClientException"
+          ],
+          "IntervalSeconds": 2,
+          "MaxAttempts": 6,
+          "BackoffRate": 2
+        }
+      ],
       "Next": "UploadReports"
     },
     "UploadReports": {
@@ -378,7 +400,7 @@
       "Resource": "arn:aws:states:::lambda:invoke",
       "OutputPath": "$.Payload",
       "Parameters": {
-        "Payload.$": "$[0][0]",
+        "Payload.$": "$",
         "FunctionName": "${upload_report_arn}"
       },
       "Retry": [

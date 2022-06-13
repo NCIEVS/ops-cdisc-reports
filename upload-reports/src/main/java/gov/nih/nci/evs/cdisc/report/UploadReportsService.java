@@ -18,7 +18,6 @@ public class UploadReportsService {
 
   private final GoogleDriveClient googleDriveClient;
 
-  // SecretsClient.getSecret("/nci/cdisc/gdrive");
   public UploadReportsService(GoogleDriveClient googleDriveClient) {
     this.googleDriveClient = googleDriveClient;
   }

@@ -2,11 +2,13 @@ package gov.nih.nci.evs.cdisc.report.aws;
 
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
+import gov.nih.nci.evs.cdisc.report.OwlZipFileGenerator;
 import gov.nih.nci.evs.cdisc.report.RDFGenerator;
 import gov.nih.nci.evs.cdisc.report.ReportEnum;
 import gov.nih.nci.evs.cdisc.report.model.ReportDetail;
 import gov.nih.nci.evs.cdisc.report.model.ReportSummary;
 import gov.nih.nci.evs.cdisc.report.utils.AssertUtils;
+import gov.nih.nci.evs.cdisc.report.utils.ReportUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,7 +29,12 @@ public class LambdaHandler implements RequestHandler<ReportSummary, ReportSummar
 
         RDFGenerator rdfGenerator = new RDFGenerator();
         rdfGenerator.generate(textFile, owlFile);
+
+        OwlZipFileGenerator owlZipFileGenerator =
+            new OwlZipFileGenerator(ReportUtils.getStaticFilesPath());
+        File owlZipFile = owlZipFileGenerator.generateOwlZipFile(new File(owlFile));
         reportDetail.getReports().put(ReportEnum.MAIN_OWL, owlFile);
+        reportDetail.getReports().put(ReportEnum.OWL_ZIP, owlZipFile.getAbsolutePath());
       } else {
         throw new RuntimeException(String.format("File %s does not exist.", textFile));
       }

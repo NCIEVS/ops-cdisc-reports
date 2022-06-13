@@ -47,4 +47,12 @@ public class ReportUtils {
     AssertUtils.assertRequired(codeLabel, "codeLabel");
     return codeLabel.replace("CDISC", "").replace("Terminology", "").trim();
   }
+
+  public static Path getConceptOutputPath(String label) {
+    return getBaseOutputDirectory().resolve(getShortCodeLabel(label));
+  }
+
+  public static Path getStaticFilesPath() {
+    return Path.of("/mnt", "cdisc", "work", "static-files");
+  }
 }
