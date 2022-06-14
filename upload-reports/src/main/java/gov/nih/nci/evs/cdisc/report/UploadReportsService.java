@@ -63,4 +63,7 @@ public class UploadReportsService {
       }
     }
   }
+  public void deleteOldReports(Integer deleteOldReportsThresholdDays){
+    googleDriveClient.deleteOldFolders(deleteOldReportsThresholdDays);
+  }
 }
