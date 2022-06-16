@@ -61,11 +61,15 @@ module "lambda_container_image" {
   policies                     = local.policies
 }
 
-resource "docker_registry_image" "this" {
+resource "docker_image" "this" {
   name = format("%s:%s", data.aws_ecr_repository.ecr_repo.repository_url, local.image_tag)
   build {
-    context    = var.source_path
+    path    = var.source_path
     dockerfile = var.docker_file_path
   }
-  keep_remotely = true
+}
+
+resource "docker_registry_image" "this" {
+  name = docker_image.this.name
+  depends_on = [docker_image.this]
 }

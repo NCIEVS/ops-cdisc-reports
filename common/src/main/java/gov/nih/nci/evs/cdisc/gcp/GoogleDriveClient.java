@@ -23,8 +23,12 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.security.GeneralSecurityException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static gov.nih.nci.evs.cdisc.report.utils.AssertUtils.assertRequired;
 
@@ -85,14 +89,15 @@ public class GoogleDriveClient {
     } catch (IOException e) {
       mediaContent = new FileContent("application/octet-stream", file);
     }
-    return
-        drive.files().create(fileMetadata, mediaContent).setFields("id, parents").execute();
+    return drive.files().create(fileMetadata, mediaContent).setFields("id, parents").execute();
   }
 
   /**
    * Creates a folder in Google Drive
+   *
    * @param folderName required. Name of the folder to create
-   * @param parentFolderId The parent folder Id under which this folder will be created. If null, the folder will be created as a top level folder
+   * @param parentFolderId The parent folder Id under which this folder will be created. If null,
+   *     the folder will be created as a top level folder
    * @param fields Comma separated fields that need to be returned in the response
    * @return metadata of the folder that was created
    */
@@ -120,5 +125,43 @@ public class GoogleDriveClient {
               new Permission().setEmailAddress(emailAddress).setType("user").setRole("writer"))
           .execute();
     }
+  }
+
+  @SneakyThrows
+  public void deleteOldFolders(int thresholdInDays) {
+    FileList result =
+        drive
+            .files()
+            .list()
+            .setQ("mimeType='application/vnd.google-apps.folder'")
+            .setSpaces("drive")
+            .setFields("files(id, name)")
+            .execute();
+
+    List<File> oldReportFolders =
+        result.getFiles().stream()
+            .filter(folder -> filterFolderByDate(folder, thresholdInDays))
+            .collect(Collectors.toList());
+    log.info("Deleting {} directories", oldReportFolders.size());
+    for (File oldReportFolder : oldReportFolders) {
+      log.info("Deleting {}", oldReportFolder.getName());
+      drive.files().delete(oldReportFolder.getId()).execute();
+    }
+  }
+
+  private boolean filterFolderByDate(File folder, int thresholdInDays) {
+    LocalDate now = LocalDate.now();
+    DateTimeFormatter folderPattern = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+
+    if (folder.getName().length() > 11) {
+      try {
+        return LocalDate.parse(folder.getName().substring(0, 10), folderPattern)
+            .isBefore(now.minusDays(thresholdInDays));
+      } catch (DateTimeParseException dtpe) {
+        // Ignore any parse exceptions. Those are non-report folders
+        log.debug("Not a report folder. Folder Name:{}", folder.getName());
+      }
+    }
+    return false;
   }
 }

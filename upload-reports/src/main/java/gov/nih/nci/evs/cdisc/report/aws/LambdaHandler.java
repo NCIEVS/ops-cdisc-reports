@@ -15,12 +15,17 @@ public class LambdaHandler implements RequestHandler<ReportSummary, ReportSummar
 
   @Override
   public ReportSummary handleRequest(ReportSummary input, Context context) {
-    validate(input);
     GoogleDriveClient googleDriveClient =
         new GoogleDriveClient(SecretsClient.getSecret("/nci/cdisc/gdrive"));
     UploadReportsService service = new UploadReportsService(googleDriveClient);
-    service.uploadReportsFolder(input.getDeliveryEmailAddresses());
-    return input;
+    if (input.getDeleteOldReportsThresholdDays() == null) {
+      validate(input);
+      service.uploadReportsFolder(input.getDeliveryEmailAddresses());
+      return input;
+    } else {
+      service.deleteOldReports(input.getDeleteOldReportsThresholdDays());
+      return input;
+    }
   }
 
   private void validate(ReportSummary request) {
