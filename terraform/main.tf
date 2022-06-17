@@ -203,3 +203,32 @@ resource "aws_sfn_state_machine" "step_function_state_machine" {
   name       = "cdisc-report-state-machine"
   role_arn   = aws_iam_role.step_function_role.arn
 }
+
+data "aws_ecr_authorization_token" "token" {
+
+}
+
+provider "docker" {
+  registry_auth {
+    address  = split("/", data.aws_ecr_repository.main_ecr_repo.repository_url)[0]
+    username = data.aws_ecr_authorization_token.token.user_name
+    password = data.aws_ecr_authorization_token.token.password
+  }
+}
+
+data "aws_ecr_repository" "main_ecr_repo" {
+  name = "cdisc-report-generators"
+}
+
+resource "docker_image" "this" {
+  name = format("%s:%s", data.aws_ecr_repository.main_ecr_repo.repository_url, "test-image")
+  build {
+    path                  = "../upload-reports"
+    dockerfile             = "./Dockerfile"
+  }
+}
+
+resource "docker_registry_image" "this" {
+  name = docker_image.this.name
+  depends_on = [docker_image.this]
+}
