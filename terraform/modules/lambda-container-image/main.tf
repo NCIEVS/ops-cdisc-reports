@@ -22,10 +22,6 @@ data "aws_ecr_repository" "ecr_repo" {
   name = "cdisc-report-generators"
 }
 
-data "aws_ecr_authorization_token" "token" {
-
-}
-
 locals {
   image_tag = format("%s-%s", var.function_name, var.image_version)
   policies  = concat(var.policies, ["arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"])
