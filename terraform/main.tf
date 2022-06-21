@@ -219,16 +219,3 @@ provider "docker" {
 data "aws_ecr_repository" "main_ecr_repo" {
   name = "cdisc-report-generators"
 }
-
-resource "docker_image" "this" {
-  name = format("%s:%s", data.aws_ecr_repository.main_ecr_repo.repository_url, "test-image")
-  build {
-    path                  = "../upload-reports"
-    dockerfile             = "./Dockerfile"
-  }
-}
-
-resource "docker_registry_image" "this" {
-  name = docker_image.this.name
-  depends_on = [docker_image.this]
-}
