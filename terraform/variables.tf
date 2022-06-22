@@ -35,7 +35,7 @@ variable "architecture" {
 }
 
 variable "lambda_configuration" {
-  type = map(object({ version = string, memory_in_mb = optional(number), timeout_in_mins = optional(number) }))
+  type = map(object({ memory_in_mb = optional(number), timeout_in_mins = optional(number) }))
 }
 
 variable "file_system_local_mount_path" {
