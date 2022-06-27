@@ -12,6 +12,7 @@ import org.apache.commons.io.FilenameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.File;
 import java.nio.file.Path;
 
 import static gov.nih.nci.evs.cdisc.report.utils.ReportUtils.getBaseOutputDirectory;
@@ -30,6 +31,10 @@ public class LambdaHandler implements RequestHandler<ReportSummary, ReportSummar
       String previousReportFileName = getPreviousReportFileName(absoluteReportFileName);
       String changesReportFileName = getReportFileName(shortCodeLabel, getBaseOutputDirectory());
 
+      if (!new File(previousReportFileName).exists()) {
+        log.info("No previous report found for {}. Skipping changes report.", shortCodeLabel);
+        continue;
+      }
       log.info("Initializing diff report. code:{}", shortCodeLabel);
       report.init(
           absoluteReportFileName,
