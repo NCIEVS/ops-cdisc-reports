@@ -2,12 +2,45 @@ plugins {
     id 'parent'
 }
 
+group 'gov.nih.nci.evs.cdisc'
 version '0.23.0'
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            artifactId 'text-excel-reports'
+            artifact("build/libs/$project.name-$version" + ".jar") {
+                extension 'jar'
+            }
+        }
+
+    }
+    repositories {
+        maven {
+            name 'nexus'
+            url 'https://ncimvn.nci.nih.gov/nexus/content/repositories/EVSReleases'
+            credentials {
+                username nexusUsername
+                password nexusPassword
+            }
+        }
+        maven {
+            name 'nexus-snapshots'
+            url 'https://ncimvn.nci.nih.gov/nexus/content/repositories/EVSSnapshots'
+            credentials {
+                username nexusUsername
+                password nexusPassword
+            }
+        }
+    }
+}
+
 
 dependencies {
     implementation 'gov.nih.nci.evs.reportwriter.core:reportwriter-core:1.0.9-SNAPSHOT'
     implementation 'com.amazonaws:aws-lambda-java-core:1.2.1'
     implementation 'com.amazonaws:aws-lambda-java-runtime-interface-client:1.0.0'
+    runtimeOnly 'org.apache.logging.log4j:log4j-1.2-api:2.17.2'
     implementation project(':common')
 
     testImplementation project(":common").sourceSets.test.output
