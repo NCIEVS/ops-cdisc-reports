@@ -1,5 +1,6 @@
 plugins {
     id 'parent'
+    id 'org.springframework.boot' version '2.7.1'
 }
 
 version '0.4.0'
@@ -18,6 +19,10 @@ dependencies {
     testImplementation 'org.xmlunit:xmlunit-matchers:2.9.0'
     testRuntimeOnly "jakarta.xml.bind:jakarta.xml.bind-api:2.3.2"
     testRuntimeOnly "org.glassfish.jaxb:jaxb-runtime:2.3.2"
+}
+
+springBoot {
+    mainClass = 'gov.nih.nci.evs.cdisc.report.RDFGenerator'
 }
 
 test {

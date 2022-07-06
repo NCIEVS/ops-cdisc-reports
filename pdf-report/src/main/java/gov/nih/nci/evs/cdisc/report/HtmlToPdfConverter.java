@@ -11,19 +11,34 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 public class HtmlToPdfConverter {
-    public static void convert(String htmlSource, String pdfDest) throws IOException {
-        PdfWriter writer = new PdfWriter(pdfDest);
-        PdfDocument pdfDocument = new PdfDocument(writer);
-        FooterEventHandler footerHandler = new FooterEventHandler();
+  public static void convert(String htmlSource, String pdfDest) throws IOException {
+    PdfWriter writer = new PdfWriter(pdfDest);
+    PdfDocument pdfDocument = new PdfDocument(writer);
+    FooterEventHandler footerHandler = new FooterEventHandler();
 
-        pdfDocument.addEventHandler(PdfDocumentEvent.END_PAGE, footerHandler);
+    pdfDocument.addEventHandler(PdfDocumentEvent.END_PAGE, footerHandler);
 
-        // Base URI is required to resolve the path to source files
-        ConverterProperties converterProperties = new ConverterProperties().setBaseUri(FilenameUtils.getPath(htmlSource));
-        HtmlConverter.convertToDocument(new FileInputStream(htmlSource), pdfDocument, converterProperties);
+    // Base URI is required to resolve the path to source files
+    ConverterProperties converterProperties =
+        new ConverterProperties().setBaseUri(FilenameUtils.getPath(htmlSource));
+    HtmlConverter.convertToDocument(
+        new FileInputStream(htmlSource), pdfDocument, converterProperties);
 
-        // Write the total number of pages to the placeholder
-        footerHandler.writeTotal(pdfDocument);
-        pdfDocument.close();
+    // Write the total number of pages to the placeholder
+    footerHandler.writeTotal(pdfDocument);
+    pdfDocument.close();
+  }
+
+  public static void main(String[] args) throws IOException {
+    if (args.length >= 1) {
+      String htmlSource = args[0];
+      String pdfTarget = htmlSource.replace("-pdf.html", ".pdf");
+      if (args.length == 2) {
+        pdfTarget = args[1];
+      }
+      HtmlToPdfConverter.convert(htmlSource, pdfTarget);
+    } else {
+      System.out.println("Expecting path to pdf-html file");
     }
+  }
 }

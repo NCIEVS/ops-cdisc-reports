@@ -1,5 +1,6 @@
 plugins {
     id 'parent'
+    id 'org.springframework.boot' version '2.7.1'
 }
 
 version '0.10.0'
@@ -15,4 +16,8 @@ dependencies {
     implementation 'com.itextpdf.tool:xmlworker:5.4.1'
     implementation 'com.itextpdf:html2pdf:4.0.2'
     testImplementation project(":common").sourceSets.test.output
+}
+
+springBoot {
+    mainClass = 'gov.nih.nci.evs.cdisc.report.HtmlToPdfConverter'
 }
