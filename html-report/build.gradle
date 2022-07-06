@@ -1,5 +1,6 @@
 plugins {
     id 'parent'
+    id 'org.springframework.boot' version '2.7.1'
 }
 
 version '0.3.0'
@@ -12,4 +13,8 @@ repositories {
 dependencies {
     implementation project(':common')
     testImplementation project(":common").sourceSets.test.output
+}
+
+springBoot {
+    mainClass = 'gov.nih.nci.evs.cdisc.report.HtmlReportGenerator'
 }

@@ -14,7 +14,6 @@ version '1.0'
 
 repositories {
     mavenCentral()
-    mavenLocal()
     maven {
         name 'nexus'
         url 'https://ncimvn.nci.nih.gov/nexus/content/repositories/EVSReleases'
@@ -47,8 +46,6 @@ dependencies {
     api 'commons-io:commons-io:2.11.0'
     api 'com.amazonaws:aws-lambda-java-core:1.2.1'
     api 'com.amazonaws:aws-lambda-java-runtime-interface-client:1.0.0'
-
-
 
     testCompileOnly 'org.projectlombok:lombok:1.18.24'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
