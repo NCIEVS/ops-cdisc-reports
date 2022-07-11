@@ -12,7 +12,6 @@ import com.google.api.services.drive.model.File;
 import com.google.api.services.drive.model.FileList;
 import com.google.api.services.drive.model.Permission;
 import com.google.common.collect.Lists;
-import gov.nih.nci.evs.cdisc.report.utils.AssertUtils;
 import lombok.SneakyThrows;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -32,6 +31,7 @@ import java.util.stream.Collectors;
 
 import static gov.nih.nci.evs.cdisc.report.utils.AssertUtils.assertRequired;
 
+/** Client that facilitates calls to Google Drive */
 public class GoogleDriveClient {
   private static final Logger log = LoggerFactory.getLogger(GoogleDriveClient.class);
   private static final String APPLICATION_NAME = "Google Drive API Java Quickstart";
@@ -62,7 +62,15 @@ public class GoogleDriveClient {
     }
   }
 
+  /**
+   * Get Google Drive Folder
+   *
+   * @param folderName required, name of the folder
+   * @return folder if found else null
+   * @throws IOException
+   */
   public File getFolder(String folderName) throws IOException {
+    assertRequired(folderName, "folderName");
     FileList result =
         drive
             .files()
@@ -76,8 +84,17 @@ public class GoogleDriveClient {
     return result.getFiles().isEmpty() ? null : result.getFiles().get(0);
   }
 
+  /**
+   * Upload a file to Google drive
+   *
+   * @param file required, file to upload
+   * @param parentFolderId optional, Google Drive folder id of the folder which would contain the
+   *     file
+   * @return uploaded Google file
+   * @throws IOException
+   */
   public File uploadFile(java.io.File file, String parentFolderId) throws IOException {
-    AssertUtils.assertRequired(file, "file");
+    assertRequired(file, "file");
     File fileMetadata = new File();
     fileMetadata.setName(file.getName());
     if (StringUtils.isNotBlank(parentFolderId)) {
@@ -113,6 +130,13 @@ public class GoogleDriveClient {
     return drive.files().create(folderMetadata).setFields(fields).execute();
   }
 
+  /**
+   * Grants a set of email address write permissions to a Google Drive folder
+   *
+   * @param targetFolder required, Google Drive folder to which write permissions need to be granted
+   * @param emailAddresses required, list of email addresses to which write permissions need to be
+   *     granted
+   */
   @SneakyThrows
   public void grantWritePermissions(File targetFolder, List<String> emailAddresses) {
     assertRequired(targetFolder, "targetFolder");
@@ -127,6 +151,12 @@ public class GoogleDriveClient {
     }
   }
 
+  /**
+   * The folders created to host the reports are not useful after the files have been transferred to
+   * the CDISC SFTP site. This method deletes these old folders.
+   *
+   * @param thresholdInDays Retain folders new that this. May want to keep the most recent folder
+   */
   @SneakyThrows
   public void deleteOldFolders(int thresholdInDays) {
     FileList result =

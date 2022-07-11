@@ -14,6 +14,15 @@ import org.slf4j.LoggerFactory;
 public class LambdaHandler implements RequestHandler<ReportSummary, ReportSummary> {
   Logger log = LoggerFactory.getLogger(LambdaHandler.class);
 
+  /**
+   * Formats Excel report created by text-excel-report. The sheet name gets added in this step among
+   * with some other formatting
+   *
+   * @param input containing path to Excel report created by text-excel-report
+   * @param context lambda context
+   * @return nothing really gets added to the report list as we are not really creating a report in
+   *     this step. So the input is just passed along
+   */
   @Override
   public ReportSummary handleRequest(ReportSummary input, Context context) {
     validate(input);

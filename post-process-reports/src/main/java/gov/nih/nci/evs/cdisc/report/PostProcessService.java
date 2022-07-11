@@ -39,6 +39,12 @@ public class PostProcessService {
     return mergeReportSummaries(reportSummaries);
   }
 
+  /**
+   * Some of the reports are expected to have the publication date as part of the file name and
+   * copied to the "Archive" folder
+   *
+   * @param reportSummary contains all generated files
+   */
   public void archiveFiles(ReportSummary reportSummary) {
     AssertUtils.assertRequired(reportSummary, "reportSummary");
     AssertUtils.assertRequired(reportSummary.getReportDetails(), "reportDetails");

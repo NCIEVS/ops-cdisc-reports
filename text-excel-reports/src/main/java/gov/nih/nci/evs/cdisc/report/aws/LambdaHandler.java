@@ -20,14 +20,21 @@ public class LambdaHandler implements RequestHandler<ThesaurusRequest, ReportSum
 
   private TextExcelReportGeneratorFactory factory = new TextExcelReportGeneratorFactory();
 
+  /**
+   * Creates Text and Excel files that are consumed by host of subsequent lambdas to create more
+   * reports.
+   *
+   * @param input path to Thesaurus OWL file and all the concept codes that we care about
+   * @param context lambda context
+   * @return initialize the report list with text and excel reports
+   */
   @Override
   public ReportSummary handleRequest(ThesaurusRequest input, Context context) {
     validate(input);
     List<ReportDetail> details = new ArrayList<>();
     for (String conceptCode : input.getConceptCodes()) {
       TextExcelReportGenerator textExcelReportGenerator =
-          factory.createTextExcelReportGenerator(
-              new File(input.getThesaurusOwlFile()));
+          factory.createTextExcelReportGenerator(new File(input.getThesaurusOwlFile()));
       ReportDetail reportDetail = textExcelReportGenerator.run(conceptCode);
       details.add(reportDetail);
     }

@@ -16,6 +16,13 @@ import java.io.IOException;
 public class LambdaHandler implements RequestHandler<ReportSummary, ReportSummary> {
   Logger log = LoggerFactory.getLogger(LambdaHandler.class);
 
+  /**
+   * Generates PDF report from an HTML file generated specifically for PDF generation by html-report
+   *
+   * @param input path to HTML file generated to create PDF
+   * @param context lambda context
+   * @return augmented report list with the PDF reports
+   */
   @Override
   public ReportSummary handleRequest(ReportSummary input, Context context) {
     log.info("Starting PDF report generation");

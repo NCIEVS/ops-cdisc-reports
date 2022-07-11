@@ -7,6 +7,11 @@ import software.amazon.awssdk.services.secretsmanager.model.GetSecretValueRespon
 
 public class SecretsClient {
 
+  /**
+   * Gets secrets stored in AWS secrets manager
+   * @param secretName
+   * @return plain text secret
+   */
   public static String getSecret(String secretName) {
     SecretsManagerClient client =
         SecretsManagerClient.builder().region(Region.of(System.getenv("AWS_REGION"))).build();

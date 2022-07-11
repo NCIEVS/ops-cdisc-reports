@@ -11,6 +11,14 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 public class HtmlToPdfConverter {
+
+  /**
+   * Converts HTML specifically generated to create PDFs to PDF.
+   *
+   * @param htmlSource file pathof HTML file
+   * @param pdfDest output PDF destination
+   * @throws IOException
+   */
   public static void convert(String htmlSource, String pdfDest) throws IOException {
     PdfWriter writer = new PdfWriter(pdfDest);
     PdfDocument pdfDocument = new PdfDocument(writer);
