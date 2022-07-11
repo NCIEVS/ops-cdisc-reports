@@ -16,6 +16,15 @@ import static gov.nih.nci.evs.cdisc.report.HtmlReportGenerator.generateHtmlRepor
 public class LambdaHandler implements RequestHandler<ReportSummary, ReportSummary> {
   Logger log = LoggerFactory.getLogger(LambdaHandler.class);
 
+  /**
+   * Creates HTML reports from the ODM XML file created by odm-report. Uses XSLT to transform the XML
+   * to HTML. This lambda creates a standalone HTML report and an HTML report that will be converted
+   * in PDF in another process
+   *
+   * @param input contains path to ODM XML report file
+   * @param context lambda context
+   * @return augmented report list with the standalone HTML and HTML for PDF reports
+   */
   @Override
   public ReportSummary handleRequest(ReportSummary input, Context context) {
     validate(input);

@@ -8,6 +8,12 @@ import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
 
 public class ZipUtils {
+  /**
+   * Compress given files and create a zip archive file
+   *
+   * @param srcFiles list files to compress
+   * @param zipFileName output zip archive file name
+   */
   public static void zipFiles(Set<File> srcFiles, String zipFileName) {
     try {
       FileOutputStream fos = new FileOutputStream(zipFileName);
@@ -38,6 +44,12 @@ public class ZipUtils {
     }
   }
 
+  /**
+   * Decompress files from a zip archive
+   *
+   * @param zipFile zip archive file
+   * @param outputDirectory directory to which the files will get decompressed and extracted to
+   */
   public static void unzipFiles(File zipFile, Path outputDirectory) {
     ZipInputStream zis = null;
     try {
@@ -79,6 +91,15 @@ public class ZipUtils {
     }
   }
 
+  /**
+   * Makes sure decompressed files are created within the given output directory. This is to avoid
+   * <a href="https://snyk.io/research/zip-slip-vulnerability">Zip Slip</a>
+   *
+   * @param destinationDir directory to extract files to
+   * @param zipEntry compressed file in the zip archive
+   * @return a logical new file inside the destinationDir
+   * @throws IOException
+   */
   public static File newFile(File destinationDir, ZipEntry zipEntry) throws IOException {
     File destFile = new File(destinationDir, zipEntry.getName());
 

@@ -19,6 +19,12 @@ import static gov.nih.nci.evs.cdisc.report.utils.ReportUtils.getBaseOutputDirect
 public class LambdaHandler implements RequestHandler<ThesaurusRequest, ReportSummary> {
   Logger log = LoggerFactory.getLogger(LambdaHandler.class);
 
+  /**
+   * Generates pairing report Excel file from a given Thesaurus file
+   * @param input path to Thesaurus file
+   * @param context lambda context
+   * @return augmented report list with the pairing report files
+   */
   @Override
   public ReportSummary handleRequest(ThesaurusRequest input, Context context) {
     validate(input);

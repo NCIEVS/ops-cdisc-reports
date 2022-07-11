@@ -13,6 +13,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Objects;
 
+import static gov.nih.nci.evs.cdisc.report.utils.AssertUtils.assertRequired;
+
 public class UploadReportsService {
   private static final Logger log = LoggerFactory.getLogger(UploadReportsService.class);
 
@@ -22,12 +24,28 @@ public class UploadReportsService {
     this.googleDriveClient = googleDriveClient;
   }
 
+  /**
+   * Upload reports in the default output folder to Google Drive
+   *
+   * @param emailAddresses required, list email addresses that are given write permissions to the
+   *     Google Drive folder
+   */
   public void uploadReportsFolder(List<String> emailAddresses) {
+    assertRequired(emailAddresses, "emailAddresses");
     Path sourceFolder = ReportUtils.getBaseOutputDirectory();
     uploadReportsFolder(emailAddresses, sourceFolder);
   }
 
+  /**
+   * Upload a given folder to Google Drive
+   *
+   * @param emailAddresses required, list email addresses that are given write permissions to the
+   *     Google Drive folder
+   * @param sourceFolder required, folder containing the reports
+   */
   public void uploadReportsFolder(List<String> emailAddresses, Path sourceFolder) {
+    assertRequired(emailAddresses, "emailAddresses");
+    assertRequired(sourceFolder, "sourceFolder");
     String targetFolder =
         LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd-HH-mm-ss"));
     com.google.api.services.drive.model.File driveTargetFolder =
@@ -63,7 +81,14 @@ public class UploadReportsService {
       }
     }
   }
-  public void deleteOldReports(Integer deleteOldReportsThresholdDays){
+
+  /**
+   * Deletes folders that were created older than the days specified
+   *
+   * @param deleteOldReportsThresholdDays folders older than this would get deleted
+   */
+  public void deleteOldReports(Integer deleteOldReportsThresholdDays) {
+    assertRequired(deleteOldReportsThresholdDays, "deleteOldReportsThresholdDays");
     googleDriveClient.deleteOldFolders(deleteOldReportsThresholdDays);
   }
 }

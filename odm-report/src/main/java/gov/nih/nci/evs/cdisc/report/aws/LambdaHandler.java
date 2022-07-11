@@ -16,6 +16,13 @@ import java.io.File;
 public class LambdaHandler implements RequestHandler<ReportSummary, ReportSummary> {
   Logger log = LoggerFactory.getLogger(LambdaHandler.class);
 
+  /**
+   * Create ODM XML file from the Excel report created by text-excel-report
+   *
+   * @param input contains path to the Excel report created by text-excel-report
+   * @param context lambda context
+   * @return augmented report list with the generated ODM XML file
+   */
   @Override
   public ReportSummary handleRequest(ReportSummary input, Context context) {
     validate(input);

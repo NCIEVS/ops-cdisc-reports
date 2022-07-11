@@ -8,9 +8,21 @@ import javax.xml.transform.stream.StreamSource;
 import java.io.FileWriter;
 import java.io.StringWriter;
 
+import static gov.nih.nci.evs.cdisc.report.utils.AssertUtils.assertRequired;
+
 public class XsltTransformer {
+  /**
+   * Converts ODM XML to HTML using XSLT
+   *
+   * @param xmlFilePath required, ODM XML path
+   * @param htmlFilePath required, HTML report output path
+   * @param xsltFilePath required, XSLT transformation file path
+   */
   public static void convertXmlToHtml(
       String xmlFilePath, String htmlFilePath, String xsltFilePath) {
+    assertRequired(xmlFilePath, "xmlFilePath");
+    assertRequired(htmlFilePath, "htmlFilePath");
+    assertRequired(xsltFilePath, "xsltFilePath");
     StringWriter sw = new StringWriter();
     Source xslt = new StreamSource(XsltTransformer.class.getResource(xsltFilePath).getPath());
     Source xml = new StreamSource(xmlFilePath);

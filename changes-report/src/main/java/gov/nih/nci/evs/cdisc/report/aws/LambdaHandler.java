@@ -21,6 +21,16 @@ import static gov.nih.nci.evs.cdisc.report.utils.ReportUtils.getShortCodeLabel;
 public class LambdaHandler implements RequestHandler<ReportSummary, ReportSummary> {
   Logger log = LoggerFactory.getLogger(LambdaHandler.class);
 
+  /**
+   * Creates changes report. It is a report that compares the most recent prior text reports created
+   * by text-excel-report with the current text report. Skip creating report if there were no prior
+   * year or current year report
+   *
+   * @param input reports that have already been created. This would give path to the current text
+   *     report
+   * @param context lambda context
+   * @return augmented report list with the changes report if one was created
+   */
   @Override
   public ReportSummary handleRequest(ReportSummary input, Context context) {
     validate(input);
