@@ -44,7 +44,7 @@ C38304	C78420		Concomitant Medication Route of Administration	TOPICAL	TOP	Admini
 C38305	C78420		Concomitant Medication Route of Administration	TRANSDERMAL		Administration through the dermal layer of the skin to the systemic circulation by diffusion. (FDA)	Transdermal Route of Administration
 C38313	C78420		Concomitant Medication Route of Administration	VAGINAL		Administration into the vagina. (FDA)	Vaginal Route of Administration
 C78422		Yes	ECG Original Units	EGORRESU	ECG Original Units	A terminology subset of the CDISC SDTM Unit codelist created for CDASH ECG Original Units codelist. (NCI)	CDISC CDASH ECG Original Units Terminology
-C49673	C78422		ECG Original Units	beats/min	Beats per Minute; bpm; BPM	The number of heartbeats measured per minute time. (NCI)	Beats per Minute
+C49673	C78422		ECG Original Units	beats/min	Beats per Minute; BPM; bpm	The number of heartbeats measured per minute time. (NCI)	Beats per Minute
 C41140	C78422		ECG Original Units	msec	Millisecond; ms	A unit of time, which is equal to one thousandth of a second.(NCI)	Millisecond
 C42535	C78422		ECG Original Units	sec	Second	The base unit of time in the International System of Units (SI) equal to the duration of 9,192,631,770 periods of the specified light radiation corresponding to the transition between the two hyperfine levels of the cesium 133 atom in its ground state at 0 K.	Second
 C128690		Yes	Ethnicity As Collected	ETHNICC	Ethnicity As Collected	A terminology codelist relevant to the ethnicity of an individual as collected on the case report form.	CDISC SDTM Collected Ethnicity Terminology

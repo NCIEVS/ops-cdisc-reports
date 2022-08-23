@@ -500,7 +500,7 @@ public class TextExcelReportGenerator {
         data.remove(i);
       }
     }
-    HashMap hmap = new HashMap();
+    HashMap hmap = new LinkedHashMap();
     for (int i = 0; i < data.size(); i++) {
       String line = (String) data.elementAt(i);
       Vector u = parseData(line, '\t');
