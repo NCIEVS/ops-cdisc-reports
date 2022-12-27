@@ -1,4 +1,4 @@
-package gov.nih.nci.evs.cdisc.report.util;
+package gov.nih.nci.evs.cdisc.thesaurus.util;
 
 import java.util.Comparator;
 

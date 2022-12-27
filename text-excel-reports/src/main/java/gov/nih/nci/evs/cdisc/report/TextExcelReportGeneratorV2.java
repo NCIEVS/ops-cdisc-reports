@@ -3,12 +3,11 @@ package gov.nih.nci.evs.cdisc.report;
 import com.google.common.collect.Lists;
 import gov.nih.nci.evs.cdisc.report.model.ReportDetail;
 import gov.nih.nci.evs.cdisc.report.model.Synonym;
-import gov.nih.nci.evs.cdisc.report.util.SortComparatorV2;
 import gov.nih.nci.evs.cdisc.report.util.TextReportLineComparator;
 import gov.nih.nci.evs.cdisc.report.utils.ReportUtils;
-import gov.nih.nci.evs.cdisc.thesaurus.model.AlternativeDefinition;
 import gov.nih.nci.evs.cdisc.thesaurus.model.Concept;
 import gov.nih.nci.evs.cdisc.thesaurus.owl.ThesaurusOwlReader;
+import gov.nih.nci.evs.cdisc.thesaurus.util.SortComparatorV2;
 import gov.nih.nci.evs.reportwriter.formatter.AsciiToExcelFormatter;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
@@ -25,6 +24,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+
+import static gov.nih.nci.evs.cdisc.thesaurus.util.ThesaurusUtil.*;
 
 /**
  *
@@ -71,10 +72,7 @@ public class TextExcelReportGeneratorV2 {
           "CDISC Synonym(s)",
           "CDISC Definition",
           "NCI Preferred Term");
-  public static final String tTERM_SOURCE_CDISC = "CDISC";
-  public static final String TERM_SOURCE_CDISC_GLOSSARY = "CDISC-GLOSS";
-  public static final String TERM_GROUP_SYNONYM = "SY";
-  public static final String TERM_GROUP_PREFERRED_TERM = "PT";
+
   public static final String TEXT_FILE_DELIMITER = "\t";
 
   private final Path outDirectory;
@@ -101,12 +99,12 @@ public class TextExcelReportGeneratorV2 {
     List<String> lines = new ArrayList<>();
 
     List<Concept> codeListCodes = new ArrayList<>();
-    populateCodeListCodes(rootConcept, codeListCodes);
+    populateCodeListCodes(rootConcept, conceptMap.values(),codeListCodes);
     if (codeListCodes.isEmpty()) {
       codeListCodes.add(rootConcept);
     }
 
-    populateCodeInSubsets(codeListCodes);
+    populateCodeInSubsets(conceptMap.values(), codeListCodes);
 
     for (int i = 0; i < codeListCodes.size(); i++) {
       log.info("Processing Code list {} of {}", i, codeListCodes.size());
@@ -142,10 +140,6 @@ public class TextExcelReportGeneratorV2 {
     return ReportDetail.builder().code(root).label(label).reports(reports).build();
   }
 
-  private boolean isGlossaryConcept(String label) {
-    return label.contains("Glossary");
-  }
-
   private String getSubmissionValue(Concept concept, String expectedTermSource) {
     return concept.getSynonyms().stream()
         .filter(
@@ -166,20 +160,6 @@ public class TextExcelReportGeneratorV2 {
         .map(Synonym::getTermName)
         .sorted(new SortComparatorV2())
         .collect(Collectors.joining("; "));
-  }
-
-  private String getCdiscDefinition(Concept concept, boolean glossaryRootConcept) {
-    if (concept.getAlternativeDefinitions() == null) {
-      return "";
-    }
-    return concept.getAlternativeDefinitions().stream()
-        .filter(alternativeDefinition -> !alternativeDefinition.isCdisc() == glossaryRootConcept)
-        .map(AlternativeDefinition::getDefinition)
-        .reduce(
-            (first, second) ->
-                second) // Get the last value. This is match what the current report generator is
-        // doing
-        .orElse("");
   }
 
   private long getSourcePTCount(Concept concept, String termSource) {
@@ -204,7 +184,8 @@ public class TextExcelReportGeneratorV2 {
         currentConcept.getSynonyms().stream()
             .filter(
                 synonym ->
-                    "NCI".equals(synonym.getTermSource()) && "AB".equals(synonym.getTermGroup()))
+                    TERM_SOURCE_NCI.equals(synonym.getTermSource())
+                        && TERM_GROUP_AB.equals(synonym.getTermGroup()))
             .map(Synonym::getTermName)
             .findFirst()
             .orElse(null);
@@ -225,15 +206,6 @@ public class TextExcelReportGeneratorV2 {
         .map(Synonym::getTermName)
         .findFirst()
         .orElse(termName);
-  }
-
-  private String decodeSpecialChar(String line) {
-    line = line.replaceAll("&apos;", "'");
-    line = line.replaceAll("&amp;", "&");
-    line = line.replaceAll("&lt;", "<");
-    line = line.replaceAll("&gt;", ">");
-    line = line.replaceAll("&quot;", "\"");
-    return line;
   }
 
   private String getCodeListConceptLine(
@@ -281,31 +253,8 @@ public class TextExcelReportGeneratorV2 {
     }
   }
 
-  private void populateCodeListCodes(Concept rootConcept, List<Concept> allDescendantCodes) {
-    List<Concept> childListCodes =
-        this.conceptMap.values().stream()
-            .filter(concept -> concept.getParents().contains(rootConcept.getCode()))
-            .collect(Collectors.toList());
-    allDescendantCodes.addAll(childListCodes);
-    for (Concept concept : childListCodes) {
-      populateCodeListCodes(concept, allDescendantCodes);
-    }
-  }
-
-  private void populateCodeInSubsets(List<Concept> codeListCodes) {
-    for (Concept concept : codeListCodes) {
-      concept
-          .getCodeInSubsets()
-          .addAll(
-              this.conceptMap.values().stream()
-                  .filter(
-                      subsetConcept -> subsetConcept.getSubsetCodes().contains(concept.getCode()))
-                  .collect(Collectors.toList()));
-    }
-  }
-
   private String getExpectedTermSource(boolean glossary) {
-    return glossary ? TERM_SOURCE_CDISC_GLOSSARY : tTERM_SOURCE_CDISC;
+    return glossary ? TERM_SOURCE_CDISC_GLOSSARY : TERM_SOURCE_CDISC;
   }
 
   private File getTextFile(String label, Path outputDirectory) {
