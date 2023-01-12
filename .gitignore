@@ -40,3 +40,6 @@ override.tf.json
 .terraformrc
 terraform.rc
 /post-process/src/main/.aws-sam/
+
+#Ignore MacOs files
+.DS_Store
