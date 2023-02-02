@@ -82,6 +82,12 @@ Or the entire project with
 gradle clean build assemble
 ```
 
+To build zip for Lambda use
+
+```shell
+gradle clean buildZip
+```
+
 Some of the tests take a long time as they load the entire Thesaurus file into memory. 
 So it is might be useful to skip the tests at times with the following -x test option
 
