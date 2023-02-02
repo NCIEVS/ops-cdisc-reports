@@ -13,204 +13,254 @@ locals {
   upload_report_configuration               = local.lambda_configuration["cdisc-upload-report"]
 }
 
-data external "versions"{
+data "external" "versions" {
   program = ["bash", "../scripts/get-gradle-version.sh"]
   query = {
     "cdisc-text-excel-report-generator" = "../text-excel-reports"
-    "cdisc-pairing-report-generator" = "../pairing-report"
-    "cdisc-excel-report-formatter" = "../excel-formatting"
-    "cdisc-changes-report-generator" = "../changes-report"
-    "cdisc-odm-xml-report-generator" = "../odm-report"
-    "cdisc-html-report-generator" = "../html-report"
-    "cdisc-pdf-report-generator" = "../pdf-report"
-    "cdisc-owl-report-generator" = "../owl-report"
-    "cdisc-post-process-report" = "../post-process-reports"
-    "cdisc-upload-report" = "../upload-reports"
+    "cdisc-pairing-report-generator"    = "../pairing-report"
+    "cdisc-excel-report-formatter"      = "../excel-formatting"
+    "cdisc-changes-report-generator"    = "../changes-report"
+    "cdisc-odm-xml-report-generator"    = "../odm-report"
+    "cdisc-html-report-generator"       = "../html-report"
+    "cdisc-pdf-report-generator"        = "../pdf-report"
+    "cdisc-owl-report-generator"        = "../owl-report"
+    "cdisc-post-process-report"         = "../post-process-reports"
+    "cdisc-upload-report"               = "../upload-reports"
   }
 }
 
-module "text_excel_report_generator_lambda" {
-  source                       = "./modules/lambda-container-image"
-  architecture                 = var.architecture
+module "text_excel_report_generator_lambda_zip" {
+  source                       = "terraform-aws-modules/lambda/aws"
+  version                      = "3.2.1"
+  architectures                = [var.architecture]
   function_name                = "cdisc-text-excel-report-generator"
   description                  = "Lambda that creates text and excel files from Thesaurus owl file for a specific concept"
-  image_version                = data.external.versions.result.cdisc-text-excel-report-generator
-  source_path                  = "../text-excel-reports"
-  docker_file_path             = "./Dockerfile"
-  timeout_in_seconds           = local.text_excel_report_generator_configuration.timeout_in_mins * 60
-  memory_size_in_mb            = local.text_excel_report_generator_configuration.memory_in_mb
-  subnet_ids                   = [data.aws_subnet.private_subnets[0].id]
-  security_group_ids           = [data.aws_security_group.default_security_group.id]
-  file_system_access_point_arn = aws_efs_access_point.cdisc_report_fs_ap.arn
+  handler                      = "gov.nih.nci.evs.cdisc.report.aws.LambdaHandler"
+  runtime                      = "java11"
+  role_name                    = "cdisc-text-excel-report-generator-lambda-role"
+  create_package               = false
+  timeout                      = local.text_excel_report_generator_configuration.timeout_in_mins * 60
+  memory_size                  = local.text_excel_report_generator_configuration.memory_in_mb
+  vpc_subnet_ids               = [data.aws_subnet.private_subnets[0].id]
+  vpc_security_group_ids       = [data.aws_security_group.default_security_group.id]
+  file_system_arn              = aws_efs_access_point.cdisc_report_fs_ap.arn
   file_system_local_mount_path = "/mnt/cdisc"
+  attach_policies              = true
+  number_of_policies           = 1
   policies                     = [aws_iam_policy.cdisc_report_policy.arn]
+  local_existing_package       = "../text-excel-reports/build/distributions/text-excel-reports-${data.external.versions.result.cdisc-text-excel-report-generator}.zip"
 }
 
-module "pairing_report_generator_lambda" {
-  source                       = "./modules/lambda-container-image"
-  architecture                 = var.architecture
+module "pairing_report_generator_lambda_zip" {
+  source                       = "terraform-aws-modules/lambda/aws"
+  version                      = "3.2.1"
+  architectures                = [var.architecture]
   function_name                = "cdisc-pairing-report-generator"
   description                  = "Lambda that creates pairing reports"
-  image_version                = data.external.versions.result.cdisc-pairing-report-generator
-  source_path                  = "../pairing-report"
-  docker_file_path             = "./Dockerfile"
-  timeout_in_seconds           = local.pairing_report_generator_configuration.timeout_in_mins * 60
-  memory_size_in_mb            = local.pairing_report_generator_configuration.memory_in_mb
-  subnet_ids                   = [data.aws_subnet.private_subnets[0].id]
-  security_group_ids           = [data.aws_security_group.default_security_group.id]
-  file_system_access_point_arn = aws_efs_access_point.cdisc_report_fs_ap.arn
+  handler                      = "gov.nih.nci.evs.cdisc.report.aws.LambdaHandler"
+  runtime                      = "java11"
+  role_name                    = "cdisc-pairing-report-generator-lambda-role"
+  create_package               = false
+  timeout                      = local.pairing_report_generator_configuration.timeout_in_mins * 60
+  memory_size                  = local.pairing_report_generator_configuration.memory_in_mb
+  vpc_subnet_ids               = [data.aws_subnet.private_subnets[0].id]
+  vpc_security_group_ids       = [data.aws_security_group.default_security_group.id]
+  file_system_arn              = aws_efs_access_point.cdisc_report_fs_ap.arn
   file_system_local_mount_path = "/mnt/cdisc"
+  attach_policies              = true
+  number_of_policies           = 1
   policies                     = [aws_iam_policy.cdisc_report_policy.arn]
+  local_existing_package       = "../pairing-report/build/distributions/pairing-report-${data.external.versions.result.cdisc-pairing-report-generator}.zip"
 }
 
-module "excel_report_formatter_lambda" {
-  source                       = "./modules/lambda-container-image"
-  architecture                 = var.architecture
+module "excel_report_formatter_lambda_zip" {
+  source                       = "terraform-aws-modules/lambda/aws"
+  version                      = "3.2.1"
+  architectures                = [var.architecture]
   function_name                = "cdisc-excel-report-formatter"
   description                  = "Lambda that formats excel reports created by cdisc-text-excel-report-generator"
-  image_version                = data.external.versions.result.cdisc-excel-report-formatter
-  source_path                  = "../excel-formatting"
-  docker_file_path             = "./Dockerfile"
-  timeout_in_seconds           = local.excel_report_formatter_configuration.timeout_in_mins * 60
-  memory_size_in_mb            = local.excel_report_formatter_configuration.memory_in_mb
-  subnet_ids                   = [data.aws_subnet.private_subnets[0].id]
-  security_group_ids           = [data.aws_security_group.default_security_group.id]
-  file_system_access_point_arn = aws_efs_access_point.cdisc_report_fs_ap.arn
+  handler                      = "gov.nih.nci.evs.cdisc.report.aws.LambdaHandler"
+  runtime                      = "java11"
+  role_name                    = "cdisc-excel-report-formatter-lambda-role"
+  create_package               = false
+  timeout                      = local.excel_report_formatter_configuration.timeout_in_mins * 60
+  memory_size                  = local.excel_report_formatter_configuration.memory_in_mb
+  vpc_subnet_ids               = [data.aws_subnet.private_subnets[0].id]
+  vpc_security_group_ids       = [data.aws_security_group.default_security_group.id]
+  file_system_arn              = aws_efs_access_point.cdisc_report_fs_ap.arn
   file_system_local_mount_path = "/mnt/cdisc"
+  attach_policies              = true
+  number_of_policies           = 1
   policies                     = [aws_iam_policy.cdisc_report_policy.arn]
+  local_existing_package       = "../excel-formatting/build/distributions/excel-formatting-${data.external.versions.result.cdisc-excel-report-formatter}.zip"
 }
 
-module "changes_report_generator_lambda" {
-  source                       = "./modules/lambda-container-image"
-  architecture                 = var.architecture
+module "changes_report_generator_lambda_zip" {
+  source                       = "terraform-aws-modules/lambda/aws"
+  version                      = "3.2.1"
+  architectures                = [var.architecture]
   function_name                = "cdisc-changes-report-generator"
   description                  = "Lambda that creates a report detailing the differences between the current and previous text report"
-  image_version                = data.external.versions.result.cdisc-changes-report-generator
-  source_path                  = "../changes-report"
-  docker_file_path             = "./Dockerfile"
-  timeout_in_seconds           = local.changes_report_generator_configuration.timeout_in_mins * 60
-  memory_size_in_mb            = local.changes_report_generator_configuration.memory_in_mb
-  subnet_ids                   = [data.aws_subnet.private_subnets[0].id]
-  security_group_ids           = [data.aws_security_group.default_security_group.id]
-  file_system_access_point_arn = aws_efs_access_point.cdisc_report_fs_ap.arn
+  handler                      = "gov.nih.nci.evs.cdisc.report.aws.LambdaHandler"
+  runtime                      = "java11"
+  role_name                    = "cdisc-changes-report-generator-lambda-role"
+  create_package               = false
+  timeout                      = local.changes_report_generator_configuration.timeout_in_mins * 60
+  memory_size                  = local.changes_report_generator_configuration.memory_in_mb
+  vpc_subnet_ids               = [data.aws_subnet.private_subnets[0].id]
+  vpc_security_group_ids       = [data.aws_security_group.default_security_group.id]
+  file_system_arn              = aws_efs_access_point.cdisc_report_fs_ap.arn
   file_system_local_mount_path = "/mnt/cdisc"
+  attach_policies              = true
+  number_of_policies           = 1
   policies                     = [aws_iam_policy.cdisc_report_policy.arn]
+  local_existing_package       = "../changes-report/build/distributions/changes-report-${data.external.versions.result.cdisc-changes-report-generator}.zip"
 }
 
-module "odm_xml_report_generator_lambda" {
-  source                       = "./modules/lambda-container-image"
-  architecture                 = var.architecture
+module "odm_xml_report_generator_lambda_zip" {
+  source                       = "terraform-aws-modules/lambda/aws"
+  version                      = "3.2.1"
+  architectures                = [var.architecture]
   function_name                = "cdisc-odm-xml-report-generator"
   description                  = "Lambda that creates odm xml"
-  image_version                = data.external.versions.result.cdisc-odm-xml-report-generator
-  source_path                  = "../odm-report"
-  docker_file_path             = "./Dockerfile"
-  timeout_in_seconds           = local.odm_xml_report_generator_configuration.timeout_in_mins * 60
-  memory_size_in_mb            = local.odm_xml_report_generator_configuration.memory_in_mb
-  subnet_ids                   = [data.aws_subnet.private_subnets[0].id]
-  security_group_ids           = [data.aws_security_group.default_security_group.id]
-  file_system_access_point_arn = aws_efs_access_point.cdisc_report_fs_ap.arn
+  handler                      = "gov.nih.nci.evs.cdisc.report.aws.LambdaHandler"
+  runtime                      = "java11"
+  role_name                    = "cdisc-odm-xml-report-generator-lambda-role"
+  create_package               = false
+  timeout                      = local.odm_xml_report_generator_configuration.timeout_in_mins * 60
+  memory_size                  = local.odm_xml_report_generator_configuration.memory_in_mb
+  vpc_subnet_ids               = [data.aws_subnet.private_subnets[0].id]
+  vpc_security_group_ids       = [data.aws_security_group.default_security_group.id]
+  file_system_arn              = aws_efs_access_point.cdisc_report_fs_ap.arn
   file_system_local_mount_path = "/mnt/cdisc"
+  attach_policies              = true
+  number_of_policies           = 1
   policies                     = [aws_iam_policy.cdisc_report_policy.arn]
+  local_existing_package       = "../odm-report/build/distributions/odm-report-${data.external.versions.result.cdisc-odm-xml-report-generator}.zip"
 }
 
-module "html_report_generator_lambda" {
-  source                       = "./modules/lambda-container-image"
-  architecture                 = var.architecture
+module "html_report_generator_lambda_zip" {
+  source                       = "terraform-aws-modules/lambda/aws"
+  version                      = "3.2.1"
+  architectures                = [var.architecture]
   function_name                = "cdisc-html-report-generator"
   description                  = "Lambda that creates two HTML reports from the XML file created in cdisc-odm-xml-report-generator. One of the HTML files is the HTML report. The other file is a HTML file from which a PDF file will be generated in a subsequent step"
-  image_version                = data.external.versions.result.cdisc-html-report-generator
-  source_path                  = "../html-report"
-  docker_file_path             = "./Dockerfile"
-  timeout_in_seconds           = local.html_report_generator_configuration.timeout_in_mins * 60
-  memory_size_in_mb            = local.html_report_generator_configuration.memory_in_mb
-  subnet_ids                   = [data.aws_subnet.private_subnets[0].id]
-  security_group_ids           = [data.aws_security_group.default_security_group.id]
-  file_system_access_point_arn = aws_efs_access_point.cdisc_report_fs_ap.arn
+  handler                      = "gov.nih.nci.evs.cdisc.report.aws.LambdaHandler"
+  runtime                      = "java11"
+  role_name                    = "cdisc-html-report-generator-lambda-role"
+  create_package               = false
+  timeout                      = local.html_report_generator_configuration.timeout_in_mins * 60
+  memory_size                  = local.html_report_generator_configuration.memory_in_mb
+  vpc_subnet_ids               = [data.aws_subnet.private_subnets[0].id]
+  vpc_security_group_ids       = [data.aws_security_group.default_security_group.id]
+  file_system_arn              = aws_efs_access_point.cdisc_report_fs_ap.arn
   file_system_local_mount_path = "/mnt/cdisc"
+  attach_policies              = true
+  number_of_policies           = 1
   policies                     = [aws_iam_policy.cdisc_report_policy.arn]
+  local_existing_package       = "../html-report/build/distributions/html-report-${data.external.versions.result.cdisc-html-report-generator}.zip"
 }
 
-module "pdf_report_generator_lambda" {
-  source                       = "./modules/lambda-container-image"
-  architecture                 = var.architecture
+module "pdf_report_generator_lambda_zip" {
+  source                       = "terraform-aws-modules/lambda/aws"
+  version                      = "3.2.1"
+  architectures                = [var.architecture]
   function_name                = "cdisc-pdf-report-generator"
   description                  = "Lambda to create a PDF report from a HMTL file created by cdisc-html-report-generator"
-  image_version                = data.external.versions.result.cdisc-pdf-report-generator
-  source_path                  = "../pdf-report"
-  docker_file_path             = "./Dockerfile"
-  timeout_in_seconds           = local.pdf_report_generator_configuration.timeout_in_mins * 60
-  memory_size_in_mb            = local.pdf_report_generator_configuration.memory_in_mb
-  subnet_ids                   = [data.aws_subnet.private_subnets[0].id]
-  security_group_ids           = [data.aws_security_group.default_security_group.id]
-  file_system_access_point_arn = aws_efs_access_point.cdisc_report_fs_ap.arn
+  handler                      = "gov.nih.nci.evs.cdisc.report.aws.LambdaHandler"
+  runtime                      = "java11"
+  role_name                    = "cdisc-pdf-report-generator-lambda-role"
+  create_package               = false
+  timeout                      = local.pdf_report_generator_configuration.timeout_in_mins * 60
+  memory_size                  = local.pdf_report_generator_configuration.memory_in_mb
+  vpc_subnet_ids               = [data.aws_subnet.private_subnets[0].id]
+  vpc_security_group_ids       = [data.aws_security_group.default_security_group.id]
+  file_system_arn              = aws_efs_access_point.cdisc_report_fs_ap.arn
   file_system_local_mount_path = "/mnt/cdisc"
+  attach_policies              = true
+  number_of_policies           = 1
   policies                     = [aws_iam_policy.cdisc_report_policy.arn]
+  local_existing_package       = "../pdf-report/build/distributions/pdf-report-${data.external.versions.result.cdisc-pdf-report-generator}.zip"
 }
 
-module "owl_report_generator_lambda" {
-  source                       = "./modules/lambda-container-image"
-  architecture                 = var.architecture
+module "owl_report_generator_lambda_zip" {
+  source                       = "terraform-aws-modules/lambda/aws"
+  version                      = "3.2.1"
+  architectures                = [var.architecture]
   function_name                = "cdisc-owl-report-generator"
   description                  = "Lambda to create a OWL file from the text file created by cdisc-text-excel-report-generator"
-  image_version                = data.external.versions.result.cdisc-owl-report-generator
-  source_path                  = "../owl-report"
-  docker_file_path             = "./Dockerfile"
-  timeout_in_seconds           = local.owl_report_generator_configuration.timeout_in_mins * 60
-  memory_size_in_mb            = local.owl_report_generator_configuration.memory_in_mb
-  subnet_ids                   = [data.aws_subnet.private_subnets[0].id]
-  security_group_ids           = [data.aws_security_group.default_security_group.id]
-  file_system_access_point_arn = aws_efs_access_point.cdisc_report_fs_ap.arn
+  handler                      = "gov.nih.nci.evs.cdisc.report.aws.LambdaHandler"
+  runtime                      = "java11"
+  role_name                    = "cdisc-owl-report-generator-lambda-role"
+  create_package               = false
+  timeout                      = local.owl_report_generator_configuration.timeout_in_mins * 60
+  memory_size                  = local.owl_report_generator_configuration.memory_in_mb
+  vpc_subnet_ids               = [data.aws_subnet.private_subnets[0].id]
+  vpc_security_group_ids       = [data.aws_security_group.default_security_group.id]
+  file_system_arn              = aws_efs_access_point.cdisc_report_fs_ap.arn
   file_system_local_mount_path = "/mnt/cdisc"
+  attach_policies              = true
+  number_of_policies           = 1
   policies                     = [aws_iam_policy.cdisc_report_policy.arn]
+  local_existing_package       = "../owl-report/build/distributions/owl-report-${data.external.versions.result.cdisc-owl-report-generator}.zip"
 }
 
-module "post_process_lambda" {
-  source                       = "./modules/lambda-container-image"
-  architecture                 = var.architecture
+module "post_process_lambda_zip" {
+  source                       = "terraform-aws-modules/lambda/aws"
+  version                      = "3.2.1"
+  architectures                = [var.architecture]
   function_name                = "cdisc-post-process-reports"
   description                  = "Lambda to consolidate reports outputs and package reports"
-  image_version                = data.external.versions.result.cdisc-post-process-report
-  source_path                  = "../post-process-reports"
-  docker_file_path             = "./Dockerfile"
-  timeout_in_seconds           = local.post_process_report_configuration.timeout_in_mins * 60
-  memory_size_in_mb            = local.post_process_report_configuration.memory_in_mb
-  subnet_ids                   = [data.aws_subnet.private_subnets[0].id]
-  security_group_ids           = [data.aws_security_group.default_security_group.id]
-  file_system_access_point_arn = aws_efs_access_point.cdisc_report_fs_ap.arn
+  handler                      = "gov.nih.nci.evs.cdisc.report.aws.LambdaHandler"
+  runtime                      = "java11"
+  role_name                    = "cdisc-post-process-reports-lambda-role"
+  create_package               = false
+  timeout                      = local.post_process_report_configuration.timeout_in_mins * 60
+  memory_size                  = local.post_process_report_configuration.memory_in_mb
+  vpc_subnet_ids               = [data.aws_subnet.private_subnets[0].id]
+  vpc_security_group_ids       = [data.aws_security_group.default_security_group.id]
+  file_system_arn              = aws_efs_access_point.cdisc_report_fs_ap.arn
   file_system_local_mount_path = "/mnt/cdisc"
+  attach_policies              = true
+  number_of_policies           = 1
   policies                     = [aws_iam_policy.cdisc_report_policy.arn]
+  local_existing_package       = "../post-process-reports/build/distributions/post-process-reports-${data.external.versions.result.cdisc-post-process-report}.zip"
 }
 
-module "upload_report_lambda" {
-  source                       = "./modules/lambda-container-image"
-  architecture                 = var.architecture
+module "upload_report_lambda_zip" {
+  source                       = "terraform-aws-modules/lambda/aws"
+  version                      = "3.2.1"
+  architectures                = [var.architecture]
   function_name                = "cdisc-upload-report"
   description                  = "Lambda that uploads all generated reports to GDrive"
-  image_version                = data.external.versions.result.cdisc-upload-report
-  source_path                  = "../upload-reports"
-  docker_file_path             = "./Dockerfile"
-  timeout_in_seconds           = local.upload_report_configuration.timeout_in_mins * 60
-  memory_size_in_mb            = local.upload_report_configuration.memory_in_mb
-  subnet_ids                   = [data.aws_subnet.private_subnets[0].id]
-  security_group_ids           = [data.aws_security_group.default_security_group.id]
-  file_system_access_point_arn = aws_efs_access_point.cdisc_report_fs_ap.arn
+  handler                      = "gov.nih.nci.evs.cdisc.report.aws.LambdaHandler"
+  runtime                      = "java11"
+  role_name                    = "cdisc-upload-report-lambda-role"
+  create_package               = false
+  timeout                      = local.owl_report_generator_configuration.timeout_in_mins * 60
+  memory_size                  = local.owl_report_generator_configuration.memory_in_mb
+  vpc_subnet_ids               = [data.aws_subnet.private_subnets[0].id]
+  vpc_security_group_ids       = [data.aws_security_group.default_security_group.id]
+  file_system_arn              = aws_efs_access_point.cdisc_report_fs_ap.arn
   file_system_local_mount_path = "/mnt/cdisc"
+  attach_policies              = true
+  number_of_policies           = 1
   policies                     = [aws_iam_policy.cdisc_report_policy.arn]
+  local_existing_package       = "../upload-reports/build/distributions/upload-reports-${data.external.versions.result.cdisc-upload-report}.zip"
 }
 
 data "template_file" "step_function_definition" {
   template = file("${path.module}/state-definition.tfl")
   vars = {
-    "text_excel_report_generator_arn" = module.text_excel_report_generator_lambda.arn
-    "pairing_report_generator_arn"    = module.pairing_report_generator_lambda.arn
-    "excel_report_formatter_arn"      = module.excel_report_formatter_lambda.arn
-    "changes_report_generator_arn"    = module.changes_report_generator_lambda.arn
-    "odm_xml_report_generator_arn"    = module.odm_xml_report_generator_lambda.arn
-    "html_report_generator_arn"       = module.html_report_generator_lambda.arn
-    "pdf_report_generator_arn"        = module.pdf_report_generator_lambda.arn
-    "owl_report_generator_arn"        = module.owl_report_generator_lambda.arn
-    "upload_report_arn"               = module.upload_report_lambda.arn
+    "text_excel_report_generator_arn" = module.text_excel_report_generator_lambda_zip.lambda_function_arn
+    "pairing_report_generator_arn"    = module.pairing_report_generator_lambda_zip.lambda_function_arn
+    "excel_report_formatter_arn"      = module.excel_report_formatter_lambda_zip.lambda_function_arn
+    "changes_report_generator_arn"    = module.changes_report_generator_lambda_zip.lambda_function_arn
+    "odm_xml_report_generator_arn"    = module.odm_xml_report_generator_lambda_zip.lambda_function_arn
+    "html_report_generator_arn"       = module.html_report_generator_lambda_zip.lambda_function_arn
+    "pdf_report_generator_arn"        = module.pdf_report_generator_lambda_zip.lambda_function_arn
+    "owl_report_generator_arn"        = module.owl_report_generator_lambda_zip.lambda_function_arn
+    "upload_report_arn"               = module.upload_report_lambda_zip.lambda_function_arn
   }
 }
 
