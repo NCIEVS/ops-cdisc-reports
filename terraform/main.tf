@@ -70,7 +70,7 @@ module "pairing_report_generator_lambda_zip" {
   attach_policies              = true
   number_of_policies           = 1
   policies                     = [aws_iam_policy.cdisc_report_policy.arn]
-  local_existing_package       = "../pairing-report/build/distributions/pairing-report-${data.external.versions.result.cdisc-pairing-report-generator}.zip"
+  local_existing_package       = "../pairing-report/build/distributions/pairing-report-${replace(data.external.versions.result.cdisc-pairing-report-generator,"\r","")}.zip"
 }
 
 module "excel_report_formatter_lambda_zip" {
@@ -92,7 +92,7 @@ module "excel_report_formatter_lambda_zip" {
   attach_policies              = true
   number_of_policies           = 1
   policies                     = [aws_iam_policy.cdisc_report_policy.arn]
-  local_existing_package       = "../excel-formatting/build/distributions/excel-formatting-${data.external.versions.result.cdisc-excel-report-formatter}.zip"
+  local_existing_package       = "../excel-formatting/build/distributions/excel-formatting-${{replace(data.external.versions.result.cdisc-excel-report-formatter,"\r","")}.zip"
 }
 
 module "changes_report_generator_lambda_zip" {
@@ -114,7 +114,7 @@ module "changes_report_generator_lambda_zip" {
   attach_policies              = true
   number_of_policies           = 1
   policies                     = [aws_iam_policy.cdisc_report_policy.arn]
-  local_existing_package       = "../changes-report/build/distributions/changes-report-${data.external.versions.result.cdisc-changes-report-generator}.zip"
+  local_existing_package       = "../changes-report/build/distributions/changes-report-${{replace(data.external.versions.result.cdisc-changes-report-generator,"\r","")}.zip"
 }
 
 module "odm_xml_report_generator_lambda_zip" {
@@ -136,7 +136,7 @@ module "odm_xml_report_generator_lambda_zip" {
   attach_policies              = true
   number_of_policies           = 1
   policies                     = [aws_iam_policy.cdisc_report_policy.arn]
-  local_existing_package       = "../odm-report/build/distributions/odm-report-${data.external.versions.result.cdisc-odm-xml-report-generator}.zip"
+  local_existing_package       = "../odm-report/build/distributions/odm-report-${{replace(data.external.versions.result.cdisc-odm-xml-report-generator,"\r","")}.zip"
 }
 
 module "html_report_generator_lambda_zip" {
@@ -158,7 +158,7 @@ module "html_report_generator_lambda_zip" {
   attach_policies              = true
   number_of_policies           = 1
   policies                     = [aws_iam_policy.cdisc_report_policy.arn]
-  local_existing_package       = "../html-report/build/distributions/html-report-${data.external.versions.result.cdisc-html-report-generator}.zip"
+  local_existing_package       = "../html-report/build/distributions/html-report-${{replace(data.external.versions.result.cdisc-html-report-generator,"\r","")}.zip"
 }
 
 module "pdf_report_generator_lambda_zip" {
@@ -180,7 +180,7 @@ module "pdf_report_generator_lambda_zip" {
   attach_policies              = true
   number_of_policies           = 1
   policies                     = [aws_iam_policy.cdisc_report_policy.arn]
-  local_existing_package       = "../pdf-report/build/distributions/pdf-report-${data.external.versions.result.cdisc-pdf-report-generator}.zip"
+  local_existing_package       = "../pdf-report/build/distributions/pdf-report-${{replace(data.external.versions.result.cdisc-pdf-report-generator,"\r","")}.zip"
 }
 
 module "owl_report_generator_lambda_zip" {
@@ -202,7 +202,7 @@ module "owl_report_generator_lambda_zip" {
   attach_policies              = true
   number_of_policies           = 1
   policies                     = [aws_iam_policy.cdisc_report_policy.arn]
-  local_existing_package       = "../owl-report/build/distributions/owl-report-${data.external.versions.result.cdisc-owl-report-generator}.zip"
+  local_existing_package       = "../owl-report/build/distributions/owl-report-${{replace(data.external.versions.result.cdisc-owl-report-generator,"\r","")}.zip"
 }
 
 module "post_process_lambda_zip" {
@@ -224,7 +224,7 @@ module "post_process_lambda_zip" {
   attach_policies              = true
   number_of_policies           = 1
   policies                     = [aws_iam_policy.cdisc_report_policy.arn]
-  local_existing_package       = "../post-process-reports/build/distributions/post-process-reports-${data.external.versions.result.cdisc-post-process-report}.zip"
+  local_existing_package       = "../post-process-reports/build/distributions/post-process-reports-${{replace(data.external.versions.result.cdisc-post-process-report,"\r","")}.zip"
 }
 
 module "upload_report_lambda_zip" {
@@ -246,7 +246,7 @@ module "upload_report_lambda_zip" {
   attach_policies              = true
   number_of_policies           = 1
   policies                     = [aws_iam_policy.cdisc_report_policy.arn]
-  local_existing_package       = "../upload-reports/build/distributions/upload-reports-${data.external.versions.result.cdisc-upload-report}.zip"
+  local_existing_package       = "../upload-reports/build/distributions/upload-reports-${{replace(data.external.versions.result.cdisc-upload-report,"\r","")}.zip"
 }
 
 data "template_file" "step_function_definition" {
