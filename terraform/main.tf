@@ -48,7 +48,7 @@ module "text_excel_report_generator_lambda_zip" {
   attach_policies              = true
   number_of_policies           = 1
   policies                     = [aws_iam_policy.cdisc_report_policy.arn]
-  local_existing_package       = "../text-excel-reports/build/distributions/text-excel-reports-${data.external.versions.result.cdisc-text-excel-report-generator}.zip"
+  local_existing_package       = "../text-excel-reports/build/distributions/text-excel-reports-${replace(data.external.versions.result.cdisc-text-excel-report-generator,"\r","")}.zip"
 }
 
 module "pairing_report_generator_lambda_zip" {
