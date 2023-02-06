@@ -565,7 +565,12 @@ public class TextExcelReportGenerator {
 
   private File getTextFile(String label, Path outputDirectory) {
     String shortLabel = ReportUtils.getShortCodeLabel(label);
-    String textFileName = label.replace("CDISC", "").trim() + ".txt";
+    String textFileName = "";
+    if (shortLabel.contains("Glossary")) {
+    	textFileName = label.replace("Terminology", "").trim() + ".txt";
+    } else {
+    	textFileName = label.replace("CDISC", "").trim() + ".txt";
+    }
     return ReportUtils.getOutputPath(outputDirectory, shortLabel).resolve(textFileName).toFile();
   }
 
