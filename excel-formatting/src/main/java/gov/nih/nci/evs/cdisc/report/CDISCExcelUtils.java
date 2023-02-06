@@ -234,6 +234,9 @@ public class CDISCExcelUtils {
 
       int n = xlsfile.lastIndexOf(".");
       String sheetName = FilenameUtils.getBaseName(xlsfile);
+      if (sheetName.contains("Glossary")) {
+    	  sheetName = sheetName.replace("Glossary", "Glossary Terminology");
+      }
       sheetName = sheetName.replace("CDISC", "").replace("_", " ");
       sheetName = sheetName + " " + timestamp;
       sheetName = sheetName.replace("Define-XML", "Def-XML");
