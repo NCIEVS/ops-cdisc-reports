@@ -23,6 +23,17 @@ resource "aws_iam_policy" "cdisc_report_policy" {
         Resource = [
           aws_efs_file_system.cdisc_report_fs.arn,
         ]
+      },
+      {
+        Effect : "Allow",
+        Action : [
+          "ec2:DescribeNetworkInterfaces",
+          "ec2:CreateNetworkInterface",
+          "ec2:DeleteNetworkInterface",
+          "ec2:DescribeInstances",
+          "ec2:AttachNetworkInterface"
+        ],
+        Resource : "*"
       }
     ]
   })
@@ -35,9 +46,11 @@ resource "aws_iam_role" "step_function_role" {
     Statement = [
       {
         Effect = "Allow"
-        Action = ["sts:AssumeRole"]
+        Action = [
+        "sts:AssumeRole"]
         Principal = {
-          Service = ["states.amazonaws.com"]
+          Service = [
+          "states.amazonaws.com"]
         }
       }
     ]
