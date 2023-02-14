@@ -58,6 +58,7 @@ h2 {
 }
 
 table {
+    table-layout: fixed;
     border-collapse: collapse;
     margin-top: 10px;
     border: 0.5px black;
@@ -74,6 +75,7 @@ th {
 }
 
 td {
+    word-wrap:break-word;
     vertical-align: top;
     border:  0px;
     font-size:9px;

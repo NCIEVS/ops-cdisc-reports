@@ -35,12 +35,12 @@ public class HtmlReportGenerator {
 
   public static void main(String[] args) {
     if (args.length >= 1) {
-      String owlFilePath = args[0];
+      String odmXmlPath = args[0];
       ReportEnum reportType = ReportEnum.MAIN_HTML;
       if (args.length == 2) {
         reportType = ReportEnum.valueOf(args[1]);
       }
-      generateHtmlReport(owlFilePath, reportType);
+      generateHtmlReport(odmXmlPath, reportType);
     } else {
       System.out.println("Expecting path to owl.xml file");
     }
