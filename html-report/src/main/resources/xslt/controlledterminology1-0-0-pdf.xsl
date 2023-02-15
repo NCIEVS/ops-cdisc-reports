@@ -135,11 +135,11 @@ margin-right:5px;
         		<th style="background-color:white; border:0;"></th>
           </tr>
           <tr>
-              <th style="width:0.55in;">NCI Code</th>
-              <th style="width:1.40in;">CDISC Submission Value</th>
-              <th style="width:1.40in;">CDISC Synonym</th>
-              <th>CDISC Definition</th>
-              <th style="width:1.40in;">NCI Preferred Term</th>
+              <th style="width:15%;">NCI Code</th>
+              <th style="width:15%;">CDISC Submission Value</th>
+              <th style="width:15%;">CDISC Synonym</th>
+              <th style="width:40%;">CDISC Definition</th>
+              <th style="width:15%;">NCI Preferred Term</th>
           </tr>
         </thead>
         <tbody>

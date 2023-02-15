@@ -3,6 +3,7 @@ package gov.nih.nci.evs.cdisc.report;
 import com.itextpdf.html2pdf.ConverterProperties;
 import com.itextpdf.html2pdf.HtmlConverter;
 import com.itextpdf.kernel.events.PdfDocumentEvent;
+import com.itextpdf.kernel.geom.PageSize;
 import com.itextpdf.kernel.pdf.PdfDocument;
 import com.itextpdf.kernel.pdf.PdfWriter;
 import org.apache.commons.io.FilenameUtils;
@@ -22,6 +23,7 @@ public class HtmlToPdfConverter {
   public static void convert(String htmlSource, String pdfDest) throws IOException {
     PdfWriter writer = new PdfWriter(pdfDest);
     PdfDocument pdfDocument = new PdfDocument(writer);
+    pdfDocument.setDefaultPageSize(PageSize.A3);
     FooterEventHandler footerHandler = new FooterEventHandler();
 
     pdfDocument.addEventHandler(PdfDocumentEvent.END_PAGE, footerHandler);
