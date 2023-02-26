@@ -121,8 +121,7 @@ margin-right:5px;
     
     <xsl:template name="CodeListItems">
 
-      <a name="{@OID}" />
-      <h2 name="{@OID}"><xsl:value-of select="nciodm:CDISCSubmissionValue"/> (<xsl:value-of select="@Name"/>)</h2>
+      <h2 id="{@OID}"><xsl:value-of select="nciodm:CDISCSubmissionValue"/> (<xsl:value-of select="@Name"/>)</h2>
     	<div class="h3">NCI Code: <xsl:value-of select="@nciodm:ExtCodeID"/>, Codelist extensible: <xsl:value-of select="@nciodm:CodeListExtensible"/></div>
     	
       <table style="page-break-after: always; repeat-header:yes;">
