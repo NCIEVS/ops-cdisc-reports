@@ -147,8 +147,8 @@ public class CDISCPairingV2 {
   public List<PairedTerm> getPairedSourceTermData(Concept concept) {
     log.trace("Getting paired source term data for {}", concept.getCode());
     List<PairedTerm> pairedSourceTerms = new ArrayList<>();
-    List<Synonym> syn_vec = synonymMap.get(concept.getCode());
-    List<String> submissionValueCodes = getSubmissionValueCodes(syn_vec, concept.getCode());
+    List<Synonym> synonyms = synonymMap.get(concept.getCode());
+    List<String> submissionValueCodes = getSubmissionValueCodes(synonyms, concept.getCode());
     for (String submissionValueCode : submissionValueCodes) {
       PairedTerm pairedSourceTerm = searchPairedSourceTerm(concept, submissionValueCode);
       if (pairedSourceTerm != null) {
@@ -176,27 +176,27 @@ public class CDISCPairingV2 {
   }
 
   public PairedTerm searchPairedTargetTerm(
-      String memberCode, String cdis_sy_term_name, String nci_ab) {
+      String memberCode, String cdiscSyTermName, String nciAb) {
     for (Concept conceptWithNciAndAb : conceptsWithNciAb) {
-      List<Synonym> syn_vec = synonymMap.get(conceptWithNciAndAb.getCode());
+      List<Synonym> synonyms = synonymMap.get(conceptWithNciAndAb.getCode());
       String cdiscSynonym = null;
       boolean nciAbMatched = false;
       boolean cdiscSynonymMatched = false;
       String termName;
-      for (Synonym syn : syn_vec) {
+      for (Synonym syn : synonyms) {
         termName = syn.getTermName();
-        if (hasAbAndNci(syn) && nci_ab.equals(termName)) {
+        if (hasAbAndNci(syn) && nciAb.equals(termName)) {
           nciAbMatched = true;
         }
         if (hasSyAndCdisc(syn)) {
           cdiscSynonym = StringEscapeUtils.escapeXml11(syn.getTermName());
-          if (cdiscSynonym.equals(cdis_sy_term_name)) {
+          if (cdiscSynonym.equals(cdiscSyTermName)) {
             cdiscSynonymMatched = true;
           }
         }
       }
       if (nciAbMatched && cdiscSynonymMatched) {
-        String cdiscPreferredTerm = findTermNameMatchingCDISCPTSourceCode(memberCode, nci_ab);
+        String cdiscPreferredTerm = findTermNameMatchingCDISCPTSourceCode(memberCode, nciAb);
         return new PairedTerm(
             conceptWithNciAndAb.getCode(), null, cdiscSynonym, cdiscPreferredTerm, null);
       }
@@ -403,19 +403,19 @@ public class CDISCPairingV2 {
   }
 
   public String getSynonyms(String code) {
-    List<String> synonyms = new ArrayList<>();
-    List<Synonym> syn_vec = synonymMap.get(code);
-    if (syn_vec != null) {
+    List<String> strSynonyms = new ArrayList<>();
+    List<Synonym> synonyms = synonymMap.get(code);
+    if (synonyms != null) {
       // Collecting to Set to remove dups
-      synonyms =
-          syn_vec.stream()
+      strSynonyms =
+          synonyms.stream()
               .filter(ThesaurusUtils::hasSyAndCdisc)
               .map(Synonym::getTermName)
               .distinct()
               .collect(Collectors.toList());
-      new SortUtils().quickSort(synonyms);
+      new SortUtils().quickSort(strSynonyms);
     }
-    return synonyms.size() > 0 ? String.join("; ", synonyms) : "";
+    return strSynonyms.size() > 0 ? String.join("; ", strSynonyms) : "";
   }
 
   public String generateMetadata() throws IOException {
