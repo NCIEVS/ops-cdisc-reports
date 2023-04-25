@@ -24,7 +24,8 @@ public class CDISCPairingTest {
     CDISCPairing pairing =
         new CDISCPairing(
             new File(
-                TestUtils.getResourceFilePath(format("/fixtures/abridged-owl-files/%s.owl", subSource))),
+                TestUtils.getResourceFilePath(
+                    format("/fixtures/abridged-owl-files/%s.owl", subSource))),
             outFolder.toPath(),
             "2022-03-25");
     pairing.run(subSourceCode, CDISCPairing.DATA_SOURCE_NCIT_OWL);
@@ -33,16 +34,44 @@ public class CDISCPairingTest {
         this.getClass()
             .getResourceAsStream(
                 format(
-                    "/fixtures/pairing-report-from-abridged-owl/%s", getPairingReportFilename(subSource))),
+                    "/fixtures/pairing-report-from-abridged-owl/%s",
+                    getPairingReportFilename(subSource, null))),
         // The file needs the date to converted to all lower case to
         new FileInputStream(
             ReportUtils.getOutputPath(outFolder.toPath(), getShortCodeLabel(subSource))
-                .resolve(getPairingReportFilename(subSource).replace("-", "_"))
+                .resolve(getPairingReportFilename(subSource, null).replace("-", "_"))
                 .toFile()));
   }
 
-  private String getPairingReportFilename(String subSource) {
-    return getShortCodeLabel(subSource) + "_paired_view_2022-03-25.xlsx";
+  @ParameterizedTest
+  @CsvSource({"ADaM Terminology,C81222", "SDTM Terminology,C66830", "SEND Terminology,C77526"})
+  public void testGenerateV2(String subSource, String subSourceCode) throws IOException {
+    CDISCPairingV2 pairing =
+        new CDISCPairingV2(
+            new File(
+                TestUtils.getResourceFilePath(
+                    format("/fixtures/abridged-owl-files/%s.owl", subSource))),
+            outFolder.toPath(),
+            "2022-03-25");
+    pairing.run(subSourceCode);
+    AssertExcelFiles assertExcelFiles = new AssertExcelFiles();
+    assertExcelFiles.assertExcel(
+        this.getClass()
+            .getResourceAsStream(
+                format(
+                    "/fixtures/pairing-report-from-abridged-owl/%s",
+                    getPairingReportFilename(subSource, null))),
+        // The file needs the date to converted to all lower case to
+        new FileInputStream(
+            ReportUtils.getOutputPath(outFolder.toPath(), getShortCodeLabel(subSource))
+                .resolve(getPairingReportFilename(subSource, "v2").replace("-", "_"))
+                .toFile()));
+  }
+
+  private String getPairingReportFilename(String subSource, String version) {
+    return String.format(
+        "%s_paired_view_2022-03-25%s.xlsx",
+        getShortCodeLabel(subSource), version != null ? ("_" + version) : "");
   }
 
   @AfterEach
