@@ -26,6 +26,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import static gov.nih.nci.evs.cdisc.thesaurus.utils.ThesaurusUtils.*;
+
 /**
  *
  * <!-- LICENSE_TEXT_START -->
@@ -71,10 +73,6 @@ public class TextExcelReportGeneratorV2 {
           "CDISC Synonym(s)",
           "CDISC Definition",
           "NCI Preferred Term");
-  public static final String tTERM_SOURCE_CDISC = "CDISC";
-  public static final String TERM_SOURCE_CDISC_GLOSSARY = "CDISC-GLOSS";
-  public static final String TERM_GROUP_SYNONYM = "SY";
-  public static final String TERM_GROUP_PREFERRED_TERM = "PT";
   public static final String TEXT_FILE_DELIMITER = "\t";
 
   private final Path outDirectory;
@@ -305,7 +303,7 @@ public class TextExcelReportGeneratorV2 {
   }
 
   private String getExpectedTermSource(boolean glossary) {
-    return glossary ? TERM_SOURCE_CDISC_GLOSSARY : tTERM_SOURCE_CDISC;
+    return glossary ? TERM_SOURCE_CDISC_GLOSSARY : TERM_SOURCE_CDISC;
   }
 
   private File getTextFile(String label, Path outputDirectory) {
