@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -66,7 +67,7 @@ public class PostProcessService {
     }
     Path archiveFilePath = getArchiveFilePath(reportFile, publicationDate);
     try {
-      Files.copy(Path.of(reportFile), archiveFilePath);
+      Files.copy(Path.of(reportFile), archiveFilePath, StandardCopyOption.REPLACE_EXISTING);
     } catch (IOException e) {
       throw new RuntimeException(
           String.format(

@@ -51,8 +51,8 @@ public class UploadReportsService {
     com.google.api.services.drive.model.File driveTargetFolder =
         googleDriveClient.createFolder(targetFolder, null, "id, webViewLink");
     log.info("Report Upload Folder Id:{} ", driveTargetFolder.getId());
-    googleDriveClient.grantWritePermissions(driveTargetFolder, emailAddresses);
     uploadFolder(sourceFolder.toFile(), driveTargetFolder);
+    googleDriveClient.grantWritePermissions(driveTargetFolder, emailAddresses);
   }
 
   private void uploadFolder(java.io.File folder, File parentFolder) {

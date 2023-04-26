@@ -1,16 +1,14 @@
 locals {
-  lambda_configuration = defaults(var.lambda_configuration, { memory_in_mb = 1024
-  timeout_in_mins = 5 })
-  text_excel_report_generator_configuration = local.lambda_configuration["cdisc-text-excel-report-generator"]
-  pairing_report_generator_configuration    = local.lambda_configuration["cdisc-pairing-report-generator"]
-  excel_report_formatter_configuration      = local.lambda_configuration["cdisc-excel-report-formatter"]
-  changes_report_generator_configuration    = local.lambda_configuration["cdisc-changes-report-generator"]
-  odm_xml_report_generator_configuration    = local.lambda_configuration["cdisc-odm-xml-report-generator"]
-  html_report_generator_configuration       = local.lambda_configuration["cdisc-html-report-generator"]
-  pdf_report_generator_configuration        = local.lambda_configuration["cdisc-pdf-report-generator"]
-  owl_report_generator_configuration        = local.lambda_configuration["cdisc-owl-report-generator"]
-  post_process_report_configuration         = local.lambda_configuration["cdisc-post-process-report"]
-  upload_report_configuration               = local.lambda_configuration["cdisc-upload-report"]
+  text_excel_report_generator_configuration = var.lambda_configuration["cdisc-text-excel-report-generator"]
+  pairing_report_generator_configuration    = var.lambda_configuration["cdisc-pairing-report-generator"]
+  excel_report_formatter_configuration      = var.lambda_configuration["cdisc-excel-report-formatter"]
+  changes_report_generator_configuration    = var.lambda_configuration["cdisc-changes-report-generator"]
+  odm_xml_report_generator_configuration    = var.lambda_configuration["cdisc-odm-xml-report-generator"]
+  html_report_generator_configuration       = var.lambda_configuration["cdisc-html-report-generator"]
+  pdf_report_generator_configuration        = var.lambda_configuration["cdisc-pdf-report-generator"]
+  owl_report_generator_configuration        = var.lambda_configuration["cdisc-owl-report-generator"]
+  post_process_report_configuration         = var.lambda_configuration["cdisc-post-process-report"]
+  upload_report_configuration               = var.lambda_configuration["cdisc-upload-report"]
 }
 
 data "external" "versions" {
