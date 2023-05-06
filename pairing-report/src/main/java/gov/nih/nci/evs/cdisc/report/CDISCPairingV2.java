@@ -467,13 +467,18 @@ public class CDISCPairingV2 {
   }
 
   public static void main(String[] args) {
-    long ms = System.currentTimeMillis();
+    if(args.length < 3){
+      log.error("Wrong number of parameters. Expected {}. Got {}", 3, args.length);
+      log.error("Usage: CDISCPairingV2 <path to OWL file> <root concept of report>");
+      log.error(
+          "Example: CDISCPairingV2 /tmp/Thesaurus-230320-23.03c_fixed.owl C66830 /tmp/pairing_reports");
+      System.exit(1);
+    }
     String owlFile = args[0];
     String root = args[1];
     Path outputDirectory = Paths.get(args[2]);
     CDISCPairingV2 cdiscPairing =
         new CDISCPairingV2(new File(owlFile), outputDirectory, LocalDate.now().toString());
     cdiscPairing.run(root);
-    System.out.println("Total run time (ms): " + (System.currentTimeMillis() - ms));
   }
 }
