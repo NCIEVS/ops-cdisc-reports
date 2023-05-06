@@ -8,6 +8,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 import static gov.nih.nci.evs.cdisc.report.utils.AssertUtils.assertRequired;
+import static org.apache.commons.lang3.StringUtils.stripAll;
 
 public class ReportUtils {
   public static final Logger log = LoggerFactory.getLogger(ReportUtils.class);
@@ -83,5 +84,21 @@ public class ReportUtils {
    */
   public static Path getStaticFilesPath() {
     return Path.of("/mnt", "cdisc", "work", "static-files");
+  }
+
+  /**
+   * If there are multiple synonyms in a concept, they are concatenated with a semicolon to fit into
+   * one field in the text file. This method, converts that delimited string into an array of
+   * synonyms
+   *
+   * @param strSynonyms
+   * @return
+   */
+  public static String[] getSynonyms(String strSynonyms) {
+    if (strSynonyms != null) {
+      String[] tokens = strSynonyms.split(";");
+      return stripAll(tokens);
+    }
+    return new String[] {};
   }
 }

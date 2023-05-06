@@ -225,15 +225,6 @@ public class TextExcelReportGeneratorV2 {
         .orElse(termName);
   }
 
-  private String decodeSpecialChar(String line) {
-    line = line.replaceAll("&apos;", "'");
-    line = line.replaceAll("&amp;", "&");
-    line = line.replaceAll("&lt;", "<");
-    line = line.replaceAll("&gt;", ">");
-    line = line.replaceAll("&quot;", "\"");
-    return line;
-  }
-
   private String getCodeListConceptLine(
       Concept concept, String submissionValue, boolean glossaryRootConcept) {
     List<String> line = new ArrayList<>();
@@ -326,14 +317,15 @@ public class TextExcelReportGeneratorV2 {
   }
 
   public static void main(String[] args) {
-    if (args == null || args.length != 3) {
-      System.out.println(
-          "Command line parameters: (1) ThesaurusInferred_forTS.owl  (2): Root concept code (e.g., C77526) (3): Output directory");
+    if (args.length < 3) {
+      log.error("Wrong number of parameters. Expected {}. Got {}", 3, args.length);
+      log.error("Usage: TextExcelReportGeneratorV2 <path to OWL file> <root concept code> <output directory>");
+      log.error("Example: TextExcelReportGeneratorV2 /tmp/ThesaurusInferred_forTS.owl C77526 /temp/text_excel_reports");
       System.exit(1);
     }
-    File owlfile = new File(args[0]);
+    File owlFile = new File(args[0]);
     String root = args[1];
     Path outputDirectory = Paths.get(args[2]);
-    new TextExcelReportGeneratorV2(owlfile, outputDirectory).run(root);
+    new TextExcelReportGeneratorV2(owlFile, outputDirectory).run(root);
   }
 }

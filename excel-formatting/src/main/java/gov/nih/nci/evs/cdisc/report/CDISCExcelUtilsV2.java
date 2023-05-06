@@ -64,6 +64,7 @@ public class CDISCExcelUtilsV2 {
   }
 
   public HSSFWorkbook format(String xlsFile) throws IOException, InvalidFormatException {
+    log.info("Formatting excel sheet {}", xlsFile);
     int sheetIndex = 0;
     FileOutputStream formattedExcelReportOut;
     try (InputStream excelReportIn = new FileInputStream(xlsFile)) {
@@ -112,6 +113,7 @@ public class CDISCExcelUtilsV2 {
       }
 
       setAutoFilter(sheet, 'H');
+      log.info("Completed formatting. Writing formatted excel file {}", xlsFile);
       formattedExcelReportOut = new FileOutputStream(xlsFile);
       formattedWorkbook.write(formattedExcelReportOut);
       return formattedWorkbook;
@@ -146,6 +148,7 @@ public class CDISCExcelUtilsV2 {
     sheetName = sheetName.replace("CDISC", "").replace("_", " ");
     sheetName = sheetName + " " + publicationDate;
     sheetName = sheetName.replace("Define-XML", "Def-XML");
+    log.info("Setting sheet name to {}", sheetName);
     workbook.setSheetName(sheetIndex, sheetName.trim());
   }
 
@@ -159,6 +162,7 @@ public class CDISCExcelUtilsV2 {
 
   public void setMetadata(
       String title, String author, String subject, String keywords, String comments) {
+    log.info("Setting metadata");
     this.workbook.createInformationProperties();
     SummaryInformation summaryInfo = this.workbook.getSummaryInformation();
     if (title != null) {
@@ -181,6 +185,7 @@ public class CDISCExcelUtilsV2 {
   }
 
   public void saveWorkbook(String filename) throws IOException {
+    log.info("Saving excel workbook {}", filename);
     try (OutputStream os = new FileOutputStream(filename)) {
       this.workbook.write(os);
     }
@@ -189,7 +194,7 @@ public class CDISCExcelUtilsV2 {
   public static void main(String[] args) throws IOException, InvalidFormatException {
     if (args.length < 2) {
       log.error("Wrong number of parameters. Expected {}. Got {}", 2, args.length);
-      log.error("Usage: CDISCExcelUtilsV2 <path to Excel report> <publication date");
+      log.error("Usage: CDISCExcelUtilsV2 <path to Excel report> <publication date>");
       log.error("Example: CDISCExcelUtilsV2 /tmp/Thesaurus-230320-23.03c_fixed.xls 2023-01-01");
       System.exit(1);
     }

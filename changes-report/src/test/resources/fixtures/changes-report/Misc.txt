@@ -1,0 +1,4 @@
+Release Date	Request Code	Change Type	NCI Code	CDISC Term Type	CDISC Codelist (Short Name)	CDISC Codelist (Long Name)	Change Summary	Original	New	Change Implementation Instructions
+2022-03-25		Remove	C1	CDISC Codelist	DATEFL	Date Imputation Flag	Retire codelist	DATEFL	- - -
+2022-03-25		Remove	C2	Term	DATEFL	Date Imputation Flag	Remove term from retired codelist	D	- - -
+2022-03-25		Update	C3	CDISC Extensible List	DTYPE	Derivation Type	Update CDISC Extensible List	Yes	No

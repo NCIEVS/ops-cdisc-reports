@@ -1,0 +1,4 @@
+Code	Codelist Code	Codelist Extensible (Yes/No)	Codelist Name	CDISC Submission Value	CDISC Synonym(s)	CDISC Definition	NCI Preferred Term
+C1		No	Date Imputation Flag	DATEFL	Date Imputation Flag	Date Imputation Flag: Indicates the level of imputation reflected in a date value.	CDISC ADaM Date Imputation Flag Terminology
+C2	C1		Date Imputation Flag	D		Day Imputed: Day is imputed.	Day Imputed
+C3		Yes	Derivation Type	DTYPE	Derivation Type	Derivation Type: Analysis value derivation method.	CDISC ADaM Derivation Type Terminology
