@@ -80,13 +80,14 @@ public class RDFGeneratorV2 {
     Map<String, List<TextReport>> textReportMap = convertToTextReportMap(textFile);
     RDF rdf = new RDF();
     Ontology ontology = createOntology();
+    rdf.setBase(String.format("http://rdf.cdisc.org/%s-terminology", terminology));
     rdf.setOntology(ontology);
     rdf.getPermissibleValue().addAll(createPermissibleValues(textReportMap));
     try (Writer writer = new PrintWriter(owlFile, StandardCharsets.UTF_8)) {
       marshaller.marshal(rdf, writer);
     }
     /**
-     * Some ugly hacks here. The default namespace is dynamically created based on the terminology.
+     * Ugly hack here. The default namespace is dynamically created based on the terminology.
      * So it cannot be specified in the package-info class. The alternate way to handle it is with
      * namespace prefix mapper. However, that was producing the default prefixes produced by the XML
      * vendor and the prefixes that we specify. This results in multiple prefixes for the same URL.
@@ -95,15 +96,6 @@ public class RDFGeneratorV2 {
      */
     String content = IOUtils.toString(new FileInputStream(owlFile), StandardCharsets.UTF_8);
     content = content.replaceAll("\\{terminology\\}", terminology);
-    /**
-     * The xnl:base element is required by the RDF root element. However, I was unable to figure out
-     * how to produce this through JAXB marshaller. So this hack is to produce a namespace called
-     * base and do a string replace after the fact. Since the URL for default namespace and xml:base
-     * is the same, the marshaller was not producing the default namespace. In order to work around
-     * that, we use different template names despite having the same values to replace
-     */
-    content = content.replaceAll("xmlns:base", "xml:base");
-    content = content.replaceAll("\\{base-terminology\\}", terminology);
     IOUtils.write(content, new FileOutputStream(owlFile), StandardCharsets.UTF_8);
   }
 

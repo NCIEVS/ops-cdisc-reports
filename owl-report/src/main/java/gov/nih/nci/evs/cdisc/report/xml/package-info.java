@@ -15,8 +15,7 @@
       @XmlNs(prefix = "owl", namespaceURI = "http://www.w3.org/2002/07/owl#"),
       @XmlNs(prefix = "xsd", namespaceURI = "http://www.w3.org/2001/XMLSchema#"),
       @XmlNs(prefix = "cts", namespaceURI = "http://rdf.cdisc.org/ct/schema#"),
-      @XmlNs(prefix = "rdfs", namespaceURI = "http://www.w3.org/2000/01/rdf-schema#"),
-      @XmlNs(prefix = "base", namespaceURI = "http://rdf.cdisc.org/{base-terminology}-terminology"),
+      @XmlNs(prefix = "rdfs", namespaceURI = "http://www.w3.org/2000/01/rdf-schema#")
     },
     elementFormDefault = jakarta.xml.bind.annotation.XmlNsForm.QUALIFIED)
 package gov.nih.nci.evs.cdisc.report.xml;
