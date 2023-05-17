@@ -244,7 +244,7 @@ public class RDFGeneratorV2 {
       BiConsumer<T, String> valueFunction,
       String value) {
     T object = supplier.get();
-    dataTypeFunction.accept(object, "http://www.w3.org/2001/XMLSchema#string");
+    dataTypeFunction.accept(object, STRING_DATATYPE_NAMESPACE);
     valueFunction.accept(object, value);
     return object;
   }
@@ -264,7 +264,7 @@ public class RDFGeneratorV2 {
     Ontology ontology = new Ontology();
     ontology.setAbout("");
     Ontology.VersionInfo versionInfo = new Ontology.VersionInfo();
-    versionInfo.setDatatype("http://www.w3.org/2001/XMLSchema#string");
+    versionInfo.setDatatype(STRING_DATATYPE_NAMESPACE);
     versionInfo.setValue("Created with RDFGenerator");
     // This is adapted from RDFGenerator. That class had a particular sequence of elements with
     // Ontology. In order to match that sequence, we are splitting up the imports elements
