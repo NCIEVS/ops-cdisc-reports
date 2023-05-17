@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mms="http://rdf.cdisc.org/mms#"
+           xmlns:owl="http://www.w3.org/2002/07/owl#"
+           attributeFormDefault="unqualified"
+           elementFormDefault="qualified"
+           targetNamespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:import schemaLocation="misc.xsd" namespace="http://www.w3.org/XML/1998/namespace" />
+    <xs:import schemaLocation="ontology.xsd" namespace="http://www.w3.org/2002/07/owl#" />
+    <xs:import schemaLocation="permissible_value.xsd" namespace="http://rdf.cdisc.org/mms#" />
+    <xs:element name="RDF">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="owl:Ontology" />
+                <xs:element maxOccurs="unbounded" ref="mms:PermissibleValue" />
+            </xs:sequence>
+            <xs:attribute ref="xml:base" use="required" />
+        </xs:complexType>
+    </xs:element>
+    <xs:attribute name="about" type="xs:string" />
+    <xs:attribute name="resource" type="xs:string" />
+    <xs:attribute name="datatype" type="xs:string" />
+    <xs:attribute name="ID" type="xs:string" />
+</xs:schema>

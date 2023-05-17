@@ -14,6 +14,10 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
     implementation project(':common')
+    implementation 'jakarta.xml.bind:jakarta.xml.bind-api:4.0.0'
+    implementation 'com.sun.xml.bind:jaxb-impl:4.0.0'
+    implementation 'org.apache.commons:commons-text:1.10.0'
+
     testImplementation project(":common").sourceSets.test.output
     testImplementation 'org.xmlunit:xmlunit-core:2.9.0'
     testImplementation 'org.xmlunit:xmlunit-matchers:2.9.0'
