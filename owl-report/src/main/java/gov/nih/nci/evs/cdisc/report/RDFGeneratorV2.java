@@ -60,14 +60,14 @@ import java.util.stream.Collectors;
 @Slf4j
 public class RDFGeneratorV2 {
   private static final String STRING_DATATYPE_NAMESPACE = "http://www.w3.org/2001/XMLSchema#string";
-  private List<String> ONTOLOGY_IMPORTS =
+  private final List<String> ONTOLOGY_IMPORTS =
       ImmutableList.of(
           "http://rdf.cdisc.org/mms",
           "http://rdf.cdisc.org/ct/schema",
           "http://purl.org/dc/elements/1.1/",
           "http://purl.org/dc/terms/",
           "http://www.w3.org/2004/02/skos/core");
-  private HashSet subsetCodes = new HashSet();
+  private final Set<String> subsetCodes = new HashSet<>();
 
   public void generate(String textFile, String owlFile) throws IOException, JAXBException {
     String terminology = getTerminologyAbbreviation(textFile);
@@ -296,12 +296,11 @@ public class RDFGeneratorV2 {
    * RDFGenerator}) was only escaping the characters that are in this method. In order to not
    * disrupt consumers, we are porting over this method from there
    *
-   * @param term
-   * @return
+   * @return escaped string
    */
   private static String encode(String term) {
     if (term == null) return null;
-    StringBuffer buf = new StringBuffer();
+    StringBuilder buf = new StringBuilder();
     for (int i = 0; i < term.length(); i++) {
       char c = term.charAt(i);
       if (c == '<') {
@@ -318,7 +317,6 @@ public class RDFGeneratorV2 {
   }
 
   public static void main(String[] args) throws IOException, JAXBException {
-    String textFile = args[0];
     if (args.length < 1) {
       log.error("Wrong number of parameters. Expected {}. Got {}", 1, args.length);
       log.error(
@@ -327,6 +325,7 @@ public class RDFGeneratorV2 {
           "Example: RDFGeneratorV2 \"~/temp/reports/SDTM Terminology.odm.xml\" \"~/temp/reports/SDTM Terminology.owl\"");
       System.exit(1);
     }
+    String textFile = args[0];
     String owlFile;
     if (Files.exists(Path.of(textFile))) {
       if (args.length == 1) {
