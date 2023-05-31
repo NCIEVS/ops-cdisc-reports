@@ -1,6 +1,7 @@
 package gov.nih.nci.evs.cdisc.report;
 
 import gov.nih.nci.evs.test.utils.TestUtils;
+import jakarta.xml.bind.JAXBException;
 import org.apache.commons.io.IOUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.io.TempDir;
@@ -47,6 +48,34 @@ public class RDFGeneratorTest {
             .checkForSimilar()
             .withTest(IOUtils.toString(new FileInputStream(outFile), Charset.defaultCharset()))
             .ignoreComments()
+            .build();
+    printDifferences(myDiff);
+    Assertions.assertFalse(myDiff.hasDifferences());
+  }
+
+  @ParameterizedTest
+  @CsvSource({
+          "ADaM Terminology",
+          "Glossary Terminology",
+          "CDASH Terminology",
+          "Define-XML Terminology",
+          "Protocol Terminology",
+          "SDTM Terminology",
+          "SEND Terminology"
+  })
+  public void testGenerateOwlV2(String subSource) throws IOException, JAXBException {
+    String outFile =
+        Paths.get(outFolder.getAbsolutePath(), format("%s_v2.owl", subSource)).toString();
+    new RDFGeneratorV2()
+        .generate(
+            TestUtils.getResourceFilePath("/fixtures/report-files/%s/%s.txt", subSource), outFile);
+    Diff myDiff =
+        DiffBuilder.compare(
+                TestUtils.getResourceAsStream("/fixtures/report-files/%s/%s.owl", subSource))
+            .checkForSimilar()
+            .withTest(IOUtils.toString(new FileInputStream(outFile), Charset.defaultCharset()))
+            .ignoreComments()
+            .ignoreWhitespace()
             .build();
     printDifferences(myDiff);
     Assertions.assertFalse(myDiff.hasDifferences());

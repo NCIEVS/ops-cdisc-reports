@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified"
+           elementFormDefault="qualified"
+           targetNamespace="http://rdf.cdisc.org/mms#"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:cts="http://rdf.cdisc.org/ct/schema#"
+           xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <xs:import schemaLocation="rdf.xsd"
+               namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <xs:import schemaLocation="cdisc.xsd"
+               namespace="http://rdf.cdisc.org/ct/schema#"/>
+    <xs:element name="PermissibleValue">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="inValueDomain">
+                    <xs:complexType>
+                        <xs:sequence minOccurs="0">
+                            <xs:element name="EnumeratedValueDomain">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element ref="cts:cdiscDefinition"/>
+                                        <xs:element ref="cts:nciPreferredTerm"/>
+                                        <xs:element ref="cts:nciCode"/>
+                                        <xs:element ref="cts:cdiscSynonyms"/>
+                                        <xs:element ref="cts:cdiscSubmissionValue"/>
+                                        <xs:element ref="cts:codelistName"/>
+                                        <xs:element ref="cts:isExtensibleCodelist"/>
+                                    </xs:sequence>
+                                    <xs:attribute ref="rdf:ID"
+                                                  use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute ref="rdf:resource"
+                                      use="optional"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element ref="cts:nciPreferredTerm"/>
+                <xs:element ref="cts:nciCode"/>
+                <xs:element ref="cts:cdiscDefinition"/>
+                <xs:element minOccurs="0"
+                            ref="cts:cdiscSynonyms"/>
+                <xs:element ref="cts:cdiscSubmissionValue"/>
+            </xs:sequence>
+            <xs:attribute
+                    ref="rdf:ID"
+                    use="required"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

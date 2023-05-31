@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified"
+           elementFormDefault="qualified"
+           targetNamespace="http://www.w3.org/2002/07/owl#"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <xs:import schemaLocation="rdf.xsd" namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" />
+    <xs:element name="Ontology">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:choice maxOccurs="unbounded">
+                    <xs:element maxOccurs="unbounded" name="imports">
+                        <xs:complexType>
+                            <xs:attribute ref="rdf:resource" use="required" />
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="versionInfo">
+                        <xs:complexType>
+                            <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                    <xs:attribute ref="rdf:datatype" use="required" />
+                                </xs:extension>
+                            </xs:simpleContent>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:choice>
+            </xs:sequence>
+            <xs:attribute ref="rdf:about" use="required" />
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
