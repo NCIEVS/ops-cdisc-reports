@@ -235,8 +235,8 @@ module "upload_report_lambda_zip" {
   runtime                      = "java11"
   role_name                    = "cdisc-upload-report-lambda-role"
   create_package               = false
-  timeout                      = local.owl_report_generator_configuration.timeout_in_mins * 60
-  memory_size                  = local.owl_report_generator_configuration.memory_in_mb
+  timeout                      = local.upload_report_configuration.timeout_in_mins * 60
+  memory_size                  = local.upload_report_configuration.memory_in_mb
   vpc_subnet_ids               = [data.aws_subnet.private_subnets[0].id]
   vpc_security_group_ids       = [data.aws_security_group.default_security_group.id]
   file_system_arn              = aws_efs_access_point.cdisc_report_fs_ap.arn
