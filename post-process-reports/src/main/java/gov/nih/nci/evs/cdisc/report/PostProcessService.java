@@ -1,11 +1,15 @@
 package gov.nih.nci.evs.cdisc.report;
 
+import static gov.nih.nci.evs.cdisc.report.utils.ReportUtils.getOutputPath;
+import static gov.nih.nci.evs.cdisc.report.utils.ReportUtils.log;
+import static org.apache.commons.io.FilenameUtils.getBaseName;
+import static org.apache.commons.io.FilenameUtils.getExtension;
+
+import com.amazonaws.lambda.thirdparty.com.fasterxml.jackson.databind.DeserializationFeature;
 import com.amazonaws.lambda.thirdparty.com.fasterxml.jackson.databind.ObjectMapper;
 import gov.nih.nci.evs.cdisc.report.model.ReportDetail;
 import gov.nih.nci.evs.cdisc.report.model.ReportSummary;
 import gov.nih.nci.evs.cdisc.report.utils.AssertUtils;
-import org.apache.commons.io.FilenameUtils;
-
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -15,11 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-
-import static gov.nih.nci.evs.cdisc.report.utils.ReportUtils.getOutputPath;
-import static gov.nih.nci.evs.cdisc.report.utils.ReportUtils.log;
-import static org.apache.commons.io.FilenameUtils.getBaseName;
-import static org.apache.commons.io.FilenameUtils.getExtension;
+import org.apache.commons.io.FilenameUtils;
 
 public class PostProcessService {
   static final String ARCHIVE_DIRECTORY = "Archive";
@@ -109,6 +109,7 @@ public class PostProcessService {
       } else {
         Map<String, ?> jsonObject = ((Map) node);
         final ObjectMapper mapper = new ObjectMapper();
+        mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         final ReportSummary reportSummary = mapper.convertValue(jsonObject, ReportSummary.class);
         summaries.add(reportSummary);
       }
