@@ -1,5 +1,10 @@
 package gov.nih.nci.evs.cdisc.report;
 
+import java.io.*;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Iterator;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.poi.hpsf.SummaryInformation;
 import org.apache.poi.hssf.usermodel.HSSFCell;
@@ -8,12 +13,6 @@ import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.ss.util.CellRangeAddress;
-
-import java.io.*;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Iterator;
 
 /**
  *
@@ -236,6 +235,9 @@ public class CDISCExcelUtils {
       String sheetName = FilenameUtils.getBaseName(xlsfile);
       if (sheetName.contains("Glossary")) {
     	  sheetName = sheetName.replace("Glossary", "Glossary Terminology");
+      }
+      if (sheetName.contains("MRCT")) {
+        sheetName = "MRCT Terminology";
       }
       sheetName = sheetName.replace("CDISC", "").replace("_", " ");
       sheetName = sheetName + " " + timestamp;

@@ -6,7 +6,6 @@ import gov.nih.nci.evs.cdisc.report.util.SortUtils;
 import gov.nih.nci.evs.cdisc.report.utils.CDISCScanner;
 import gov.nih.nci.evs.cdisc.report.utils.ReportUtils;
 import gov.nih.nci.evs.reportwriter.formatter.AsciiToExcelFormatter;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.nio.file.Path;
@@ -71,6 +70,7 @@ public class TextExcelReportGenerator {
 
   static String CDISC = "CDISC";
   static String CDISC_GLOSS = "CDISC-GLOSS";
+  static String MRCT_GLOSS = "MRCT Ctr-CDISC";
 
   String SOURCE_NAME = CDISC;
 
@@ -87,16 +87,23 @@ public class TextExcelReportGenerator {
     File textfile = getTextFile(label, outDirectory);
     System.out.println("Generating " + textfile + " -- please wait.");
 
-    if (label.indexOf("Glossary") != -1) {
+    if (label.contains("CDISC Glossary Terminology")) {
       SOURCE_NAME = CDISC_GLOSS;
       cdiscDefinitionMap = cdiscScanner.getCdiscGlossDefinitionMap();
-    } else {
+    } else if (label.contains("CDISC MRCT Center Clinical Research Glossary")){
+      SOURCE_NAME = MRCT_GLOSS;
+      cdiscDefinitionMap = cdiscScanner.getMrctCdiscGlossDefinitionMap();
+    }
+    else {
       cdiscDefinitionMap = cdiscScanner.getCdiscDefinitionMap();
     }
-
+    System.out.println("cdiscDefinitionMap:"+cdiscScanner.getCdiscGlossDefinitionMap().size());
     extensibleListMap = cdiscScanner.getExtensibleListMap();
+    System.out.println("extensibleListMap:"+extensibleListMap.size());
     preferredNameMap = cdiscScanner.getPreferredNameMap();
+    System.out.println("preferredNameMap:"+preferredNameMap.size());
     retired_concepts = cdiscScanner.getRetiredConcepts();
+    System.out.println("retired_concepts:"+retired_concepts.size());
 
     Vector v = new Vector();
     v.add(HEADING);
@@ -106,21 +113,28 @@ public class TextExcelReportGenerator {
       codeListCodes = new Vector();
       codeListCodes.add(root);
     }
+    System.out.println("codeListCodes:"+codeListCodes.size());
     subsetMemberHashMap = createSubsetMemberHashMap(codeListCodes);
+    System.out.println("subsetMemberHashMap:"+subsetMemberHashMap.size());
     focusedCodes = createFocusedCodes(subsetMemberHashMap);
+    System.out.println("focusedCodes:"+focusedCodes.size());
 
     HashSet hset = cdiscScanner.vector2HashSet(focusedCodes);
     if (!hset.contains(root)) {
       hset.add(root);
     }
     Vector syn_vec = cdiscScanner.extractFULLSyns(hset);
+    System.out.println("syn_vec:"+syn_vec.size());
     synonymMap = createSynonymMap(syn_vec);
+    System.out.println("synonymMap:"+synonymMap.size());
     Vector subset_codes = cdiscScanner.getSubclassCodes(root);
 
     for (int i = 0; i < codeListCodes.size(); i++) {
       String code = (String) codeListCodes.elementAt(i);
+      System.out.println("Code:"+code);
       String codelistName = getCodeListName(code);
       String submissionValue = getSubmissionValue(code);
+      System.out.println("submissionValue:"+submissionValue);
       if (submissionValue != null && submissionValue.compareTo("null") != 0) {
         String yetOrNo = (String) extensibleListMap.get(code);
         // KLO, 12/08/2021
@@ -150,6 +164,7 @@ public class TextExcelReportGenerator {
         v.add(decodeSpecialChar(line));
         // Vector members = cdiscScanner.getSubsetMemberCodes(code);
         Vector members = (Vector) subsetMemberHashMap.get(code);
+        System.out.println("Members:"+members);
         for (int j = 0; j < members.size(); j++) {
           String member = (String) members.elementAt(j);
           if (!isRetired(member)) {
