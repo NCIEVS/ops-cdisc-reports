@@ -70,7 +70,7 @@ public class TextExcelReportGenerator {
 
   static String CDISC = "CDISC";
   static String CDISC_GLOSS = "CDISC-GLOSS";
-  static String MRCT_GLOSS = "MRCT Ctr-CDISC";
+  static String MRCT_GLOSS = "MRCT-Ctr";
 
   String SOURCE_NAME = CDISC;
 
