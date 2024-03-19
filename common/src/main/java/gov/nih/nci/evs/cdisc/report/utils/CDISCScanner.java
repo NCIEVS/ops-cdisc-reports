@@ -2,7 +2,6 @@ package gov.nih.nci.evs.cdisc.report.utils;
 
 import gov.nih.nci.evs.cdisc.report.model.Synonym;
 import gov.nih.nci.evs.restapi.util.SortUtils;
-
 import java.io.File;
 import java.util.*;
 
@@ -64,6 +63,7 @@ public class CDISCScanner {
     HashMap synonymMap = null;
     HashMap cdiscDefinitionMap = null;
     HashMap cdiscGlossDefinitionMap = null;
+	HashMap cdiscMrctGlossDefinitionMap = null;
     HashMap extensibleListMap = null;
     HashSet retired_concepts = new HashSet();
     HashMap code2LabelMap = null;//getCode2LabelMap()
@@ -182,6 +182,10 @@ public class CDISCScanner {
 		return cdiscGlossDefinitionMap;
 	}
 
+	public HashMap getMrctCdiscGlossDefinitionMap() {
+		return cdiscMrctGlossDefinitionMap;
+	}
+
 	public HashMap getExtensibleListMap() {
 		return extensibleListMap;
 	}
@@ -239,10 +243,11 @@ public class CDISCScanner {
         //Vector w = owlscanner.extractPropertiesWithQualifiers(defs);
         cdiscDefinitionMap = new HashMap();
         cdiscGlossDefinitionMap = new HashMap();
+		cdiscMrctGlossDefinitionMap = new HashMap();
 		//PropertyValue|code|propertyCode|Description|P378$CDISC
         for (int i=0; i<defs.size(); i++) {
 			String line = (String) defs.elementAt(i);
-			if (line.indexOf("P378$CDISC") != -1 || line.indexOf("P378$CDISC-GLOSS") != -1) {
+      if (line.contains("P378$CDISC") || line.contains("P378$CDISC-GLOSS") || line.contains("P378$MRCT-Ctr")) {
 				Vector u = parseData(line, '|');
 				String code = (String) u.elementAt(1);
 				String alt_def = (String) u.elementAt(3);
@@ -252,8 +257,10 @@ public class CDISCScanner {
 				String src = (String) u2.elementAt(1);
 				if (src.compareTo("CDISC") == 0) {
 					cdiscDefinitionMap.put(code, alt_def);
-				} else {
+				} else if(src.equals("CDISC-GLOSS")){
 					cdiscGlossDefinitionMap.put(code, alt_def);
+				} else {
+					cdiscMrctGlossDefinitionMap.put(code, alt_def);
 				}
 			}
 		}
