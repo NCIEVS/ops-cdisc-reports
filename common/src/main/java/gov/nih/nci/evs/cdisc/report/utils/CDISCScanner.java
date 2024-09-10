@@ -4,6 +4,8 @@ import gov.nih.nci.evs.cdisc.report.model.Synonym;
 import gov.nih.nci.evs.restapi.util.SortUtils;
 import java.io.File;
 import java.util.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * <!-- LICENSE_TEXT_START -->
@@ -56,6 +58,7 @@ import java.util.*;
  *
  */
 public class CDISCScanner {
+	private static final Logger log = LoggerFactory.getLogger(CDISCScanner.class);
     File owlfile = null;
 
     Vector focusedCodes = new Vector();
@@ -444,7 +447,9 @@ public class CDISCScanner {
 			String sub = (String) subset_codes.elementAt(i);
 			int j = i+1;
 			Vector subsets = getSubsetMemberCodes(sub);
-			w.addAll(subsets);
+			if(subsets != null){
+				w.addAll(subsets);
+			}
 		}
 		return w;
 	}
