@@ -250,6 +250,7 @@ public class CDISCScanner {
 		//PropertyValue|code|propertyCode|Description|P378$CDISC
         for (int i=0; i<defs.size(); i++) {
 			String line = (String) defs.elementAt(i);
+			line = line.replaceAll("|", "&#124;");
       if (line.contains("P378$CDISC") || line.contains("P378$CDISC-GLOSS") || line.contains("P378$MRCT-Ctr")) {
 				Vector u = parseData(line, '|');
 				String code = (String) u.elementAt(1);
