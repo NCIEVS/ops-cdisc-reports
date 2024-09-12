@@ -5,7 +5,6 @@ import gov.nih.nci.evs.restapi.bean.AltDefinition;
 import gov.nih.nci.evs.restapi.bean.Definition;
 import gov.nih.nci.evs.restapi.bean.OWLAxiom;
 import gov.nih.nci.evs.restapi.util.SortUtils;
-
 import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -1064,7 +1063,7 @@ C4910|<NHC0>C4910</NHC0>
 			}
 			String s = t.substring(n, t.length());
 			int m = s.lastIndexOf("<");
-			String propertyValue = s.substring(1, m);
+			String propertyValue = s.substring(1, m).replaceAll("\\|", "&#124;");
         	return propertyCode + "|" + propertyValue;
 		}
 	}
@@ -2610,7 +2609,7 @@ C4910|<NHC0>C4910</NHC0>
 				} else if (t.startsWith("<owl:annotatedTarget")) {
 					int n = t.indexOf(">");
 					int m = t.lastIndexOf("<");
-					String value = t.substring(n+1, m);
+					String value = t.substring(n+1, m).replaceAll("\\|","&#124;");
 					buf.append("|" + value);
 
 				} else if (t.startsWith("<") && t.endsWith(">")) {

@@ -87,13 +87,15 @@ public class CDISCScanner {
 	}
 
     public static Vector parseData(String line, char delimiter) {
+		String tempPlaceholder = "__TEMP_DELIMITER__";
+		line = line.replaceAll("&#124;", tempPlaceholder);
 		if(line == null) return null;
 		Vector w = new Vector();
 		StringBuffer buf = new StringBuffer();
 		for (int i=0; i<line.length(); i++) {
 			char c = line.charAt(i);
 			if (c == delimiter) {
-				w.add(buf.toString());
+				w.add(buf.toString().replaceAll(tempPlaceholder, "|"));
 				buf = new StringBuffer();
 			} else {
 				buf.append(c);
@@ -250,7 +252,6 @@ public class CDISCScanner {
 		//PropertyValue|code|propertyCode|Description|P378$CDISC
         for (int i=0; i<defs.size(); i++) {
 			String line = (String) defs.elementAt(i);
-			line = line.replaceAll("|", "&#124;");
       if (line.contains("P378$CDISC") || line.contains("P378$CDISC-GLOSS") || line.contains("P378$MRCT-Ctr")) {
 				Vector u = parseData(line, '|');
 				String code = (String) u.elementAt(1);
