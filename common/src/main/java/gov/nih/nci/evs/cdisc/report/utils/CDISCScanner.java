@@ -87,13 +87,16 @@ public class CDISCScanner {
 	}
 
     public static Vector parseData(String line, char delimiter) {
+		String tempPlaceholder = "__TEMP_DELIMITER__";
+		//The HTML encoded string for pipe gets matched with the pipe delimiter here when that is in the data. This is a workaround for that.
+		line = line.replaceAll("&#124;", tempPlaceholder);
 		if(line == null) return null;
 		Vector w = new Vector();
 		StringBuffer buf = new StringBuffer();
 		for (int i=0; i<line.length(); i++) {
 			char c = line.charAt(i);
 			if (c == delimiter) {
-				w.add(buf.toString());
+				w.add(buf.toString().replaceAll(tempPlaceholder, "|"));
 				buf = new StringBuffer();
 			} else {
 				buf.append(c);

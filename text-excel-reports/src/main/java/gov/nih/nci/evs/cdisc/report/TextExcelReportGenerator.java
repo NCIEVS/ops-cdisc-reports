@@ -501,6 +501,7 @@ public class TextExcelReportGenerator {
     line = line.replaceAll("&lt;", "<");
     line = line.replaceAll("&gt;", ">");
     line = line.replaceAll("&quot;", "\"");
+    line = line.replaceAll("&#124;", "|");
     return line;
   }
 
