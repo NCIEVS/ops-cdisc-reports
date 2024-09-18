@@ -1,8 +1,12 @@
 package gov.nih.nci.evs.cdisc.gcp;
 
+import static gov.nih.nci.evs.cdisc.report.utils.AssertUtils.assertRequired;
+
 import com.google.api.client.googleapis.auth.oauth2.GoogleCredential;
 import com.google.api.client.googleapis.javanet.GoogleNetHttpTransport;
 import com.google.api.client.http.FileContent;
+import com.google.api.client.http.HttpRequest;
+import com.google.api.client.http.HttpRequestInitializer;
 import com.google.api.client.http.javanet.NetHttpTransport;
 import com.google.api.client.json.JsonFactory;
 import com.google.api.client.json.gson.GsonFactory;
@@ -12,12 +16,6 @@ import com.google.api.services.drive.model.File;
 import com.google.api.services.drive.model.FileList;
 import com.google.api.services.drive.model.Permission;
 import com.google.common.collect.Lists;
-import lombok.SneakyThrows;
-import org.apache.commons.io.IOUtils;
-import org.apache.commons.lang3.StringUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
@@ -28,8 +26,11 @@ import java.time.format.DateTimeParseException;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
-
-import static gov.nih.nci.evs.cdisc.report.utils.AssertUtils.assertRequired;
+import lombok.SneakyThrows;
+import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /** Client that facilitates calls to Google Drive */
 public class GoogleDriveClient {
@@ -54,7 +55,7 @@ public class GoogleDriveClient {
                   IOUtils.toInputStream(credentialsJson, Charset.defaultCharset()))
               .createScoped(SCOPES);
       this.drive =
-          new Drive.Builder(HTTP_TRANSPORT, JSON_FACTORY, credentials)
+          new Drive.Builder(HTTP_TRANSPORT, JSON_FACTORY, setHttpTimeout(credentials))
               .setApplicationName(APPLICATION_NAME)
               .build();
     } catch (IOException | GeneralSecurityException e) {
@@ -193,5 +194,16 @@ public class GoogleDriveClient {
       }
     }
     return false;
+  }
+
+  private HttpRequestInitializer setHttpTimeout(final HttpRequestInitializer requestInitializer) {
+    return new HttpRequestInitializer() {
+      @Override
+      public void initialize(HttpRequest httpRequest) throws IOException {
+        requestInitializer.initialize(httpRequest);
+        httpRequest.setConnectTimeout(15 * 60000); // 3 minutes connect timeout
+        httpRequest.setReadTimeout(15 * 60000); // 3 minutes read timeout
+      }
+    };
   }
 }
