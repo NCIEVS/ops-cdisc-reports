@@ -10,10 +10,10 @@ package gov.nih.nci.evs.cdisc.report;
 import gov.nih.nci.evs.cdisc.report.model.Change;
 import gov.nih.nci.evs.cdisc.report.model.Codelist;
 import gov.nih.nci.evs.cdisc.report.model.Element;
-
 import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.charset.Charset;
 import java.util.*;
 
 public class ChangesReport {
@@ -477,13 +477,16 @@ public class ChangesReport {
     HashMap<Codelist, ArrayList<Element>> map = new HashMap<Codelist, ArrayList<Element>>();
 
     try {
-      Scanner input = new Scanner(new File(filename), "windows-1252");
+      Scanner input = new Scanner(new File(filename), Charset.defaultCharset());
       int lineNum = 0;
       while (input.hasNext()) {
         lineNum++;
         String line = input.nextLine().trim();
         String[] tokens = line.split("\t");
-
+        if("Code".equals(tokens[0])){
+          //skip header
+          continue;
+        }
         if (tokens.length == 8) {
           /* 0 - Code
            * 1 - Codelist Code
@@ -528,7 +531,7 @@ public class ChangesReport {
               }
             }
             if (!found) {
-              System.err.println(
+              throw new RuntimeException(
                   "Unable to find the codelist "
                       + e.getCodelistCode()
                       + " for element "
@@ -536,13 +539,12 @@ public class ChangesReport {
             }
           }
         } else {
-          System.err.println("Unable to read " + filename + ": line " + lineNum);
+          throw new RuntimeException("Unable to read " + filename + ": line " + lineNum);
         }
       }
       input.close();
-    } catch (FileNotFoundException e) {
-      System.err.println("Unable to open and parse file " + filename);
-      e.printStackTrace();
+    } catch (IOException e) {
+      throw new RuntimeException("Unable to open and parse file " + filename);
     }
     return map;
   }
