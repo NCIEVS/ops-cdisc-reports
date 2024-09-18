@@ -483,7 +483,10 @@ public class ChangesReport {
         lineNum++;
         String line = input.nextLine().trim();
         String[] tokens = line.split("\t");
-
+        if("Code".equals(tokens[0])){
+          //skip header
+          continue;
+        }
         if (tokens.length == 8) {
           /* 0 - Code
            * 1 - Codelist Code
@@ -528,7 +531,7 @@ public class ChangesReport {
               }
             }
             if (!found) {
-              System.err.println(
+              throw new RuntimeException(
                   "Unable to find the codelist "
                       + e.getCodelistCode()
                       + " for element "
@@ -536,13 +539,12 @@ public class ChangesReport {
             }
           }
         } else {
-          System.err.println("Unable to read " + filename + ": line " + lineNum);
+          throw new RuntimeException("Unable to read " + filename + ": line " + lineNum);
         }
       }
       input.close();
     } catch (IOException e) {
-      System.err.println("Unable to open and parse file " + filename);
-      e.printStackTrace();
+      throw new RuntimeException("Unable to open and parse file " + filename);
     }
     return map;
   }
