@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsl:stylesheet version="1.0" 
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns:odm="http://www.cdisc.org/ns/odm/v1.3" 
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xlink="http://www.w3.org/1999/xlink" xml:lang="en"
-  xmlns:nciodm="http://ncicb.nci.nih.gov/xml/odm/EVS/CDISC"
-  exclude-result-prefixes="xlink odm xsi nciodm">
+<xsl:stylesheet version="1.0"
+                xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                xmlns:odm="http://www.cdisc.org/ns/odm/v1.3"
+                xml:lang="en"
+                xmlns:nciodm="http://ncicb.nci.nih.gov/xml/odm/EVS/CDISC"
+                exclude-result-prefixes="xlink odm xsi nciodm">
   <xsl:output method="xml" indent="yes" encoding="UTF-8"
     omit-xml-declaration="yes"
     doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" 
@@ -124,21 +123,21 @@ margin-right:5px;
       <h2 id="{@OID}"><xsl:value-of select="nciodm:CDISCSubmissionValue"/> (<xsl:value-of select="@Name"/>)</h2>
     	<div class="h3">NCI Code: <xsl:value-of select="@nciodm:ExtCodeID"/>, Codelist extensible: <xsl:value-of select="@nciodm:CodeListExtensible"/></div>
     	
-      <table style="page-break-after: always; repeat-header:yes;">
+      <table style="page-break-after: always; repeat-header:yes;table-layout: fixed;">
         <thead>
-        	<tr style="background-color:white; border:0;">
-          	<th style="background-color:white; border:0;"><xsl:value-of select="@nciodm:ExtCodeID"/></th>
-          	<th style="background-color:white; border:0;"><xsl:value-of select="nciodm:CDISCSubmissionValue"/></th>
-        		<th style="background-color:white; border:0;"></th>
-        		<th style="background-color:white; border:0;"></th>
-        		<th style="background-color:white; border:0;"></th>
+        	<tr style="background-color:white; border:0">
+          	<th style="background-color:white; border:0;width:15%;"><xsl:value-of select="@nciodm:ExtCodeID"/></th>
+          	<th style="background-color:white; border:0;width:15%;"><xsl:value-of select="nciodm:CDISCSubmissionValue"/></th>
+            <th style="background-color:white; border:0;width:15%;"></th>
+            <th style="background-color:white; border:0;width:40%;"></th>
+            <th style="background-color:white; border:0;width:15%;"></th>
           </tr>
           <tr>
-              <th style="width:15%;">NCI Code</th>
-              <th style="width:15%;">CDISC Submission Value</th>
-              <th style="width:15%;">CDISC Synonym</th>
-              <th style="width:40%;">CDISC Definition</th>
-              <th style="width:15%;">NCI Preferred Term</th>
+              <th>NCI Code</th>
+              <th>CDISC Submission Value</th>
+              <th>CDISC Synonym</th>
+              <th>CDISC Definition</th>
+              <th>NCI Preferred Term</th>
           </tr>
         </thead>
         <tbody>
