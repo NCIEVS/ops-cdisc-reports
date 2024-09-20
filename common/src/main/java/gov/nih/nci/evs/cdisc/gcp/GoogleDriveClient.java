@@ -168,15 +168,21 @@ public class GoogleDriveClient {
             .setSpaces("drive")
             .setFields("files(id, name)")
             .execute();
-
-    List<File> oldReportFolders =
-        result.getFiles().stream()
-            .filter(folder -> filterFolderByDate(folder, thresholdInDays))
-            .collect(Collectors.toList());
-    log.info("Deleting {} directories", oldReportFolders.size());
-    for (File oldReportFolder : oldReportFolders) {
-      log.info("Deleting {}", oldReportFolder.getName());
-      drive.files().delete(oldReportFolder.getId()).execute();
+    if (thresholdInDays > 0) {
+      List<File> oldReportFolders =
+          result.getFiles().stream()
+              .filter(folder -> filterFolderByDate(folder, thresholdInDays))
+              .collect(Collectors.toList());
+      log.info("Deleting {} directories", oldReportFolders.size());
+      for (File oldReportFolder : oldReportFolders) {
+        log.info("Deleting {}", oldReportFolder.getName());
+        drive.files().delete(oldReportFolder.getId()).execute();
+      }
+    } else {
+      for(File file : result.getFiles()){
+        log.info("Deleting {}", file.getName());
+        drive.files().delete(file.getId()).execute();
+      }
     }
   }
 

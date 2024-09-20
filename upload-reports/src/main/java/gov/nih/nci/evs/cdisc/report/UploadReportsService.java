@@ -1,19 +1,19 @@
 package gov.nih.nci.evs.cdisc.report;
 
+import static gov.nih.nci.evs.cdisc.report.utils.AssertUtils.assertRequired;
+
 import com.google.api.services.drive.model.File;
+import gov.nih.nci.evs.cdisc.aws.SecretsClient;
 import gov.nih.nci.evs.cdisc.gcp.GoogleDriveClient;
 import gov.nih.nci.evs.cdisc.report.utils.ReportUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.io.IOException;
 import java.nio.file.Path;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Objects;
-
-import static gov.nih.nci.evs.cdisc.report.utils.AssertUtils.assertRequired;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class UploadReportsService {
   private static final Logger log = LoggerFactory.getLogger(UploadReportsService.class);
@@ -90,5 +90,12 @@ public class UploadReportsService {
   public void deleteOldReports(Integer deleteOldReportsThresholdDays) {
     assertRequired(deleteOldReportsThresholdDays, "deleteOldReportsThresholdDays");
     googleDriveClient.deleteOldFolders(deleteOldReportsThresholdDays);
+  }
+
+  public static void main(String[] args){
+    GoogleDriveClient googleDriveClient =
+            new GoogleDriveClient(SecretsClient.getSecret("/nci/cdisc/gdrive"));
+    UploadReportsService service = new UploadReportsService(googleDriveClient);
+    service.deleteOldReports(0);
   }
 }
