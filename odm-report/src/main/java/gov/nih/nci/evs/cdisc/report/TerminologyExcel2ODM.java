@@ -2,7 +2,6 @@ package gov.nih.nci.evs.cdisc.report;
 
 import gov.nih.nci.evs.cdisc.report.model.XMLData;
 import gov.nih.nci.evs.cdisc.report.utils.ExcelReader;
-
 import java.io.File;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
@@ -332,14 +331,14 @@ public class TerminologyExcel2ODM {
 
 	public XMLData line2XMLData(String line) {
 		Vector u = parseData(line, '|');
-		String code = (String) u.elementAt(0);
-		String codeListCode = (String) u.elementAt(1);
-		String codelistExtensible = (String) u.elementAt(2);
-		String codeListName = (String) u.elementAt(3);
-		String submissionValue = (String) u.elementAt(4);
-		String synonyms = (String) u.elementAt(5);
-		String cdiscDefinition = (String) u.elementAt(6);
-		String nciPreferredTerm = (String) u.elementAt(7);
+		String code = getDataFromVector(u, 0);
+		String codeListCode = getDataFromVector(u,1);
+		String codelistExtensible = getDataFromVector(u,2);
+		String codeListName = getDataFromVector(u,3);
+		String submissionValue = getDataFromVector(u,4);
+		String synonyms = getDataFromVector(u,5);
+		String cdiscDefinition = getDataFromVector(u,6);
+		String nciPreferredTerm = getDataFromVector(u,7);
 
         XMLData xmldata = new XMLData(
 			code,
@@ -352,6 +351,10 @@ public class TerminologyExcel2ODM {
 			nciPreferredTerm);
 		xmldata.setData(line);
 		return xmldata;
+	}
+
+	private String getDataFromVector(Vector vector, int index){
+		return ((String) vector.elementAt(index)).replace(ExcelReader.TEMP_PLACEHOLDER, "|");
 	}
 
 	public String xmlEscapeText(String t) {

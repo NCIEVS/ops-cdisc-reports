@@ -1,15 +1,14 @@
 package gov.nih.nci.evs.cdisc.report.utils;
 
 import gov.nih.nci.evs.cdisc.report.model.Column;
-import org.apache.poi.hssf.usermodel.HSSFCell;
-import org.apache.poi.hssf.usermodel.HSSFRow;
-import org.apache.poi.ss.usermodel.*;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Vector;
+import org.apache.poi.hssf.usermodel.HSSFCell;
+import org.apache.poi.hssf.usermodel.HSSFRow;
+import org.apache.poi.ss.usermodel.*;
 
 /**
  * <!-- LICENSE_TEXT_START -->
@@ -63,7 +62,7 @@ import java.util.Vector;
  */
 public class ExcelReader {
 	public static DataFormatter dataFormatter = new DataFormatter();
-
+    public static final String TEMP_PLACEHOLDER = "__TEMP_DELIMITER__";
 	public static String getCellValue(HSSFRow row, Column column, boolean scrapNewline) {
 		HSSFCell cell = row.getCell(column.getIndex());
 		if (cell == null) return null;
@@ -200,6 +199,7 @@ public class ExcelReader {
 				if (cell != null) {
 					cellValue = getCellValue(cell);
 				}
+                cellValue = cellValue.replace(Character.toString(delim), TEMP_PLACEHOLDER);
                 buf.append(cellValue).append(delim);
 			}
             String line = buf.toString();
