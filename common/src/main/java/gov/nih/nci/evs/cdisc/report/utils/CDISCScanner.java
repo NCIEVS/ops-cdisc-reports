@@ -67,6 +67,7 @@ public class CDISCScanner {
     HashMap cdiscDefinitionMap = null;
     HashMap cdiscGlossDefinitionMap = null;
 	HashMap cdiscMrctGlossDefinitionMap = null;
+	HashMap ichDefinitionMap = null;
     HashMap extensibleListMap = null;
     HashSet retired_concepts = new HashSet();
     HashMap code2LabelMap = null;//getCode2LabelMap()
@@ -192,6 +193,10 @@ public class CDISCScanner {
 		return cdiscMrctGlossDefinitionMap;
 	}
 
+	public HashMap getIchDefinitionMap() {
+		return ichDefinitionMap;
+	}
+
 	public HashMap getExtensibleListMap() {
 		return extensibleListMap;
 	}
@@ -250,10 +255,11 @@ public class CDISCScanner {
         cdiscDefinitionMap = new HashMap();
         cdiscGlossDefinitionMap = new HashMap();
 		cdiscMrctGlossDefinitionMap = new HashMap();
+		ichDefinitionMap = new HashMap();
 		//PropertyValue|code|propertyCode|Description|P378$CDISC
         for (int i=0; i<defs.size(); i++) {
 			String line = (String) defs.elementAt(i);
-      if (line.contains("P378$CDISC") || line.contains("P378$CDISC-GLOSS") || line.contains("P378$MRCT-Ctr")) {
+      if (line.contains("P378$CDISC") || line.contains("P378$CDISC-GLOSS") || line.contains("P378$MRCT-Ctr") || line.contains("P378$ICH")) {
 				Vector u = parseData(line, '|');
 				String code = (String) u.elementAt(1);
 				String alt_def = (String) u.elementAt(3);
@@ -265,6 +271,8 @@ public class CDISCScanner {
 					cdiscDefinitionMap.put(code, alt_def);
 				} else if(src.equals("CDISC-GLOSS")){
 					cdiscGlossDefinitionMap.put(code, alt_def);
+				} else if(src.equals("ICH")){
+					ichDefinitionMap.put(code, alt_def);
 				} else {
 					cdiscMrctGlossDefinitionMap.put(code, alt_def);
 				}

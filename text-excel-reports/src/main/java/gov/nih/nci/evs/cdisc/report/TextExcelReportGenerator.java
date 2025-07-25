@@ -93,6 +93,9 @@ public class TextExcelReportGenerator {
     } else if (label.contains("CDISC MRCT Center Clinical Research Glossary")){
       SOURCE_NAME = MRCT_GLOSS;
       cdiscDefinitionMap = cdiscScanner.getMrctCdiscGlossDefinitionMap();
+    } else if (label.contains("ICH M11 Terminology")){
+      SOURCE_NAME="ICH";
+      cdiscDefinitionMap = cdiscScanner.getIchDefinitionMap();
     }
     else {
       cdiscDefinitionMap = cdiscScanner.getCdiscDefinitionMap();
