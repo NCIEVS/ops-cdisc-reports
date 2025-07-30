@@ -89,7 +89,7 @@ public class TextExcelReportGenerator {
     String label = cdiscScanner.getPreferredName(root);
     File textfile = getTextFile(label, outDirectory);
     System.out.println("Generating " + textfile + " -- please wait.");
-    String headers = HEADING;
+    String heading = HEADING;
     if (label.contains("CDISC Glossary Terminology")) {
       SOURCE_NAME = CDISC_GLOSS;
       cdiscDefinitionMap = cdiscScanner.getCdiscGlossDefinitionMap();
@@ -99,7 +99,7 @@ public class TextExcelReportGenerator {
     } else if (label.contains("ICH M11 Terminology")){
       SOURCE_NAME="ICH";
       cdiscDefinitionMap = cdiscScanner.getIchDefinitionMap();
-      headers = ICH_HEADING;
+      heading = ICH_HEADING;
     }
     else {
       cdiscDefinitionMap = cdiscScanner.getCdiscDefinitionMap();
@@ -113,7 +113,7 @@ public class TextExcelReportGenerator {
     System.out.println("retired_concepts:"+retired_concepts.size());
 
     Vector v = new Vector();
-    v.add(headers);
+    v.add(heading);
 
     codeListCodes = getCodeListCodes(root);
     if (codeListCodes == null || codeListCodes.size() == 0) {
@@ -200,7 +200,7 @@ public class TextExcelReportGenerator {
         }
       }
     }
-    v = sort(v);
+    v = sort(v, heading);
     saveToFile(textfile, v);
     String excelFileName = generateExcel(textfile);
 
@@ -548,11 +548,11 @@ public class TextExcelReportGenerator {
     return w;
   }
 
-  public Vector sort(Vector v) {
+  public Vector sort(Vector v, String heading) {
     // The content needs to be sorted alphabetically by CDISC submission value within a codelist
     // and also alphabetically by codelist long name.
     Vector w = new Vector();
-    w.add(HEADING);
+    w.add(heading);
     String prev_key = "";
     HashMap hmap = new HashMap();
     for (int i = 1; i < v.size(); i++) {
