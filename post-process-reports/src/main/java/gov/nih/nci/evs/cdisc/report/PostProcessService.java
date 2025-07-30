@@ -14,6 +14,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.List;
@@ -134,6 +135,7 @@ public class PostProcessService {
     // group all reports by code
     Map<String, List<ReportDetail>> reportsByCode =
         reportSummaries.stream()
+                .filter(rs -> rs.getReportDetails() != null)
             .flatMap(rs -> rs.getReportDetails().stream())
             .collect(Collectors.groupingBy(ReportDetail::getCode));
     List<ReportDetail> reportDetails =
@@ -162,5 +164,14 @@ public class PostProcessService {
       List<ReportDetail> finalList, List<ReportDetail> currentList) {
     finalList.add(currentList.stream().reduce(this::accumulateReportDetail).get());
     return finalList;
+  }
+
+  public static void main(String[] args) throws IOException {
+    ObjectMapper objectMapper = new ObjectMapper();
+    String json = new String(Files.readAllBytes(Paths.get("/Users/squareroot/temp/post_process.json")));
+    List reports = objectMapper.readValue(json, List.class);
+    PostProcessService postProcessService = new PostProcessService();
+    ReportSummary reportSummary = postProcessService.getReportSummary(reports);
+    System.out.println("ReportSummary: " + objectMapper.writeValueAsString(reportSummary));
   }
 }

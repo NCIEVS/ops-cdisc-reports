@@ -239,6 +239,9 @@ public class CDISCExcelUtils {
       if (sheetName.contains("MRCT")) {
         sheetName = "MRCT Terminology";
       }
+      if (sheetName.contains("ICH") && sheetName.contains("M11")) {
+        sheetName = "ICH-M11 Terminology";
+      }
       sheetName = sheetName.replace("CDISC", "").replace("_", " ");
       sheetName = sheetName + " " + timestamp;
       sheetName = sheetName.replace("Define-XML", "Def-XML");

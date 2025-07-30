@@ -51,6 +51,9 @@ public class TextExcelReportGenerator {
 
   public static String HEADING =
       "Code	Codelist Code	Codelist Extensible (Yes/No)	Codelist Name	CDISC Submission Value	CDISC Synonym(s)	CDISC Definition	NCI Preferred Term";
+  public static String ICH_HEADING =
+          "Code	Codelist Code	Codelist Extensible (Yes/No)	Codelist Name	ICH Submission Value	ICH Synonym(s)	ICH Definition	NCI Preferred Term";
+
   Vector focusedCodes = null;
   Vector codeListCodes = null;
   HashMap subsetMemberHashMap = null;
@@ -86,7 +89,7 @@ public class TextExcelReportGenerator {
     String label = cdiscScanner.getPreferredName(root);
     File textfile = getTextFile(label, outDirectory);
     System.out.println("Generating " + textfile + " -- please wait.");
-
+    String headers = HEADING;
     if (label.contains("CDISC Glossary Terminology")) {
       SOURCE_NAME = CDISC_GLOSS;
       cdiscDefinitionMap = cdiscScanner.getCdiscGlossDefinitionMap();
@@ -96,6 +99,7 @@ public class TextExcelReportGenerator {
     } else if (label.contains("ICH M11 Terminology")){
       SOURCE_NAME="ICH";
       cdiscDefinitionMap = cdiscScanner.getIchDefinitionMap();
+      headers = ICH_HEADING;
     }
     else {
       cdiscDefinitionMap = cdiscScanner.getCdiscDefinitionMap();
@@ -109,7 +113,7 @@ public class TextExcelReportGenerator {
     System.out.println("retired_concepts:"+retired_concepts.size());
 
     Vector v = new Vector();
-    v.add(HEADING);
+    v.add(headers);
 
     codeListCodes = getCodeListCodes(root);
     if (codeListCodes == null || codeListCodes.size() == 0) {
