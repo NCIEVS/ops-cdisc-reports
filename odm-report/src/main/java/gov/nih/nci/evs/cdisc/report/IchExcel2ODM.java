@@ -117,7 +117,7 @@ public class IchExcel2ODM {
 
 		odm_creationDateTime = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss").format(new Date());
 		odm_asOfDateTime = dateStamp + "T00:00:00";
-		odm_originator = "ICH XML Technologies Team (Terminology2ODM converter)";
+		odm_originator = "CDISC XML Technologies Team (Terminology2ODM converter)";
 		odm_sourceSystem = "NCI Thesaurus";
 		odm_sourceSystemVersion = dateStamp;
 		odm_fileOID     = "ICH_CT." + terminologyModel + "." + dateStamp;
