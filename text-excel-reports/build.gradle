@@ -6,6 +6,11 @@ plugins {
 group 'gov.nih.nci.evs.cdisc'
 version '0.25.0'
 
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
 publishing {
     publications {
         maven(MavenPublication) {

@@ -60,8 +60,8 @@ public class TextExcelReportGenerator {
 
   HashMap preferredNameMap = null;
   HashMap synonymMap = null;
-  HashMap cdiscDefinitionMap = null;
-  HashMap cdiscGlossDefinitionMap = null;
+  HashMap<String, List<String>> cdiscDefinitionMap = null;
+  HashMap<String, List<String>> cdiscGlossDefinitionMap = null;
   HashMap extensibleListMap = null;
   HashSet retired_concepts = null;
 
@@ -150,7 +150,8 @@ public class TextExcelReportGenerator {
         }
         String s = getCDISCSynonyms(code);
         s = decodeSpecialChar(s);
-        String def = getCdiscDefinition(code);
+        String def = getCdiscDefinition(code) != null ?
+            String.join("|", getCdiscDefinition(code)) : "";
         String pref_name = getPreferredName(code);
         String line =
             code
@@ -178,7 +179,8 @@ public class TextExcelReportGenerator {
             submissionValue = getSubmissionValue(member, code);
             s = getCDISCSynonyms(member);
             s = decodeSpecialChar(s);
-            def = getCdiscDefinition(member);
+            def = getCdiscDefinition(member) != null ?
+                String.join("|", getCdiscDefinition(member)) : "";
             pref_name = getPreferredName(member);
             line =
                 member
@@ -437,12 +439,11 @@ public class TextExcelReportGenerator {
     return t.substring(0, t.length() - 2);
   }
 
-  public String getCdiscDefinition(String code) {
+  public List<String> getCdiscDefinition(String code) {
     if (cdiscDefinitionMap == null) {
       return null;
     }
-    if (!cdiscDefinitionMap.containsKey(code)) return null;
-    return (String) cdiscDefinitionMap.get(code);
+    return cdiscDefinitionMap.get(code);
   }
 
   public String getPreferredName(String code) {
