@@ -64,9 +64,10 @@ public class CDISCScanner {
     Vector focusedCodes = new Vector();
     HashMap preferredNameMap = null;
     HashMap synonymMap = null;
-    HashMap cdiscDefinitionMap = null;
-    HashMap cdiscGlossDefinitionMap = null;
-	HashMap cdiscMrctGlossDefinitionMap = null;
+    HashMap<String, List<String>> cdiscDefinitionMap = null;
+    HashMap<String, List<String>> cdiscGlossDefinitionMap = null;
+	HashMap<String, List<String>> cdiscMrctGlossDefinitionMap = null;
+	HashMap<String, List<String>> ichDefinitionMap = null;
     HashMap extensibleListMap = null;
     HashSet retired_concepts = new HashSet();
     HashMap code2LabelMap = null;//getCode2LabelMap()
@@ -180,16 +181,20 @@ public class CDISCScanner {
 		return synonymMap;
 	}
 
-	public HashMap getCdiscDefinitionMap() {
+	public HashMap<String, List<String>> getCdiscDefinitionMap() {
 		return cdiscDefinitionMap;
 	}
 
-	public HashMap getCdiscGlossDefinitionMap() {
+	public HashMap<String, List<String>> getCdiscGlossDefinitionMap() {
 		return cdiscGlossDefinitionMap;
 	}
 
-	public HashMap getMrctCdiscGlossDefinitionMap() {
+	public HashMap<String, List<String>> getMrctCdiscGlossDefinitionMap() {
 		return cdiscMrctGlossDefinitionMap;
+	}
+
+	public HashMap<String, List<String>> getIchDefinitionMap() {
+		return ichDefinitionMap;
 	}
 
 	public HashMap getExtensibleListMap() {
@@ -247,13 +252,14 @@ public class CDISCScanner {
 		//Utils.saveToFile(propertyCode + ".txt", defs);
 		//A procedure to evaluate the health of the an individual after receiving a heart transplant.|C100005|P325|A procedure to evaluate the health of the an individual after receiving a heart transplant.|P378$CDISC
         //Vector w = owlscanner.extractPropertiesWithQualifiers(defs);
-        cdiscDefinitionMap = new HashMap();
+        cdiscDefinitionMap = new HashMap<String, List<String>>();
         cdiscGlossDefinitionMap = new HashMap();
 		cdiscMrctGlossDefinitionMap = new HashMap();
+		ichDefinitionMap = new HashMap();
 		//PropertyValue|code|propertyCode|Description|P378$CDISC
         for (int i=0; i<defs.size(); i++) {
 			String line = (String) defs.elementAt(i);
-      if (line.contains("P378$CDISC") || line.contains("P378$CDISC-GLOSS") || line.contains("P378$MRCT-Ctr")) {
+      if (line.contains("P378$CDISC") || line.contains("P378$CDISC-GLOSS") || line.contains("P378$MRCT-Ctr") || line.contains("P378$ICH")) {
 				Vector u = parseData(line, '|');
 				String code = (String) u.elementAt(1);
 				String alt_def = (String) u.elementAt(3);
@@ -261,13 +267,7 @@ public class CDISCScanner {
 				String source_str = (String) u.elementAt(4);
 				Vector u2 = parseData(source_str, '$');
 				String src = (String) u2.elementAt(1);
-				if (src.compareTo("CDISC") == 0) {
-					cdiscDefinitionMap.put(code, alt_def);
-				} else if(src.equals("CDISC-GLOSS")){
-					cdiscGlossDefinitionMap.put(code, alt_def);
-				} else {
-					cdiscMrctGlossDefinitionMap.put(code, alt_def);
-				}
+				addToDefinitionMap(src, code, alt_def);
 			}
 		}
 		propertyCode = "P90";
@@ -301,20 +301,31 @@ public class CDISCScanner {
 		}
 	}
 
+	private void addToDefinitionMap(String src, String code, String alt_def) {
+		Map<String, List<String>> definitionMap = null;
+		if (src.compareTo("CDISC") == 0) {
+			definitionMap = cdiscDefinitionMap;
+		} else if(src.equals("CDISC-GLOSS")){
+			definitionMap = cdiscGlossDefinitionMap;
+		} else if(src.equals("ICH")){
+			definitionMap = ichDefinitionMap;
+		} else {
+			definitionMap = cdiscMrctGlossDefinitionMap;
+		}
+		List<String> definitions = definitionMap.get(code);
+		if (definitions == null) {
+			definitions = new ArrayList<>();
+		}
+		definitions.add(alt_def);
+		definitionMap.put(code, definitions);
+	}
+
 	public String getExtensibleList(String code) {
 		return  (String) extensibleListMap.get(code);
 	}
 
 	public String getCDISCPreferredName(String code) {
 		return  (String) preferredNameMap.get(code);
-	}
-
-	public String getCDISCDefinition(String code) {
-		return  (String) cdiscDefinitionMap.get(code);
-	}
-
-	public String getCDISCGlossDefinition(String code) {
-		return  (String) cdiscGlossDefinitionMap.get(code);
 	}
 
 	public String getSynonyms(String code) {

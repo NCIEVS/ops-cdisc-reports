@@ -51,14 +51,17 @@ public class TextExcelReportGenerator {
 
   public static String HEADING =
       "Code	Codelist Code	Codelist Extensible (Yes/No)	Codelist Name	CDISC Submission Value	CDISC Synonym(s)	CDISC Definition	NCI Preferred Term";
+  public static String ICH_HEADING =
+          "Code	Codelist Code	Codelist Extensible (Yes/No)	Codelist Name	ICH Submission Value	ICH Synonym(s)	ICH Definition	NCI Preferred Term";
+
   Vector focusedCodes = null;
   Vector codeListCodes = null;
   HashMap subsetMemberHashMap = null;
 
   HashMap preferredNameMap = null;
   HashMap synonymMap = null;
-  HashMap cdiscDefinitionMap = null;
-  HashMap cdiscGlossDefinitionMap = null;
+  HashMap<String, List<String>> cdiscDefinitionMap = null;
+  HashMap<String, List<String>> cdiscGlossDefinitionMap = null;
   HashMap extensibleListMap = null;
   HashSet retired_concepts = null;
 
@@ -86,13 +89,17 @@ public class TextExcelReportGenerator {
     String label = cdiscScanner.getPreferredName(root);
     File textfile = getTextFile(label, outDirectory);
     System.out.println("Generating " + textfile + " -- please wait.");
-
+    String heading = HEADING;
     if (label.contains("CDISC Glossary Terminology")) {
       SOURCE_NAME = CDISC_GLOSS;
       cdiscDefinitionMap = cdiscScanner.getCdiscGlossDefinitionMap();
     } else if (label.contains("CDISC MRCT Center Clinical Research Glossary")){
       SOURCE_NAME = MRCT_GLOSS;
       cdiscDefinitionMap = cdiscScanner.getMrctCdiscGlossDefinitionMap();
+    } else if (label.contains("ICH M11 Terminology")){
+      SOURCE_NAME="ICH";
+      cdiscDefinitionMap = cdiscScanner.getIchDefinitionMap();
+      heading = ICH_HEADING;
     }
     else {
       cdiscDefinitionMap = cdiscScanner.getCdiscDefinitionMap();
@@ -106,7 +113,7 @@ public class TextExcelReportGenerator {
     System.out.println("retired_concepts:"+retired_concepts.size());
 
     Vector v = new Vector();
-    v.add(HEADING);
+    v.add(heading);
 
     codeListCodes = getCodeListCodes(root);
     if (codeListCodes == null || codeListCodes.size() == 0) {
@@ -143,7 +150,8 @@ public class TextExcelReportGenerator {
         }
         String s = getCDISCSynonyms(code);
         s = decodeSpecialChar(s);
-        String def = getCdiscDefinition(code);
+        String def = getCdiscDefinition(code) != null ?
+            String.join("|", getCdiscDefinition(code)) : "";
         String pref_name = getPreferredName(code);
         String line =
             code
@@ -171,7 +179,8 @@ public class TextExcelReportGenerator {
             submissionValue = getSubmissionValue(member, code);
             s = getCDISCSynonyms(member);
             s = decodeSpecialChar(s);
-            def = getCdiscDefinition(member);
+            def = getCdiscDefinition(member) != null ?
+                String.join("|", getCdiscDefinition(member)) : "";
             pref_name = getPreferredName(member);
             line =
                 member
@@ -193,7 +202,7 @@ public class TextExcelReportGenerator {
         }
       }
     }
-    v = sort(v);
+    v = sort(v, heading);
     saveToFile(textfile, v);
     String excelFileName = generateExcel(textfile);
 
@@ -430,12 +439,11 @@ public class TextExcelReportGenerator {
     return t.substring(0, t.length() - 2);
   }
 
-  public String getCdiscDefinition(String code) {
+  public List<String> getCdiscDefinition(String code) {
     if (cdiscDefinitionMap == null) {
       return null;
     }
-    if (!cdiscDefinitionMap.containsKey(code)) return null;
-    return (String) cdiscDefinitionMap.get(code);
+    return cdiscDefinitionMap.get(code);
   }
 
   public String getPreferredName(String code) {
@@ -541,11 +549,11 @@ public class TextExcelReportGenerator {
     return w;
   }
 
-  public Vector sort(Vector v) {
+  public Vector sort(Vector v, String heading) {
     // The content needs to be sorted alphabetically by CDISC submission value within a codelist
     // and also alphabetically by codelist long name.
     Vector w = new Vector();
-    w.add(HEADING);
+    w.add(heading);
     String prev_key = "";
     HashMap hmap = new HashMap();
     for (int i = 1; i < v.size(); i++) {

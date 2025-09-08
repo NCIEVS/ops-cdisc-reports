@@ -20,3 +20,7 @@ dependencies {
 springBoot {
     mainClass = 'gov.nih.nci.evs.cdisc.report.CDISCExcelUtils'
 }
+
+tasks.matching { true }.all {
+    dependsOn project(':common').tasks.build
+}

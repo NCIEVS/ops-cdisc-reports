@@ -10,7 +10,7 @@ public class HtmlReportGenerator {
    * @param reportType required, this determines the contents of the HTML file
    * @return path to HTML report
    */
-  public static String generateHtmlReport(String odmXmlFile, ReportEnum reportType) {
+  public String generateHtmlReport(String odmXmlFile, ReportEnum reportType) {
     assertRequired(odmXmlFile, "odmXmlFile");
     assertRequired(reportType, "reportType");
     String htmlFileName = getHtmlFileName(odmXmlFile, reportType);
@@ -19,13 +19,13 @@ public class HtmlReportGenerator {
     return htmlFileName;
   }
 
-  private static String getHtmlFileName(String owlFileName, ReportEnum reportType) {
+  private String getHtmlFileName(String owlFileName, ReportEnum reportType) {
     return ReportEnum.MAIN_HTML.equals(reportType)
         ? owlFileName.replace(".odm.xml", ".html")
         : owlFileName.replace(".odm.xml", "-pdf.html");
   }
 
-  private static String getXsltFileName(ReportEnum reportType) {
+  protected String getXsltFileName(ReportEnum reportType) {
     return String.format(
         "/xslt/%s",
         ReportEnum.MAIN_HTML.equals(reportType)
@@ -40,7 +40,11 @@ public class HtmlReportGenerator {
       if (args.length == 2) {
         reportType = ReportEnum.valueOf(args[1]);
       }
-      generateHtmlReport(odmXmlPath, reportType);
+      HtmlReportGenerator generator =
+          odmXmlPath.toLowerCase().contains("ich")
+              ? new IchHtmlReportGenerator()
+              : new HtmlReportGenerator();
+      generator.generateHtmlReport(odmXmlPath, reportType);
     } else {
       System.out.println("Expecting path to owl.xml file");
     }
