@@ -13,7 +13,7 @@ for ((i = 0; i < ${#input_array}; i += 2)); do
   directory_name=$(sed 's/\r$//' <<< "${input_array[$i + 1]}")
   version=$(
     cd "$directory_name"
-    gradle properties -q | grep "version:" | awk '{print $2}'
+    ../gradlew properties -q | grep "version:" | awk '{print $2}'
   )
   # use the key that was passed and set the value as the version that was determined
   output+="\"$key\":\"$version\""
