@@ -151,17 +151,7 @@ public class TerminologyExcelReader extends ExcelReader {
         } else {
 			parts.remove(0);
 		}
-      } else {
-        throw new RuntimeException(
-            "Expected sheet name in form '<type> Terminology <date>' but found '"
-                + sheetName
-                + "' instead");
       }
-    } else {
-      throw new RuntimeException(
-          "Expected sheet name in form '<type> Terminology <date>' but found '"
-              + sheetName
-              + "' instead");
     }
 
     /*
