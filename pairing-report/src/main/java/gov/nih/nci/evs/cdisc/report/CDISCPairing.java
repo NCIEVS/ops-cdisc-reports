@@ -11,7 +11,6 @@ import gov.nih.nci.evs.restapi.util.ExcelReadWriteUtils;
 import gov.nih.nci.evs.restapi.util.SortUtils;
 import gov.nih.nci.evs.restapi.util.StringUtils;
 import gov.nih.nci.evs.restapi.util.Utils;
-
 import java.io.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -435,7 +434,7 @@ public class CDISCPairing {
               }
               String syns = getSynonyms(code);
               syns = decodeSpecialChar(syns);
-              String def = getCDISCDefinition(code);
+              String def = String.join("|",getCDISCDefinition(code));
               String pt = getPreferredName(code);
 
               String targetdata = searchPairedTargetTerm(member_code, name, submissionValueCode);
@@ -1108,8 +1107,8 @@ public class CDISCPairing {
     return (String) preferredNameMap.get(code);
   }
 
-  public String getCDISCDefinition(String code) {
-    return (String) cdiscDefinitionMap.get(code);
+  public List<String> getCDISCDefinition(String code) {
+    return (List<String>) cdiscDefinitionMap.get(code);
   }
 
   public String getSynonyms(String code) {
@@ -1177,7 +1176,7 @@ public class CDISCPairing {
       String submissionvalue = (String) u.elementAt(3);
       String syns = getSynonyms(code);
       syns = decodeSpecialChar(syns);
-      String def = getCDISCDefinition(code);
+      String def = String.join("|",getCDISCDefinition(code));
       String pt = getPreferredName(code);
       String t =
           code
@@ -1203,7 +1202,7 @@ public class CDISCPairing {
       submissionvalue = (String) u.elementAt(6);
       syns = getSynonyms(code);
       syns = decodeSpecialChar(syns);
-      def = getCDISCDefinition(code);
+      def = String.join("|",getCDISCDefinition(code));
       pt = getPreferredName(code);
       t =
           code
