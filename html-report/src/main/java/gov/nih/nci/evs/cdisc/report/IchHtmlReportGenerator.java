@@ -7,8 +7,8 @@ public class IchHtmlReportGenerator extends HtmlReportGenerator {
         return String.format(
                 "/xslt/%s",
                 ReportEnum.MAIN_HTML.equals(reportType)
-                        ? "ich.xsl"
-                        : "ich-pdf.xsl");
+                        ? "controlledterminology1-0-0-m11.xsl"
+                        : "controlledterminology1-0-0-m11-pdf.xsl");
 
     }
 }

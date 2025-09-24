@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.cdisc.org/ns/odm/v1.3" 
+           xmlns="http://www.cdisc.org/ns/odm/v1.3"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:ich="http://ncicb.nci.nih.gov/xml/odm/EVS/ICH" 
+           elementFormDefault="qualified" attributeFormDefault="unqualified">
+           
+  <!--
+      ICH M11 controlled-terminology-m11-extension schema
+  -->
+
+  <xs:import namespace="http://ncicb.nci.nih.gov/xml/odm/EVS/ICH" schemaLocation="controlledterminology-m11-ns.xsd"/>
+      
+  <xs:redefine schemaLocation="../controlled-terminology/controlledterminology-extension.xsd">
+
+    <xs:group name="CodeListElementExtension">
+         <xs:sequence>
+           <xs:group ref="CodeListElementExtension"/>
+           <xs:element ref="ich:ICHSubmissionValue" minOccurs="0" maxOccurs="1"/>
+           <xs:element ref="ich:ICHSynonym" minOccurs="0" maxOccurs="unbounded"/>
+         </xs:sequence>
+       </xs:group>
+   
+    <xs:group name="EnumeratedItemElementExtension">
+      <xs:sequence>
+        <xs:group ref="EnumeratedItemElementExtension"/>
+        <xs:element ref="ich:ICHDefinition" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ich:ICHSynonym" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:group>
+    
+    </xs:redefine>
+
+</xs:schema>
