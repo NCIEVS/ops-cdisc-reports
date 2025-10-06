@@ -122,7 +122,7 @@ public class IchExcel2ODM {
 		odm_sourceSystemVersion = dateStamp;
 		odm_fileOID     = "ICH_CT." + terminologyModel + "." + dateStamp;
 		odm_controlledTerminologyVersion = "1.2.0";
-		odm_context = "Submission";
+		odm_context = "Other";
 
 		study_oid = "ICH_CT." + terminologyModel + "." + dateStamp;
 		study_globalVarsStudyName = "ICH " + terminologyModel + " " + terminologyType;
@@ -157,8 +157,28 @@ public class IchExcel2ODM {
 	public void writeHeader(PrintWriter out) {
 		out.println("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
 		out.println("");
-		out.println("<ODM xmlns=\"http://www.ich.org/ns/odm/v1.3\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:nciodm=\"http://ncicb.nci.nih.gov/xml/odm/EVS/ICH\"" + " FileType=\"Snapshot\" FileOID=\"" + odm_fileOID + "\" Granularity=\"Metadata\" CreationDateTime=\"" + odm_creationDateTime + "\" AsOfDateTime=\"" + odm_asOfDateTime + "\" ODMVersion=\"" + ODM_VERSION + "\" Originator=\"" + odm_originator + "\" SourceSystem=\"" + odm_sourceSystem + "\" SourceSystemVersion=\"" + odm_sourceSystemVersion
-		    + "\" nciodm:Context=\"" + odm_context + "\" nciodm:ControlledTerminologyVersion=\"" + odm_controlledTerminologyVersion + "\">");
+    out.println(
+        "<ODM xmlns=\"http://www.cdisc.org/ns/odm/v1.3\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:nciodm=\"http://ncicb.nci.nih.gov/xml/odm/EVS/CDISC\""
+            + " xmlns:ich=\"http://ncicb.nci.nih.gov/xml/odm/EVS/ICH\" "
+            + " FileType=\"Snapshot\" FileOID=\""
+            + odm_fileOID
+            + "\" Granularity=\"Metadata\" CreationDateTime=\""
+            + odm_creationDateTime
+            + "\" AsOfDateTime=\""
+            + odm_asOfDateTime
+            + "\" ODMVersion=\""
+            + ODM_VERSION
+            + "\" Originator=\""
+            + odm_originator
+            + "\" SourceSystem=\""
+            + odm_sourceSystem
+            + "\" SourceSystemVersion=\""
+            + odm_sourceSystemVersion
+            + "\" nciodm:Context=\""
+            + odm_context
+            + "\" nciodm:ControlledTerminologyVersion=\""
+            + odm_controlledTerminologyVersion
+            + "\">");
 		out.println("    <Study OID=\"" + study_oid + "\">");
 		out.println("        <GlobalVariables>");
 		out.println("            <StudyName>" + study_globalVarsStudyName + "</StudyName>");
@@ -171,7 +191,7 @@ public class IchExcel2ODM {
 	public void writeCodeList(PrintWriter out, XMLData xmldata) {
 		if (curr_xmldata != null) {
 			String submissionValue = curr_xmldata.getSubmissionValue();
-			out.println("                <nciodm:ICHSubmissionValue>" + xmlEscapeText(submissionValue) + "</nciodm:ICHSubmissionValue>");
+			out.println("                <ich:ICHSubmissionValue>" + xmlEscapeText(submissionValue) + "</ich:ICHSubmissionValue>");
 
 			String syns = curr_xmldata.getSynonyms();
 			syns = syns.replace("; ", ";");
@@ -180,7 +200,7 @@ public class IchExcel2ODM {
 			for (int i=0; i<sync_vec.size(); i++) {
 				String syn = (String) sync_vec.elementAt(i);
 				if (syn.length() > 0) {
-					out.println("                <nciodm:ICHSynonym>" + xmlEscapeText(syn) + "</nciodm:ICHSynonym>");
+					out.println("                <ich:ICHSynonym>" + xmlEscapeText(syn) + "</ich:ICHSynonym>");
 				}
 			}
 
@@ -231,10 +251,10 @@ public class IchExcel2ODM {
 		for (int i=0; i<sync_vec.size(); i++) {
 			String syn = (String) sync_vec.elementAt(i);
 			if (syn.length() > 0) {
-				out.println("                    <nciodm:ICHSynonym>" + xmlEscapeText(syn) + "</nciodm:ICHSynonym>");
+				out.println("                    <ich:ICHSynonym>" + xmlEscapeText(syn) + "</ich:ICHSynonym>");
 			}
 		}
-		out.println("                    <nciodm:ICHDefinition>" + xmlEscapeText(cdiscDefinition) + "</nciodm:ICHDefinition>");
+		out.println("                    <ich:ICHDefinition>" + xmlEscapeText(cdiscDefinition) + "</ich:ICHDefinition>");
 		out.println("                    <nciodm:PreferredTerm>" + xmlEscapeText(nciPreferredTerm) + "</nciodm:PreferredTerm>");
 		out.println("                </EnumeratedItem>");
 	}
@@ -243,7 +263,7 @@ public class IchExcel2ODM {
 
 		if (curr_xmldata != null) {
 			String submissionValue = curr_xmldata.getSubmissionValue();
-			out.println("                <nciodm:ICHSubmissionValue>" + xmlEscapeText(submissionValue) + "</nciodm:ICHSubmissionValue>");
+			out.println("                <ich:ICHSubmissionValue>" + xmlEscapeText(submissionValue) + "</ich:ICHSubmissionValue>");
 
 			String syns = curr_xmldata.getSynonyms();
 			syns = syns.replace("; ", ";");
@@ -252,7 +272,7 @@ public class IchExcel2ODM {
 			for (int i=0; i<sync_vec.size(); i++) {
 				String syn = (String) sync_vec.elementAt(i);
 				if (syn.length() > 0) {
-					out.println("                <nciodm:ICHSynonym>" + xmlEscapeText(syn) + "</nciodm:ICHSynonym>");
+					out.println("                <ich:ICHSynonym>" + xmlEscapeText(syn) + "</ich:ICHSynonym>");
 				}
 			}
 

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <xsl:stylesheet version="1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
-    xmlns:odm="http://www.ich.org/ns/odm/v1.3"
-    xmlns:nciodm="http://ncicb.nci.nih.gov/xml/odm/EVS/ICH"
-    xmlns:xalan="http://xml.apache.org/xalan"
-    exclude-result-prefixes="odm nciodm xalan">
-
+    xmlns:odm="http://www.cdisc.org/ns/odm/v1.3"
+    xmlns:nciodm="http://ncicb.nci.nih.gov/xml/odm/EVS/CDISC"
+    xmlns:ich="http://ncicb.nci.nih.gov/xml/odm/EVS/ICH"
+    xmlns:xalan="http://xml.apache.org/xalan">
+    
     <xsl:output method="html" indent="yes" xalan:indent-amount="2" 
                 encoding="ISO-8859-1" 
                 doctype-public="-//W3C//DTD HTML 4.01//EN" doctype-system="http://www.w3.org/TR/html4/strict.dtd"/>
@@ -157,11 +157,11 @@ tr.codelist td {
             <td>
                 <a name="{@OID}"><xsl:value-of select="@OID"/></a>
             </td>
-            <td><xsl:value-of select="@Name"/><br />(<xsl:value-of select="nciodm:ICHSubmissionValue"/>)</td>
+            <td><xsl:value-of select="@Name"/><br />(<xsl:value-of select="ich:ICHSubmissionValue"/>)</td>
             <td nowrap="nowrap"><xsl:value-of select="@DataType"/><br />Extensible: <xsl:value-of select="@nciodm:CodeListExtensible"/></td>
             <td><xsl:value-of select="@nciodm:ExtCodeID"/></td>
             <td>
-            <xsl:for-each select="nciodm:ICHSynonym">
+                <xsl:for-each select="ich:ICHSynonym">            
                 <xsl:value-of select="text()"/>
                 <xsl:if test="position() != last()">;</xsl:if>
             </xsl:for-each>                
@@ -178,12 +178,12 @@ tr.codelist td {
                 <!--  <td><xsl:value-of select="odm:Decode/odm:TranslatedText[@xml:lang='en']"/></td> -->
                 <td class="nci"><xsl:value-of select="@nciodm:ExtCodeID"/></td>
                 <td class="nci">
-                <xsl:for-each select="nciodm:ICHSynonym">
+                <xsl:for-each select="ich:ICHSynonym">            
                     <xsl:value-of select="text()"/>
                     <xsl:if test="position() != last()">;</xsl:if>
                 </xsl:for-each>                
                 </td>
-                <td class="nci"><xsl:value-of select="nciodm:ICHDefinition"/></td>
+                <td class="nci"><xsl:value-of select="ich:ICHDefinition"/></td>
                 <td class="nci"><xsl:value-of select="nciodm:PreferredTerm"/></td>
             </tr>
         </xsl:for-each>

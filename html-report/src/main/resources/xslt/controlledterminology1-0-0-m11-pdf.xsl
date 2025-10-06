@@ -3,7 +3,8 @@
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:odm="http://www.ich.org/ns/odm/v1.3"
                 xml:lang="en"
-                xmlns:nciodm="http://ncicb.nci.nih.gov/xml/odm/EVS/ICH"
+                xmlns:nciodm="http://ncicb.nci.nih.gov/xml/odm/EVS/CDISC"
+                xmlns:ich="http://ncicb.nci.nih.gov/xml/odm/EVS/ICH"
                 exclude-result-prefixes="xlink odm xsi nciodm">
   <xsl:output method="xml" indent="yes" encoding="UTF-8"
     omit-xml-declaration="yes"
@@ -103,14 +104,14 @@ margin-right:5px;
         </thead>
         <tbody>
     <xsl:for-each select="$g_seqCodeLists">
-        <xsl:sort order="ascending" select="nciodm:ICHSubmissionValue"/>
+        <xsl:sort order="ascending" select="ich:ICHSubmissionValue"/>
         <xsl:call-template name="CodeLists"/>
     </xsl:for-each>
     </tbody>
     </table>
 
     <xsl:for-each select="$g_seqCodeLists">
-        <xsl:sort order="ascending" select="nciodm:ICHSubmissionValue"/>
+        <xsl:sort order="ascending" select="ich:ICHSubmissionValue"/>
         <xsl:call-template name="CodeListItems"/>
     </xsl:for-each>
     <!-- <xsl:apply-templates select="//odm:CodeList"/> -->
@@ -120,14 +121,14 @@ margin-right:5px;
     
     <xsl:template name="CodeListItems">
 
-      <h2 id="{@OID}"><xsl:value-of select="nciodm:ICHSubmissionValue"/> (<xsl:value-of select="@Name"/>)</h2>
+      <h2 id="{@OID}"><xsl:value-of select="ich:ICHSubmissionValue"/> (<xsl:value-of select="@Name"/>)</h2>
     	<div class="h3">NCI Code: <xsl:value-of select="@nciodm:ExtCodeID"/>, Codelist extensible: <xsl:value-of select="@nciodm:CodeListExtensible"/></div>
     	
       <table style="page-break-after: always; repeat-header:yes;table-layout: fixed;">
         <thead>
         	<tr style="background-color:white; border:0">
           	<th style="background-color:white; border:0;width:15%;"><xsl:value-of select="@nciodm:ExtCodeID"/></th>
-          	<th style="background-color:white; border:0;width:15%;"><xsl:value-of select="nciodm:ICHSubmissionValue"/></th>
+          	<th style="background-color:white; border:0;width:15%;"><xsl:value-of select="ich:ICHSubmissionValue"/></th>
             <th style="background-color:white; border:0;width:15%;"></th>
             <th style="background-color:white; border:0;width:40%;"></th>
             <th style="background-color:white; border:0;width:15%;"></th>
@@ -147,12 +148,12 @@ margin-right:5px;
             <td><xsl:value-of select="@nciodm:ExtCodeID"/></td>
             <td><xsl:value-of select="@CodedValue"/></td>
             <td>
-              <xsl:for-each select="nciodm:ICHSynonym">
+              <xsl:for-each select="ich:ICHSynonym">
                   <xsl:value-of select="text()"/>
                   <xsl:if test="position() != last()">;</xsl:if>
               </xsl:for-each>                
             </td>
-            <td><xsl:value-of select="nciodm:ICHDefinition"/></td>
+            <td><xsl:value-of select="ich:ICHDefinition"/></td>
             <td><xsl:value-of select="nciodm:PreferredTerm"/></td>
           </tr>
         </xsl:for-each>
@@ -169,7 +170,7 @@ margin-right:5px;
 
     <tr>  
       <td><xsl:value-of select="@nciodm:ExtCodeID"/></td>
-      <td><a class="codelist" href="#{@OID}"><xsl:value-of select="nciodm:ICHSubmissionValue"/></a></td>
+      <td><a class="codelist" href="#{@OID}"><xsl:value-of select="ich:ICHSubmissionValue"/></a></td>
       <td><xsl:value-of select="@Name"/></td>
       <td><xsl:value-of select="odm:Description/odm:TranslatedText[@xml:lang='en']"/></td>
       <td><xsl:value-of select="@nciodm:CodeListExtensible"/></td>                    
