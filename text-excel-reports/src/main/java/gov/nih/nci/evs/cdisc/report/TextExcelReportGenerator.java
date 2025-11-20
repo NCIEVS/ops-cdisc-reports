@@ -52,7 +52,7 @@ public class TextExcelReportGenerator {
   public static String HEADING =
       "Code	Codelist Code	Codelist Extensible (Yes/No)	Codelist Name	CDISC Submission Value	CDISC Synonym(s)	CDISC Definition	NCI Preferred Term";
   public static String ICH_HEADING =
-          "Code	Codelist Code	Codelist Extensible (Yes/No)	Codelist Name	ICH Submission Value	ICH Synonym(s)	ICH Definition	NCI Preferred Term";
+          "Code	Codelist Code	Codelist Extensible (Yes/No)	Codelist Name	ICH Preferred Term	ICH Synonym(s)	ICH Definition	NCI Preferred Term";
 
   Vector focusedCodes = null;
   Vector codeListCodes = null;

@@ -210,8 +210,8 @@ public class IchRDFGenerator {
 						out.println("    <cts:ichSynonyms rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\"");
 						out.println("    >" + encode(cdiscSynonyms) + "</cts:ichSynonyms>");
 					}
-					out.println("    <cts:ichSubmissionValue rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\"");
-					out.println("    >" + encode(cdiscSubmissionValue) + "</cts:ichSubmissionValue>");
+					out.println("    <cts:ichPreferredTerm rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\"");
+					out.println("    >" + encode(cdiscSubmissionValue) + "</cts:ichPreferredTerm>");
 					out.println("  </mms:PermissibleValue>");
 				}
 		    }
@@ -248,8 +248,8 @@ public class IchRDFGenerator {
 			out.println("        >" + code + "</cts:nciCode>");
 			out.println("        <cts:ichSynonyms rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\"");
 			out.println("        >" + encode(cdiscSynonyms) + "</cts:ichSynonyms>");
-			out.println("        <cts:ichSubmissionValue rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\"");
-			out.println("        >" + encode(cdiscSubmissionValue) + "</cts:ichSubmissionValue>");
+			out.println("        <cts:ichPreferredTerm rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\"");
+			out.println("        >" + encode(cdiscSubmissionValue) + "</cts:ichPreferredTerm>");
 			out.println("        <cts:codelistName rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\"");
 			out.println("        >" + encode(codelistName) + "</cts:codelistName>");
 

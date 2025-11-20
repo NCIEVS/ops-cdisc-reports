@@ -96,7 +96,7 @@ margin-right:5px;
         <thead>
           <tr>
             <th style="width:0.55in;">NCI Code</th>
-            <th style="width:1.40in;">ICH Submission Value</th>
+            <th style="width:1.40in;">ICH Preferred Term</th>
             <th style="width:1.20in;">Codelist Name</th>
             <th>ICH Definition</th>
             <th style="width:0.65in;">Codelist Extensible</th>
@@ -104,14 +104,14 @@ margin-right:5px;
         </thead>
         <tbody>
     <xsl:for-each select="$g_seqCodeLists">
-        <xsl:sort order="ascending" select="ich:ICHSubmissionValue"/>
+        <xsl:sort order="ascending" select="ich:ICHPreferredTerm"/>
         <xsl:call-template name="CodeLists"/>
     </xsl:for-each>
     </tbody>
     </table>
 
     <xsl:for-each select="$g_seqCodeLists">
-        <xsl:sort order="ascending" select="ich:ICHSubmissionValue"/>
+        <xsl:sort order="ascending" select="ich:ICHPreferredTerm"/>
         <xsl:call-template name="CodeListItems"/>
     </xsl:for-each>
     <!-- <xsl:apply-templates select="//odm:CodeList"/> -->
@@ -121,21 +121,21 @@ margin-right:5px;
     
     <xsl:template name="CodeListItems">
 
-      <h2 id="{@OID}"><xsl:value-of select="ich:ICHSubmissionValue"/> (<xsl:value-of select="@Name"/>)</h2>
+      <h2 id="{@OID}"><xsl:value-of select="ich:ICHPreferredTerm"/> (<xsl:value-of select="@Name"/>)</h2>
     	<div class="h3">NCI Code: <xsl:value-of select="@nciodm:ExtCodeID"/>, Codelist extensible: <xsl:value-of select="@nciodm:CodeListExtensible"/></div>
     	
       <table style="page-break-after: always; repeat-header:yes;table-layout: fixed;">
         <thead>
         	<tr style="background-color:white; border:0">
           	<th style="background-color:white; border:0;width:15%;"><xsl:value-of select="@nciodm:ExtCodeID"/></th>
-          	<th style="background-color:white; border:0;width:15%;"><xsl:value-of select="ich:ICHSubmissionValue"/></th>
+          	<th style="background-color:white; border:0;width:15%;"><xsl:value-of select="ich:ICHPreferredTerm"/></th>
             <th style="background-color:white; border:0;width:15%;"></th>
             <th style="background-color:white; border:0;width:40%;"></th>
             <th style="background-color:white; border:0;width:15%;"></th>
           </tr>
           <tr>
               <th>NCI Code</th>
-              <th>ICH Submission Value</th>
+              <th>ICH Preferred Term</th>
               <th>ICH Synonym</th>
               <th>ICH Definition</th>
               <th>NCI Preferred Term</th>
@@ -170,7 +170,7 @@ margin-right:5px;
 
     <tr>  
       <td><xsl:value-of select="@nciodm:ExtCodeID"/></td>
-      <td><a class="codelist" href="#{@OID}"><xsl:value-of select="ich:ICHSubmissionValue"/></a></td>
+      <td><a class="codelist" href="#{@OID}"><xsl:value-of select="ich:ICHPreferredTerm"/></a></td>
       <td><xsl:value-of select="@Name"/></td>
       <td><xsl:value-of select="odm:Description/odm:TranslatedText[@xml:lang='en']"/></td>
       <td><xsl:value-of select="@nciodm:CodeListExtensible"/></td>                    

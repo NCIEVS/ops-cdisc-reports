@@ -191,7 +191,7 @@ public class IchExcel2ODM {
 	public void writeCodeList(PrintWriter out, XMLData xmldata) {
 		if (curr_xmldata != null) {
 			String submissionValue = curr_xmldata.getSubmissionValue();
-			out.println("                <ich:ICHSubmissionValue>" + xmlEscapeText(submissionValue) + "</ich:ICHSubmissionValue>");
+			out.println("                <ich:ICHPreferredTerm>" + xmlEscapeText(submissionValue) + "</ich:ICHPreferredTerm>");
 
 			String syns = curr_xmldata.getSynonyms();
 			syns = syns.replace("; ", ";");
@@ -263,7 +263,7 @@ public class IchExcel2ODM {
 
 		if (curr_xmldata != null) {
 			String submissionValue = curr_xmldata.getSubmissionValue();
-			out.println("                <ich:ICHSubmissionValue>" + xmlEscapeText(submissionValue) + "</ich:ICHSubmissionValue>");
+			out.println("                <ich:ICHPreferredTerm>" + xmlEscapeText(submissionValue) + "</ich:ICHPreferredTerm>");
 
 			String syns = curr_xmldata.getSynonyms();
 			syns = syns.replace("; ", ";");

@@ -130,7 +130,7 @@ tr.codelist td {
                 <table><thead>
                     <tr class="header cl">
                         <th>OID</th>
-                        <th>Name<br />(ICH Submission Value)</th>
+                        <th>Name<br />(ICH Preferred Term)</th>
                         <th>DataType<br />Extensible</th>
                         <th rowspan="2" class="nci">NCI Code</th>
                         <th rowspan="2" class="nci">ICH Synonym</th>
@@ -139,7 +139,7 @@ tr.codelist td {
                     </tr>
                     <tr class="header cli">
                         <th/>
-                        <th colspan="2">ICH Submission Value [ODM:CodedValue]</th>
+                        <th colspan="2">ICH Preferred Term [ODM:CodedValue]</th>
                         <!--  <th>Decode</th> -->
                     </tr>
                     </thead>
@@ -157,7 +157,7 @@ tr.codelist td {
             <td>
                 <a name="{@OID}"><xsl:value-of select="@OID"/></a>
             </td>
-            <td><xsl:value-of select="@Name"/><br />(<xsl:value-of select="ich:ICHSubmissionValue"/>)</td>
+            <td><xsl:value-of select="@Name"/><br />(<xsl:value-of select="ich:ICHPreferredTerm"/>)</td>
             <td nowrap="nowrap"><xsl:value-of select="@DataType"/><br />Extensible: <xsl:value-of select="@nciodm:CodeListExtensible"/></td>
             <td><xsl:value-of select="@nciodm:ExtCodeID"/></td>
             <td>
