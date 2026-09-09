@@ -1,0 +1,4 @@
+interface:
+  display_name: "Jira Create Ticket"
+  short_description: "Create NCI-META Jira tickets in project NM"
+  default_prompt: "Use $jira-create-ticket to create a Jira ticket."
